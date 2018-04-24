@@ -8,5 +8,5 @@
 
 import Foundation
 protocol DataProtocol {
-    
+    func getUser(userId:String,password:String,success:@escaping ((User?)->()),failure:@escaping ((Int?,String?)->()) );
 }

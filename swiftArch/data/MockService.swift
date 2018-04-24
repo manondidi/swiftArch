@@ -7,7 +7,19 @@
 //
 
 import UIKit
+import HandyJSON
 
 class MockService: DataProtocol {
 
+    func getUser(userId:String,password:String,success:@escaping ((User?)->()),failure:@escaping ((Int?,String?)->()) ){
+        
+       success(  self.loadJsonFromFile(fileName: "getUser.json" ,model:User()));
+    }
+    
+    
+    func loadJsonFromFile<T:HandyJSON>(fileName:String,model:T ) -> T {
+        
+//        let result:T = T.deserialize(from: jsonStr)!
+//        return  result
+    }
 }
