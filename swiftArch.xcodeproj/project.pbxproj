@@ -15,7 +15,6 @@
 		61C0134D208DAEBA00BBE4DC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C0134C208DAEBA00BBE4DC /* User.swift */; };
 		61C0134F208DBABA00BBE4DC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C0134E208DBABA00BBE4DC /* Result.swift */; };
 		61C01351208DC27B00BBE4DC /* ResponseJsonHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C01350208DC27B00BBE4DC /* ResponseJsonHandle.swift */; };
-		61C01355208EC3CB00BBE4DC /* ResultChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C01354208EC3CB00BBE4DC /* ResultChecker.swift */; };
 		61C01359208ED07E00BBE4DC /* CMSResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C01358208ED07E00BBE4DC /* CMSResult.swift */; };
 		61C0135B208ED09A00BBE4DC /* SocialResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C0135A208ED09A00BBE4DC /* SocialResult.swift */; };
 		61C9D4E7208B55BA00DD8C17 /* swiftArchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C9D4E6208B55BA00DD8C17 /* swiftArchTests.swift */; };
@@ -51,7 +50,6 @@
 		61C0134C208DAEBA00BBE4DC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		61C0134E208DBABA00BBE4DC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		61C01350208DC27B00BBE4DC /* ResponseJsonHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseJsonHandle.swift; sourceTree = "<group>"; };
-		61C01354208EC3CB00BBE4DC /* ResultChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultChecker.swift; sourceTree = "<group>"; };
 		61C01358208ED07E00BBE4DC /* CMSResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSResult.swift; sourceTree = "<group>"; };
 		61C0135A208ED09A00BBE4DC /* SocialResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialResult.swift; sourceTree = "<group>"; };
 		61C9D4E4208B55BA00DD8C17 /* swiftArchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftArchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,7 +111,6 @@
 		61B66AF22088DC7700C6ECA8 /* http */ = {
 			isa = PBXGroup;
 			children = (
-				61C01354208EC3CB00BBE4DC /* ResultChecker.swift */,
 				61A4CEC1208A1E800097AC72 /* HttpClient.swift */,
 				61C01350208DC27B00BBE4DC /* ResponseJsonHandle.swift */,
 			);
@@ -408,7 +405,6 @@
 				61C0135B208ED09A00BBE4DC /* SocialResult.swift in Sources */,
 				61C01351208DC27B00BBE4DC /* ResponseJsonHandle.swift in Sources */,
 				61D471FC2080457A009B10F5 /* AppDelegate.swift in Sources */,
-				61C01355208EC3CB00BBE4DC /* ResultChecker.swift in Sources */,
 				61C0134F208DBABA00BBE4DC /* Result.swift in Sources */,
 				618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */,
 			);

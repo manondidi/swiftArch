@@ -16,11 +16,11 @@ enum URL_ENVITORMENT{
 
 class DataManager: NSObject {
     
-    var baseUrlDev:String="http://baidu.com/"
+    var baseUrlDev:String="http://47.98.129.57:8080/info-admin-web/"
     
-    var baseUrlTest:String="http://baidu.com/"
+    var baseUrlTest:String="http://47.98.129.57:8080/info-admin-web/"
     
-    var baseUrlRelease:String="http://baidu.com/"
+    var baseUrlRelease:String="http://47.98.129.57:8080/info-admin-web/"
     
     let urlEnv=URL_ENVITORMENT.Dev;//在这切换环境
     
@@ -28,11 +28,13 @@ class DataManager: NSObject {
     
     var remoteService = RemoteService()
     
-    static let shareInstance = DataManager.init()
-    
- 
-    override
-    private init( ){
+    static let shareInstance : DataManager = {
+        let instance = DataManager()
+        return instance
+    }()
+  
+    private override init( ){
+        
         switch urlEnv {
         case .Dev:
             self.baseUrl=baseUrlDev

@@ -7,14 +7,15 @@
 //
 
 import HandyJSON
+
 class Result<T>:HandyJSON{
     
     var status:Int?
     var msg:String?
     var data:T?
    
-    required   init() {}
+    required  init() {}
     
-    
+     
      
 }

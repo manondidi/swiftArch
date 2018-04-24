@@ -8,7 +8,7 @@
 
 import UIKit
 import HandyJSON
-class SocialResult<T>:HandyJSON,ResultProtocol{
+class SocialResult<T>:HandyJSON{
     
     var code:Int?
     var message:String?
@@ -17,5 +17,6 @@ class SocialResult<T>:HandyJSON,ResultProtocol{
     required   init() {}
     
     
+   
 }
 

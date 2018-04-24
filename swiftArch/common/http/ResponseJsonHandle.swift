@@ -11,22 +11,18 @@ import Alamofire
 import HandyJSON
 extension DataRequest {
     
-    public func responseModel<T:HandyJSON>( success:@escaping ((T)->()),failure:@escaping ((T?,Error?)->()) )
+    public func responseModel<T:HandyJSON>( success:@escaping ((T)->()),failure:@escaping ((Int?,Error)->()) )
         
     {
          responseString { (response) in
             if(response.result.isFailure){
-                failure(nil,response.error!)
+                failure(response.response?.statusCode,response.error!)
             }
             let jsonStr = response.value
             let result:T = T.deserialize(from: jsonStr)!
-            
-            if(ResultChecker.checkSuccess(result: result as AnyObject)){
-                success(result)
-            }else{
-                failure(result,response.error!)
-            }
-             
+            success( result)
+        
         }
     }
+    
 }

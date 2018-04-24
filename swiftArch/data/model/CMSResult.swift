@@ -8,13 +8,14 @@
 
 import UIKit
 import HandyJSON
-class CMSResult<T>:HandyJSON,ResultProtocol{
+class CMSResult<T>:HandyJSON{
     
     var code:Int?
     var msg:String?
     var data:T?
     
     required   init() {}
+    
     
     
 }
