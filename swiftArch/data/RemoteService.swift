@@ -26,6 +26,16 @@ class RemoteService: DataProtocol {
             }, failure: {statusCode,error in
                 failure(statusCode,error.localizedDescription)
             })
+        
+        //如果接口还没做好,而我们又知道了接口的格式
+        //可以将json字符串 保存在本地json文件里面 通过mockservice进行调试
+//        在此处
+        
+//        mockService.getUser(userId: userId, password: password, success: { (User) in
+//
+//        }) { (statusCode,error) in
+//
+//        }
     }
     
     

@@ -19,7 +19,11 @@ class MockService: DataProtocol {
     
     func loadJsonFromFile<T:HandyJSON>(fileName:String,model:T ) -> T {
         
-//        let result:T = T.deserialize(from: jsonStr)!
-//        return  result
+        let jsonPath = Bundle.main.path(forResource: "fileName", ofType: "json")
+     
+        let data = NSData.init(contentsOfFile: jsonPath!)
+       
+        let result:T = T.deserialize(from: jsonStr)!
+        return  result
     }
 }
