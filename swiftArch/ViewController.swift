@@ -17,6 +17,7 @@ class ViewController: UIViewController {
           print("success")
         }, failure: { (statusCode, msg) in
             print("failure")
+            //ojbk xingaitao
         })
        
             
