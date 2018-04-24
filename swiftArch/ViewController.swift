@@ -16,8 +16,7 @@ class ViewController: UIViewController {
         remoteService.getUser(userId: "manondidi", password: "123", success: { (user) in
           print("success")
         }, failure: { (statusCode, msg) in
-            print("failure")
-            //ojbk xingaitao
+            print("failure") 
         })
        
             
