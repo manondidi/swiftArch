@@ -26,7 +26,12 @@ class DataManager: NSObject {
     
     var baseUrl=""
     
-    var remoteService = RemoteService()
+    //var remoteService = RemoteService()
+    
+    lazy var remoteService :RemoteService = {
+        let service = RemoteService()
+        return service
+    }()
     
     static let shareInstance : DataManager = {
         let instance = DataManager()
