@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RemoteService: DataProtocol {
+class RemoteService {
     
     let httpClient = HttpClient(baseUrl:DataManager.shareInstance.baseUrl,headers:["X-Requested-With":"XMLHttpRequest"])
     let mockService:MockService=MockService();
@@ -31,11 +31,7 @@ class RemoteService: DataProtocol {
         //可以将json字符串 保存在本地json文件里面 通过mockservice进行调试
 //        在此处
         
-//        mockService.getUser(userId: userId, password: password, success: { (User) in
-//
-//        }) { (statusCode,error) in
-//
-//        }
+//       success( mockService.getUser(userId: userId, password: password))
     }
     
     

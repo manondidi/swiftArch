@@ -9,11 +9,11 @@
 import UIKit
 import HandyJSON
 
-class MockService: DataProtocol {
+class MockService    {
 
-    func getUser(userId:String,password:String,success:@escaping ((User?)->()),failure:@escaping ((Int?,String?)->()) ){
+    func getUser(userId:String,password:String)->(User){
         
-       success(  self.loadJsonFromFile(fileName: "getUser.json" ,model:User()));
+       return  self.loadJsonFromFile(fileName: "getUser.json" ,model:User());
     }
     
     
@@ -24,6 +24,7 @@ class MockService: DataProtocol {
         let data = NSData.init(contentsOfFile: jsonPath!)
        
         let result:T = T.deserialize(from: jsonStr)!
+        //在此处做延时操作
         return  result
     }
 }
