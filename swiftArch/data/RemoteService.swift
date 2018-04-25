@@ -16,7 +16,7 @@ class RemoteService {
     
     func getUser(userId:String,password:String,success:@escaping ((User?)->()),failure:@escaping ((Int?,String?)->()) ){
         httpClient.request(url: "user/{userId}", method: .get, pathParams: ["userId":"manondidi" ], params: ["password":"123"])
-            .responseModel(success: { (result:Result<User>) in 
+            .responseModel(success: { (result:Result<User>) in
                 if(self.checkSuccess(result: result)){
                     success(self.getData(result: result))
                 }
@@ -31,12 +31,14 @@ class RemoteService {
         //可以将json字符串 保存在本地json文件里面 通过mockservice进行调试
 //        在此处
         
-//       success( mockService.getUser(userId: userId, password: password))
+//        mockService.getUser(userId: userId, password: password) { (user) in
+//            success(user)
+//        }
     }
     
     
-    
-    
+   
+
     
    private func getData<T>(result:Result<T>)->T?{
         if self.checkSuccess(result: result) {

@@ -11,20 +11,25 @@ import HandyJSON
 
 class MockService    {
 
-    func getUser(userId:String,password:String)->(User){
+    
+    
+    func getUser(userId:String,password:String,result:@escaping (User)->()){
         
-       return  self.loadJsonFromFile(fileName: "getUser.json" ,model:User());
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            result(self.loadJsonFromFile(fileName: "getUser.json" ,model:User()));
+        }
+        
     }
     
     
     func loadJsonFromFile<T:HandyJSON>(fileName:String,model:T ) -> T {
         
-        let jsonPath = Bundle.main.path(forResource: "fileName", ofType: "json")
+        let jsonPath = Bundle.main.path(forResource: fileName, ofType: "")
      
-        let data = NSData.init(contentsOfFile: jsonPath!)
+        let jsonStr=try?String(contentsOfFile: jsonPath!)
        
-        let result:T = T.deserialize(from: jsonStr)!
-        //在此处做延时操作
-        return  result
+        let result:T = T.deserialize(from: jsonStr!)!
+        return result
+        
     }
 }
