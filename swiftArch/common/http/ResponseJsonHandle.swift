@@ -48,9 +48,11 @@ extension DataRequest {
         }
     }
     
-    func makeKey(request:URLRequest) -> String? { 
-        var key:String?=""+request.url?.absoluteString +request.httpMethod? +request.httpBody?.base64EncodedString()+request.allHTTPHeaderFields?.description
-        return key
+    
+    
+    
+    func makeKey(request:URLRequest) -> String? {        
+        return safeString(request.url?.absoluteString) + safeString(request.httpMethod)  +  safeString(request.httpBody) + safeString(request.allHTTPHeaderFields?.description)
     }
     
     
@@ -62,4 +64,18 @@ extension DataRequest {
         return ""
     }
     
+}
+
+func safeString(_ d :Data?) ->String{
+    if let data = d , let s = String(data: data, encoding: String.Encoding.utf8) {
+        return s
+    }
+    return ""
+}
+
+func safeString(_ s :String?) -> String{
+    if s == nil {
+        return ""
+    }
+    return s!
 }
