@@ -25,8 +25,7 @@ class DataManager: NSObject {
     let urlEnv=URL_ENVITORMENT.Dev;//在这切换环境
     
     var baseUrl=""
-    
-    //var remoteService = RemoteService()
+     
     
     lazy var remoteService :RemoteService = {
         let service = RemoteService()
