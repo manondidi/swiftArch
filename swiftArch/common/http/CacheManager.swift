@@ -32,7 +32,7 @@ class CacheManager: NSObject {
             .documentDirectory, .userDomainMask, true
             ).first!
         db = try? Connection("\(path)/db.sqlite3")
-        try? db?.run(cacheTable.create(ifNotExists: true) { t in
+        _ = try? db?.run(cacheTable.create(ifNotExists: true) { t in
             t.column(cacheKey, primaryKey: true)
             t.column(cacheValue)
         })
@@ -50,6 +50,9 @@ class CacheManager: NSObject {
         }
         return nil;
         
+    }
+    func cleanCache()  {
+         _ =  try? db?.run(cacheTable.delete())
     }
 
 
