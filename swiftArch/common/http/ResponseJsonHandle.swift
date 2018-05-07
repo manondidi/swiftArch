@@ -29,20 +29,27 @@ extension DataRequest {
         
     {
         responseString { (response) in
+            
+            let cacheManager:CacheManager=CacheManager.shareInstance
+            cacheManager.initCacheDB()
+            let cacheKey:String? = self.makeKey(request: response.request!)
+            
+            let cacheJson = cacheManager.getCache(key:cacheKey!)
+            if(cacheJson != nil){
+                let cacheResult:T = T.deserialize(from: cacheJson)!
+                success( cacheResult)
+            }
             if(response.result.isFailure){
                 failure(response.response?.statusCode,response.error!)
                 return;
             }
             
             let jsonStr = response.value
-            let cacheKey:String? = self.makeKey(request: response.request!)
-            
+            cacheManager.saveCache(key: cacheKey!, value: jsonStr!)
             if((cacheKey) != nil){
-                self.saveCache(key:cacheKey!, value: jsonStr!)
+                cacheManager.saveCache(key:cacheKey!, value: jsonStr!)
             }
-
-            let result:T = T.deserialize(from: jsonStr)!
-            
+            let result:T = T.deserialize(from: jsonStr)! 
             success( result)
             
         }
@@ -51,18 +58,18 @@ extension DataRequest {
     
     
     
-    func makeKey(request:URLRequest) -> String? {        
-        return safeString(request.url?.absoluteString) + safeString(request.httpMethod)  +  safeString(request.httpBody) + safeString(request.allHTTPHeaderFields?.description)
+    func makeKey(request:URLRequest) -> String? {
+    
+        return safeString(request.httpMethod) + "|||"
+            + safeString(request.url?.absoluteString) + "|||"
+            +  safeString(request.httpBody) + "|||"
+            + safeString(request.allHTTPHeaderFields?.description)
+        //key具有可读性
+        
     }
     
     
-    private func saveCache(key:String,value:String){
-        
-    }
-    private func getCache(key:String)->String{
-        
-        return ""
-    }
+  
     
 }
 

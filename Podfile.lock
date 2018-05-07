@@ -1,20 +1,26 @@
 PODS:
   - Alamofire (4.7.2)
   - HandyJSON (4.1.1)
+  - SQLite.swift (0.11.5):
+    - SQLite.swift/standard (= 0.11.5)
+  - SQLite.swift/standard (0.11.5)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - HandyJSON (~> 4.1.1)
+  - SQLite.swift (~> 0.11.5)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - HandyJSON
+    - SQLite.swift
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   HandyJSON: 3a3de917c4118767ffe41c29b5acba23409649f4
+  SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
 
-PODFILE CHECKSUM: c2eff1f77de990c006a1957b55fcafabcb9ca3ea
+PODFILE CHECKSUM: 0bacd05145ff800d78e42b532bccf1c85701eb95
 
 COCOAPODS: 1.5.0

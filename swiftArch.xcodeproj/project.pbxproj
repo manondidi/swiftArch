@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61244C4B209C597B00BBF6BF /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C4A209C597B00BBF6BF /* CacheManager.swift */; };
+		61244C4D209FF55300BBF6BF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */; };
 		618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E36208584CA004F06F7 /* RemoteService.swift */; };
 		618F8E39208584D7004F06F7 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E38208584D7004F06F7 /* MockService.swift */; };
 		618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E3A2085858A004F06F7 /* DataManager.swift */; };
@@ -42,6 +44,8 @@
 		06B98FABE1261D64DF33EEF6 /* Pods_swiftArch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftArch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		20014EBA2A243C2F3A68564F /* Pods-swiftArchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftArchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftArchTests/Pods-swiftArchTests.release.xcconfig"; sourceTree = "<group>"; };
 		45FBCA4B6B7E99E4861A1A27 /* Pods-swiftArch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftArch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftArch/Pods-swiftArch.debug.xcconfig"; sourceTree = "<group>"; };
+		61244C4A209C597B00BBF6BF /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		618F8E36208584CA004F06F7 /* RemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
 		618F8E38208584D7004F06F7 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		618F8E3A2085858A004F06F7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61244C4D209FF55300BBF6BF /* libsqlite3.0.tbd in Frameworks */,
 				D47744617A868E234E5726CD /* Pods_swiftArchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +118,7 @@
 			children = (
 				61A4CEC1208A1E800097AC72 /* HttpClient.swift */,
 				61C01350208DC27B00BBE4DC /* ResponseJsonHandle.swift */,
+				61244C4A209C597B00BBF6BF /* CacheManager.swift */,
 			);
 			path = http;
 			sourceTree = "<group>";
@@ -190,6 +196,7 @@
 		9AB2DC129541A8855DBAFC44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */,
 				06B98FABE1261D64DF33EEF6 /* Pods_swiftArch.framework */,
 				955BC851D4321AC8A4DD88C7 /* Pods_swiftArchTests.framework */,
 			);
@@ -339,11 +346,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-swiftArch/Pods-swiftArch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -377,11 +386,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-swiftArchTests/Pods-swiftArchTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -408,6 +419,7 @@
 				61C01359208ED07E00BBE4DC /* CMSResult.swift in Sources */,
 				618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */,
 				618F8E39208584D7004F06F7 /* MockService.swift in Sources */,
+				61244C4B209C597B00BBF6BF /* CacheManager.swift in Sources */,
 				61C0134D208DAEBA00BBE4DC /* User.swift in Sources */,
 				61A4CEC2208A1E800097AC72 /* HttpClient.swift in Sources */,
 				61C0135B208ED09A00BBE4DC /* SocialResult.swift in Sources */,
