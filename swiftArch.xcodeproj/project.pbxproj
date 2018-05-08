@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		61244C4B209C597B00BBF6BF /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C4A209C597B00BBF6BF /* CacheManager.swift */; };
 		61244C4D209FF55300BBF6BF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */; };
+		61244C5320A1467000BBF6BF /* StateTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C5220A1467000BBF6BF /* StateTableView.swift */; };
+		61244C5620A183C700BBF6BF /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C5520A183C600BBF6BF /* R.generated.swift */; };
 		618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E36208584CA004F06F7 /* RemoteService.swift */; };
 		618F8E39208584D7004F06F7 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E38208584D7004F06F7 /* MockService.swift */; };
 		618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E3A2085858A004F06F7 /* DataManager.swift */; };
@@ -46,6 +48,8 @@
 		45FBCA4B6B7E99E4861A1A27 /* Pods-swiftArch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftArch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftArch/Pods-swiftArch.debug.xcconfig"; sourceTree = "<group>"; };
 		61244C4A209C597B00BBF6BF /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		61244C5220A1467000BBF6BF /* StateTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableView.swift; sourceTree = "<group>"; };
+		61244C5520A183C600BBF6BF /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		618F8E36208584CA004F06F7 /* RemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
 		618F8E38208584D7004F06F7 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		618F8E3A2085858A004F06F7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -92,6 +96,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		61244C4E20A0452500BBF6BF /* component */ = {
+			isa = PBXGroup;
+			children = (
+				61244C4F20A0453600BBF6BF /* tableview */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
+		61244C4F20A0453600BBF6BF /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				61244C5220A1467000BBF6BF /* StateTableView.swift */,
+			);
+			path = tableview;
+			sourceTree = "<group>";
+		};
 		618F8E3220858348004F06F7 /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +128,7 @@
 		61B66AF12088DC6700C6ECA8 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				61244C4E20A0452500BBF6BF /* component */,
 				61B66AF22088DC7700C6ECA8 /* http */,
 			);
 			path = common;
@@ -181,6 +202,7 @@
 		61D471FA2080457A009B10F5 /* swiftArch */ = {
 			isa = PBXGroup;
 			children = (
+				61244C5520A183C600BBF6BF /* R.generated.swift */,
 				61B66AF12088DC6700C6ECA8 /* common */,
 				618F8E3220858348004F06F7 /* data */,
 				61D471FB2080457A009B10F5 /* AppDelegate.swift */,
@@ -246,6 +268,7 @@
 				61D471F52080457A009B10F5 /* Frameworks */,
 				61D471F62080457A009B10F5 /* Resources */,
 				565B59ADF44471A6A4C91CA6 /* [CP] Embed Pods Frameworks */,
+				61244C5420A17F5D00BBF6BF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -346,18 +369,35 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-swiftArch/Pods-swiftArch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swiftArch/Pods-swiftArch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		61244C5420A17F5D00BBF6BF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
 		};
 		D31E17EEF355DD964644BB27 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -416,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61D471FE2080457A009B10F5 /* ViewController.swift in Sources */,
+				61244C5620A183C700BBF6BF /* R.generated.swift in Sources */,
 				61C01359208ED07E00BBE4DC /* CMSResult.swift in Sources */,
 				618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */,
 				618F8E39208584D7004F06F7 /* MockService.swift in Sources */,
@@ -425,6 +466,7 @@
 				61C0135B208ED09A00BBE4DC /* SocialResult.swift in Sources */,
 				61C01351208DC27B00BBE4DC /* ResponseJsonHandle.swift in Sources */,
 				61D471FC2080457A009B10F5 /* AppDelegate.swift in Sources */,
+				61244C5320A1467000BBF6BF /* StateTableView.swift in Sources */,
 				61C0134F208DBABA00BBE4DC /* Result.swift in Sources */,
 				618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */,
 			);
