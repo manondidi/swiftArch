@@ -11,6 +11,12 @@
 		61244C4D209FF55300BBF6BF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */; };
 		61244C5320A1467000BBF6BF /* StateTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C5220A1467000BBF6BF /* StateTableView.swift */; };
 		61244C5620A183C700BBF6BF /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C5520A183C600BBF6BF /* R.generated.swift */; };
+		61244C5920A1850400BBF6BF /* DefaultTableLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C5820A1850400BBF6BF /* DefaultTableLoadView.swift */; };
+		61244C5B20A1852000BBF6BF /* DefaultTableLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61244C5A20A1852000BBF6BF /* DefaultTableLoadView.xib */; };
+		61244C5D20A19B5200BBF6BF /* DefaultTableEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C5C20A19B5200BBF6BF /* DefaultTableEmptyView.swift */; };
+		61244C5F20A19B6500BBF6BF /* DefaultTableEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61244C5E20A19B6500BBF6BF /* DefaultTableEmptyView.xib */; };
+		61244C6120A19FF600BBF6BF /* DefaultTableErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C6020A19FF600BBF6BF /* DefaultTableErrorView.swift */; };
+		61244C6520A1A02600BBF6BF /* DefaultTableErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61244C6420A1A02600BBF6BF /* DefaultTableErrorView.xib */; };
 		618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E36208584CA004F06F7 /* RemoteService.swift */; };
 		618F8E39208584D7004F06F7 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E38208584D7004F06F7 /* MockService.swift */; };
 		618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E3A2085858A004F06F7 /* DataManager.swift */; };
@@ -50,6 +56,12 @@
 		61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		61244C5220A1467000BBF6BF /* StateTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableView.swift; sourceTree = "<group>"; };
 		61244C5520A183C600BBF6BF /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		61244C5820A1850400BBF6BF /* DefaultTableLoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableLoadView.swift; sourceTree = "<group>"; };
+		61244C5A20A1852000BBF6BF /* DefaultTableLoadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultTableLoadView.xib; sourceTree = "<group>"; };
+		61244C5C20A19B5200BBF6BF /* DefaultTableEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableEmptyView.swift; sourceTree = "<group>"; };
+		61244C5E20A19B6500BBF6BF /* DefaultTableEmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultTableEmptyView.xib; sourceTree = "<group>"; };
+		61244C6020A19FF600BBF6BF /* DefaultTableErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableErrorView.swift; sourceTree = "<group>"; };
+		61244C6420A1A02600BBF6BF /* DefaultTableErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultTableErrorView.xib; sourceTree = "<group>"; };
 		618F8E36208584CA004F06F7 /* RemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
 		618F8E38208584D7004F06F7 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		618F8E3A2085858A004F06F7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -107,9 +119,23 @@
 		61244C4F20A0453600BBF6BF /* tableview */ = {
 			isa = PBXGroup;
 			children = (
+				61244C5720A1849400BBF6BF /* state */,
 				61244C5220A1467000BBF6BF /* StateTableView.swift */,
 			);
 			path = tableview;
+			sourceTree = "<group>";
+		};
+		61244C5720A1849400BBF6BF /* state */ = {
+			isa = PBXGroup;
+			children = (
+				61244C5820A1850400BBF6BF /* DefaultTableLoadView.swift */,
+				61244C5A20A1852000BBF6BF /* DefaultTableLoadView.xib */,
+				61244C5C20A19B5200BBF6BF /* DefaultTableEmptyView.swift */,
+				61244C5E20A19B6500BBF6BF /* DefaultTableEmptyView.xib */,
+				61244C6020A19FF600BBF6BF /* DefaultTableErrorView.swift */,
+				61244C6420A1A02600BBF6BF /* DefaultTableErrorView.xib */,
+			);
+			path = state;
 			sourceTree = "<group>";
 		};
 		618F8E3220858348004F06F7 /* data */ = {
@@ -335,7 +361,10 @@
 				61D472062080457A009B10F5 /* LaunchScreen.storyboard in Resources */,
 				61D472032080457A009B10F5 /* Assets.xcassets in Resources */,
 				61D472012080457A009B10F5 /* Main.storyboard in Resources */,
+				61244C5B20A1852000BBF6BF /* DefaultTableLoadView.xib in Resources */,
 				61C0135F208F28C600BBE4DC /* getUser.json in Resources */,
+				61244C6520A1A02600BBF6BF /* DefaultTableErrorView.xib in Resources */,
+				61244C5F20A19B6500BBF6BF /* DefaultTableEmptyView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +397,9 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-swiftArch/Pods-swiftArch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Closures/Closures.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -376,7 +407,9 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Closures.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -457,6 +490,7 @@
 			files = (
 				61D471FE2080457A009B10F5 /* ViewController.swift in Sources */,
 				61244C5620A183C700BBF6BF /* R.generated.swift in Sources */,
+				61244C5920A1850400BBF6BF /* DefaultTableLoadView.swift in Sources */,
 				61C01359208ED07E00BBE4DC /* CMSResult.swift in Sources */,
 				618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */,
 				618F8E39208584D7004F06F7 /* MockService.swift in Sources */,
@@ -467,8 +501,10 @@
 				61C01351208DC27B00BBE4DC /* ResponseJsonHandle.swift in Sources */,
 				61D471FC2080457A009B10F5 /* AppDelegate.swift in Sources */,
 				61244C5320A1467000BBF6BF /* StateTableView.swift in Sources */,
+				61244C5D20A19B5200BBF6BF /* DefaultTableEmptyView.swift in Sources */,
 				61C0134F208DBABA00BBE4DC /* Result.swift in Sources */,
 				618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */,
+				61244C6120A19FF600BBF6BF /* DefaultTableErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

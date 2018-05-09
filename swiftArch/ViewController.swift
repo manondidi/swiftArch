@@ -9,20 +9,30 @@
 import UIKit 
 class ViewController: UIViewController {
 
-     var remoteService:RemoteService=DataManager.shareInstance.remoteService
+//     var remoteService:RemoteService=DataManager.shareInstance.remoteService
+    
+    let tableView=StateTableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        remoteService.getUser(userId: "manondidi", password: "123", success: { (user) in
-          print("success")
-        }, failure: { (statusCode, msg) in
-            print("failure") 
-        })
+//        remoteService.getUser(userId: "manondidi", password: "123", success: { (user) in
+//          print("success")
+//        }, failure: { (statusCode, msg) in
+//            print("failure")
+//        })
        
-            
         
-        
-        
+        self.view.addSubview(tableView)
+        self.tableView.snp.makeConstraints { (make) in
+             make.left.right.top.bottom.equalToSuperview()
+        }
+        self.tableView.setUpState()
+        self.tableView.setLoadMoreCallback {
+            self.tableView.endRefresh()
+        }
+        self.tableView.setRefreshCallback {
+            self.tableView.endRefresh()
+        }  
     }
 
 }

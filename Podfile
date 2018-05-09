@@ -7,7 +7,9 @@ target 'swiftArch' do
     pod 'HandyJSON', '~> 4.1.1'
     pod 'SQLite.swift', '~> 0.11.5'
     pod 'SnapKit', '~> 4.0.0'
-    pod 'R.swift'
+    pod 'R.swift' 
+    pod 'MJRefresh'
+    pod 'Closures'
 end
 
 
