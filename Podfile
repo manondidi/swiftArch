@@ -10,6 +10,7 @@ target 'swiftArch' do
     pod 'R.swift' 
     pod 'MJRefresh'
     pod 'Closures'
+    pod 'Toast-Swift', '~> 3.0.1'
 end
 
 

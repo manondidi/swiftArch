@@ -6,33 +6,37 @@
 //  Copyright © 2018年 czq. All rights reserved.
 //
 
-import UIKit 
+import UIKit
+import Closures
 class ViewController: UIViewController {
-
-//     var remoteService:RemoteService=DataManager.shareInstance.remoteService
-    
-    let tableView=StateTableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        remoteService.getUser(userId: "manondidi", password: "123", success: { (user) in
-//          print("success")
-//        }, failure: { (statusCode, msg) in
-//            print("failure")
-//        })
-       
+        self.view.backgroundColor=UIColor.white
         
-        self.view.addSubview(tableView)
-        self.tableView.snp.makeConstraints { (make) in
-             make.left.right.top.bottom.equalToSuperview()
+        let btn1=UIButton(type: UIButtonType.roundedRect)
+        self.view.addSubview(btn1)
+        btn1.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(140)
         }
-        self.tableView.setUpState()
-        self.tableView.setLoadMoreCallback {
-            self.tableView.endRefresh()
+        btn1.setTitle("默认样式的styleTable例子", for: UIControlState.normal)
+        btn1.onTap {
+            self.navigationController?.pushViewController(TableDemoVC(nibName: "TableDemoVC", bundle: nil), animated: true)
         }
-        self.tableView.setRefreshCallback {
-            self.tableView.endRefresh()
-        }  
+ 
+        
+        
+        let btn2=UIButton(type: UIButtonType.roundedRect)
+        self.view.addSubview(btn2)
+        btn2.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(btn1.snp.bottom).offset(30)
+        }
+        btn2.setTitle("自定义样式的styleTable例子", for: UIControlState.normal)
+        btn2.onTap {
+            self.navigationController?.pushViewController(StyleTableDemoVC(), animated: true)
+        }
     }
 
 }

@@ -10,6 +10,7 @@ PODS:
   - SQLite.swift (0.11.5):
     - SQLite.swift/standard (= 0.11.5)
   - SQLite.swift/standard (0.11.5)
+  - Toast-Swift (3.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - R.swift
   - SnapKit (~> 4.0.0)
   - SQLite.swift (~> 0.11.5)
+  - Toast-Swift (~> 3.0.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -30,6 +32,7 @@ SPEC REPOS:
     - R.swift.Library
     - SnapKit
     - SQLite.swift
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -40,7 +43,8 @@ SPEC CHECKSUMS:
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
+  Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: c19c8a3b61f360cc70dfadfcd1c00c59c9abf6d1
+PODFILE CHECKSUM: f53c17634d0082cc319b3da6cd306a74ac628d97
 
 COCOAPODS: 1.5.0

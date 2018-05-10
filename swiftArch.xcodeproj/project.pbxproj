@@ -17,6 +17,10 @@
 		61244C5F20A19B6500BBF6BF /* DefaultTableEmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61244C5E20A19B6500BBF6BF /* DefaultTableEmptyView.xib */; };
 		61244C6120A19FF600BBF6BF /* DefaultTableErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C6020A19FF600BBF6BF /* DefaultTableErrorView.swift */; };
 		61244C6520A1A02600BBF6BF /* DefaultTableErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61244C6420A1A02600BBF6BF /* DefaultTableErrorView.xib */; };
+		61707A5820A3363100B378FD /* TableDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707A5620A3363100B378FD /* TableDemoVC.swift */; };
+		61707A5920A3363100B378FD /* TableDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61707A5720A3363100B378FD /* TableDemoVC.xib */; };
+		61707A5B20A33AA900B378FD /* StyleTableDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707A5A20A33AA900B378FD /* StyleTableDemoVC.swift */; };
+		61707A5D20A34B2200B378FD /* UserStyleTableEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707A5C20A34B2200B378FD /* UserStyleTableEmptyView.swift */; };
 		618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E36208584CA004F06F7 /* RemoteService.swift */; };
 		618F8E39208584D7004F06F7 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E38208584D7004F06F7 /* MockService.swift */; };
 		618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E3A2085858A004F06F7 /* DataManager.swift */; };
@@ -62,6 +66,10 @@
 		61244C5E20A19B6500BBF6BF /* DefaultTableEmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultTableEmptyView.xib; sourceTree = "<group>"; };
 		61244C6020A19FF600BBF6BF /* DefaultTableErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableErrorView.swift; sourceTree = "<group>"; };
 		61244C6420A1A02600BBF6BF /* DefaultTableErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultTableErrorView.xib; sourceTree = "<group>"; };
+		61707A5620A3363100B378FD /* TableDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDemoVC.swift; sourceTree = "<group>"; };
+		61707A5720A3363100B378FD /* TableDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableDemoVC.xib; sourceTree = "<group>"; };
+		61707A5A20A33AA900B378FD /* StyleTableDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleTableDemoVC.swift; sourceTree = "<group>"; };
+		61707A5C20A34B2200B378FD /* UserStyleTableEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStyleTableEmptyView.swift; sourceTree = "<group>"; };
 		618F8E36208584CA004F06F7 /* RemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
 		618F8E38208584D7004F06F7 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		618F8E3A2085858A004F06F7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -136,6 +144,17 @@
 				61244C6420A1A02600BBF6BF /* DefaultTableErrorView.xib */,
 			);
 			path = state;
+			sourceTree = "<group>";
+		};
+		61244C6620A2E7A500BBF6BF /* demo */ = {
+			isa = PBXGroup;
+			children = (
+				61707A5620A3363100B378FD /* TableDemoVC.swift */,
+				61707A5720A3363100B378FD /* TableDemoVC.xib */,
+				61707A5A20A33AA900B378FD /* StyleTableDemoVC.swift */,
+				61707A5C20A34B2200B378FD /* UserStyleTableEmptyView.swift */,
+			);
+			path = demo;
 			sourceTree = "<group>";
 		};
 		618F8E3220858348004F06F7 /* data */ = {
@@ -231,6 +250,7 @@
 				61244C5520A183C600BBF6BF /* R.generated.swift */,
 				61B66AF12088DC6700C6ECA8 /* common */,
 				618F8E3220858348004F06F7 /* data */,
+				61244C6620A2E7A500BBF6BF /* demo */,
 				61D471FB2080457A009B10F5 /* AppDelegate.swift */,
 				61D471FD2080457A009B10F5 /* ViewController.swift */,
 				61D471FF2080457A009B10F5 /* Main.storyboard */,
@@ -364,6 +384,7 @@
 				61244C5B20A1852000BBF6BF /* DefaultTableLoadView.xib in Resources */,
 				61C0135F208F28C600BBE4DC /* getUser.json in Resources */,
 				61244C6520A1A02600BBF6BF /* DefaultTableErrorView.xib in Resources */,
+				61707A5920A3363100B378FD /* TableDemoVC.xib in Resources */,
 				61244C5F20A19B6500BBF6BF /* DefaultTableEmptyView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +424,7 @@
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -413,6 +435,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -498,12 +521,15 @@
 				61C0134D208DAEBA00BBE4DC /* User.swift in Sources */,
 				61A4CEC2208A1E800097AC72 /* HttpClient.swift in Sources */,
 				61C0135B208ED09A00BBE4DC /* SocialResult.swift in Sources */,
+				61707A5B20A33AA900B378FD /* StyleTableDemoVC.swift in Sources */,
 				61C01351208DC27B00BBE4DC /* ResponseJsonHandle.swift in Sources */,
 				61D471FC2080457A009B10F5 /* AppDelegate.swift in Sources */,
+				61707A5820A3363100B378FD /* TableDemoVC.swift in Sources */,
 				61244C5320A1467000BBF6BF /* StateTableView.swift in Sources */,
 				61244C5D20A19B5200BBF6BF /* DefaultTableEmptyView.swift in Sources */,
 				61C0134F208DBABA00BBE4DC /* Result.swift in Sources */,
 				618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */,
+				61707A5D20A34B2200B378FD /* UserStyleTableEmptyView.swift in Sources */,
 				61244C6120A19FF600BBF6BF /* DefaultTableErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

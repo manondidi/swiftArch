@@ -28,17 +28,25 @@ class StateTableView: UITableView {
    private var refreshCallback:refreshCallback?
    private var loadMoreCallback:loadMoreCallback?
     
-    func setUpLoadView(view:UIView) {
+    func setLoadView(view:UIView) {
         loadView=view;
     }
     
-    func setUpEmptyiew(view:UIView) {
+    func setEmptyiew(view:UIView) {
         emptyView=view;
     }
     
     
-    func setUpErroriew(view:UIView) {
+    func setErroriew(view:UIView) {
         errorView=view;
+    }
+    
+    func setRefreshHeader(refreshHeader:MJRefreshHeader)  {
+        self.refreshHeader=refreshHeader
+    }
+    
+    func setLoadMoreFooter(loadMoreFooter:MJRefreshFooter)  {
+        self.loadMoreFooter=loadMoreFooter
     }
     
     func setRefreshCallback(refreshCallback:@escaping refreshCallback){
@@ -103,7 +111,8 @@ class StateTableView: UITableView {
             self.showLoading()
         })
         
-        self.showError()
+        self.showContent()
+        
         
     }
     @objc func onRefresh(){
