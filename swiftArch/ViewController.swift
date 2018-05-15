@@ -37,6 +37,18 @@ class ViewController: UIViewController {
         btn2.onTap {
             self.navigationController?.pushViewController(StyleTableDemoVC(), animated: true)
         }
+        
+        
+        let btn3=UIButton(type: UIButtonType.roundedRect)
+        self.view.addSubview(btn3)
+        btn3.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(btn2.snp.bottom).offset(30)
+        }
+        btn3.setTitle("继承自BaseViewcontrollerDemo", for: UIControlState.normal)
+        btn3.onTap {
+            self.navigationController?.pushViewController(DemoViewController(), animated: true)
+        }
     }
 
 }

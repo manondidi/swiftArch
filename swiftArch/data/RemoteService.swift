@@ -17,10 +17,8 @@ class RemoteService {
     typealias failureCallback = (_ statusCode:Int?,_ msg:String?) -> Void
     
     func getUser(userId:String,password:String,success:@escaping ((User?)->()),failure:@escaping failureCallback ){
-        
         httpClient.request(url: "user/{userId}", method: .get, pathParams: ["userId":"manondidi" ], params: ["password":"123"])
             .responseModelAndCache(success: { (result:Result<User>) in
-                
                 if(self.checkSuccess(result: result)){
                     success(self.getData(result: result))
                 }
@@ -49,6 +47,7 @@ class RemoteService {
             return result.data;
         }
         else{
+            
             return nil
         }
     }

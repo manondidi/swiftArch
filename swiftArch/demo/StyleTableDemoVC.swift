@@ -37,8 +37,7 @@ class StyleTableDemoVC: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.tableView.endRefresh()
                 self.tableView.showContent()
-            }
-           
+            } 
         }
        
         self.tableView.showEmpty()
