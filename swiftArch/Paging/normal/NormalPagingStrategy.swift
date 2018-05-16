@@ -8,12 +8,14 @@
 
 import UIKit
 
-class NormalPagingStrategy: PagingStrategy {
+class NormalPagingStrategy: PagingStrategy { 
+    
     var pageInfo:NormalPageInfo=NormalPageInfo()
     
     convenience init(startPageNum:Int=0,pageSize:Int=20) {
         self.init()
         pageInfo.startPageNum=startPageNum
+        pageInfo.pageNum=startPageNum;
         pageInfo.pageSize=pageSize
     }
     
@@ -21,17 +23,17 @@ class NormalPagingStrategy: PagingStrategy {
         pageInfo.pageNum+=1
     }
     
-    func resetPage(info:Any) {
+    func resetPage() {
         pageInfo.pageNum=pageInfo.startPageNum
     }
     
     func getPageInfo() -> Any {
         return pageInfo
     }
-    func checkFinish(result:Any,listSize: Int) -> Bool {
-        let dic = result as? [String:Any]
-        pageInfo.totalCount=dic?["totalCount"] as! Int
-        return pageInfo.totalCount>=listSize
+    func checkFinish(result:NSObject,listSize: Int) -> Bool {
+        
+        pageInfo.totalCount=(result.value(forKey: "totalNum") as! NSNumber).intValue
+        return pageInfo.totalCount<=listSize
     }
     
  

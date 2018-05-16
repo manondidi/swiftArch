@@ -28,14 +28,20 @@ class RemoteService {
             }, failure: {statusCode,error in
                 failure(statusCode,error.localizedDescription)
             })
-        
-        //如果接口还没做好,而我们又知道了接口的格式
-        //可以将json字符串 保存在本地json文件里面 通过mockservice进行调试
-//        在此处
-//
-//        mockService.getUser(userId: userId, password: password) { (user) in
-//            success(user)
-//        }
+    }
+    
+    func getGame(pageNum:Int,pageSize:Int,success:@escaping ((NormalPageModel<GameModel>?)->()),failure:@escaping failureCallback)  {
+        httpClient.request(url: "archServer/games", method: .get ,params:["pageNum":"\(pageNum)","pageSize":"\(pageSize)"])
+            .responseModel(success: {(result:Result<NormalPageModel<GameModel>>) in
+                if(self.checkSuccess(result: result)){
+                    success(self.getData(result: result))
+                }
+                else{
+                    failure(result.status,result.msg)
+                }
+            }, failure: {statusCode,error in
+                failure(statusCode,error.localizedDescription)
+            })
     }
     
     

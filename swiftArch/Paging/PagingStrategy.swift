@@ -11,7 +11,7 @@ import UIKit
 ///分页策略
 protocol PagingStrategy{
     func addPage(info:Any)
-    func resetPage(info:Any)
+    func resetPage()
     func getPageInfo()->Any
-    func checkFinish(result:Any,listSize: Int) -> Bool
+    func checkFinish(result:NSObject,listSize: Int) -> Bool
 }

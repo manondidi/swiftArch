@@ -49,6 +49,18 @@ class ViewController: UIViewController {
         btn3.onTap {
             self.navigationController?.pushViewController(DemoViewController(), animated: true)
         }
+        
+        
+        let btn4=UIButton(type: UIButtonType.roundedRect)
+        self.view.addSubview(btn4)
+        btn4.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(btn3.snp.bottom).offset(30)
+        }
+        btn4.setTitle("继承自pagingViewcontrollerDemo", for: UIControlState.normal)
+        btn4.onTap {
+            self.navigationController?.pushViewController(PaingTalbeDemoViewController(), animated: true)
+        }
     }
 
 }

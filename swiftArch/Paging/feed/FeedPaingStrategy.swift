@@ -26,7 +26,7 @@ class FeedPaingStrategy: PagingStrategy {
         pageInfo.offsetId=feed?.value(forKey: offsetIdKey) as? String
     }
     
-    func resetPage(info:Any) {
+    func resetPage() {
         
         pageInfo.type="new"
         pageInfo.offsetId=""
@@ -36,7 +36,7 @@ class FeedPaingStrategy: PagingStrategy {
          return pageInfo
     }
     
-    func checkFinish(result: Any, listSize: Int) -> Bool {
+    func checkFinish(result: NSObject, listSize: Int) -> Bool {
         let arr=result as! [Any]
         return arr.count==0
     }

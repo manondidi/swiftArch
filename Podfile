@@ -11,6 +11,7 @@ target 'swiftArch' do
     pod 'MJRefresh'
     pod 'Closures'
     pod 'Toast-Swift', '~> 3.0.1'
+    pod 'Kingfisher', '~>4.8.0'
 end
 
 

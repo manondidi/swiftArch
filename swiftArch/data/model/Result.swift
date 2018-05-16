@@ -8,13 +8,13 @@
 
 import HandyJSON
 
-class Result<T>:HandyJSON{
+class Result<T:HandyJSON>:NSObject,HandyJSON{
     
     var status:Int?
     var msg:String?
     var data:T?
    
-    required  init() {}
+    required  override init() {}
     
      
      

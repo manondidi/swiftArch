@@ -8,13 +8,13 @@
 
 import UIKit
 import HandyJSON
-class SocialResult<T>:HandyJSON{
+class SocialResult<T:HandyJSON>:NSObject,HandyJSON{
     
     var code:Int?
     var message:String?
     var data:T?
     
-    required   init() {}
+    required   override init() {}
     
     
    

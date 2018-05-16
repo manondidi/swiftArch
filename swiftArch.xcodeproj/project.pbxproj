@@ -36,6 +36,14 @@
 		61707A6320A3E76500B378FD /* PageStateEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707A6220A3E76500B378FD /* PageStateEmptyView.swift */; };
 		61707A6520A3E77700B378FD /* PageStateErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707A6420A3E77700B378FD /* PageStateErrorView.swift */; };
 		61707A6720A3E78900B378FD /* PageStateLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707A6620A3E78900B378FD /* PageStateLoadView.swift */; };
+		617E89FC20AC00A2006C358E /* UITableView+Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E89FB20AC00A2006C358E /* UITableView+Binder.swift */; };
+		617E8A0220AC04E3006C358E /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E8A0020AC04E3006C358E /* GameCell.swift */; };
+		617E8A0320AC04E3006C358E /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617E8A0120AC04E3006C358E /* GameCell.xib */; };
+		617E8A0520AC07A8006C358E /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E8A0420AC07A8006C358E /* GameModel.swift */; };
+		617E8A0820AC102E006C358E /* feed.json in Resources */ = {isa = PBXBuildFile; fileRef = 617E8A0620AC102E006C358E /* feed.json */; };
+		617E8A0920AC102E006C358E /* game.json in Resources */ = {isa = PBXBuildFile; fileRef = 617E8A0720AC102E006C358E /* game.json */; };
+		617E8A0B20AC124A006C358E /* PaingTalbeDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E8A0A20AC124A006C358E /* PaingTalbeDemoViewController.swift */; };
+		617E8A0D20AC18AB006C358E /* NormalPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E8A0C20AC18AB006C358E /* NormalPageModel.swift */; };
 		618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E36208584CA004F06F7 /* RemoteService.swift */; };
 		618F8E39208584D7004F06F7 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E38208584D7004F06F7 /* MockService.swift */; };
 		618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E3A2085858A004F06F7 /* DataManager.swift */; };
@@ -100,6 +108,14 @@
 		61707A6220A3E76500B378FD /* PageStateEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageStateEmptyView.swift; sourceTree = "<group>"; };
 		61707A6420A3E77700B378FD /* PageStateErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageStateErrorView.swift; sourceTree = "<group>"; };
 		61707A6620A3E78900B378FD /* PageStateLoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageStateLoadView.swift; sourceTree = "<group>"; };
+		617E89FB20AC00A2006C358E /* UITableView+Binder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Binder.swift"; sourceTree = "<group>"; };
+		617E8A0020AC04E3006C358E /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		617E8A0120AC04E3006C358E /* GameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
+		617E8A0420AC07A8006C358E /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		617E8A0620AC102E006C358E /* feed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feed.json; sourceTree = "<group>"; };
+		617E8A0720AC102E006C358E /* game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game.json; sourceTree = "<group>"; };
+		617E8A0A20AC124A006C358E /* PaingTalbeDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaingTalbeDemoViewController.swift; sourceTree = "<group>"; };
+		617E8A0C20AC18AB006C358E /* NormalPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalPageModel.swift; sourceTree = "<group>"; };
 		618F8E36208584CA004F06F7 /* RemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
 		618F8E38208584D7004F06F7 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		618F8E3A2085858A004F06F7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -189,6 +205,7 @@
 			children = (
 				61244C5720A1849400BBF6BF /* state */,
 				61244C5220A1467000BBF6BF /* StateTableView.swift */,
+				617E89FB20AC00A2006C358E /* UITableView+Binder.swift */,
 			);
 			path = tableview;
 			sourceTree = "<group>";
@@ -209,6 +226,7 @@
 		61244C6620A2E7A500BBF6BF /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				617E89FD20AC04B2006C358E /* cell */,
 				61707A5620A3363100B378FD /* TableDemoVC.swift */,
 				61707A5720A3363100B378FD /* TableDemoVC.xib */,
 				61707A5A20A33AA900B378FD /* StyleTableDemoVC.swift */,
@@ -217,6 +235,7 @@
 				61079DAF20A9271F00624424 /* UserStyleLoadView.swift */,
 				61079DB120A9273100624424 /* UserStyleLoadView.xib */,
 				61079DBB20A991E900624424 /* DemoPageViewController.swift */,
+				617E8A0A20AC124A006C358E /* PaingTalbeDemoViewController.swift */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -239,6 +258,15 @@
 				61079DB320A929AD00624424 /* PagingViewController.swift */,
 			);
 			path = basePage;
+			sourceTree = "<group>";
+		};
+		617E89FD20AC04B2006C358E /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				617E8A0020AC04E3006C358E /* GameCell.swift */,
+				617E8A0120AC04E3006C358E /* GameCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		618F8E3220858348004F06F7 /* data */ = {
@@ -289,6 +317,8 @@
 				61C0134E208DBABA00BBE4DC /* Result.swift */,
 				61C01358208ED07E00BBE4DC /* CMSResult.swift */,
 				61C0135A208ED09A00BBE4DC /* SocialResult.swift */,
+				617E8A0420AC07A8006C358E /* GameModel.swift */,
+				617E8A0C20AC18AB006C358E /* NormalPageModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -296,6 +326,8 @@
 		61C0135D208F28A800BBE4DC /* jsonFile */ = {
 			isa = PBXGroup;
 			children = (
+				617E8A0620AC102E006C358E /* feed.json */,
+				617E8A0720AC102E006C358E /* game.json */,
 				61C0135E208F28C600BBE4DC /* getUser.json */,
 			);
 			path = jsonFile;
@@ -465,10 +497,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				61D472062080457A009B10F5 /* LaunchScreen.storyboard in Resources */,
+				617E8A0820AC102E006C358E /* feed.json in Resources */,
+				617E8A0320AC04E3006C358E /* GameCell.xib in Resources */,
 				61D472032080457A009B10F5 /* Assets.xcassets in Resources */,
 				61D472012080457A009B10F5 /* Main.storyboard in Resources */,
 				61244C5B20A1852000BBF6BF /* DefaultTableLoadView.xib in Resources */,
 				61079DB220A9273100624424 /* UserStyleLoadView.xib in Resources */,
+				617E8A0920AC102E006C358E /* game.json in Resources */,
 				61C0135F208F28C600BBE4DC /* getUser.json in Resources */,
 				61244C6520A1A02600BBF6BF /* DefaultTableErrorView.xib in Resources */,
 				61707A5920A3363100B378FD /* TableDemoVC.xib in Resources */,
@@ -507,6 +542,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Closures/Closures.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
@@ -518,6 +554,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Closures.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
@@ -600,15 +637,18 @@
 			files = (
 				61D471FE2080457A009B10F5 /* ViewController.swift in Sources */,
 				61244C5620A183C700BBF6BF /* R.generated.swift in Sources */,
+				617E8A0B20AC124A006C358E /* PaingTalbeDemoViewController.swift in Sources */,
 				61244C5920A1850400BBF6BF /* DefaultTableLoadView.swift in Sources */,
 				61707A6720A3E78900B378FD /* PageStateLoadView.swift in Sources */,
 				61079DAC20A7180600624424 /* BaseViewController.swift in Sources */,
 				61C01359208ED07E00BBE4DC /* CMSResult.swift in Sources */,
 				61079DB020A9271F00624424 /* UserStyleLoadView.swift in Sources */,
+				617E8A0520AC07A8006C358E /* GameModel.swift in Sources */,
 				61079DD620AA83E300624424 /* NormalPagingStrategy.swift in Sources */,
 				618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */,
 				618F8E39208584D7004F06F7 /* MockService.swift in Sources */,
 				61244C4B209C597B00BBF6BF /* CacheManager.swift in Sources */,
+				617E8A0220AC04E3006C358E /* GameCell.swift in Sources */,
 				61C0134D208DAEBA00BBE4DC /* User.swift in Sources */,
 				61079DD920AA83F500624424 /* FeedPageInfo.swift in Sources */,
 				61A4CEC2208A1E800097AC72 /* HttpClient.swift in Sources */,
@@ -621,6 +661,7 @@
 				61707A5820A3363100B378FD /* TableDemoVC.swift in Sources */,
 				61244C5320A1467000BBF6BF /* StateTableView.swift in Sources */,
 				61079DD420AA83E300624424 /* PagingStrategy.swift in Sources */,
+				617E89FC20AC00A2006C358E /* UITableView+Binder.swift in Sources */,
 				61079DAE20A9259700624424 /* DemoViewController.swift in Sources */,
 				61244C5D20A19B5200BBF6BF /* DefaultTableEmptyView.swift in Sources */,
 				61079DD520AA83E300624424 /* FeedPaingStrategy.swift in Sources */,
@@ -628,6 +669,7 @@
 				61C0134F208DBABA00BBE4DC /* Result.swift in Sources */,
 				61707A6520A3E77700B378FD /* PageStateErrorView.swift in Sources */,
 				618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */,
+				617E8A0D20AC18AB006C358E /* NormalPageModel.swift in Sources */,
 				61707A5D20A34B2200B378FD /* UserStyleTableEmptyView.swift in Sources */,
 				61079DD720AA83E300624424 /* NormalPageInfo.swift in Sources */,
 				61079DB420A929AD00624424 /* PagingViewController.swift in Sources */,
