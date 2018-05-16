@@ -16,6 +16,10 @@ class Result<T>:NSObject,HandyJSON{
    
     required  override init() {}
     
+    func checkSuccess( ) -> Bool {
+        return status==0
+    }
+    
      
      
 }

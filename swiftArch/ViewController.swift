@@ -73,6 +73,8 @@ class ViewController: UIViewController {
         btn5.onTap {
             self.navigationController?.pushViewController(PagingOffsetIdDemoViewController(), animated: true)
         }
+        
+       
     }
 
 }
