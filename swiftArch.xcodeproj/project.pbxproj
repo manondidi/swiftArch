@@ -12,7 +12,6 @@
 		61079DB020A9271F00624424 /* UserStyleLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61079DAF20A9271F00624424 /* UserStyleLoadView.swift */; };
 		61079DB220A9273100624424 /* UserStyleLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61079DB120A9273100624424 /* UserStyleLoadView.xib */; };
 		61079DB420A929AD00624424 /* PagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61079DB320A929AD00624424 /* PagingViewController.swift */; };
-		61079DBC20A991E900624424 /* DemoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61079DBB20A991E900624424 /* DemoPageViewController.swift */; };
 		61079DD420AA83E300624424 /* PagingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61079DCE20AA83E200624424 /* PagingStrategy.swift */; };
 		61079DD520AA83E300624424 /* FeedPaingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61079DD020AA83E300624424 /* FeedPaingStrategy.swift */; };
 		61079DD620AA83E300624424 /* NormalPagingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61079DD220AA83E300624424 /* NormalPagingStrategy.swift */; };
@@ -44,6 +43,10 @@
 		617E8A0920AC102E006C358E /* game.json in Resources */ = {isa = PBXBuildFile; fileRef = 617E8A0720AC102E006C358E /* game.json */; };
 		617E8A0B20AC124A006C358E /* PaingTalbeDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E8A0A20AC124A006C358E /* PaingTalbeDemoViewController.swift */; };
 		617E8A0D20AC18AB006C358E /* NormalPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E8A0C20AC18AB006C358E /* NormalPageModel.swift */; };
+		617E8A0F20AC3715006C358E /* PagingOffsetIdDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E8A0E20AC3715006C358E /* PagingOffsetIdDemoViewController.swift */; };
+		617E8A1220AC3753006C358E /* FeedArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E8A1020AC3753006C358E /* FeedArticleCell.swift */; };
+		617E8A1320AC3753006C358E /* FeedArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617E8A1120AC3753006C358E /* FeedArticleCell.xib */; };
+		617E8A1520AC39F9006C358E /* FeedArtileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E8A1420AC39F9006C358E /* FeedArtileModel.swift */; };
 		618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E36208584CA004F06F7 /* RemoteService.swift */; };
 		618F8E39208584D7004F06F7 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E38208584D7004F06F7 /* MockService.swift */; };
 		618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E3A2085858A004F06F7 /* DataManager.swift */; };
@@ -84,7 +87,6 @@
 		61079DAF20A9271F00624424 /* UserStyleLoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStyleLoadView.swift; sourceTree = "<group>"; };
 		61079DB120A9273100624424 /* UserStyleLoadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserStyleLoadView.xib; sourceTree = "<group>"; };
 		61079DB320A929AD00624424 /* PagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingViewController.swift; sourceTree = "<group>"; };
-		61079DBB20A991E900624424 /* DemoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoPageViewController.swift; sourceTree = "<group>"; };
 		61079DCE20AA83E200624424 /* PagingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingStrategy.swift; sourceTree = "<group>"; };
 		61079DD020AA83E300624424 /* FeedPaingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPaingStrategy.swift; sourceTree = "<group>"; };
 		61079DD220AA83E300624424 /* NormalPagingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalPagingStrategy.swift; sourceTree = "<group>"; };
@@ -116,6 +118,10 @@
 		617E8A0720AC102E006C358E /* game.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = game.json; sourceTree = "<group>"; };
 		617E8A0A20AC124A006C358E /* PaingTalbeDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaingTalbeDemoViewController.swift; sourceTree = "<group>"; };
 		617E8A0C20AC18AB006C358E /* NormalPageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalPageModel.swift; sourceTree = "<group>"; };
+		617E8A0E20AC3715006C358E /* PagingOffsetIdDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingOffsetIdDemoViewController.swift; sourceTree = "<group>"; };
+		617E8A1020AC3753006C358E /* FeedArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedArticleCell.swift; sourceTree = "<group>"; };
+		617E8A1120AC3753006C358E /* FeedArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedArticleCell.xib; sourceTree = "<group>"; };
+		617E8A1420AC39F9006C358E /* FeedArtileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedArtileModel.swift; sourceTree = "<group>"; };
 		618F8E36208584CA004F06F7 /* RemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
 		618F8E38208584D7004F06F7 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		618F8E3A2085858A004F06F7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -234,8 +240,8 @@
 				61079DAD20A9259700624424 /* DemoViewController.swift */,
 				61079DAF20A9271F00624424 /* UserStyleLoadView.swift */,
 				61079DB120A9273100624424 /* UserStyleLoadView.xib */,
-				61079DBB20A991E900624424 /* DemoPageViewController.swift */,
 				617E8A0A20AC124A006C358E /* PaingTalbeDemoViewController.swift */,
+				617E8A0E20AC3715006C358E /* PagingOffsetIdDemoViewController.swift */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -265,6 +271,8 @@
 			children = (
 				617E8A0020AC04E3006C358E /* GameCell.swift */,
 				617E8A0120AC04E3006C358E /* GameCell.xib */,
+				617E8A1020AC3753006C358E /* FeedArticleCell.swift */,
+				617E8A1120AC3753006C358E /* FeedArticleCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -319,6 +327,7 @@
 				61C0135A208ED09A00BBE4DC /* SocialResult.swift */,
 				617E8A0420AC07A8006C358E /* GameModel.swift */,
 				617E8A0C20AC18AB006C358E /* NormalPageModel.swift */,
+				617E8A1420AC39F9006C358E /* FeedArtileModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -508,6 +517,7 @@
 				61244C6520A1A02600BBF6BF /* DefaultTableErrorView.xib in Resources */,
 				61707A5920A3363100B378FD /* TableDemoVC.xib in Resources */,
 				61244C5F20A19B6500BBF6BF /* DefaultTableEmptyView.xib in Resources */,
+				617E8A1320AC3753006C358E /* FeedArticleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,8 +666,10 @@
 				61707A6120A3E6E800B378FD /* PageSateManager.swift in Sources */,
 				61707A5B20A33AA900B378FD /* StyleTableDemoVC.swift in Sources */,
 				61C01351208DC27B00BBE4DC /* ResponseJsonHandle.swift in Sources */,
+				617E8A0F20AC3715006C358E /* PagingOffsetIdDemoViewController.swift in Sources */,
 				61707A6320A3E76500B378FD /* PageStateEmptyView.swift in Sources */,
 				61D471FC2080457A009B10F5 /* AppDelegate.swift in Sources */,
+				617E8A1220AC3753006C358E /* FeedArticleCell.swift in Sources */,
 				61707A5820A3363100B378FD /* TableDemoVC.swift in Sources */,
 				61244C5320A1467000BBF6BF /* StateTableView.swift in Sources */,
 				61079DD420AA83E300624424 /* PagingStrategy.swift in Sources */,
@@ -665,12 +677,12 @@
 				61079DAE20A9259700624424 /* DemoViewController.swift in Sources */,
 				61244C5D20A19B5200BBF6BF /* DefaultTableEmptyView.swift in Sources */,
 				61079DD520AA83E300624424 /* FeedPaingStrategy.swift in Sources */,
-				61079DBC20A991E900624424 /* DemoPageViewController.swift in Sources */,
 				61C0134F208DBABA00BBE4DC /* Result.swift in Sources */,
 				61707A6520A3E77700B378FD /* PageStateErrorView.swift in Sources */,
 				618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */,
 				617E8A0D20AC18AB006C358E /* NormalPageModel.swift in Sources */,
 				61707A5D20A34B2200B378FD /* UserStyleTableEmptyView.swift in Sources */,
+				617E8A1520AC39F9006C358E /* FeedArtileModel.swift in Sources */,
 				61079DD720AA83E300624424 /* NormalPageInfo.swift in Sources */,
 				61079DB420A929AD00624424 /* PagingViewController.swift in Sources */,
 				61244C6120A19FF600BBF6BF /* DefaultTableErrorView.swift in Sources */,

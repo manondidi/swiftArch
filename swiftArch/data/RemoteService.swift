@@ -44,6 +44,24 @@ class RemoteService {
             })
     }
     
+    func getFeedArticle(direction:String,pageSize:Int,offsetId:String?,success:@escaping ((Array<FeedArtileModel>?)->()),failure:@escaping failureCallback)  {
+        var dic=Dictionary<String, String>()
+        dic["pageSize"]="\(pageSize)"
+        dic["directon"]=direction
+        dic["offsetId"]=offsetId
+        httpClient.request(url: "archServer/feeds", method: .get ,params:dic)
+             .responseModel(success: {(result:Result<Array<FeedArtileModel>>) in
+                if(self.checkSuccess(result: result)){
+                    success(self.getData(result: result))
+                }
+                else{
+                    failure(result.status,result.msg)
+                }
+            }, failure: {statusCode,error in
+                failure(statusCode,error.localizedDescription)
+            })
+    }
+    
     
    
 

@@ -29,7 +29,7 @@ class FeedPaingStrategy: PagingStrategy {
     func resetPage() {
         
         pageInfo.type="new"
-        pageInfo.offsetId=""
+        pageInfo.offsetId=nil
     }
     
     func getPageInfo() -> Any {

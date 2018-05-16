@@ -8,7 +8,7 @@
 
 import HandyJSON
 
-class Result<T:HandyJSON>:NSObject,HandyJSON{
+class Result<T>:NSObject,HandyJSON{
     
     var status:Int?
     var msg:String?

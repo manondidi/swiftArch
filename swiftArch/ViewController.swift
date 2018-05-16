@@ -57,9 +57,21 @@ class ViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.top.equalTo(btn3.snp.bottom).offset(30)
         }
-        btn4.setTitle("继承自pagingViewcontrollerDemo", for: UIControlState.normal)
+        btn4.setTitle("继承自pagingViewcontrollerDemo(pageNum pageSize分页)", for: UIControlState.normal)
         btn4.onTap {
             self.navigationController?.pushViewController(PaingTalbeDemoViewController(), animated: true)
+        }
+        
+        
+        let btn5=UIButton(type: UIButtonType.roundedRect)
+        self.view.addSubview(btn5)
+        btn5.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(btn4.snp.bottom).offset(30)
+        }
+        btn5.setTitle("继承自pagingViewcontrollerDemo(offset分页)", for: UIControlState.normal)
+        btn5.onTap {
+            self.navigationController?.pushViewController(PagingOffsetIdDemoViewController(), animated: true)
         }
     }
 

@@ -58,6 +58,9 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
     
     func  onTableRresh() {
         self.pagingStrategy?.resetPage()
+        if self.dataSource.count==0 {
+            self.tableView?.showLoading()
+        }
         self.onLoadData(pagingStrategy: self.pagingStrategy!)
     }
     func onTableLoadMore(){
@@ -105,8 +108,7 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         self.dataSource += dataSource
         self.tableView?.reloadData()
     }
-    func loadFail(){
-        
+    func loadFail(){ 
         self.tableView?.showError()
     }
     
@@ -121,6 +123,9 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
        return cell!
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView?.beginRefresh()
+    }
  
     
     
