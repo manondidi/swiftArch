@@ -15,13 +15,13 @@ class DemoViewController: BaseViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadData(userId: "manondidi", password: "12345566")
+        self.loadData(userId: "manondidi", password: "12345566")//错误的账号密码 肯定失败
        
     }
     
     override func onReload() {
         self.showLoading() 
-        self.loadData(userId: "manondidi", password: "123")
+        self.loadMockData(userId: "manondidi", password: "12345566") // 这里走mock 肯定成功
         
     }
     ///在此处定制各种 stateView
@@ -31,6 +31,16 @@ class DemoViewController: BaseViewController {
     func loadData(userId:String,password:String){
         self.showLoading()
         remoteService.getUser(userId: userId, password: password, success: { (user) in
+            self.showContent()
+            self.view.makeToast("success")
+        }) { (code, msg) in
+            self.showError()
+        }
+    }
+    
+    func loadMockData(userId:String,password:String){
+        self.showLoading()
+        remoteService.getUserMock(userId: userId, password: password, success: { (user) in
             self.showContent()
             self.view.makeToast("success")
         }) { (code, msg) in

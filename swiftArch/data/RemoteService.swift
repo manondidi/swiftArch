@@ -62,7 +62,11 @@ class RemoteService {
             })
     }
     
-    
+    func getUserMock(userId:String,password:String,success:@escaping ((User?)->()),failure:@escaping failureCallback ){
+        mockService.getUser(userId: "", password: "") { (user) in
+            success(user)
+        }
+    }
    
 
     
