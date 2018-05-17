@@ -15,7 +15,10 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
     
     var pagingStrategy:PagingStrategy?
     
-    private var dataSource =  Array<NSObject>()
+    private var dataSource = Array<NSObject>()
+    private var sectionModelList =  Array<NSObject>()
+    
+    private var sectionData = Array<Array<NSObject>>()
     
     
     override func initView() {
@@ -23,6 +26,7 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         self.pagingStrategy=self.getPagingStrategy()
         self.initTableView()
         self.registerCellModel()
+        self.registerSectionHeaderModel()
         self.setTalbeStateView()
         self.tableView?.setUpState()
         self.tableView?.tableFooterView=UIView()
@@ -37,12 +41,19 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         self.tableView?.delegate=self;
     }
     
+    
+    ///子类可以重写 用于注册sectionHeader和模型的关系
+    func registerSectionHeaderModel()  {
+        
+    }
+    
     ///子类必须重写 用于注册cell和模型的关系
     func registerCellModel()  {
         
 //        self.tableView?.registerCellNib(nib: <#T##UINib#>, modelClass: <#T##AnyClass#>)
 //        self.tableView?.registerCellClass(cellClass: <#T##AnyClass#>, modelClass: <#T##AnyClass#>)
     }
+    
     
     ///提供分页策略 必须重写
     func getPagingStrategy() -> PagingStrategy {
@@ -113,19 +124,80 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return self.dataSource.count
+       
+        if(self.sectionData.count==0){
+            return self.dataSource.count
+            
+        }else{
+            return self.sectionData[section].count
+        }
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let item=self.dataSource[indexPath.row]
+        
+        var sectionDataSource = Array<NSObject>()
+        
+        if(self.sectionData.count==0){
+              sectionDataSource = self.dataSource
+            
+        }else{
+              sectionDataSource = self.sectionData[indexPath.section]
+        }
+       let item=sectionDataSource[indexPath.row]
        let cellKey=String(describing:item.classForCoder.self)
        let cell = tableView.dequeueReusableCell(withIdentifier: cellKey)
        cell?.setValue(item, forKey: "model")
        return cell!
     }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        if (section<self.sectionModelList.count) { 
+            let item=self.sectionModelList[section]
+            let header:UIView = tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing:item.classForCoder.self))!
+            header.setValue(item, forKey: "model")
+            return header
+        }
+         return nil
+    }
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+       self.sectionModelList=Array<NSObject>()
+       let sectionCount = self.dataSource.filter { (data) -> Bool in
+          let isSectionModel = (tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing:data.classForCoder.self)) != nil)
+          if(isSectionModel){
+            self.sectionModelList.append(data)
+          }
+           return isSectionModel
+        }.count
+        
+        if sectionCount == 0 {
+            sectionData.removeAll()
+        }else{
+            
+            var dataInSection:Array<NSObject>?=nil
+            self.dataSource.forEach { (data) in
+                if(self.sectionModelList.contains(data)){
+                    if(dataInSection != nil){
+                        self.sectionData.append( dataInSection!)
+                    }
+                    dataInSection = Array<NSObject>()
+                }else{
+                    dataInSection!.append(data)
+                }
+                
+            } 
+            self.sectionData.append( dataInSection!)
+        }
+        return sectionCount==0 ? 1:sectionCount
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         self.tableView?.beginRefresh()
     }
+    
+    
  
     
     

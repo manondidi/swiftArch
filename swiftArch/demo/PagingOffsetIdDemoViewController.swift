@@ -42,8 +42,7 @@ class PagingOffsetIdDemoViewController: PagingViewController {
         let strategy:FeedPaingStrategy=pagingStrategy as! FeedPaingStrategy;
         let pageInfo:FeedPageInfo=strategy.getPageInfo() as! FeedPageInfo
         
-        self.remoteService.getFeedArticle(direction: pageInfo.type, pageSize: pageInfo.pageSize, offsetId: pageInfo.offsetId, success: { (feedArticleList) in
-            
+        self.remoteService.getFeedArticle(direction: pageInfo.type, pageSize: pageInfo.pageSize, offsetId: pageInfo.offsetId, success: { (feedArticleList) in 
              if(pageInfo.isFirstPage()){
                 self.pagingList=feedArticleList!
                 self.datasource=feedArticleList!
