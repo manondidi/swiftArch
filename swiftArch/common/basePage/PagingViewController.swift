@@ -156,7 +156,8 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
             header.setValue(item, forKey: "model")
             return header
         }
-         return nil
+         
+         return UIView()
     }
     
     

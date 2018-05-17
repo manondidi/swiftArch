@@ -22,6 +22,7 @@ class GameDateHeader: UITableViewHeaderFooterView {
  
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
+        self.contentView.backgroundColor=UIColor.white
         labelDate=UILabel()
         labelDate?.textColor=UIColor.black
         labelDate?.font=UIFont.systemFont(ofSize: 12)
