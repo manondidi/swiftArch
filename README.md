@@ -31,8 +31,8 @@ UI组件
 页面
 
 - [x] ​		页面状态视图展示和个性化定制
- - [x] ​	分页计算策略模式  
-  - [x] 列表model解耦
+   - [x] ​分页计算策略模式  
+- [x] 列表model解耦
   - [ ] section支持
 
 
@@ -40,8 +40,49 @@ UI组件
 文档
 
 - [ ] ​		使用文档
- - [x] ​	详细例子
+   - [x] ​详细例子
 
+
+- [ ] 代码生成器
+
+
+
+
+
+#### 说明
+
+工程使用swift4.1 
+
+引用了如下的第三方 
+
+    pod 'Alamofire', '~> 4.7'  网络库
+    pod 'HandyJSON', '~> 4.1.1' json解析库
+    pod 'SQLite.swift', '~> 0.11.5' sql库
+    pod 'SnapKit', '~> 4.0.0'  autulayout库
+    pod 'R.swift'   资源管理库
+    pod 'MJRefresh' 下拉刷新库
+    pod 'Closures'  类似oc上的blockkit,非常方便
+    pod 'Toast-Swift', '~> 3.0.1'  toast库
+    pod 'Kingfisher', '~>4.8.0'  网络图片库
+
+
+#### 安装
+
+1.cd进工程目录 pod install
+
+2.如果你不支持swift4.1 请自行升级xcode
+
+3.由于使用了[R.swift](https://github.com/mac-cain13/R.swift) 所以pod install之后无法直接运行
+
+可以参考R.swfit的配置  
+
+我直接说明下也可以
+
+cmd+b build整个工程 如果成功 可以打开工程文件夹
+
+看到 R.generated.swift 文件
+
+ok 拖进工程里 注意不要勾选Copy items if needed
 
 
 
