@@ -8,6 +8,9 @@
 
 import UIKit
 
+///一个service 持有一个httpclient
+///我的意思是 一个httpclient管理一个baseUrl 通常对应一个系统
+///同一个系统下面 head cookie 返回值result节点和 sucees条件是一样的
 class RemoteService {
     
     let httpClient = HttpClient(baseUrl:DataManager.shareInstance.baseUrl,headers:["X-Requested-With":"XMLHttpRequest"])
@@ -45,9 +48,10 @@ class RemoteService {
     }
     
     func getFeedArticle(direction:String,pageSize:Int,offsetId:String?,success:@escaping ((Array<FeedArtileModel>?)->()),failure:@escaping failureCallback)  {
+         
         var dic=Dictionary<String, String>()
         dic["pageSize"]="\(pageSize)"
-        dic["directon"]=direction
+        dic["direction"]=direction
         dic["offsetId"]=offsetId
         httpClient.request(url: "archServer/feeds", method: .get ,params:dic)
              .responseModel(success: {(result:Result<Array<FeedArtileModel>>) in
