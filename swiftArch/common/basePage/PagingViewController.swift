@@ -43,7 +43,12 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
     
     
     ///子类可以重写 用于注册sectionHeader和模型的关系
+    ///框架已经帮你做好了 emptyHeader的注册
+    /// 使用sectionheader的规则是 sh=sectionheederModel c=cellModel 如下
+    /// 正确 sh,c....sh,c...     错误 c...sh
+    ///但是由于业务需要不可能一开始就是cell所以,往数组的起始位置塞入EmptyHeaderModel对象做占位
     func registerSectionHeaderModel()  {
+        self.tableView?.registerHeaderClass(headerClass: EmptyHeader.self, modelClass: EmptyHeaderModel.self)
         
     }
     
@@ -152,11 +157,10 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         
         if (section<self.sectionModelList.count) { 
             let item=self.sectionModelList[section]
-            let header:UIView = tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing:item.classForCoder.self))!
+            let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing:item.classForCoder.self))!
             header.setValue(item, forKey: "model")
             return header
-        }
-         
+        } 
          return UIView()
     }
     

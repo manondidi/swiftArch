@@ -38,9 +38,11 @@ class PaingTalbeDemoViewController: PagingViewController {
         self.tableView?.setEmptyiew(view: emptyView)
     }
     override func registerCellModel() {
+        super.registerCellModel()
         self.tableView?.registerCellNib(nib: R.nib.gameCell(), modelClass: GameModel.self)
     }
     override func registerSectionHeaderModel() {
+        super.registerSectionHeaderModel()
         self.tableView?.registerHeaderClass(headerClass: GameDateHeader.self, modelClass: GameDateModel.self)
     }
     
@@ -58,11 +60,11 @@ class PaingTalbeDemoViewController: PagingViewController {
                 self.pagingList=(gameListModel?.listData)!
                 self.datasource=(gameListModel?.listData)!
                 
-                self.datasource.insert(GameDateModel(date:"2011-11-11"), at: 0)
+//                self.datasource.insert(EmptyHeaderModel(), at: 0)//第一行一定是Section
+                                                                    //如果和业务相悖,就插入emptyheadermodel占位
+                self.datasource.insert(GameDateModel(date:"今天"), at: 0)
             }else{
                 self.pagingList+=(gameListModel?.listData)!
-                
-                
                 self.datasource.append(GameDateModel(date:"2011-11-\(Int(arc4random()%30)+1)"))
                 self.datasource.append(contentsOf: (gameListModel?.listData)!) 
             }
