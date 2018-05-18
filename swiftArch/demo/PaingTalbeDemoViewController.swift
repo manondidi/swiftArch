@@ -17,7 +17,8 @@ class PaingTalbeDemoViewController: PagingViewController {
  
    //可以不需要重写该方法
     override func initView() {
-        super.initView() 
+        super.initView()
+        self.title="真实的分页请求(还支持section)"
     }
      
     override func initTableView() {

@@ -18,6 +18,7 @@ class PagingOffsetIdDemoViewController: PagingViewController {
     //可以不需要重写该方法
     override func initView() {
         super.initView()
+        self.title="真实的分页请求"
     }
     
     override func initTableView() {
