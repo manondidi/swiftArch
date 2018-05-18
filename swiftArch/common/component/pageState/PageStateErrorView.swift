@@ -14,6 +14,7 @@ class PageStateErrorView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor=UIColor.white
         self.addSubview(errorLabel)
         errorLabel.textColor=UIColor.darkGray
         errorLabel.font=UIFont.systemFont(ofSize: 14)

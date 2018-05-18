@@ -16,6 +16,16 @@ class DemoViewController: BaseViewController {
     
     override func initView() {
         super.initView()
+        let label=UILabel()
+        label.text="界面是 demo包下的 DemoViewController\n,一定来看看源码,mock功能的演示"
+        label.numberOfLines=0
+        label.textColor=UIColor.black
+        label.font=UIFont.systemFont(ofSize: 20)
+        self.view.addSubview(label)
+        label.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
+        
     }
     
     override func viewDidLoad() {

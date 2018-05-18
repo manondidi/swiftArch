@@ -15,6 +15,7 @@ class PageStateEmptyView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(emptyLabel)
+        self.backgroundColor=UIColor.white
         emptyLabel.textColor=UIColor.darkGray
         emptyLabel.font=UIFont.systemFont(ofSize: 14)
         emptyLabel.text="404,资源不存在"

@@ -13,7 +13,8 @@ class PageStateLoadView: UIView {
     let loadLabel = UILabel()
     
     override init(frame: CGRect) {
-        super.init(frame: frame)
+        super.init(frame: frame) 
+        self.backgroundColor=UIColor.white
         self.addSubview(loadLabel)
         loadLabel.textColor=UIColor.darkGray
         loadLabel.font=UIFont.systemFont(ofSize: 14)
