@@ -59,14 +59,19 @@ class PaingTalbeDemoViewController: PagingViewController {
             if(pageInfo.isFirstPage()){
                 self.pagingList=(gameListModel?.listData)!
                 self.datasource=(gameListModel?.listData)!
-                
-//                self.datasource.insert(EmptyHeaderModel(), at: 0)//第一行一定是Section
+                                                                    //如果要使用sectionHeader功能
+//                self.datasource.insert(EmptyHeaderModel(), at: 0)//第一行一定是SectionModel
+                                                                    //因为我是靠sectionmodel的个数做section截断
                                                                     //如果和业务相悖,就插入emptyheadermodel占位
+                                                                    //这个model对应的headerview是是个高度为1 完全透明的一个header
+                                                                    //如果你确定你的一整个datasource是不可能存在sectionmodel即不使用section功能
+                                                                    //那你可以不需要插EmptyHeaderModel
+                
                 self.datasource.insert(GameDateModel(date:"今天"), at: 0)
             }else{
                 self.pagingList+=(gameListModel?.listData)!
                 self.datasource.append(GameDateModel(date:"2011-11-\(Int(arc4random()%30)+1)"))
-                self.datasource.append(contentsOf: (gameListModel?.listData)!) 
+                self.datasource.append(contentsOf: (gameListModel?.listData)!)
             }
             //调用者必须维护两个列表
             //1.和分页相关的列表
