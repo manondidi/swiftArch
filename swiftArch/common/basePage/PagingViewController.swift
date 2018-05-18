@@ -46,7 +46,7 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
     ///框架已经帮你做好了 emptyHeader的注册
     /// 使用sectionheader的规则是 sh=sectionheederModel c=cellModel 如下
     /// 正确 sh,c....sh,c...     错误 c...sh
-    ///但是由于业务需要不可能一开始就是cell所以,往数组的起始位置塞入EmptyHeaderModel对象做占位
+    ///但是由于业务需要不可能一开始就是section所以,所以往数组的起始位置塞入EmptyHeaderModel对象做占位
     func registerSectionHeaderModel()  {
         self.tableView?.registerHeaderClass(headerClass: EmptyHeader.self, modelClass: EmptyHeaderModel.self)
         
