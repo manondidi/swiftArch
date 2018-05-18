@@ -13,6 +13,11 @@ class DemoViewController: BaseViewController {
     
     var remoteService:RemoteService=DataManager.shareInstance.remoteService
   
+    
+    override func initView() {
+        super.initView()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadData(userId: "manondidi", password: "12345566")//错误的账号密码 肯定失败
@@ -34,6 +39,7 @@ class DemoViewController: BaseViewController {
             self.showContent()
             self.view.makeToast("success")
         }) { (code, msg) in
+            self.view.makeToast("错误的账号密码必然失败回调")
             self.showError()
         }
     }
@@ -42,7 +48,7 @@ class DemoViewController: BaseViewController {
         self.showLoading()
         remoteService.getUserMock(userId: userId, password: password, success: { (user) in
             self.showContent()
-            self.view.makeToast("success")
+            self.view.makeToast("mock必然成功演示")
         }) { (code, msg) in
             self.showError()
             self.view.makeToast(msg)
