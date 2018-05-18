@@ -133,17 +133,20 @@ class StateTableView: UITableView {
    public func showLoading()  {
         self.hideAllCover()
         loadView?.isHidden=false
+        self.bringCoverToFront()
     }
     public func showEmpty()  {
         
         self.showContent()
         emptyView?.isHidden=false
+        self.bringCoverToFront()
     }
     
     public func showError()  {
         
         self.showContent()
         errorView?.isHidden=false
+        self.bringCoverToFront()
     }
     
     public func beginRefresh() {
@@ -190,6 +193,12 @@ class StateTableView: UITableView {
     }
     private func useDefaultFooterStyle(){
         loadMoreFooter=MJRefreshAutoFooter()
+    }
+    
+    public func bringCoverToFront(){
+        self.bringSubview(toFront: emptyView!)
+        self.bringSubview(toFront: errorView!)
+        self.bringSubview(toFront: loadView!)
     }
   
 

@@ -27,6 +27,12 @@ class PageSateManager: NSObject {
         
     }
     
+    public func bringCoverToFront(){
+        self.rootView.bringSubview(toFront: emptyView!)
+        self.rootView.bringSubview(toFront: errorView!)
+        self.rootView.bringSubview(toFront: loadView!)
+    }
+    
     public func setEmptyView(view:UIView){
         self.emptyView=view
     }
@@ -56,7 +62,6 @@ class PageSateManager: NSObject {
     }
     
     public func showContent( ){
-        self.rootView.superview?.bringSubview(toFront: self.rootView)
         self.errorView?.isHidden=true
         self.loadView?.isHidden=true
         self.emptyView?.isHidden=true
@@ -65,14 +70,17 @@ class PageSateManager: NSObject {
     public func showEmpty(){
         self.showContent()
         self.emptyView?.isHidden=false
+        self.bringCoverToFront()
     }
     public func showLoading(){
         self.showContent()
         self.loadView?.isHidden=false
+        self.bringCoverToFront()
     }
     public func showError(){
         self.showContent()
         self.errorView?.isHidden=false
+        self.bringCoverToFront()
     }
     
     public func setUpState()  {
