@@ -26,6 +26,8 @@ class DemoViewController: BaseViewController {
             make.center.equalToSuperview()
         }
         
+        UIApplication.shared.keyWindow?.makeToast("这个开小差是我故意的,请点一下空白处", duration: 3)
+        
     }
     
     override func viewDidLoad() {
