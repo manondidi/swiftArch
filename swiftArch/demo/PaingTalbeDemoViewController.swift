@@ -93,6 +93,14 @@ class PaingTalbeDemoViewController: PagingViewController {
         }
         
     }
+    
+    override func registerEventforCell(cell: UITableViewCell, model: NSObject) {
+        if let item:GameModel = model as? GameModel {
+            cell.addTapGesture { (tap) in
+                self.view.makeToast("cell被点击\(item.title)")
+            }
+        }
+    }
 
     
     
