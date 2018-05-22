@@ -48,8 +48,8 @@ class PagingOffsetIdDemoViewController: PagingViewController {
                 self.pagingList=feedArticleList!
                 self.datasource=feedArticleList!
             }else{
-                self.pagingList.append(contentsOf: (feedArticleList)!)
-                self.datasource.append(contentsOf: (feedArticleList)!)
+                self.pagingList = self.pagingList + feedArticleList!
+                self.datasource = self.datasource + feedArticleList!
             }
             self.loadSuccess(resultData: feedArticleList! as NSObject, dataSource: self.datasource, pagingList: self.pagingList)
         }) { (code, msg) in

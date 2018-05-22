@@ -39,6 +39,8 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         
         self.tableView?.dataSource=self;
         self.tableView?.delegate=self;
+        self.edgesForExtendedLayout = UIRectEdge.bottom
+        self.automaticallyAdjustsScrollViewInsets = false;
     }
     
     

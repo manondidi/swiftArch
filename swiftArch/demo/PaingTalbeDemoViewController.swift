@@ -71,7 +71,7 @@ class PaingTalbeDemoViewController: PagingViewController {
             }else{
                 self.pagingList+=(gameListModel?.listData)!
                 self.datasource.append(GameDateModel(date:"2011-11-\(Int(arc4random()%30)+1)"))
-                self.datasource.append(contentsOf: (gameListModel?.listData)!)
+                self.datasource = self.datasource + (gameListModel?.listData)!
             }
             //调用者必须维护两个列表
             //1.和分页相关的列表
