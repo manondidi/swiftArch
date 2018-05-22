@@ -21,6 +21,13 @@ class MockService    {
         
     }
     
+    // 获取Feeds
+    func getFeeds(result: @escaping ((Result<Array<Feed>>)->())) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            result(self.loadJsonFromFile(fileName: "feeds.json" ,model:Result<Array<Feed>>()));
+        }
+    }
+    
     
     func loadJsonFromFile<T:HandyJSON>(fileName:String,model:T ) -> T {
         
