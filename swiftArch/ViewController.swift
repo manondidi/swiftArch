@@ -76,6 +76,18 @@ class ViewController: UIViewController {
             self.navigationController?.pushViewController(PagingOffsetIdDemoViewController(), animated: true)
         }
         
+        
+        let btn6=UIButton(type: UIButtonType.roundedRect)
+        self.view.addSubview(btn6)
+        btn6.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(btn5.snp.bottom).offset(30)
+        }
+        btn6.titleLabel?.numberOfLines=0
+        btn6.setTitle("FeedsDemoViewController", for: UIControlState.normal)
+        btn6.onTap {
+            self.navigationController?.pushViewController(FeedsDemoViewController(), animated: true)
+        }
        
     }
 

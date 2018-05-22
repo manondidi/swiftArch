@@ -69,6 +69,16 @@
 		61D472012080457A009B10F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D471FF2080457A009B10F5 /* Main.storyboard */; };
 		61D472032080457A009B10F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61D472022080457A009B10F5 /* Assets.xcassets */; };
 		61D472062080457A009B10F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D472042080457A009B10F5 /* LaunchScreen.storyboard */; };
+		9C02969F20B40C2C0053E9F3 /* SPFeedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969320B40C2C0053E9F3 /* SPFeedVM.swift */; };
+		9C0296A020B40C2C0053E9F3 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969520B40C2C0053E9F3 /* Feed.swift */; };
+		9C0296A120B40C2C0053E9F3 /* SPFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969720B40C2C0053E9F3 /* SPFeedCell.swift */; };
+		9C0296A220B40C2C0053E9F3 /* SPFeedGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969820B40C2C0053E9F3 /* SPFeedGameView.swift */; };
+		9C0296A320B40C2C0053E9F3 /* SPFeedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969920B40C2C0053E9F3 /* SPFeedTextView.swift */; };
+		9C0296A420B40C2C0053E9F3 /* SPFeedToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969A20B40C2C0053E9F3 /* SPFeedToolbar.swift */; };
+		9C0296A520B40C2C0053E9F3 /* SPFeedPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969B20B40C2C0053E9F3 /* SPFeedPhotosView.swift */; };
+		9C0296A620B40C2C0053E9F3 /* SPFeedLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969C20B40C2C0053E9F3 /* SPFeedLinkView.swift */; };
+		9C0296A720B40C2C0053E9F3 /* FeedsDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969E20B40C2C0053E9F3 /* FeedsDemoViewController.swift */; };
+		9C0296A920B40C4A0053E9F3 /* feeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C0296A820B40C4A0053E9F3 /* feeds.json */; };
 		D47744617A868E234E5726CD /* Pods_swiftArchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955BC851D4321AC8A4DD88C7 /* Pods_swiftArchTests.framework */; };
 		F86489AA0484851B8AA4BEB4 /* Pods_swiftArch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B98FABE1261D64DF33EEF6 /* Pods_swiftArch.framework */; };
 /* End PBXBuildFile section */
@@ -154,6 +164,16 @@
 		61D472072080457A009B10F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65D2D9C9D77AFE02537B7037 /* Pods-swiftArchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftArchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftArchTests/Pods-swiftArchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		955BC851D4321AC8A4DD88C7 /* Pods_swiftArchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftArchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C02969320B40C2C0053E9F3 /* SPFeedVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedVM.swift; sourceTree = "<group>"; };
+		9C02969520B40C2C0053E9F3 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		9C02969720B40C2C0053E9F3 /* SPFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedCell.swift; sourceTree = "<group>"; };
+		9C02969820B40C2C0053E9F3 /* SPFeedGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedGameView.swift; sourceTree = "<group>"; };
+		9C02969920B40C2C0053E9F3 /* SPFeedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedTextView.swift; sourceTree = "<group>"; };
+		9C02969A20B40C2C0053E9F3 /* SPFeedToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedToolbar.swift; sourceTree = "<group>"; };
+		9C02969B20B40C2C0053E9F3 /* SPFeedPhotosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedPhotosView.swift; sourceTree = "<group>"; };
+		9C02969C20B40C2C0053E9F3 /* SPFeedLinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedLinkView.swift; sourceTree = "<group>"; };
+		9C02969E20B40C2C0053E9F3 /* FeedsDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsDemoViewController.swift; sourceTree = "<group>"; };
+		9C0296A820B40C4A0053E9F3 /* feeds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feeds.json; sourceTree = "<group>"; };
 		EDF36AABFF347B42BE92D093 /* Pods-swiftArch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftArch.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftArch/Pods-swiftArch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -253,6 +273,7 @@
 		61244C6620A2E7A500BBF6BF /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				9C02969120B40C2C0053E9F3 /* Discovery */,
 				610D229320AD92D2003B1324 /* sectionHeader */,
 				617E89FD20AC04B2006C358E /* cell */,
 				61707A5620A3363100B378FD /* TableDemoVC.swift */,
@@ -369,6 +390,7 @@
 				617E8A0620AC102E006C358E /* feed.json */,
 				617E8A0720AC102E006C358E /* game.json */,
 				61C0135E208F28C600BBE4DC /* getUser.json */,
+				9C0296A820B40C4A0053E9F3 /* feeds.json */,
 			);
 			path = jsonFile;
 			sourceTree = "<group>";
@@ -429,6 +451,54 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9C02969120B40C2C0053E9F3 /* Discovery */ = {
+			isa = PBXGroup;
+			children = (
+				9C02969220B40C2C0053E9F3 /* ViewModel */,
+				9C02969420B40C2C0053E9F3 /* Model */,
+				9C02969620B40C2C0053E9F3 /* View */,
+				9C02969D20B40C2C0053E9F3 /* ViewController */,
+			);
+			path = Discovery;
+			sourceTree = "<group>";
+		};
+		9C02969220B40C2C0053E9F3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C02969320B40C2C0053E9F3 /* SPFeedVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9C02969420B40C2C0053E9F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C02969520B40C2C0053E9F3 /* Feed.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C02969620B40C2C0053E9F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C02969720B40C2C0053E9F3 /* SPFeedCell.swift */,
+				9C02969820B40C2C0053E9F3 /* SPFeedGameView.swift */,
+				9C02969920B40C2C0053E9F3 /* SPFeedTextView.swift */,
+				9C02969A20B40C2C0053E9F3 /* SPFeedToolbar.swift */,
+				9C02969B20B40C2C0053E9F3 /* SPFeedPhotosView.swift */,
+				9C02969C20B40C2C0053E9F3 /* SPFeedLinkView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C02969D20B40C2C0053E9F3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C02969E20B40C2C0053E9F3 /* FeedsDemoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		FDDCFEEDE2F4C7D0E849E264 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,11 +538,11 @@
 			buildConfigurationList = 61D4720A2080457A009B10F5 /* Build configuration list for PBXNativeTarget "swiftArch" */;
 			buildPhases = (
 				508792E5EC31398B4B58B222 /* [CP] Check Pods Manifest.lock */,
+				61244C5420A17F5D00BBF6BF /* ShellScript */,
 				61D471F42080457A009B10F5 /* Sources */,
 				61D471F52080457A009B10F5 /* Frameworks */,
 				61D471F62080457A009B10F5 /* Resources */,
 				565B59ADF44471A6A4C91CA6 /* [CP] Embed Pods Frameworks */,
-				61244C5420A17F5D00BBF6BF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -537,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61D472062080457A009B10F5 /* LaunchScreen.storyboard in Resources */,
+				9C0296A920B40C4A0053E9F3 /* feeds.json in Resources */,
 				617E8A0820AC102E006C358E /* feed.json in Resources */,
 				617E8A0320AC04E3006C358E /* GameCell.xib in Resources */,
 				61D472032080457A009B10F5 /* Assets.xcassets in Resources */,
@@ -586,6 +657,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/RegexKitLite/RegexKitLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
@@ -598,6 +670,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RegexKitLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
@@ -678,14 +751,19 @@
 			files = (
 				61D471FE2080457A009B10F5 /* ViewController.swift in Sources */,
 				61244C5620A183C700BBF6BF /* R.generated.swift in Sources */,
+				9C0296A120B40C2C0053E9F3 /* SPFeedCell.swift in Sources */,
 				617E8A0B20AC124A006C358E /* PaingTalbeDemoViewController.swift in Sources */,
 				61244C5920A1850400BBF6BF /* DefaultTableLoadView.swift in Sources */,
 				61707A6720A3E78900B378FD /* PageStateLoadView.swift in Sources */,
 				61079DAC20A7180600624424 /* BaseViewController.swift in Sources */,
 				61C01359208ED07E00BBE4DC /* CMSResult.swift in Sources */,
+				9C0296A020B40C2C0053E9F3 /* Feed.swift in Sources */,
+				9C02969F20B40C2C0053E9F3 /* SPFeedVM.swift in Sources */,
 				61079DB020A9271F00624424 /* UserStyleLoadView.swift in Sources */,
+				9C0296A220B40C2C0053E9F3 /* SPFeedGameView.swift in Sources */,
 				617E8A0520AC07A8006C358E /* GameModel.swift in Sources */,
 				61079DD620AA83E300624424 /* NormalPagingStrategy.swift in Sources */,
+				9C0296A420B40C2C0053E9F3 /* SPFeedToolbar.swift in Sources */,
 				618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */,
 				618F8E39208584D7004F06F7 /* MockService.swift in Sources */,
 				61244C4B209C597B00BBF6BF /* CacheManager.swift in Sources */,
@@ -699,6 +777,7 @@
 				610D229D20AE6007003B1324 /* EmptyHeader.swift in Sources */,
 				61C01351208DC27B00BBE4DC /* ResponseJsonHandle.swift in Sources */,
 				617E8A0F20AC3715006C358E /* PagingOffsetIdDemoViewController.swift in Sources */,
+				9C0296A520B40C2C0053E9F3 /* SPFeedPhotosView.swift in Sources */,
 				61707A6320A3E76500B378FD /* PageStateEmptyView.swift in Sources */,
 				61D471FC2080457A009B10F5 /* AppDelegate.swift in Sources */,
 				617E8A1220AC3753006C358E /* FeedArticleCell.swift in Sources */,
@@ -716,10 +795,13 @@
 				610D229B20AD9497003B1324 /* GameDateHeader.swift in Sources */,
 				61707A6520A3E77700B378FD /* PageStateErrorView.swift in Sources */,
 				618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */,
+				9C0296A720B40C2C0053E9F3 /* FeedsDemoViewController.swift in Sources */,
 				617E8A0D20AC18AB006C358E /* NormalPageModel.swift in Sources */,
 				61707A5D20A34B2200B378FD /* UserStyleTableEmptyView.swift in Sources */,
 				617E8A1520AC39F9006C358E /* FeedArtileModel.swift in Sources */,
+				9C0296A320B40C2C0053E9F3 /* SPFeedTextView.swift in Sources */,
 				61079DD720AA83E300624424 /* NormalPageInfo.swift in Sources */,
+				9C0296A620B40C2C0053E9F3 /* SPFeedLinkView.swift in Sources */,
 				61079DB420A929AD00624424 /* PagingViewController.swift in Sources */,
 				61244C6120A19FF600BBF6BF /* DefaultTableErrorView.swift in Sources */,
 			);

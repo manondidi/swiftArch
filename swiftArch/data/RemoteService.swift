@@ -72,7 +72,19 @@ class RemoteService {
         }
     }
    
-
+    func getFeedsMock(result callback: @escaping ((Array<SPFeedVM>)->())) {
+        mockService.getFeeds { (result: Result<Array<Feed>>) in
+            // 转换为VM
+            //            var feedVMs? = [SPFeedVM]()
+            let tmpFeeds = result.data;
+            var feedVMs = tmpFeeds?.map({ (feed: Feed) -> SPFeedVM in
+                let feedVM = SPFeedVM()
+                feedVM.feed = feed
+                return feedVM
+            })
+            callback(feedVMs!)
+        }
+    }
     
    private func getData<T>(result:Result<T>)->T?{
         if self.checkSuccess(result: result) {
