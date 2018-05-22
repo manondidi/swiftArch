@@ -7,6 +7,7 @@ PODS:
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
+  - RegexKitLite-NoWarning (1.1.0)
   - SnapKit (4.0.0)
   - SQLite.swift (0.11.5):
     - SQLite.swift/standard (= 0.11.5)
@@ -20,6 +21,7 @@ DEPENDENCIES:
   - Kingfisher (~> 4.8.0)
   - MJRefresh
   - R.swift
+  - RegexKitLite-NoWarning
   - SnapKit (~> 4.0.0)
   - SQLite.swift (~> 0.11.5)
   - Toast-Swift (~> 3.0.1)
@@ -33,6 +35,7 @@ SPEC REPOS:
     - MJRefresh
     - R.swift
     - R.swift.Library
+    - RegexKitLite-NoWarning
     - SnapKit
     - SQLite.swift
     - Toast-Swift
@@ -45,10 +48,11 @@ SPEC CHECKSUMS:
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
+  RegexKitLite-NoWarning: 365d208f8187997e33d9de8baeddfc00728596d8
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: 35e0ce634f5fe32d204f183b28d888d5f8b00347
+PODFILE CHECKSUM: f2d66fab1c16f072b187c578d691722081859f73
 
 COCOAPODS: 1.5.0
