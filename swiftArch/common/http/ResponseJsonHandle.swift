@@ -25,7 +25,7 @@ extension DataRequest {
         }
     }
     
-    public func responseModelAndCache<T:HandyJSON>( success:@escaping ((T)->()),failure:@escaping ((Int?,Error)->()) )
+    public func responseModelAndCache<T:HandyJSON>( success:@escaping ((T,Bool)->()),failure:@escaping ((Int?,Error)->()) )
         
     {
         responseString { (response) in
@@ -37,7 +37,7 @@ extension DataRequest {
             let cacheJson = cacheManager.getCache(key:cacheKey!)
             if(cacheJson != nil){
                 let cacheResult:T = T.deserialize(from: cacheJson)!
-                success( cacheResult)
+                success( cacheResult,true)
             }
             if(response.result.isFailure){
                 failure(response.response?.statusCode,response.error!)
@@ -50,7 +50,7 @@ extension DataRequest {
                 cacheManager.saveCache(key:cacheKey!, value: jsonStr!)
             }
             let result:T = T.deserialize(from: jsonStr)! 
-            success( result)
+            success( result,false)
             
         }
     }
