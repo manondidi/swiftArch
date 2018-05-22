@@ -32,6 +32,8 @@
 		61244C6120A19FF600BBF6BF /* DefaultTableErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C6020A19FF600BBF6BF /* DefaultTableErrorView.swift */; };
 		61244C6520A1A02600BBF6BF /* DefaultTableErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61244C6420A1A02600BBF6BF /* DefaultTableErrorView.xib */; };
 		612B17A820B4106300F06E4E /* NonePagingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612B17A720B4106300F06E4E /* NonePagingStrategy.swift */; };
+		612B17AC20B415A600F06E4E /* SPFeedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612B17AB20B415A600F06E4E /* SPFeedVM.swift */; };
+		612B17AE20B415CD00F06E4E /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612B17AD20B415CD00F06E4E /* Feed.swift */; };
 		61707A5820A3363100B378FD /* TableDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707A5620A3363100B378FD /* TableDemoVC.swift */; };
 		61707A5920A3363100B378FD /* TableDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61707A5720A3363100B378FD /* TableDemoVC.xib */; };
 		61707A5B20A33AA900B378FD /* StyleTableDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707A5A20A33AA900B378FD /* StyleTableDemoVC.swift */; };
@@ -69,8 +71,6 @@
 		61D472012080457A009B10F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D471FF2080457A009B10F5 /* Main.storyboard */; };
 		61D472032080457A009B10F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61D472022080457A009B10F5 /* Assets.xcassets */; };
 		61D472062080457A009B10F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61D472042080457A009B10F5 /* LaunchScreen.storyboard */; };
-		9C02969F20B40C2C0053E9F3 /* SPFeedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969320B40C2C0053E9F3 /* SPFeedVM.swift */; };
-		9C0296A020B40C2C0053E9F3 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969520B40C2C0053E9F3 /* Feed.swift */; };
 		9C0296A120B40C2C0053E9F3 /* SPFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969720B40C2C0053E9F3 /* SPFeedCell.swift */; };
 		9C0296A220B40C2C0053E9F3 /* SPFeedGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969820B40C2C0053E9F3 /* SPFeedGameView.swift */; };
 		9C0296A320B40C2C0053E9F3 /* SPFeedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969920B40C2C0053E9F3 /* SPFeedTextView.swift */; };
@@ -122,6 +122,8 @@
 		61244C6020A19FF600BBF6BF /* DefaultTableErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTableErrorView.swift; sourceTree = "<group>"; };
 		61244C6420A1A02600BBF6BF /* DefaultTableErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DefaultTableErrorView.xib; sourceTree = "<group>"; };
 		612B17A720B4106300F06E4E /* NonePagingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonePagingStrategy.swift; sourceTree = "<group>"; };
+		612B17AB20B415A600F06E4E /* SPFeedVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedVM.swift; sourceTree = "<group>"; };
+		612B17AD20B415CD00F06E4E /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		61707A5620A3363100B378FD /* TableDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDemoVC.swift; sourceTree = "<group>"; };
 		61707A5720A3363100B378FD /* TableDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableDemoVC.xib; sourceTree = "<group>"; };
 		61707A5A20A33AA900B378FD /* StyleTableDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleTableDemoVC.swift; sourceTree = "<group>"; };
@@ -164,8 +166,6 @@
 		61D472072080457A009B10F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65D2D9C9D77AFE02537B7037 /* Pods-swiftArchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftArchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftArchTests/Pods-swiftArchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		955BC851D4321AC8A4DD88C7 /* Pods_swiftArchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftArchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C02969320B40C2C0053E9F3 /* SPFeedVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedVM.swift; sourceTree = "<group>"; };
-		9C02969520B40C2C0053E9F3 /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		9C02969720B40C2C0053E9F3 /* SPFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedCell.swift; sourceTree = "<group>"; };
 		9C02969820B40C2C0053E9F3 /* SPFeedGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedGameView.swift; sourceTree = "<group>"; };
 		9C02969920B40C2C0053E9F3 /* SPFeedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedTextView.swift; sourceTree = "<group>"; };
@@ -292,6 +292,7 @@
 		612B17A120B3E84300F06E4E /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				612B17AB20B415A600F06E4E /* SPFeedVM.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -372,6 +373,7 @@
 		61C0134B208DAE9F00BBE4DC /* model */ = {
 			isa = PBXGroup;
 			children = (
+				612B17AD20B415CD00F06E4E /* Feed.swift */,
 				61C0134C208DAEBA00BBE4DC /* User.swift */,
 				61C0134E208DBABA00BBE4DC /* Result.swift */,
 				61C01358208ED07E00BBE4DC /* CMSResult.swift */,
@@ -454,28 +456,10 @@
 		9C02969120B40C2C0053E9F3 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
-				9C02969220B40C2C0053E9F3 /* ViewModel */,
-				9C02969420B40C2C0053E9F3 /* Model */,
 				9C02969620B40C2C0053E9F3 /* View */,
 				9C02969D20B40C2C0053E9F3 /* ViewController */,
 			);
 			path = Discovery;
-			sourceTree = "<group>";
-		};
-		9C02969220B40C2C0053E9F3 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				9C02969320B40C2C0053E9F3 /* SPFeedVM.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		9C02969420B40C2C0053E9F3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				9C02969520B40C2C0053E9F3 /* Feed.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		9C02969620B40C2C0053E9F3 /* View */ = {
@@ -757,8 +741,6 @@
 				61707A6720A3E78900B378FD /* PageStateLoadView.swift in Sources */,
 				61079DAC20A7180600624424 /* BaseViewController.swift in Sources */,
 				61C01359208ED07E00BBE4DC /* CMSResult.swift in Sources */,
-				9C0296A020B40C2C0053E9F3 /* Feed.swift in Sources */,
-				9C02969F20B40C2C0053E9F3 /* SPFeedVM.swift in Sources */,
 				61079DB020A9271F00624424 /* UserStyleLoadView.swift in Sources */,
 				9C0296A220B40C2C0053E9F3 /* SPFeedGameView.swift in Sources */,
 				617E8A0520AC07A8006C358E /* GameModel.swift in Sources */,
@@ -767,6 +749,7 @@
 				618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */,
 				618F8E39208584D7004F06F7 /* MockService.swift in Sources */,
 				61244C4B209C597B00BBF6BF /* CacheManager.swift in Sources */,
+				612B17AE20B415CD00F06E4E /* Feed.swift in Sources */,
 				617E8A0220AC04E3006C358E /* GameCell.swift in Sources */,
 				61C0134D208DAEBA00BBE4DC /* User.swift in Sources */,
 				61079DD920AA83F500624424 /* FeedPageInfo.swift in Sources */,
@@ -787,6 +770,7 @@
 				617E89FC20AC00A2006C358E /* UITableView+Binder.swift in Sources */,
 				61079DAE20A9259700624424 /* DemoViewController.swift in Sources */,
 				61244C5D20A19B5200BBF6BF /* DefaultTableEmptyView.swift in Sources */,
+				612B17AC20B415A600F06E4E /* SPFeedVM.swift in Sources */,
 				612B17A820B4106300F06E4E /* NonePagingStrategy.swift in Sources */,
 				61079DD520AA83E300624424 /* FeedPaingStrategy.swift in Sources */,
 				610D229720AD9308003B1324 /* GameDateModel.swift in Sources */,

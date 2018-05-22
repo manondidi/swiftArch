@@ -84,7 +84,7 @@ class ViewController: UIViewController {
             make.top.equalTo(btn5.snp.bottom).offset(30)
         }
         btn6.titleLabel?.numberOfLines=0
-        btn6.setTitle("FeedsDemoViewController", for: UIControlState.normal)
+        btn6.setTitle("pagingViewcontrollerDemo手动计算行高的例子", for: UIControlState.normal)
         btn6.onTap {
             self.navigationController?.pushViewController(FeedsDemoViewController(), animated: true)
         }
