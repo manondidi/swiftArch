@@ -125,7 +125,11 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         self.tableView?.reloadData()
     }
     func loadFail(){
-        self.tableView?.showError()
+        if(self.dataSource.count==0){
+            self.tableView?.showError()
+        }else{
+            self.view.makeToast("加载失败")
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -139,15 +143,8 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var sectionDataSource = Array<NSObject>()
         
-        if(self.sectionData.count==0){
-              sectionDataSource = self.dataSource
-            
-        }else{
-              sectionDataSource = self.sectionData[indexPath.section]
-        }
-       let item=sectionDataSource[indexPath.row]
+       let item=self.getRealDataSourceModel(indexPath: indexPath)
        let cellKey=String(describing:item.classForCoder.self)
        let cell = tableView.dequeueReusableCell(withIdentifier: cellKey)
        cell?.setValue(item, forKey: "model")
@@ -186,10 +183,11 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
            return isSectionModel
         }.count
         
+        //没有section类型的model
         if sectionCount == 0 {
             sectionData.removeAll()
+            return 1
         }else{
-            
             var dataInSection:Array<NSObject>?=nil
             self.dataSource.forEach { (data) in
                 if(self.sectionModelList.contains(data)){
@@ -200,11 +198,10 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
                 }else{
                     dataInSection!.append(data)
                 }
-                
-            } 
+            }  
             self.sectionData.append( dataInSection!)
         }
-        return sectionCount==0 ? 1:sectionCount
+        return sectionCount
     }
     
     
@@ -213,9 +210,31 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
     }
     
     
+    func getRealDataSourceModel(indexPath: IndexPath) -> NSObject {
+        var sectionDataSource = Array<NSObject>()
+        if(self.sectionData.count==0){
+            sectionDataSource = self.dataSource 
+        }else{
+            sectionDataSource = self.sectionData[indexPath.section]
+        }
+        let item=sectionDataSource[indexPath.row]
+        return item
+    }
+    
+    //禁止重写
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let item:NSObject = self.getRealDataSourceModel(indexPath: indexPath)
+        let cell:UITableViewCell=self.tableView(tableView, cellForRowAt: indexPath)
+        return self.tableView(cell, heightForModel: item)
+    }
     
     
- 
+    
+    //默认使用autolayout方式
+    //你可以重写
+    func tableView(_ cell: UITableViewCell, heightForModel model: NSObject)->CGFloat {
+        return UITableViewAutomaticDimension
+    }
     
     
 }
