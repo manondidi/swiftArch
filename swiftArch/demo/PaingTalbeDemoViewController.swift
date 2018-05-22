@@ -84,6 +84,15 @@ class PaingTalbeDemoViewController: PagingViewController {
         }
         
     }
+    override func registerEventforSectionHeader(header: UIView, model: NSObject) {
+        
+        if let item:GameDateModel = model as? GameDateModel {
+            header.addTapGesture { (tap) in
+                self.view.makeToast("header被点击\(item.date)")
+            }
+        }
+        
+    }
 
     
     

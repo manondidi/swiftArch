@@ -160,7 +160,7 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
     
     
     ///子类重写去注册header或者header内部的事件
-    func registerEventforSectionHeader(cell:UIView,model:NSObject){}
+    func registerEventforSectionHeader(header:UIView,model:NSObject){}
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
@@ -168,10 +168,9 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
             let item=self.sectionModelList[section]
             let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing:item.classForCoder.self))!
             header.setValue(item, forKey: "model")
-            self.registerEventforSectionHeader(cell: header,model: item)
+            self.registerEventforSectionHeader(header: header,model: item)
             return header
         }
-        
          return UIView()
     }
     
@@ -212,6 +211,8 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
     override func viewDidAppear(_ animated: Bool) {
         self.tableView?.beginRefresh()
     }
+    
+    
     
     
  
