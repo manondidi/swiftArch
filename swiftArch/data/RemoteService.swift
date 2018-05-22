@@ -21,7 +21,7 @@ class RemoteService {
     
     func getUser(userId:String,password:String,success:@escaping ((User?)->()),failure:@escaping failureCallback ){
         httpClient.request(url: "user/{userId}", method: .get, pathParams: ["userId":userId ], params: ["password":password])
-            .responseModelAndCache(success: { (result:Result<User>) in
+            .responseModelAndCache(success: { (result:Result<User>,isCache:Bool) in
                 if(self.checkSuccess(result: result)){
                     success(self.getData(result: result))
                 }

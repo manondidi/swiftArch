@@ -24,7 +24,7 @@ class PaingTalbeDemoViewController: PagingViewController {
     override func initTableView() {
         super.initTableView()
         self.tableView?.estimatedRowHeight = 80//这个值不影响行高 最好接近你想要的值 
-        self.tableView?.estimatedSectionHeaderHeight = 40 
+        self.tableView?.estimatedSectionHeaderHeight = 40
     }
     
     //如果使用默认的列表Stateview可以不需要重写该方法(用于自定义 empty error loadingview)

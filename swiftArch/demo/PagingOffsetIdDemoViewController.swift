@@ -25,7 +25,7 @@ class PagingOffsetIdDemoViewController: PagingViewController {
         super.initTableView()
         self.tableView?.estimatedRowHeight = 80;//这个值不影响行高 最好接近你想要的值 
         self.tableView?.separatorStyle=UITableViewCellSeparatorStyle.none
-        self.tableView?.estimatedSectionHeaderHeight = 0
+       
     }
     
  
