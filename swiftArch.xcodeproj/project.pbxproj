@@ -265,6 +265,13 @@
 			path = demo;
 			sourceTree = "<group>";
 		};
+		612B17A120B3E84300F06E4E /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
 		61707A5E20A3DC6E00B378FD /* pageState */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,9 +306,9 @@
 		618F8E3220858348004F06F7 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				612B17A120B3E84300F06E4E /* viewModel */,
 				61C0135D208F28A800BBE4DC /* jsonFile */,
 				61C0134B208DAE9F00BBE4DC /* model */,
-				61C0134A208DAE9F00BBE4DC /* viewModel */,
 				618F8E36208584CA004F06F7 /* RemoteService.swift */,
 				618F8E38208584D7004F06F7 /* MockService.swift */,
 				618F8E3A2085858A004F06F7 /* DataManager.swift */,
@@ -328,13 +335,6 @@
 				61244C4A209C597B00BBF6BF /* CacheManager.swift */,
 			);
 			path = http;
-			sourceTree = "<group>";
-		};
-		61C0134A208DAE9F00BBE4DC /* viewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = viewModel;
 			sourceTree = "<group>";
 		};
 		61C0134B208DAE9F00BBE4DC /* model */ = {

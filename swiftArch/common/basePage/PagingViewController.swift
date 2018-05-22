@@ -124,7 +124,7 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         self.dataSource += dataSource
         self.tableView?.reloadData()
     }
-    func loadFail(){ 
+    func loadFail(){
         self.tableView?.showError()
     }
     
@@ -151,16 +151,27 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
        let cellKey=String(describing:item.classForCoder.self)
        let cell = tableView.dequeueReusableCell(withIdentifier: cellKey)
        cell?.setValue(item, forKey: "model")
+       self.registerEventforCell(cell: cell!, model: item)
        return cell!
     }
+    
+    ///子类重写去注册cell或者cell内部的事件
+    func registerEventforCell(cell:UITableViewCell,model:NSObject){}
+    
+    
+    ///子类重写去注册header或者header内部的事件
+    func registerEventforSectionHeader(cell:UIView,model:NSObject){}
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         if (section<self.sectionModelList.count) { 
             let item=self.sectionModelList[section]
             let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing:item.classForCoder.self))!
             header.setValue(item, forKey: "model")
+            self.registerEventforSectionHeader(cell: header,model: item)
             return header
-        } 
+        }
+        
          return UIView()
     }
     
