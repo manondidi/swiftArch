@@ -79,19 +79,10 @@ class RemoteService {
             return result.data;
         }
         else{
-            
             return nil
         }
     }
-    
-    private func getDataAndCache<T>(result:Result<T>)->T?{
-        if self.checkSuccess(result: result) {
-            return result.data;
-        }
-        else{
-            return nil
-        }
-    } 
+     
     
   private  func checkSuccess<T>(result:Result<T>) -> Bool {
         return result.status==0
