@@ -23,8 +23,7 @@ class PaingTalbeDemoViewController: PagingViewController {
      
     override func initTableView() {
         super.initTableView()
-        self.tableView?.estimatedRowHeight = 80//这个值不影响行高 最好接近你想要的值
-        self.tableView?.rowHeight=UITableViewAutomaticDimension
+        self.tableView?.estimatedRowHeight = 80//这个值不影响行高 最好接近你想要的值 
         self.tableView?.estimatedSectionHeaderHeight = 40 
     }
     
@@ -100,7 +99,7 @@ class PaingTalbeDemoViewController: PagingViewController {
                 self.view.makeToast("cell被点击\(item.title)")
             }
         }
-    }
+    } 
 
     
     
