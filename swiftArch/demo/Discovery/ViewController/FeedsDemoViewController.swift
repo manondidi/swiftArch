@@ -13,14 +13,14 @@ class FeedsDemoViewController: PagingViewController {
     private var remoteService:RemoteService=DataManager.shareInstance.remoteService
     private var datasource=Array<NSObject>()
 
-     
+    
     override func initTableView() {
         super.initTableView()
     }
     
     override func registerCellModel() {
         super.registerCellModel()
-        self.tableView?.register(SPFeedCell.self, forCellReuseIdentifier: String(describing: SPFeedVM.self))
+        self.tableView?.registerCellClass(cellClass: SPFeedCell.self, modelClass: SPFeedVM.self) 
     }
     
     override func getPagingStrategy() -> PagingStrategy {
