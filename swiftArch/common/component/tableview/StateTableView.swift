@@ -90,6 +90,7 @@ class StateTableView: UITableView {
         }
         self.mj_header=refreshHeader
         self.mj_footer=loadMoreFooter
+        self.mj_footer.isHidden=true
         self.mj_header.setRefreshingTarget(self, refreshingAction: #selector(self.onRefresh))
         self.mj_footer.setRefreshingTarget(self, refreshingAction: #selector(self.onLoadMore))
         emptyView?.addTapGesture(handler: { (tap) in
@@ -107,6 +108,8 @@ class StateTableView: UITableView {
         
     }
     @objc func onRefresh(){
+        
+        loadMoreFooter?.isHidden=true
         self.refreshCallback?()
     }
     
@@ -192,7 +195,7 @@ class StateTableView: UITableView {
        (refreshHeader as! MJRefreshGifHeader).setImages(images, for: MJRefreshState.refreshing)
     }
     private func useDefaultFooterStyle(){
-        loadMoreFooter=MJRefreshAutoFooter()
+        loadMoreFooter=MJRefreshAutoNormalFooter()
     }
     
     public func bringCoverToFront(){
