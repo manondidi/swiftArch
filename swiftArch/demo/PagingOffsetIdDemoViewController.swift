@@ -46,14 +46,14 @@ class PagingOffsetIdDemoViewController: PagingViewController {
         self.remoteService.getFeedArticle(direction: pageInfo.type, pageSize: pageInfo.pageSize, offsetId: pageInfo.offsetId, success: {
             [weak self] (feedArticleList) in
             if let strongSelf=self{
-             if(pageInfo.isFirstPage()){
-                strongSelf.pagingList=feedArticleList!
-                strongSelf.datasource=feedArticleList!
-            }else{
-                strongSelf.pagingList = strongSelf.pagingList + feedArticleList!
-                strongSelf.datasource = strongSelf.datasource + feedArticleList!
-            }
-            strongSelf.loadSuccess(resultData: feedArticleList! as NSObject, dataSource: strongSelf.datasource, pagingList: strongSelf.pagingList)
+                 if(pageInfo.isFirstPage()){
+                    strongSelf.pagingList=feedArticleList!
+                    strongSelf.datasource=feedArticleList!
+                }else{
+                    strongSelf.pagingList = strongSelf.pagingList + feedArticleList!
+                    strongSelf.datasource = strongSelf.datasource + feedArticleList!
+                }
+                strongSelf.loadSuccess(resultData: feedArticleList! as NSObject, dataSource: strongSelf.datasource, pagingList: strongSelf.pagingList)
             }
         }) {[weak self] (code, msg) in
               self?.loadFail()

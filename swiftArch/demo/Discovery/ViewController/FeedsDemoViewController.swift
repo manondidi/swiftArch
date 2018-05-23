@@ -37,12 +37,12 @@ class FeedsDemoViewController: PagingViewController {
 //            print("")
             if let strongSelf=self{
             
-                if(pageInfo.isFirstPage()){
-                    strongSelf.datasource=result
-                
-                }else{
-                    strongSelf.datasource = strongSelf.datasource + result
-                }
+                    if(pageInfo.isFirstPage()){
+                        strongSelf.datasource=result
+                    
+                    }else{
+                        strongSelf.datasource = strongSelf.datasource + result
+                    }
                 // 调用者必须维护两个列表
                 // 1.和分页相关的列表
                 // 2.总数据源的列表
