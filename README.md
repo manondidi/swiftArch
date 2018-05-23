@@ -80,9 +80,11 @@ UI组件
 
 cmd+b build整个工程 如果成功 可以打开工程文件夹
 
-看到 R.generated.swift 文件
+看到 R.generated.swift 文件 
 
-ok 拖进工程里 注意不要勾选Copy items if needed
+同时工程里的 R.generated.swift不再是红色
+
+那么开始运行吧
 
 
 

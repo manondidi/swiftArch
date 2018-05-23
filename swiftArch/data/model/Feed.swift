@@ -8,7 +8,7 @@
 
 import UIKit
 import HandyJSON
-import RegexKitLite
+import RegexKitLite_NoWarning
 
 class Feed: NSObject, HandyJSON  {
     

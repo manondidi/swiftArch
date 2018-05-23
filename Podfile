@@ -12,7 +12,7 @@ target 'swiftArch' do
     pod 'Closures', ' = 0.3'
     pod 'Toast-Swift', '~> 3.0.1'
     pod 'Kingfisher', '~>4.8.0'
-    pod 'RegexKitLite'
+    pod 'RegexKitLite-NoWarning'
 end
 
 
