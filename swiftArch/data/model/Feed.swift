@@ -17,10 +17,11 @@ class Feed: NSObject, HandyJSON  {
     var type = ""
     var payload: PayLoad?
     var user: PostUser?
+    var isRetweeted: Bool = false
     
     var specials: [TextSpecial] = [TextSpecial]()
     var textParts: [TextPart] = [TextPart]()
-
+    
     // 属性字符串，用于内容显示
     var showAttributeText: NSAttributedString?
     
@@ -29,9 +30,21 @@ class Feed: NSObject, HandyJSON  {
         var attributeText = NSMutableAttributedString()
         if let text = self.payload?.post?.content?.text {
             // 普通文本
-            return self.composeAttrStr(text: text)
+            var composeText = text
+            if self.isRetweeted {
+                if let nickName = user?.nickname {
+                    composeText = "@" + nickName + " " + text
+                }
+            }
+            return self.composeAttrStr(text: composeText)
         } else if let text = self.payload?.record?.reviewContent {
             // 游戏文本
+            var composeText = text
+            if self.isRetweeted {
+                if let nickName = user?.nickname {
+                    composeText = "@" + nickName + " " + text
+                }
+            }
             return self.composeAttrStr(text: text)
         }
         return attributeText
@@ -72,14 +85,12 @@ class Feed: NSObject, HandyJSON  {
             textParts.append(part)
         }
         
-        textParts.sort { (p1: TextPart, p2: TextPart) -> Bool in
-            return p1.range.location < p2.range.location
-        }
+        textParts.sort {  $0.range.location < $1.range.location }
         self.textParts = textParts
         
         let specialAttributes = [NSAttributedStringKey.foregroundColor: UIColor.blue, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)]
         let normalAttributes = [NSAttributedStringKey.foregroundColor: UIColor.black, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)]
-
+        
         let mAttrStr = NSMutableAttributedString()
         var textSpecials = [TextSpecial]()
         for textPart in textParts {
@@ -96,7 +107,7 @@ class Feed: NSObject, HandyJSON  {
                 mAttrStr.append(NSAttributedString(string: textPart.text, attributes: normalAttributes))
             }
         }
-        self.specials = textSpecials        
+        self.specials = textSpecials
         return mAttrStr
     }
     
@@ -111,18 +122,18 @@ class PayLoad: NSObject, HandyJSON {
 }
 
 class PostUser: NSObject, HandyJSON {
-    var id:Int = 0
+    var id: Int = 0
     var avatar: String = ""
     var nickname: String = ""
     var followStatus: String = ""
-    var isFireflyUser:Bool = false
+    var isFireflyUser: Bool = false
     
     required override init() {}
 }
 
 
 class Post: NSObject, HandyJSON {
-    var id:Int = 0
+    var id: Int = 0
     var content: PostTextContent?
     var topicId = ""
     var topicTitle = ""
@@ -144,22 +155,22 @@ class Post: NSObject, HandyJSON {
 class PostTextContent: NSObject, HandyJSON {
     var text: String?
     var entities: [PostTextContentEntity] = [PostTextContentEntity]()
-
+    
     required override init() {}
 }
 
 class PostTextContentEntity: NSObject, HandyJSON {
     var data: PostTextContentEntityData?
-    var length:Int = 0
-    var offset:Int = 0
+    var length: Int = 0
+    var offset: Int = 0
     var type: String = ""
     
     required override init() {}
 }
 
 class PostTextContentEntityData: NSObject, HandyJSON {
-    var id:Int = 0
-    var name:String = ""
+    var id: Int = 0
+    var name: String = ""
     var hasRecord: Bool = true
     
     required override init() {}
@@ -176,7 +187,7 @@ class PostImage: NSObject, HandyJSON {
 }
 
 class PostGame: NSObject, HandyJSON {
-    var id:Int = 0
+    var id: Int = 0
     var name: String = ""
     var icon: String = ""
     var iconType: String = ""

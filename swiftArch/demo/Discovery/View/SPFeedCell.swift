@@ -46,7 +46,7 @@ class SPFeedCell: UITableViewCell {
     // Feed 富文本内容
     private lazy var contentTextView: SPFeedTextView = {
         let contentTextView = SPFeedTextView()
-        contentTextView.textContainerInset = UIEdgeInsetsMake(0, -5 , 0, -5)
+        contentTextView.textContainerInset = UIEdgeInsetsMake(0, -5, 0, -5)
         contentTextView.isEditable = false
         contentTextView.isScrollEnabled = false
         contentTextView.isSelectable = false
@@ -79,10 +79,10 @@ class SPFeedCell: UITableViewCell {
     }()
     
     // 转发背景按钮
-    private lazy var retweetViewBackBtn:UIButton = {
+    private lazy var retweetViewBackBtn: UIButton = {
         var retweetViewBackBtn = UIButton(type: UIButtonType.system)
         retweetViewBackBtn.isUserInteractionEnabled = true
-        retweetViewBackBtn.setBackgroundImage(R.image.timeline_card_bottom_background_highlighted(), for:.highlighted)
+        retweetViewBackBtn.setBackgroundImage(R.image.timeline_card_bottom_background_highlighted(), for: .highlighted)
         retweetViewBackBtn.setBackgroundImage(R.image.timeline_card_bottom_background_normal(), for: UIControlState.normal)
         retweetViewBackBtn.onTap {
             print("Tap")
@@ -93,11 +93,10 @@ class SPFeedCell: UITableViewCell {
     // 转发Feed富文本内容
     private lazy var retweetContentTextView: SPFeedTextView = {
         let retweetContentTextView = SPFeedTextView()
-        retweetContentTextView.textContainerInset = UIEdgeInsetsMake(0, -5 , 0, -5)
+        retweetContentTextView.textContainerInset = UIEdgeInsetsMake(0, -5, 0, -5)
         retweetContentTextView.isEditable = false
         retweetContentTextView.isScrollEnabled = false
         retweetContentTextView.isSelectable = false
-//        retweetContentTextView.isUserInteractionEnabled = false
         retweetContentTextView.backgroundColor = UIColor.clear
         return retweetContentTextView
     }()
@@ -221,7 +220,7 @@ class SPFeedCell: UITableViewCell {
     // MARK:- Public
     
     // KVO 设置数据模型
-    @objc var model:SPFeedVM? {
+    @objc var model: SPFeedVM? {
         didSet
         {
             self.originalView.frame = (model?.originalViewFrame)!
