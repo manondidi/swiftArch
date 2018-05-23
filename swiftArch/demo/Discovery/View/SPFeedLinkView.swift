@@ -22,7 +22,7 @@ class SPFeedLinkView: UIView {
         backButton.setBackgroundImage(R.image.timeline_card_bottom_background_highlighted(), for:.highlighted)
         backButton.setBackgroundImage(R.image.timeline_card_bottom_background_normal(), for: UIControlState.normal)
         backButton.onTap {
-            print("Tap")
+//            print("Tap")
         }
         return backButton
     }()

@@ -85,7 +85,7 @@ class SPFeedCell: UITableViewCell {
         retweetViewBackBtn.setBackgroundImage(R.image.timeline_card_bottom_background_highlighted(), for:.highlighted)
         retweetViewBackBtn.setBackgroundImage(R.image.timeline_card_bottom_background_normal(), for: UIControlState.normal)
         retweetViewBackBtn.onTap {
-            print("Tap")
+            
         }
         return retweetViewBackBtn
     }()
@@ -153,7 +153,7 @@ class SPFeedCell: UITableViewCell {
     
     override func setHighlighted(_ highlighted: Bool, animated: Bool) {
         super.setHighlighted(highlighted, animated: animated)
-        print("setHighlighted===\(highlighted)")
+//        print("setHighlighted===\(highlighted)")
         let highlightedColor = UIColor.cyan
         let normalColor = UIColor.white
         let handleViewArr = [self.contentView, self.contentTextView, self.toolbar, self.originalView, self.retweetView]

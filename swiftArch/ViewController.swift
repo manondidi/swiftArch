@@ -22,7 +22,8 @@ class ViewController: UIViewController {
         }
         btn1.setTitle("默认样式的styleTable例子", for: UIControlState.normal)
         btn1.onTap {
-            self.navigationController?.pushViewController(TableDemoVC(nibName: "TableDemoVC", bundle: nil), animated: true)
+            [weak self]  in
+                self?.navigationController?.pushViewController(TableDemoVC(nibName: "TableDemoVC", bundle: nil), animated: true)
         }
  
         
@@ -35,7 +36,8 @@ class ViewController: UIViewController {
         }
         btn2.setTitle("自定义样式的styleTable例子", for: UIControlState.normal)
         btn2.onTap {
-            self.navigationController?.pushViewController(StyleTableDemoVC(), animated: true)
+            [weak self]  in
+            self?.navigationController?.pushViewController(StyleTableDemoVC(), animated: true)
         }
         
         
@@ -60,7 +62,8 @@ class ViewController: UIViewController {
         btn4.titleLabel?.numberOfLines=0
         btn4.setTitle("继承自pagingViewcontrollerDemo(pageNum pageSize分页，\n autolayout行高)", for: UIControlState.normal)
         btn4.onTap {
-            self.navigationController?.pushViewController(PaingTalbeDemoViewController(), animated: true)
+            [weak self] in
+            self?.navigationController?.pushViewController(PaingTalbeDemoViewController(), animated: true)
         }
         
         
@@ -73,7 +76,8 @@ class ViewController: UIViewController {
         btn5.titleLabel?.numberOfLines=0
         btn5.setTitle("继承自pagingViewcontrollerDemo(offset分页 \nautolayout行高)", for: UIControlState.normal)
         btn5.onTap {
-            self.navigationController?.pushViewController(PagingOffsetIdDemoViewController(), animated: true)
+            [weak self] in
+            self?.navigationController?.pushViewController(PagingOffsetIdDemoViewController(), animated: true)
         }
         
         
@@ -86,7 +90,8 @@ class ViewController: UIViewController {
         btn6.titleLabel?.numberOfLines=0
         btn6.setTitle("pagingViewcontrollerDemo手动计算行高的例子", for: UIControlState.normal)
         btn6.onTap {
-            self.navigationController?.pushViewController(FeedsDemoViewController(), animated: true)
+            [weak self] in
+            self?.navigationController?.pushViewController(FeedsDemoViewController(), animated: true)
         }
        
     }

@@ -30,11 +30,11 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         self.setTalbeStateView()
         self.tableView?.setUpState()
         self.tableView?.tableFooterView=UIView()
-        self.tableView?.setRefreshCallback {
-            self.onTableRresh()
+        self.tableView?.setRefreshCallback {[weak self] in
+            self?.onTableRresh()
         }
-        self.tableView?.setLoadMoreCallback {
-             self.onTableLoadMore()
+        self.tableView?.setLoadMoreCallback {[weak self] in
+             self?.onTableLoadMore()
         }
         
         self.tableView?.dataSource=self;

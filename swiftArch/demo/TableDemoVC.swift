@@ -15,13 +15,24 @@ class TableDemoVC: UIViewController {
         super.viewDidLoad()
     
         self.tableView.setUpState()
-        self.tableView.setLoadMoreCallback {
-            self.tableView.endLoadMore()
+        self.tableView.setLoadMoreCallback  {
+            [weak self] in
+                if let strongSelf = self{
+                    strongSelf.tableView.endLoadMore()
+            }
+            
         }
         self.tableView.setRefreshCallback {
-            self.tableView.endRefresh()
+            [weak self] in
+            if let strongSelf = self{ 
+                strongSelf.tableView.endRefresh()
+            }
+            
         }
     }
  
+    deinit {
+        print("TableDemoVC deinit")
+    }
 
 }

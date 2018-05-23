@@ -77,7 +77,7 @@ class RemoteService {
             // 转换为VM
             //            var feedVMs? = [SPFeedVM]()
             let tmpFeeds = result.data;
-            var feedVMs = tmpFeeds?.map({ (feed: Feed) -> SPFeedVM in
+            let feedVMs = tmpFeeds?.map({ (feed: Feed) -> SPFeedVM in
                 let feedVM = SPFeedVM()
                 feedVM.feed = feed
                 return feedVM

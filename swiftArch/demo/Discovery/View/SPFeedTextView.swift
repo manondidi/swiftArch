@@ -26,14 +26,14 @@ class SPFeedTextView: UITextView {
             isInside = self.judgeTouchSpecial(point: point)
         }
         
-        print("point inside \(point) isInside=\(isInside)")
+//        print("point inside \(point) isInside=\(isInside)")
         return isInside
     }
     
     // MARK:- UIResponder
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touchesBegan==")
+//        print("touchesBegan==")
         let touch = touches.first
         if let point = touch?.location(in: self) {
             let _ = self.judgeTouchSpecial(point: point, setCover: true)
@@ -41,14 +41,14 @@ class SPFeedTextView: UITextView {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touchesEnded==")
+//        print("touchesEnded==")
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
             self.touchesCancelled(touches, with: event)
         }
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("touchesBegan==")
+//        print("touchesBegan==")
         for child in self.subviews {
             if child.tag == SPFeedTextView.CoverTag {
                 child.removeFromSuperview()
