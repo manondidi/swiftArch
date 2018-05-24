@@ -12,20 +12,20 @@ class NetLogger: NSObject {
 
     static func log(response:DataResponse<String>) {
       
-        print("\n")
+        debugPrint("\n")
         if let headers = response.request?.allHTTPHeaderFields {
               print("NetLogger#### header:"+headers.description)
         }
-        print("NetLogger#### url:"+response.request!.httpMethod!+": "+response.request!.url!.absoluteString)
+        debugPrint("NetLogger#### url:"+response.request!.httpMethod!+": "+response.request!.url!.absoluteString)
         
         if let body = response.request?.httpBody {
-            print("NetLogger#### httpBody:"+String(data: body, encoding: String.Encoding.utf8)!)
+            debugPrint("NetLogger#### httpBody:"+String(data: body, encoding: String.Encoding.utf8)!)
         }
         
         if let result = response.value {
-            print("NetLogger#### result:"+result)
+            debugPrint("NetLogger#### result:"+result)
         }
         
-        print("\n")
+        debugPrint("\n")
     }
 }
