@@ -140,7 +140,7 @@ class SPFeedCell: UITableViewCell {
     // 分割线
     private lazy var separatorLine: UIView = {
         var separatorLine = UIView()
-        separatorLine.backgroundColor = UIColor(red: 230/255, green: 230/255, blue: 255/255, alpha: 1)
+        separatorLine.backgroundColor = UIColor(red: 243/255.0, green: 243/255.0, blue: 243/255.0, alpha: 1)
         return separatorLine
     }()
     

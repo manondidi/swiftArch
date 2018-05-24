@@ -30,6 +30,7 @@ class PagingOffsetIdDemoViewController: PagingViewController {
     
  
     override func registerCellModel() {
+        self.tableView?.registerCellClass(cellClass: BannerCell.self, modelClass: BannersVM.self)
         self.tableView?.registerCellNib(nib: R.nib.feedArticleCell(), modelClass: FeedArtileModel.self)
     }
     
@@ -43,17 +44,17 @@ class PagingOffsetIdDemoViewController: PagingViewController {
         let strategy:FeedPaingStrategy=pagingStrategy as! FeedPaingStrategy;
         let pageInfo:FeedPageInfo=strategy.getPageInfo() as! FeedPageInfo
         
-        self.remoteService.getFeedArticle(direction: pageInfo.type, pageSize: pageInfo.pageSize, offsetId: pageInfo.offsetId, success: {
-            [weak self] (feedArticleList) in
+        self.remoteService.getBannerAndFeedArticle(direction: pageInfo.type, pageSize: pageInfo.pageSize, offsetId: pageInfo.offsetId, success: {
+            [weak self] (bannerArticleList) in
             if let strongSelf=self{
                  if(pageInfo.isFirstPage()){
-                    strongSelf.pagingList=feedArticleList!
-                    strongSelf.datasource=feedArticleList!
+                    strongSelf.pagingList=bannerArticleList!
+                    strongSelf.datasource=bannerArticleList!
                 }else{
-                    strongSelf.pagingList = strongSelf.pagingList + feedArticleList!
-                    strongSelf.datasource = strongSelf.datasource + feedArticleList!
+                    strongSelf.pagingList = strongSelf.pagingList + bannerArticleList!
+                    strongSelf.datasource = strongSelf.datasource + bannerArticleList!
                 }
-                strongSelf.loadSuccess(resultData: feedArticleList! as NSObject, dataSource: strongSelf.datasource, pagingList: strongSelf.pagingList)
+                strongSelf.loadSuccess(resultData: bannerArticleList! as NSObject, dataSource: strongSelf.datasource, pagingList: strongSelf.pagingList)
             }
         }) {[weak self] (code, msg) in
               self?.loadFail()

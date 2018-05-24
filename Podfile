@@ -13,6 +13,7 @@ target 'swiftArch' do
     pod 'Toast-Swift', '~> 3.0.1'
     pod 'Kingfisher', '~>4.8.0'
     pod 'RegexKitLite-NoWarning'
+    pod 'FSPagerView'
 end
 
 

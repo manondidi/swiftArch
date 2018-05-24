@@ -23,6 +23,9 @@
 		610D229F20AE604B003B1324 /* EmptyHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610D229E20AE604B003B1324 /* EmptyHeaderModel.swift */; };
 		6119133620B6509E00553D3A /* banner.json in Resources */ = {isa = PBXBuildFile; fileRef = 6119133520B6509D00553D3A /* banner.json */; };
 		6119133820B650DC00553D3A /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6119133720B650DC00553D3A /* Banner.swift */; };
+		6119133C20B6652F00553D3A /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6119133B20B6652F00553D3A /* BannerCell.swift */; };
+		6119133E20B66E6E00553D3A /* BannersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6119133D20B66E6E00553D3A /* BannersVM.swift */; };
+		6119134020B69A8A00553D3A /* BannerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6119133F20B69A8A00553D3A /* BannerItemCell.swift */; };
 		61244C4B209C597B00BBF6BF /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C4A209C597B00BBF6BF /* CacheManager.swift */; };
 		61244C4D209FF55300BBF6BF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */; };
 		61244C5320A1467000BBF6BF /* StateTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C5220A1467000BBF6BF /* StateTableView.swift */; };
@@ -116,6 +119,9 @@
 		610D229E20AE604B003B1324 /* EmptyHeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyHeaderModel.swift; sourceTree = "<group>"; };
 		6119133520B6509D00553D3A /* banner.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = banner.json; sourceTree = "<group>"; };
 		6119133720B650DC00553D3A /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		6119133B20B6652F00553D3A /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		6119133D20B66E6E00553D3A /* BannersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersVM.swift; sourceTree = "<group>"; };
+		6119133F20B69A8A00553D3A /* BannerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerItemCell.swift; sourceTree = "<group>"; };
 		61244C4A209C597B00BBF6BF /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		61244C5220A1467000BBF6BF /* StateTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableView.swift; sourceTree = "<group>"; };
@@ -299,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				612B17AB20B415A600F06E4E /* SPFeedVM.swift */,
+				6119133D20B66E6E00553D3A /* BannersVM.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -338,6 +345,8 @@
 				617E8A0120AC04E3006C358E /* GameCell.xib */,
 				617E8A1020AC3753006C358E /* FeedArticleCell.swift */,
 				617E8A1120AC3753006C358E /* FeedArticleCell.xib */,
+				6119133B20B6652F00553D3A /* BannerCell.swift */,
+				6119133F20B69A8A00553D3A /* BannerItemCell.swift */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -654,6 +663,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-swiftArch/Pods-swiftArch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Closures/Closures.framework",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -667,6 +677,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Closures.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -716,6 +727,7 @@
 				617E8A0B20AC124A006C358E /* PaingTalbeDemoViewController.swift in Sources */,
 				61244C5920A1850400BBF6BF /* DefaultTableLoadView.swift in Sources */,
 				61707A6720A3E78900B378FD /* PageStateLoadView.swift in Sources */,
+				6119133E20B66E6E00553D3A /* BannersVM.swift in Sources */,
 				61079DAC20A7180600624424 /* BaseViewController.swift in Sources */,
 				61C01359208ED07E00BBE4DC /* CMSResult.swift in Sources */,
 				61079DB020A9271F00624424 /* UserStyleLoadView.swift in Sources */,
@@ -756,6 +768,8 @@
 				61C0134F208DBABA00BBE4DC /* Result.swift in Sources */,
 				610D229F20AE604B003B1324 /* EmptyHeaderModel.swift in Sources */,
 				610D229B20AD9497003B1324 /* GameDateHeader.swift in Sources */,
+				6119134020B69A8A00553D3A /* BannerItemCell.swift in Sources */,
+				6119133C20B6652F00553D3A /* BannerCell.swift in Sources */,
 				61707A6520A3E77700B378FD /* PageStateErrorView.swift in Sources */,
 				618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */,
 				9C0296A720B40C2C0053E9F3 /* FeedsDemoViewController.swift in Sources */,
