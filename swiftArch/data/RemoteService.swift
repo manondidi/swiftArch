@@ -85,6 +85,47 @@ class RemoteService {
             callback(feedVMs!)
         }
     }
+    func getBanners(success:@escaping ((Array<Banner>?)->()),failure:@escaping failureCallback ) {
+        mockService.getBanners { (result: Result<Array<Banner>>) in
+            success(result.data)
+        }
+    }
+    ///下拉刷新时候 一起请求banner和article的第一页,上拉加载只请求article
+//    func getBannerAndFeedArticle(direction:String,pageSize:Int,offsetId:String?,success:@escaping ((Array<NSObject>?)->()),failure:@escaping failureCallback)  {
+//        
+//        if(direction=="new"){
+//            var requestCount=2
+//            var articles:Array<FeedArtileModel>?
+//            var banners:Array<Banner>?
+//            self.getFeedArticle(direction: direction, pageSize: pageSize, offsetId: offsetId, success: { (artileList) in
+//                requestCount-=1
+//                articles=artileList
+//                if(requestCount==0){
+//                    var list=[NSObject]()
+//                    list.append(banners! as NSObject)
+//                    list.append(contentsOf: articles)
+//                    success(list)
+//                }
+//            }) { (code, msg) in
+//                failure(code, msg)
+//            }
+//            self.getBanners(success: { (bannerList) in
+//                requestCount-=1
+//                 banners=bannerList
+//                if(requestCount==0){
+//                    var list=[NSObject]()
+//                    list.append(banners! as NSObject)
+//                    list.append(contentsOf: articles)
+//                    success(list)
+//                }
+//            }) { (code, msg) in
+//                failure(code, msg)
+//                
+//            }
+//        } 
+//    }
+    
+    
     
    private func getData<T>(result:Result<T>)->T?{
         if self.checkSuccess(result: result) {

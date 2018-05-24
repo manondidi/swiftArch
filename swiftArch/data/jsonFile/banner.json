@@ -1,0 +1,51 @@
+{
+    "status": 0,
+    "msg": "ok.",
+    "data": [
+             {
+  "id": 1,
+  "title": "第一篇编辑精选",
+  "summary": "推荐摘要内容，这是我推荐的理由。",
+  "cover": "http:\/\/i1.cdn.test.17173.com\/gdthue\/YWxqaGBf\/snsapp\/20180313\/CyPAkJbmiotfEqc.jpg",
+  "isFirefly": true,
+  "relatedType": "gameInfo",
+  "relatedId": 10008039,
+  "feedId": null
+  }, {
+  "id": 2,
+  "title": "我最喜欢的塞尔达作品",
+  "summary": "玩玩玩玩玩买买买买买买，如果推荐的内容比较长会怎么样？玩玩玩玩玩买买买买买买，如果推荐的内容比较长会怎么样？玩玩玩玩玩买买买买买买，如果推荐的内容比较长会怎么样？玩玩玩玩玩买买买买买买，如果推荐的内容比较长会怎么样？玩玩玩玩玩买买买买买买，如果推荐的内容比较长会怎么样？",
+  "cover": "http:\/\/i1.cdn.test.17173.com\/gdthue\/YWxqaGBf\/snsapp\/20180313\/AbOOiTbmiotjjtx.jpg",
+  "isFirefly": false,
+  "relatedType": "gameInfo",
+  "relatedId": 10003481,
+  "feedId": null
+  }, {
+  "id": 3,
+  "title": "第三篇推荐",
+  "summary": "今天推荐的是一篇文章",
+  "cover": "http:\/\/i1.cdn.test.17173.com\/gdthue\/YWxqaGBf\/snsapp\/20180313\/BsihMdbmiotljdv.jpg",
+  "isFirefly": true,
+  "relatedType": "article",
+  "relatedId": 2361,
+  "feedId": 8107
+  }, {
+  "id": 4,
+  "title": "第四篇推荐",
+  "summary": "啦啦啦啦啦啦啦耶耶耶hahahahaahhahhah。6666666666666666666666",
+  "cover": "http:\/\/i1.cdn.test.17173.com\/gdthue\/YWxqaGBf\/snsapp\/20180313\/oJlQDobmiotnagz.jpg",
+  "isFirefly": true,
+  "relatedType": "article",
+  "relatedId": 2528,
+  "feedId": 8520
+  }, {
+  "id": 5,
+  "title": "第5篇推荐",
+  "summary": "这个厉害了",
+  "cover": "http:\/\/i1.cdn.test.17173.com\/gdthue\/YWxqaGBf\/snsapp\/20180313\/KuJgEqbmiotpdbg.gif",
+  "isFirefly": false,
+  "relatedType": "article",
+  "relatedId": 2526,
+  "feedId": 8517
+  }]
+}

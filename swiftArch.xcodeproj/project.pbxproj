@@ -21,6 +21,8 @@
 		610D229B20AD9497003B1324 /* GameDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610D229A20AD9497003B1324 /* GameDateHeader.swift */; };
 		610D229D20AE6007003B1324 /* EmptyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610D229C20AE6007003B1324 /* EmptyHeader.swift */; };
 		610D229F20AE604B003B1324 /* EmptyHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610D229E20AE604B003B1324 /* EmptyHeaderModel.swift */; };
+		6119133620B6509E00553D3A /* banner.json in Resources */ = {isa = PBXBuildFile; fileRef = 6119133520B6509D00553D3A /* banner.json */; };
+		6119133820B650DC00553D3A /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6119133720B650DC00553D3A /* Banner.swift */; };
 		61244C4B209C597B00BBF6BF /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C4A209C597B00BBF6BF /* CacheManager.swift */; };
 		61244C4D209FF55300BBF6BF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */; };
 		61244C5320A1467000BBF6BF /* StateTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C5220A1467000BBF6BF /* StateTableView.swift */; };
@@ -111,6 +113,8 @@
 		610D229A20AD9497003B1324 /* GameDateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDateHeader.swift; sourceTree = "<group>"; };
 		610D229C20AE6007003B1324 /* EmptyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyHeader.swift; sourceTree = "<group>"; };
 		610D229E20AE604B003B1324 /* EmptyHeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyHeaderModel.swift; sourceTree = "<group>"; };
+		6119133520B6509D00553D3A /* banner.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = banner.json; sourceTree = "<group>"; };
+		6119133720B650DC00553D3A /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		61244C4A209C597B00BBF6BF /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		61244C5220A1467000BBF6BF /* StateTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableView.swift; sourceTree = "<group>"; };
@@ -382,6 +386,7 @@
 				617E8A0C20AC18AB006C358E /* NormalPageModel.swift */,
 				617E8A1420AC39F9006C358E /* FeedArtileModel.swift */,
 				610D229620AD9308003B1324 /* GameDateModel.swift */,
+				6119133720B650DC00553D3A /* Banner.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				617E8A0720AC102E006C358E /* game.json */,
 				61C0135E208F28C600BBE4DC /* getUser.json */,
 				9C0296A820B40C4A0053E9F3 /* feeds.json */,
+				6119133520B6509D00553D3A /* banner.json */,
 			);
 			path = jsonFile;
 			sourceTree = "<group>";
@@ -603,6 +609,7 @@
 				61244C6520A1A02600BBF6BF /* DefaultTableErrorView.xib in Resources */,
 				61707A5920A3363100B378FD /* TableDemoVC.xib in Resources */,
 				61244C5F20A19B6500BBF6BF /* DefaultTableEmptyView.xib in Resources */,
+				6119133620B6509E00553D3A /* banner.json in Resources */,
 				617E8A1320AC3753006C358E /* FeedArticleCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -786,6 +793,7 @@
 				9C0296A320B40C2C0053E9F3 /* SPFeedTextView.swift in Sources */,
 				61079DD720AA83E300624424 /* NormalPageInfo.swift in Sources */,
 				9C0296A620B40C2C0053E9F3 /* SPFeedLinkView.swift in Sources */,
+				6119133820B650DC00553D3A /* Banner.swift in Sources */,
 				61079DB420A929AD00624424 /* PagingViewController.swift in Sources */,
 				61244C6120A19FF600BBF6BF /* DefaultTableErrorView.swift in Sources */,
 			);
