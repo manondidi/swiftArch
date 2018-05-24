@@ -20,8 +20,8 @@ class RemoteService {
     typealias failureCallback = (_ statusCode:Int?,_ msg:String?) -> Void
     
     func getUser(userId:String,password:String,success:@escaping ((User?)->()),failure:@escaping failureCallback ){
-        httpClient.request(url: "user/{userId}", method: .get, pathParams: ["userId":userId ], params: ["password":password])
-            .responseModelAndCache(success: { (result:Result<User>,isCache:Bool) in
+        httpClient.request(url: "user/{userId}", method: .post, pathParams: ["userId":userId ], params: ["password":password])
+            .responseModelAndCache(readCache:true ,success: { (result:Result<User>,isCache:Bool) in
                 if(self.checkSuccess(result: result)){
                     success(self.getData(result: result))
                 }

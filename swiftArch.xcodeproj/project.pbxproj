@@ -26,6 +26,7 @@
 		6119133C20B6652F00553D3A /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6119133B20B6652F00553D3A /* BannerCell.swift */; };
 		6119133E20B66E6E00553D3A /* BannersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6119133D20B66E6E00553D3A /* BannersVM.swift */; };
 		6119134020B69A8A00553D3A /* BannerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6119133F20B69A8A00553D3A /* BannerItemCell.swift */; };
+		61197E7D20B6BFEC0046E8C2 /* NetLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61197E7C20B6BFEC0046E8C2 /* NetLogger.swift */; };
 		61244C4B209C597B00BBF6BF /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C4A209C597B00BBF6BF /* CacheManager.swift */; };
 		61244C4D209FF55300BBF6BF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */; };
 		61244C5320A1467000BBF6BF /* StateTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C5220A1467000BBF6BF /* StateTableView.swift */; };
@@ -122,6 +123,7 @@
 		6119133B20B6652F00553D3A /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
 		6119133D20B66E6E00553D3A /* BannersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersVM.swift; sourceTree = "<group>"; };
 		6119133F20B69A8A00553D3A /* BannerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerItemCell.swift; sourceTree = "<group>"; };
+		61197E7C20B6BFEC0046E8C2 /* NetLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetLogger.swift; sourceTree = "<group>"; };
 		61244C4A209C597B00BBF6BF /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		61244C5220A1467000BBF6BF /* StateTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableView.swift; sourceTree = "<group>"; };
@@ -382,6 +384,7 @@
 				61A4CEC1208A1E800097AC72 /* HttpClient.swift */,
 				61C01350208DC27B00BBE4DC /* ResponseJsonHandle.swift */,
 				61244C4A209C597B00BBF6BF /* CacheManager.swift */,
+				61197E7C20B6BFEC0046E8C2 /* NetLogger.swift */,
 			);
 			path = http;
 			sourceTree = "<group>";
@@ -748,6 +751,7 @@
 				61707A6120A3E6E800B378FD /* PageSateManager.swift in Sources */,
 				61707A5B20A33AA900B378FD /* StyleTableDemoVC.swift in Sources */,
 				610D229D20AE6007003B1324 /* EmptyHeader.swift in Sources */,
+				61197E7D20B6BFEC0046E8C2 /* NetLogger.swift in Sources */,
 				61C01351208DC27B00BBE4DC /* ResponseJsonHandle.swift in Sources */,
 				617E8A0F20AC3715006C358E /* PagingOffsetIdDemoViewController.swift in Sources */,
 				9C0296A520B40C2C0053E9F3 /* SPFeedPhotosView.swift in Sources */,

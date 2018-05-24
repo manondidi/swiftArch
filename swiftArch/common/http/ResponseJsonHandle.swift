@@ -15,27 +15,35 @@ extension DataRequest {
         
     {
          responseString { (response) in
+            NetLogger.log(response: response)
             if(response.result.isFailure){
                 failure(response.response?.statusCode,response.error!)
             }
-            let jsonStr = response.value
+            let jsonStr = response.value   
             let result:T = T.deserialize(from: jsonStr)!
             success( result)
         
         }
     }
     
-    public func responseModelAndCache<T:HandyJSON>( success:@escaping ((T,Bool)->()),failure:@escaping ((Int?,Error)->()) )
+    /// 调用或者存储缓存 使用该方法来接reqeust肯定会做存储动作
+    ///
+    /// - Parameters:
+    ///   - useCache:是否读缓存,一定会去存
+    ///   - success: 成功回调,第一个参数是整个返回值model节点,第二个参数是该回调是否是缓存回调
+    ///   - failure: 失败回调
+    public func responseModelAndCache<T:HandyJSON>( readCache:Bool,success:@escaping ((T,Bool)->()),failure:@escaping ((Int?,Error)->()) )
         
     {
         responseString { (response) in
             
+            NetLogger.log(response: response)
             let cacheManager:CacheManager=CacheManager.shareInstance
             cacheManager.initCacheDB()
             let cacheKey:String? = self.makeKey(request: response.request!)
             
             let cacheJson = cacheManager.getCache(key:cacheKey!)
-            if(cacheJson != nil){
+            if(cacheJson != nil && readCache){
                 let cacheResult:T = T.deserialize(from: cacheJson)!
                 success( cacheResult,true)
             }
