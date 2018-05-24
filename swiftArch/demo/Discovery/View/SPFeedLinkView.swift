@@ -19,7 +19,7 @@ class SPFeedLinkView: UIView {
         backButton.layer.masksToBounds = true
         backButton.clipsToBounds = true
         backButton.isUserInteractionEnabled = true
-        backButton.setBackgroundImage(R.image.timeline_card_bottom_background_highlighted(), for:.highlighted)
+        backButton.setBackgroundImage(R.image.timeline_card_bottom_background_highlighted(), for: .highlighted)
         backButton.setBackgroundImage(R.image.timeline_card_bottom_background_normal(), for: UIControlState.normal)
         backButton.onTap {
 //            print("Tap")
@@ -51,27 +51,18 @@ class SPFeedLinkView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.backButton.frame = self.bounds
+        self.iconView.frame = CGRect(x: 5, y: 5, width: 40, height: 40)
+        self.titleLabel.frame = CGRect(x: self.iconView.frame.maxX + 8, y: 0, width: self.frame.width - self.iconView.frame.maxX - 16, height: self.frame.height)
+    }
+    
     func setupUI() -> () {
         self.isUserInteractionEnabled = true
         self.addSubview(self.backButton)
         self.addSubview(self.iconView)
         self.addSubview(self.titleLabel)
-        
-        self.backButton.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
-        }
-        
-        self.iconView.snp.makeConstraints { (make) in
-            make.left.equalToSuperview().offset(5)
-            make.centerY.equalToSuperview()
-            make.width.height.equalTo(40)
-        }
-        
-        self.titleLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(self.iconView.snp.right).offset(8)
-            make.right.equalToSuperview().offset(-8)
-            make.centerY.equalToSuperview()
-        }
     }
     
     // MARK:- Public

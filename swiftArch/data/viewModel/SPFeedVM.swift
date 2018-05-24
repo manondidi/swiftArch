@@ -26,15 +26,17 @@ class SPFeedVM: NSObject {
     // 分页策略器使用到的id
     @objc var id = 0
 
-    static var paddingH:CGFloat = 8
-    static var paddingV:CGFloat = 8
-    static var avatarWH:CGFloat = 40
-    static var imageWH = (UIScreen.main.bounds.width - SPFeedVM.avatarWH - SPFeedVM.paddingH * 5)/3
-    static var linkViewH:CGFloat = 50
-    static var gameViewH:CGFloat = 50
-    static var retweetImageWH = (UIScreen.main.bounds.width - SPFeedVM.avatarWH - SPFeedVM.paddingH * 7)/3
-    static var toolBarH:CGFloat = 40
-    
+    static let photoCountPerRow: Int = 3
+    static let paddingH: CGFloat = 8
+    static let paddingV: CGFloat = 8
+    static let avatarWH: CGFloat = 40
+    static let imageWH = (UIScreen.main.bounds.width - SPFeedVM.avatarWH - SPFeedVM.paddingH * 5)/CGFloat(SPFeedVM.photoCountPerRow)
+    static let linkViewH: CGFloat = 50
+    static let gameViewH: CGFloat = 50
+    static let retweetImageWH = (UIScreen.main.bounds.width - SPFeedVM.avatarWH - SPFeedVM.paddingH * 7)/CGFloat(SPFeedVM.photoCountPerRow)
+    static let toolBarH: CGFloat = 40
+    static let separatorLineH: CGFloat = 10
+
     // MARK:- 显示内容
     @objc var feed: Feed? {
         didSet {
@@ -47,20 +49,27 @@ class SPFeedVM: NSObject {
     
     lazy var showTimeStr: String = {
         var showTimeStr = ""
+        var date: Date = Date()
         if let createTimeInternal = (self.feed?.payload?.post?.createTime) {
-            var date = Date(timeIntervalSince1970: Double(createTimeInternal))
-            showTimeStr = self.postDateFormatter.string(from: date)
+            // 用户发送文本
+            date = Date(timeIntervalSince1970: Double(createTimeInternal))
         } else if let createTimeInternal = (self.feed?.payload?.record?.recordCreateTime) {
-            var date = Date(timeIntervalSince1970: Double(createTimeInternal))
-            showTimeStr = self.postDateFormatter.string(from: date)
+            // 游戏记录
+            date = Date(timeIntervalSince1970: Double(createTimeInternal))
         }
+        showTimeStr = date.friendlyDateString()
+        
+        // 时间后面添加状态
+        if self.feed?.payload?.record != nil {
+            let status = self.feed?.payload?.record?.playStatus
+            showTimeStr = showTimeStr + (status == "playing" ? " 在玩" : status == "played" ? " 玩过" : status == "wish" ? " 想玩" : "")
+        }
+        
+        if self.feed?.payload?.post?.retweetFeed != nil {
+            showTimeStr = showTimeStr + " 转发"
+        }
+        
         return showTimeStr
-    }()
-    
-    lazy var postDateFormatter: DateFormatter = {
-        var postDateFormatter = DateFormatter()
-        postDateFormatter.dateFormat = " YYYY-MM-dd HH:mm"
-        return postDateFormatter
     }()
     
     // MARK:- View 尺寸信息
@@ -73,22 +82,27 @@ class SPFeedVM: NSObject {
     var photosViewFrame: CGRect = CGRect.zero
     var linkViewFrame: CGRect = CGRect.zero
     var gameViewFrame: CGRect = CGRect.zero
+    var articleViewFrame: CGRect = CGRect.zero
     var retweetViewFrame: CGRect = CGRect.zero
     var retweetContentTextViewFrame: CGRect = CGRect.zero
     var retweetPhotosViewFrame: CGRect = CGRect.zero
     var retweetLinkViewFrame: CGRect = CGRect.zero
     var retweetGameViewFrame: CGRect = CGRect.zero
+    var retweetArticleViewFrame: CGRect = CGRect.zero
     var toolbarFrame: CGRect = CGRect.zero
+    var separatorLineFrame: CGRect = CGRect.zero
     
     /// 设置Cell中View的Frame
     func setupViewFrame() -> () {
         
-        let cellW:CGFloat = UIScreen.main.bounds.size.width
-        
+        let cellW: CGFloat = UIScreen.main.bounds.size.width
+        var offsetY: CGFloat = 0
+
         // Original Feed
         self.avatarIconViewFrame = CGRect.init(x: SPFeedVM.paddingH, y: SPFeedVM.paddingV, width: SPFeedVM.avatarWH, height: SPFeedVM.avatarWH)
         self.userNameLabelFrame = CGRect.init(x: self.avatarIconViewFrame.maxX + 4, y: self.avatarIconViewFrame.minY, width: cellW - self.avatarIconViewFrame.maxX - SPFeedVM.paddingH, height: 16)
         self.createTimeLabelFrame = CGRect.init(x: self.userNameLabelFrame.minX, y: self.userNameLabelFrame.maxY + 4, width: self.userNameLabelFrame.width, height: 16)
+        offsetY = self.createTimeLabelFrame.maxY
         
         // 内容处理
         let conentW = cellW - self.avatarIconViewFrame.maxX - SPFeedVM.paddingH * 2
@@ -100,13 +114,17 @@ class SPFeedVM: NSObject {
             let _ = self.recomposeAttrStr(feed: feed, fitSize: fitSize)
         }
         if let showAttributeText = self.feed?.showAttributeText {
-            let contentSize = showAttributeText.boundingRect(with: CGSize(width: conentW, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil)
-            self.contentTextViewFrame = CGRect.init(x: self.createTimeLabelFrame.minX, y: self.createTimeLabelFrame.maxY + 10, width: conentW, height: contentSize.height)
+            if showAttributeText.length > 0 {
+                let contentSize = showAttributeText.boundingRect(with: CGSize(width: conentW, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil)
+                self.contentTextViewFrame = CGRect.init(x: self.createTimeLabelFrame.minX, y: self.createTimeLabelFrame.maxY + 10, width: conentW, height: contentSize.height)
+                offsetY = self.contentTextViewFrame.maxY
+            } else {
+                self.contentTextViewFrame = CGRect.init(x: self.createTimeLabelFrame.minX, y: self.createTimeLabelFrame.maxY, width: conentW, height: 0)
+            }
         } else {
             self.contentTextViewFrame = CGRect.init(x: self.createTimeLabelFrame.minX, y: self.createTimeLabelFrame.maxY, width: conentW, height: 0)
         }
         
-        var offsetY: CGFloat = self.contentTextViewFrame.maxY
         if let count = self.feed?.payload?.post?.images.count {
             if count > 0 {
                 let photoH: CGFloat = SPFeedVM.imageWH + SPFeedVM.paddingV * 2
@@ -115,14 +133,19 @@ class SPFeedVM: NSObject {
             }
         }
         
-        if let _ = self.feed?.payload?.post?.link {
-            self.linkViewFrame = CGRect(x: self.contentTextViewFrame.minX, y: self.contentTextViewFrame.maxY + 4, width: conentW, height: SPFeedVM.linkViewH)
+        if self.feed?.payload?.post?.link != nil {
+            self.linkViewFrame = CGRect(x: self.contentTextViewFrame.minX, y: self.contentTextViewFrame.maxY + 8, width: conentW, height: SPFeedVM.linkViewH)
             offsetY = self.linkViewFrame.maxY
         }
         
-        if let _ = self.feed?.payload?.game {
-            self.gameViewFrame = CGRect(x: self.contentTextViewFrame.minX, y: self.contentTextViewFrame.maxY + 4, width: conentW, height: SPFeedVM.gameViewH)
+        if self.feed?.payload?.game != nil {
+            self.gameViewFrame = CGRect(x: self.contentTextViewFrame.minX, y: self.contentTextViewFrame.maxY + 8, width: conentW, height: SPFeedVM.gameViewH)
             offsetY = self.gameViewFrame.maxY
+        }
+        
+        if self.feed?.payload?.article != nil {
+            self.articleViewFrame = CGRect(x: self.contentTextViewFrame.minX, y: self.contentTextViewFrame.maxY + 10, width: conentW, height: conentW * 9 / 18)
+            offsetY = self.articleViewFrame.maxY
         }
         
         self.originalViewFrame = CGRect(x: 0, y: 0, width: cellW, height: offsetY)
@@ -152,14 +175,19 @@ class SPFeedVM: NSObject {
                 }
             }
             
-            if let _ = retweetFeed.payload?.post?.link {
+            if retweetFeed.payload?.post?.link != nil {
                 self.retweetLinkViewFrame = CGRect(x: SPFeedVM.paddingH, y: self.retweetContentTextViewFrame.maxY + 4, width: retweetContentW, height: SPFeedVM.linkViewH)
                 innerOffsetY = self.retweetLinkViewFrame.maxY
             }
             
-            if let _ = retweetFeed.payload?.game {
+            if retweetFeed.payload?.game != nil {
                 self.retweetGameViewFrame = CGRect(x: SPFeedVM.paddingH, y: self.retweetContentTextViewFrame.maxY + 4, width: retweetContentW, height: SPFeedVM.gameViewH)
                 innerOffsetY = self.retweetGameViewFrame.maxY
+            }
+            
+            if retweetFeed.payload?.article != nil {
+                self.retweetArticleViewFrame = CGRect(x: self.contentTextViewFrame.minX, y: self.retweetContentTextViewFrame.maxY + 4, width: conentW, height: conentW * 9 / 16)
+                innerOffsetY = self.retweetArticleViewFrame.maxY
             }
             
             self.retweetViewFrame = CGRect(x: self.contentTextViewFrame.minX, y: self.originalViewFrame.maxY + 8, width: retweetViewW, height: innerOffsetY + 8)
@@ -170,6 +198,10 @@ class SPFeedVM: NSObject {
         self.toolbarFrame = CGRect(x: 0, y: offsetY, width: cellW, height: SPFeedVM.toolBarH)
         offsetY = self.toolbarFrame.maxY
         
+        // SeparatorLine
+        self.separatorLineFrame = CGRect(x: 0, y: offsetY, width: cellW, height: SPFeedVM.separatorLineH)
+        offsetY = self.separatorLineFrame.maxY
+
         self.cellHeight = offsetY
     }
     
@@ -190,7 +222,10 @@ class SPFeedVM: NSObject {
         return true
     }
     
-    /// 重新生成显示的属性字符串
+    /// 重新生成显示的属性字符串，限制5行，并且在末尾添加“查看更多”
+    /// 从已经生成的属性字符串的末尾向前遍历，分别处理每个TextPart(TextPart是属性字符串中的最小部分，完整的属性字符串是由多个TextPart组成的)
+    /// 每个TextPart每次减少4个字符获取对应的剩余的属性字符串，添加“查看更多”判断重新组合的属性字符串是否满足要求
+    /// 循环以上的步骤，直到满足条件为止
     private func recomposeAttrStr(feed: Feed, fitSize: CGSize) -> NSAttributedString? {
         // 判断是否匹配
         var isMatch = self.judgeSizeIsMatch(attributeText: feed.attributeText, fitSize: fitSize)
@@ -276,15 +311,27 @@ class SPFeedVM: NSObject {
     
     // 处理Specials特殊字符串数组
     private func handleSpecial(feed: Feed, lastRange: NSRange, lastSpecial: TextSpecial) {
+        var removeIndexs = [Int]()
         for index in 0...feed.specials.count-1 {
-            let exitSpecial = feed.specials[feed.specials.count-1 - index]
+            // FIXME: Bug
+            let reversedIndex = feed.specials.count - 1 - index
+            let exitSpecial = feed.specials[reversedIndex]
             if exitSpecial.range.location >= lastRange.location {
-                feed.specials.removeLast()
+                removeIndexs.append(reversedIndex)
             } else {
                 break
             }
         }
+        for removeIndex in removeIndexs {
+            feed.specials.remove(at: removeIndex)
+        }
+        
         // 添加新的Special
+        let specialEntityData = PostTextContentEntity()
+        specialEntityData.type = "see_more"
+        let specialData = PostTextContentEntityData()
+        specialEntityData.data = specialData
+        lastSpecial.specialObj = specialEntityData
         feed.specials.append(lastSpecial)
     }
 }

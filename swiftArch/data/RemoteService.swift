@@ -75,9 +75,11 @@ class RemoteService {
     func getFeedsMock(result callback: @escaping ((Array<SPFeedVM>)->())) {
         mockService.getFeeds { (result: Result<Array<Feed>>) in
             // 转换为VM
-            //            var feedVMs? = [SPFeedVM]()
             let tmpFeeds = result.data;
             let feedVMs = tmpFeeds?.map({ (feed: Feed) -> SPFeedVM in
+                if let retweetFeed = feed.payload?.post?.retweetFeed {
+                    retweetFeed.isRetweeted = true
+                }
                 let feedVM = SPFeedVM()
                 feedVM.feed = feed
                 return feedVM
