@@ -22,8 +22,8 @@ class BaseViewController: UIViewController {
         stateManager=PageSateManager(rootView: self.view)
         self.setStateManagerView(sateManager: self.stateManager!)
         stateManager?.setUpState()
-        stateManager?.setReloadCallback {
-            self.onReload()
+        stateManager?.setReloadCallback {[weak self] in
+            self?.onReload()
         } 
     }
     func setStateManagerView(sateManager:PageSateManager){//子类重写这个方法去自定义几种View的样式
@@ -47,4 +47,7 @@ class BaseViewController: UIViewController {
     }
  
 
+    deinit {
+        print("########### \(String(describing:self.classForCoder.self))deinit################")
+    }
 }

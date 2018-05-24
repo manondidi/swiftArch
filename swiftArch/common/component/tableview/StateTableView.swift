@@ -93,14 +93,14 @@ class StateTableView: UITableView {
         self.mj_footer.isHidden=true
         self.mj_header.setRefreshingTarget(self, refreshingAction: #selector(self.onRefresh))
         self.mj_footer.setRefreshingTarget(self, refreshingAction: #selector(self.onLoadMore))
-        emptyView?.addTapGesture(handler: { (tap) in
-            self.beginRefresh()
-            self.showLoading()
+        emptyView?.addTapGesture(handler: { [weak self] (tap) in
+            self?.beginRefresh()
+            self?.showLoading()
         })
         
-        errorView?.addTapGesture(handler: { (tap) in
-            self.beginRefresh()
-            self.showLoading()
+        errorView?.addTapGesture(handler: {[weak self]  (tap) in
+            self?.beginRefresh()
+            self?.showLoading()
         })
         
         self.showContent()

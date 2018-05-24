@@ -47,23 +47,23 @@ class DemoViewController: BaseViewController {
     }
     func loadData(userId:String,password:String){
         self.showLoading()
-        remoteService.getUser(userId: userId, password: password, success: { (user) in
-            self.showContent()
-            self.view.makeToast("success")
-        }) { (code, msg) in
-            self.view.makeToast("错误的账号密码必然失败回调")
-            self.showError()
+        remoteService.getUser(userId: userId, password: password, success: { [weak self] user in
+            self?.showContent()
+            self?.view.makeToast("success")
+        }) {[weak self] (code, msg) in
+            self?.view.makeToast("错误的账号密码必然失败回调")
+            self?.showError()
         }
     }
     
     func loadMockData(userId:String,password:String){
         self.showLoading()
-        remoteService.getUserMock(userId: userId, password: password, success: { (user) in
-            self.showContent()
-            self.view.makeToast("mock必然成功演示")
-        }) { (code, msg) in
-            self.showError()
-            self.view.makeToast(msg)
+        remoteService.getUserMock(userId: userId, password: password, success: { [weak self]  user in
+            self?.showContent()
+            self?.view.makeToast("mock必然成功演示")
+        }) {[weak self] (code, msg) in
+            self?.showError()
+            self?.view.makeToast(msg)
         }
     }
  

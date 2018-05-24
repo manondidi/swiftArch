@@ -110,8 +110,8 @@ class PageSateManager: NSObject {
             make.width.height.equalToSuperview()
         })
         
-        errorView?.addTapGesture(handler: { (tap) in
-            self.reloadCallback?()
+        errorView?.addTapGesture(handler: { [weak self] (tap) in
+            self?.reloadCallback?()
         })
         
         
