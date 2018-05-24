@@ -35,7 +35,7 @@ class FeedsDemoViewController: PagingViewController {
     
     override func registerCellModel() {
         super.registerCellModel()
-        self.tableView?.register(SPFeedCell.self, forCellReuseIdentifier: String(describing: SPFeedVM.self))
+        self.tableView?.registerCellClass(cellClass: SPFeedCell.self, modelClass: SPFeedVM.self)
     }
     
     override func getPagingStrategy() -> PagingStrategy {
@@ -55,7 +55,7 @@ class FeedsDemoViewController: PagingViewController {
                 self.pagingDatas = result
                 self.datasource = result
                 //如果要使用sectionHeader功能
-                //                self.datasource.insert(EmptyHeaderModel(), at: 0)//第一行一定是SectionModel
+                // self.datasource.insert(EmptyHeaderModel(), at: 0)//第一行一定是SectionModel
                 //因为我是靠sectionmodel的个数做section截断
                 //如果和业务相悖,就插入emptyheadermodel占位
                 //这个model对应的headerview是是个高度为1 完全透明的一个header
@@ -64,9 +64,9 @@ class FeedsDemoViewController: PagingViewController {
                 
             }else{
                 self.pagingDatas += result
-                
                 self.datasource = self.datasource + result
             }
+            
             // 调用者必须维护两个列表
             // 1.和分页相关的列表
             // 2.总数据源的列表
@@ -75,7 +75,7 @@ class FeedsDemoViewController: PagingViewController {
     }
     
     // MARK:- UITableViewDataSource
-    override func tableView(_ cell: UITableViewCell, heightForModel model: NSObject) -> CGFloat {
+    override func tableView(_ cell: UITableViewCell?, heightForModel model: NSObject) -> CGFloat {
         let realItem = model as! SPFeedVM
         return realItem.cellHeight
     }

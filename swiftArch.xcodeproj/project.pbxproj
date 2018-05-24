@@ -80,6 +80,8 @@
 		9C0296A720B40C2C0053E9F3 /* FeedsDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02969E20B40C2C0053E9F3 /* FeedsDemoViewController.swift */; };
 		9C0296A920B40C4A0053E9F3 /* feeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C0296A820B40C4A0053E9F3 /* feeds.json */; };
 		9C46BA6B20B52914002CCBB4 /* DateShowExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46BA6A20B52914002CCBB4 /* DateShowExt.swift */; };
+		9CBFDA3420B57CD700698F08 /* SPFeedArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBFDA3320B57CD600698F08 /* SPFeedArticleView.swift */; };
+		9CBFDA3620B57D9000698F08 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9CBFDA3520B57D9000698F08 /* iconfont.ttf */; };
 		F86489AA0484851B8AA4BEB4 /* Pods_swiftArch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06B98FABE1261D64DF33EEF6 /* Pods_swiftArch.framework */; };
 /* End PBXBuildFile section */
 
@@ -173,6 +175,8 @@
 		9C02969E20B40C2C0053E9F3 /* FeedsDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsDemoViewController.swift; sourceTree = "<group>"; };
 		9C0296A820B40C4A0053E9F3 /* feeds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feeds.json; sourceTree = "<group>"; };
 		9C46BA6A20B52914002CCBB4 /* DateShowExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateShowExt.swift; sourceTree = "<group>"; };
+		9CBFDA3320B57CD600698F08 /* SPFeedArticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedArticleView.swift; sourceTree = "<group>"; };
+		9CBFDA3520B57D9000698F08 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		EDF36AABFF347B42BE92D093 /* Pods-swiftArch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftArch.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftArch/Pods-swiftArch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -436,6 +440,7 @@
 				61D471FD2080457A009B10F5 /* ViewController.swift */,
 				61D471FF2080457A009B10F5 /* Main.storyboard */,
 				61D472022080457A009B10F5 /* Assets.xcassets */,
+				9CBFDA3520B57D9000698F08 /* iconfont.ttf */,
 				61D472042080457A009B10F5 /* LaunchScreen.storyboard */,
 				61D472072080457A009B10F5 /* Info.plist */,
 			);
@@ -464,6 +469,7 @@
 		9C02969620B40C2C0053E9F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9CBFDA3320B57CD600698F08 /* SPFeedArticleView.swift */,
 				9C02969720B40C2C0053E9F3 /* SPFeedCell.swift */,
 				9C02969820B40C2C0053E9F3 /* SPFeedGameView.swift */,
 				9C02969920B40C2C0053E9F3 /* SPFeedTextView.swift */,
@@ -601,6 +607,7 @@
 				61D472012080457A009B10F5 /* Main.storyboard in Resources */,
 				61244C5B20A1852000BBF6BF /* DefaultTableLoadView.xib in Resources */,
 				61079DB220A9273100624424 /* UserStyleLoadView.xib in Resources */,
+				9CBFDA3620B57D9000698F08 /* iconfont.ttf in Resources */,
 				617E8A0920AC102E006C358E /* game.json in Resources */,
 				61C0135F208F28C600BBE4DC /* getUser.json in Resources */,
 				61244C6520A1A02600BBF6BF /* DefaultTableErrorView.xib in Resources */,
@@ -709,6 +716,7 @@
 				617E8A0520AC07A8006C358E /* GameModel.swift in Sources */,
 				61079DD620AA83E300624424 /* NormalPagingStrategy.swift in Sources */,
 				9C0296A420B40C2C0053E9F3 /* SPFeedToolbar.swift in Sources */,
+				9CBFDA3420B57CD700698F08 /* SPFeedArticleView.swift in Sources */,
 				618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */,
 				618F8E39208584D7004F06F7 /* MockService.swift in Sources */,
 				61244C4B209C597B00BBF6BF /* CacheManager.swift in Sources */,
@@ -941,7 +949,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YEDCH4UEA5;
 				INFOPLIST_FILE = swiftArch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.czq.swiftArch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -958,7 +968,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YEDCH4UEA5;
 				INFOPLIST_FILE = swiftArch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.czq.swiftArch;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -96,6 +96,10 @@ class SPFeedTextView: UITextView {
                         cover.layer.cornerRadius = 3
                         self.insertSubview(cover, at: 0)
                     }
+                    
+                    // 处理事件
+                    print("\(special.text) id = \(special.specialObj?.data?.id) type = \(special.specialObj?.type)" )
+                    
                     break
                 }
             }

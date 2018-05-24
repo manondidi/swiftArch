@@ -104,8 +104,8 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         self.tableView=StateTableView()
         self.view.addSubview(self.tableView!)
         self.tableView?.snp.makeConstraints({ (make) in
-            make.width.height.equalToSuperview()
-        }) 
+            make.top.left.bottom.right.equalToSuperview()
+        })
         self.tableView?.estimatedSectionHeaderHeight = 0
     }
     
@@ -227,15 +227,15 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
     //禁止重写
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let item:NSObject = self.getRealDataSourceModel(indexPath: indexPath)
-        let cell:UITableViewCell=self.tableView(tableView, cellForRowAt: indexPath)
-        return self.tableView(cell, heightForModel: item)
+        let _cell: UITableViewCell? = nil
+        return self.tableView(_cell, heightForModel: item)
     }
     
     
     
     //默认使用autolayout方式
     //你可以重写
-    func tableView(_ cell: UITableViewCell, heightForModel model: NSObject)->CGFloat {
+    func tableView(_ cell: UITableViewCell?, heightForModel model: NSObject)->CGFloat {
         return UITableViewAutomaticDimension
     }
     
