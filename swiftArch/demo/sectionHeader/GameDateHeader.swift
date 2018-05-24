@@ -32,6 +32,14 @@ class GameDateHeader: UITableViewHeaderFooterView {
             make.top.bottom.equalToSuperview()
             make.height.equalTo(40)
         })
+        
+        let line=UIView()
+        line.backgroundColor = UIColor(red: 243/255.0, green: 243/255.0, blue: 243/255.0, alpha: 1)
+        self.contentView.addSubview(line)
+        line.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(1) 
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
