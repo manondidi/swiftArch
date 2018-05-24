@@ -90,7 +90,7 @@ class BannerItemCell: FSPagerViewCell {
         gameLine.snp.makeConstraints { (make) in
             make.left.right.equalTo(lbGameName)
             make.height.equalTo(5)
-            make.top.equalTo(lbGameName.snp.bottom).offset(-2)
+            make.top.equalTo(lbGameName.snp.bottom).offset(-5)
         }
         lbGameDesc.numberOfLines=2
         lbGameDesc.snp.makeConstraints { (make) in
