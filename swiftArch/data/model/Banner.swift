@@ -8,7 +8,7 @@
 
 import UIKit
 import HandyJSON
-class Banner: HandyJSON,NSObject {
+class Banner: NSObject, HandyJSON {
     
     var id:String?
     var title:String?
