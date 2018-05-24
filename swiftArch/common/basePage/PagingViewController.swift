@@ -224,18 +224,17 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         return item
     }
     
-    //禁止重写
+    ///禁止重写 因为你的indexpath用子类的datasource取到的不一定是真正的数据源,看下getRealDataSourceModel方法
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let item:NSObject = self.getRealDataSourceModel(indexPath: indexPath)
-        let cell:UITableViewCell=self.tableView(tableView, cellForRowAt: indexPath)
-        return self.tableView(cell, heightForModel: item)
+        return self.tableView(tableView, heightForModel: item)
     }
     
     
     
     //默认使用autolayout方式
     //你可以重写
-    func tableView(_ cell: UITableViewCell, heightForModel model: NSObject)->CGFloat {
+    func tableView(_ tableView: UITableView,heightForModel model: NSObject)->CGFloat {
         return UITableViewAutomaticDimension
     }
     

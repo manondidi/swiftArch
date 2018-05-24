@@ -52,7 +52,7 @@ class FeedsDemoViewController: PagingViewController {
     }
      
     
-    override func tableView(_ cell: UITableViewCell, heightForModel model: NSObject)->CGFloat {
+    override  func tableView(_ tableView: UITableView,heightForModel model: NSObject)->CGFloat {
         let realItem = model as! SPFeedVM
         return realItem.cellHeight
     }
