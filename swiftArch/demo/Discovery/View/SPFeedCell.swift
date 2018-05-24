@@ -46,7 +46,7 @@ class SPFeedCell: UITableViewCell {
     // Feed 富文本内容
     private lazy var contentTextView: SPFeedTextView = {
         let contentTextView = SPFeedTextView()
-        contentTextView.textContainerInset = UIEdgeInsetsMake(0, -5 , 0, -5)
+        contentTextView.textContainerInset = UIEdgeInsetsMake(0, -5, 0, -5)
         contentTextView.isEditable = false
         contentTextView.isScrollEnabled = false
         contentTextView.isSelectable = false
@@ -71,6 +71,12 @@ class SPFeedCell: UITableViewCell {
         return gameView
     }()
     
+    // 文章内容
+    private lazy var articleView: SPFeedArticleView = {
+        let articleView = SPFeedArticleView()
+        return articleView
+    }()
+    
     // 转发内容
     private lazy var retweetView: UIView = {
         let retweetView = UIView()
@@ -79,10 +85,10 @@ class SPFeedCell: UITableViewCell {
     }()
     
     // 转发背景按钮
-    private lazy var retweetViewBackBtn:UIButton = {
+    private lazy var retweetViewBackBtn: UIButton = {
         var retweetViewBackBtn = UIButton(type: UIButtonType.system)
         retweetViewBackBtn.isUserInteractionEnabled = true
-        retweetViewBackBtn.setBackgroundImage(R.image.timeline_card_bottom_background_highlighted(), for:.highlighted)
+        retweetViewBackBtn.setBackgroundImage(R.image.timeline_card_bottom_background_highlighted(), for: .highlighted)
         retweetViewBackBtn.setBackgroundImage(R.image.timeline_card_bottom_background_normal(), for: UIControlState.normal)
         retweetViewBackBtn.onTap {
             
@@ -93,11 +99,10 @@ class SPFeedCell: UITableViewCell {
     // 转发Feed富文本内容
     private lazy var retweetContentTextView: SPFeedTextView = {
         let retweetContentTextView = SPFeedTextView()
-        retweetContentTextView.textContainerInset = UIEdgeInsetsMake(0, -5 , 0, -5)
+        retweetContentTextView.textContainerInset = UIEdgeInsetsMake(0, -5, 0, -5)
         retweetContentTextView.isEditable = false
         retweetContentTextView.isScrollEnabled = false
         retweetContentTextView.isSelectable = false
-//        retweetContentTextView.isUserInteractionEnabled = false
         retweetContentTextView.backgroundColor = UIColor.clear
         return retweetContentTextView
     }()
@@ -120,9 +125,23 @@ class SPFeedCell: UITableViewCell {
         return retweetGameView
     }()
     
+    // 转发文章内容
+    private lazy var retweetArticleView: SPFeedArticleView = {
+        let retweetArticleView = SPFeedArticleView()
+        return retweetArticleView
+    }()
+    
+    // 工具条
     private lazy var toolbar: SPFeedToolbar = {
         var toolbar = SPFeedToolbar()
         return toolbar
+    }()
+    
+    // 分割线
+    private lazy var separatorLine: UIView = {
+        var separatorLine = UIView()
+        separatorLine.backgroundColor = UIColor.gray
+        return separatorLine
     }()
     
     // MARK:- 生命周期方法
@@ -133,6 +152,7 @@ class SPFeedCell: UITableViewCell {
         self.setupOriginalFeed()
         self.setupRetweetFeed()
         self.setupToolbar()
+        self.setupSeparatorLine()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -189,6 +209,7 @@ class SPFeedCell: UITableViewCell {
         self.linkView.isHidden = true
         self.gameView.isHidden = true
         self.photosView.isHidden = true
+        self.articleView.isHidden = true
     }
     
     // MARK:- setup
@@ -202,6 +223,7 @@ class SPFeedCell: UITableViewCell {
         self.originalView.addSubview(self.photosView)
         self.originalView.addSubview(self.gameView)
         self.originalView.addSubview(self.linkView)
+        self.originalView.addSubview(self.articleView)
     }
     
     private func setupRetweetFeed() {
@@ -211,17 +233,22 @@ class SPFeedCell: UITableViewCell {
         self.retweetView.addSubview(self.retweetPhotosView)
         self.retweetView.addSubview(self.retweetGameView)
         self.retweetView.addSubview(self.retweetLinkView)
+        self.retweetView.addSubview(self.retweetArticleView)
     }
     
     private func setupToolbar() {
         self.contentView.addSubview(self.toolbar)
     }
     
+    private func setupSeparatorLine() {
+        self.contentView.addSubview(self.separatorLine)
+    }
+    
     
     // MARK:- Public
     
     // KVO 设置数据模型
-    @objc var model:SPFeedVM? {
+    @objc var model: SPFeedVM? {
         didSet
         {
             self.originalView.frame = (model?.originalViewFrame)!
@@ -272,6 +299,15 @@ class SPFeedCell: UITableViewCell {
                 self.gameView.isHidden = true
             }
             
+            // 文章内容
+            if let article = model?.feed?.payload?.article {
+                self.articleView.frame = (model?.articleViewFrame)!
+                self.articleView.article = article
+                self.articleView.isHidden = false
+            } else {
+                self.articleView.isHidden = true
+            }
+            
             // 处理转发内容
             if let retweedFeed = model?.feed?.payload?.post?.retweetFeed {
                 
@@ -308,6 +344,15 @@ class SPFeedCell: UITableViewCell {
                     self.retweetGameView.isHidden = true
                 }
                 
+                // 文章内容
+                if let article = retweedFeed.payload?.article {
+                    self.retweetArticleView.frame = (model?.retweetArticleViewFrame)!
+                    self.retweetArticleView.article = article
+                    self.retweetArticleView.isHidden = false
+                } else {
+                    self.retweetArticleView.isHidden = true
+                }
+                
                 self.retweetView.frame = (model?.retweetViewFrame)!
                 self.retweetViewBackBtn.frame = self.retweetView.bounds
                 self.retweetView.isHidden = false
@@ -318,6 +363,9 @@ class SPFeedCell: UITableViewCell {
             // Toolbar
             self.toolbar.frame = (model?.toolbarFrame)!
             self.toolbar.feed = model?.feed
+            
+            // SeparatorLine
+            self.separatorLine.frame = (model?.separatorLineFrame)!
         }
     }
     

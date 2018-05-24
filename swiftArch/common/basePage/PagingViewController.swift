@@ -104,8 +104,8 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         self.tableView=StateTableView()
         self.view.addSubview(self.tableView!)
         self.tableView?.snp.makeConstraints({ (make) in
-            make.width.height.equalToSuperview()
-        }) 
+            make.top.left.bottom.right.equalToSuperview()
+        })
         self.tableView?.estimatedSectionHeaderHeight = 0
     }
     

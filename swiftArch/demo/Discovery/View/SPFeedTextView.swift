@@ -11,9 +11,9 @@ import UIKit
 /// 用于处理显示内容
 class SPFeedTextView: UITextView {
     
-    static var CoverTag:Int = 999
+    static let CoverTag: Int = 999
     
-    var specials : [TextSpecial] = [TextSpecial]()
+    var specials: [TextSpecial] = [TextSpecial]()
     
     
     // MARK:- UIView(UIViewGeometry)
@@ -58,38 +58,50 @@ class SPFeedTextView: UITextView {
     
     // MARK:- Helper
     
+
+    /// 判断是否点击的特殊内容的方法
+    ///
+    /// - Parameters:
+    ///   - point: 点击位置
+    ///   - setCover: 设置点击特殊内容位置的高亮背景
     private func judgeTouchSpecial(point: CGPoint, setCover: Bool = false) -> Bool {
         var found = false
         for special in specials {
             self.selectedRange = special.range
-            let selectionRects = self.selectionRects(for: self.selectedTextRange!) as! [UITextSelectionRect]
-            self.selectedRange = NSRange.init()
-            
-            for selectionRect in selectionRects {
-                let rect = selectionRect.rect
-                if rect.size.width == 0 || rect.size.height == 0 {
-                    continue
-                }
-                if rect.contains(point) {
-                    found = true
-                    break
-                }
-            }
-            
-            if found && setCover {
+            let selectionRects = self.selectionRects(for: self.selectedTextRange!) as? [UITextSelectionRect]
+            if let selectionRects = selectionRects {
+                self.selectedRange = NSRange.init()
+                
                 for selectionRect in selectionRects {
                     let rect = selectionRect.rect
                     if rect.size.width == 0 || rect.size.height == 0 {
                         continue
                     }
-                    let cover = UIView()
-                    cover.backgroundColor = UIColor.cyan
-                    cover.frame = rect
-                    cover.tag = SPFeedTextView.CoverTag
-                    cover.layer.cornerRadius = 3
-                    self.insertSubview(cover, at: 0)
+                    if rect.contains(point) {
+                        found = true
+                        break
+                    }
                 }
-                break
+                
+                if found && setCover {
+                    for selectionRect in selectionRects {
+                        let rect = selectionRect.rect
+                        if rect.size.width == 0 || rect.size.height == 0 {
+                            continue
+                        }
+                        let cover = UIView()
+                        cover.backgroundColor = UIColor.cyan
+                        cover.frame = rect
+                        cover.tag = SPFeedTextView.CoverTag
+                        cover.layer.cornerRadius = 3
+                        self.insertSubview(cover, at: 0)
+                    }
+                    
+                    // 处理事件
+                    print("\(special.text) id = \(special.specialObj?.data?.id) type = \(special.specialObj?.type)" )
+                    
+                    break
+                }
             }
         }
         return found

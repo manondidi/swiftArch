@@ -9,32 +9,46 @@
 import UIKit
 
 class FeedsDemoViewController: PagingViewController {
-
+    
     private var remoteService:RemoteService=DataManager.shareInstance.remoteService
-    private var datasource=Array<NSObject>()
-
+    private var datasource = Array<NSObject>()
+    private var pagingDatas = Array<SPFeedVM>()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    // MARK:- 模板方法重写
     
     override func initTableView() {
         super.initTableView()
+        self.tableView?.estimatedSectionHeaderHeight = 0
     }
     
     override func registerCellModel() {
         super.registerCellModel()
-        self.tableView?.registerCellClass(cellClass: SPFeedCell.self, modelClass: SPFeedVM.self) 
+        self.tableView?.registerCellClass(cellClass: SPFeedCell.self, modelClass: SPFeedVM.self)
     }
     
     override func getPagingStrategy() -> PagingStrategy {
-        let strategy:PagingStrategy=FeedPaingStrategy(pageSize: 20, offsetIdKey: "id")
+        let strategy:PagingStrategy = FeedPaingStrategy(pageSize: 20, offsetIdKey: "id")
         return strategy
     }
     
     override func onLoadData(pagingStrategy: PagingStrategy) {
-
+        
         let strategy:FeedPaingStrategy=pagingStrategy as! FeedPaingStrategy;
         let pageInfo:FeedPageInfo=strategy.getPageInfo() as! FeedPageInfo
 
         self.remoteService.getFeedsMock { [weak self] (result: Array<SPFeedVM>) in
-//            print("")
             if let strongSelf=self{
             
                     if(pageInfo.isFirstPage()){
@@ -50,9 +64,8 @@ class FeedsDemoViewController: PagingViewController {
                 }
          }
     }
-     
     
-    override  func tableView(_ tableView: UITableView,heightForModel model: NSObject)->CGFloat {
+    override func tableView(_ tableView: UITableView, heightForModel model: NSObject) -> CGFloat {
         let realItem = model as! SPFeedVM
         return realItem.cellHeight
     }
