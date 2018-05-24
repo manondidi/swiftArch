@@ -12,18 +12,29 @@ UI组件
 - [x] ​       可定制状态视图  
 - [x] ​       上下拉(可定制) 
 
-- [ ] collectionView(分页解耦)  暂时不打算做
+- [ ] ~~collectionView(分页解耦)  暂时不打算做~~
 
 网络库
 
-- [ ] ​              请求聚合
+- [ ] ​              请求聚合(还没想到怎么做,替代方案是在service层用requestcount做聚合控制,详见RemoteService
+
+      -getBannerAndFeedArticle)
+
 - [x] ​               缓存
+
 - [x] ​               自动解析模型<传入泛型>
+
 - [x] ​               参数封装 
+
 - [x] ​               url管理  
+
 - [x] ​              网络日志
-- [ ] ​             上传
-- [ ] ​              下载
+
+- [ ] ​             ~~上传(使用alamofire自带,已经很棒了)~~
+
+- [ ] ​              ~~下载(使用alamofire自带,已经很棒了)~~
+
+- [ ] cookie
 
 业务层  
 
