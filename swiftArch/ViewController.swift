@@ -20,7 +20,7 @@ class ViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(140)
         }
-        btn1.setTitle("默认样式的styleTable例子", for: UIControlState.normal)
+        btn1.setTitle("tableview组件演示默认样式的styleTable例子", for: UIControlState.normal)
         btn1.onTap {
             [weak self]  in
                 self?.navigationController?.pushViewController(TableDemoVC(nibName: "TableDemoVC", bundle: nil), animated: true)
@@ -34,7 +34,8 @@ class ViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.top.equalTo(btn1.snp.bottom).offset(30)
         }
-        btn2.setTitle("自定义样式的styleTable例子", for: UIControlState.normal)
+        btn2.titleLabel?.numberOfLines=0
+        btn2.setTitle("tableview组件演示自定义样式的styleTable例子\n可自定义headview footview emptyview error loadingcover", for: UIControlState.normal)
         btn2.onTap {
             [weak self]  in
             self?.navigationController?.pushViewController(StyleTableDemoVC(), animated: true)
