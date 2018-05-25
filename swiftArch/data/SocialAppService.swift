@@ -13,7 +13,7 @@ import UIKit
 ///同一个系统下面 head cookie 返回值result节点和 sucees条件是一样的
 class SocialAppService {
     
-    let httpClient = HttpClient(baseUrl:DataManager.shareInstance.baseUrl,headers:["X-Requested-With":"XMLHttpRequest"])
+    let httpClient = HttpClient(baseUrl:DataManager.shareInstance.baseUrlSocail,headers:["X-Requested-With":"XMLHttpRequest"])
     let mockService:MockService=MockService();
     
     

@@ -16,16 +16,24 @@ enum URL_ENVITORMENT{
 
 class DataManager: NSObject {
     
-    var baseUrlDev:String="http://47.98.129.57:8080/info-admin-web/"
+    var baseUrlDevSocail:String="http://47.98.129.57:8080/info-admin-web/"
+    var baseUrlTestSocail:String="http://47.98.129.57:8080/info-admin-web/"
+    var baseUrlReleaseSocail:String="http://47.98.129.57:8080/info-admin-web/"
+    let urlEnvSocail=URL_ENVITORMENT.Dev;//在这切换环境
+    var baseUrlSocail=""
     
-    var baseUrlTest:String="http://47.98.129.57:8080/info-admin-web/"
     
-    var baseUrlRelease:String="http://47.98.129.57:8080/info-admin-web/"
-    
-    let urlEnv=URL_ENVITORMENT.Dev;//在这切换环境
-    
-    var baseUrl=""
+    var baseUrlDevCms:String="http://47.98.129.57:8080/info-admin-web/"
+    var baseUrlTestCms:String="http://47.98.129.57:8080/info-admin-web/"
+    var baseUrlReleaseCms:String="http://47.98.129.57:8080/info-admin-web/"
+    let urlEnvCms=URL_ENVITORMENT.Dev;//在这切换环境
+    var baseUrlCms=""
      
+    
+    lazy var cmsService :CmsService = {
+        let service = CmsService()
+        return service
+    }()
     
     lazy var socailAppService :SocialAppService = {
         let service = SocialAppService()
@@ -39,13 +47,22 @@ class DataManager: NSObject {
   
     private override init( ){
         
-        switch urlEnv {
+        switch urlEnvSocail {
         case .Dev:
-            self.baseUrl=baseUrlDev
+            self.baseUrlSocail=baseUrlDevSocail
         case .Test:
-             self.baseUrl=baseUrlTest
+             self.baseUrlSocail=baseUrlTestSocail
         case .Release:
-             self.baseUrl=baseUrlRelease
+             self.baseUrlSocail=baseUrlReleaseSocail
+        }
+        
+        switch urlEnvCms {
+        case .Dev:
+            self.baseUrlCms=baseUrlDevCms
+        case .Test:
+            self.baseUrlCms=baseUrlTestCms
+        case .Release:
+            self.baseUrlCms=baseUrlReleaseCms
         }
     }
   
