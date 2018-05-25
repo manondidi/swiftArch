@@ -100,9 +100,11 @@ cmd+b build整个工程 如果成功 可以打开工程文件夹
 
 
 
-#### 说明
+#### 说明(没耐心看的直接从 6.PagingViewController 开始看 )
 
 [使用文档](https://github.com/manondidi/swiftArch/blob/master/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md)	
+
+##### 
 
 
 
