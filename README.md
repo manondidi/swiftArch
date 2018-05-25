@@ -16,9 +16,9 @@ UI组件
 
 网络库
 
-- [ ] ​              请求聚合(还没想到怎么做,替代方案是在service层用requestcount做聚合控制,详见RemoteService
+- [ ] ​              请求聚合(还没想到怎么做,替代方案是在service层用requestcount做聚合控制,详见
 
-      -getBannerAndFeedArticle)
+      RemoteService  -getBannerAndFeedArticle)
 
 - [x] ​               缓存
 
