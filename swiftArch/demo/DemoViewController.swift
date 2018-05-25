@@ -11,7 +11,7 @@ import UIKit
 class DemoViewController: BaseViewController {
 
     
-    var remoteService:RemoteService=DataManager.shareInstance.remoteService
+    var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
   
     
     override func initView() {
@@ -47,7 +47,7 @@ class DemoViewController: BaseViewController {
     }
     func loadData(userId:String,password:String){
         self.showLoading()
-        remoteService.getUser(userId: userId, password: password, success: { [weak self] user in
+        socailAppService.getUser(userId: userId, password: password, success: { [weak self] user in
             self?.showContent()
             self?.view.makeToast("success")
         }) {[weak self] (code, msg) in
@@ -58,7 +58,7 @@ class DemoViewController: BaseViewController {
     
     func loadMockData(userId:String,password:String){
         self.showLoading()
-        remoteService.getUserMock(userId: userId, password: password, success: { [weak self]  user in
+        socailAppService.getUserMock(userId: userId, password: password, success: { [weak self]  user in
             self?.showContent()
             self?.view.makeToast("mock必然成功演示")
         }) {[weak self] (code, msg) in

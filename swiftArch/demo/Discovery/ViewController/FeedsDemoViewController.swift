@@ -10,7 +10,7 @@ import UIKit
 
 class FeedsDemoViewController: PagingViewController {
     
-    private var remoteService:RemoteService=DataManager.shareInstance.remoteService
+    private var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
     private var datasource = Array<NSObject>()
     private var pagingDatas = Array<SPFeedVM>()
     
@@ -48,7 +48,7 @@ class FeedsDemoViewController: PagingViewController {
         let strategy:FeedPaingStrategy=pagingStrategy as! FeedPaingStrategy;
         let pageInfo:FeedPageInfo=strategy.getPageInfo() as! FeedPageInfo
 
-        self.remoteService.getFeedsMock { [weak self] (result: Array<SPFeedVM>) in
+        self.socailAppService.getFeedsMock { [weak self] (result: Array<SPFeedVM>) in
             if let strongSelf=self{
             
                     if(pageInfo.isFirstPage()){

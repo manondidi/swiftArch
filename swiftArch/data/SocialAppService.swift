@@ -11,10 +11,11 @@ import UIKit
 ///一个service 持有一个httpclient
 ///我的意思是 一个httpclient管理一个baseUrl 通常对应一个系统
 ///同一个系统下面 head cookie 返回值result节点和 sucees条件是一样的
-class RemoteService {
+class SocialAppService {
     
     let httpClient = HttpClient(baseUrl:DataManager.shareInstance.baseUrl,headers:["X-Requested-With":"XMLHttpRequest"])
     let mockService:MockService=MockService();
+    
     
     
     typealias failureCallback = (_ statusCode:Int?,_ msg:String?) -> Void
@@ -121,7 +122,7 @@ class RemoteService {
                     success(list)
                 }
             }) { (code, msg) in
-                failure(code, msg) 
+                failure(code, msg)
             }
         }
         else{

@@ -10,7 +10,7 @@ import UIKit
 
 class PagingOffsetIdDemoViewController: PagingViewController {
 
-    var remoteService:RemoteService=DataManager.shareInstance.remoteService
+    var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
     
     private var datasource=Array<NSObject>()
     private var pagingList=Array<NSObject>()
@@ -44,7 +44,7 @@ class PagingOffsetIdDemoViewController: PagingViewController {
         let strategy:FeedPaingStrategy=pagingStrategy as! FeedPaingStrategy;
         let pageInfo:FeedPageInfo=strategy.getPageInfo() as! FeedPageInfo
         
-        self.remoteService.getBannerAndFeedArticle(direction: pageInfo.type, pageSize: pageInfo.pageSize, offsetId: pageInfo.offsetId, success: {
+        self.socailAppService.getBannerAndFeedArticle(direction: pageInfo.type, pageSize: pageInfo.pageSize, offsetId: pageInfo.offsetId, success: {
             [weak self] (bannerArticleList) in
             if let strongSelf=self{
                  if(pageInfo.isFirstPage()){

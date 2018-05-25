@@ -27,6 +27,7 @@
 		6119133E20B66E6E00553D3A /* BannersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6119133D20B66E6E00553D3A /* BannersVM.swift */; };
 		6119134020B69A8A00553D3A /* BannerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6119133F20B69A8A00553D3A /* BannerItemCell.swift */; };
 		61197E7D20B6BFEC0046E8C2 /* NetLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61197E7C20B6BFEC0046E8C2 /* NetLogger.swift */; };
+		61197E7F20B7A2730046E8C2 /* CmsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61197E7E20B7A2730046E8C2 /* CmsService.swift */; };
 		61244C4B209C597B00BBF6BF /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C4A209C597B00BBF6BF /* CacheManager.swift */; };
 		61244C4D209FF55300BBF6BF /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */; };
 		61244C5320A1467000BBF6BF /* StateTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C5220A1467000BBF6BF /* StateTableView.swift */; };
@@ -60,7 +61,7 @@
 		617E8A1220AC3753006C358E /* FeedArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E8A1020AC3753006C358E /* FeedArticleCell.swift */; };
 		617E8A1320AC3753006C358E /* FeedArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617E8A1120AC3753006C358E /* FeedArticleCell.xib */; };
 		617E8A1520AC39F9006C358E /* FeedArtileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E8A1420AC39F9006C358E /* FeedArtileModel.swift */; };
-		618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E36208584CA004F06F7 /* RemoteService.swift */; };
+		618F8E37208584CA004F06F7 /* SocialAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E36208584CA004F06F7 /* SocialAppService.swift */; };
 		618F8E39208584D7004F06F7 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E38208584D7004F06F7 /* MockService.swift */; };
 		618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F8E3A2085858A004F06F7 /* DataManager.swift */; };
 		61A4CEC2208A1E800097AC72 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A4CEC1208A1E800097AC72 /* HttpClient.swift */; };
@@ -124,6 +125,7 @@
 		6119133D20B66E6E00553D3A /* BannersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersVM.swift; sourceTree = "<group>"; };
 		6119133F20B69A8A00553D3A /* BannerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerItemCell.swift; sourceTree = "<group>"; };
 		61197E7C20B6BFEC0046E8C2 /* NetLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetLogger.swift; sourceTree = "<group>"; };
+		61197E7E20B7A2730046E8C2 /* CmsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmsService.swift; sourceTree = "<group>"; };
 		61244C4A209C597B00BBF6BF /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		61244C5220A1467000BBF6BF /* StateTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableView.swift; sourceTree = "<group>"; };
@@ -157,7 +159,7 @@
 		617E8A1020AC3753006C358E /* FeedArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedArticleCell.swift; sourceTree = "<group>"; };
 		617E8A1120AC3753006C358E /* FeedArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedArticleCell.xib; sourceTree = "<group>"; };
 		617E8A1420AC39F9006C358E /* FeedArtileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedArtileModel.swift; sourceTree = "<group>"; };
-		618F8E36208584CA004F06F7 /* RemoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
+		618F8E36208584CA004F06F7 /* SocialAppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAppService.swift; sourceTree = "<group>"; };
 		618F8E38208584D7004F06F7 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		618F8E3A2085858A004F06F7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		61A4CEC1208A1E800097AC72 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
@@ -359,9 +361,10 @@
 				612B17A120B3E84300F06E4E /* viewModel */,
 				61C0135D208F28A800BBE4DC /* jsonFile */,
 				61C0134B208DAE9F00BBE4DC /* model */,
-				618F8E36208584CA004F06F7 /* RemoteService.swift */,
+				618F8E36208584CA004F06F7 /* SocialAppService.swift */,
 				618F8E38208584D7004F06F7 /* MockService.swift */,
 				618F8E3A2085858A004F06F7 /* DataManager.swift */,
+				61197E7E20B7A2730046E8C2 /* CmsService.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -766,6 +769,7 @@
 				9C46BA6B20B52914002CCBB4 /* DateShowExt.swift in Sources */,
 				61244C5D20A19B5200BBF6BF /* DefaultTableEmptyView.swift in Sources */,
 				612B17AC20B415A600F06E4E /* SPFeedVM.swift in Sources */,
+				61197E7F20B7A2730046E8C2 /* CmsService.swift in Sources */,
 				612B17A820B4106300F06E4E /* NonePagingStrategy.swift in Sources */,
 				61079DD520AA83E300624424 /* FeedPaingStrategy.swift in Sources */,
 				610D229720AD9308003B1324 /* GameDateModel.swift in Sources */,
@@ -775,7 +779,7 @@
 				6119134020B69A8A00553D3A /* BannerItemCell.swift in Sources */,
 				6119133C20B6652F00553D3A /* BannerCell.swift in Sources */,
 				61707A6520A3E77700B378FD /* PageStateErrorView.swift in Sources */,
-				618F8E37208584CA004F06F7 /* RemoteService.swift in Sources */,
+				618F8E37208584CA004F06F7 /* SocialAppService.swift in Sources */,
 				9C0296A720B40C2C0053E9F3 /* FeedsDemoViewController.swift in Sources */,
 				617E8A0D20AC18AB006C358E /* NormalPageModel.swift in Sources */,
 				61707A5D20A34B2200B378FD /* UserStyleTableEmptyView.swift in Sources */,

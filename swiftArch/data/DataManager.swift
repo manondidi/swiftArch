@@ -27,8 +27,8 @@ class DataManager: NSObject {
     var baseUrl=""
      
     
-    lazy var remoteService :RemoteService = {
-        let service = RemoteService()
+    lazy var socailAppService :SocialAppService = {
+        let service = SocialAppService()
         return service
     }()
     

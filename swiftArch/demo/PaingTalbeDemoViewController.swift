@@ -10,7 +10,7 @@ import UIKit
 
 class PaingTalbeDemoViewController: PagingViewController {
 
-    var remoteService:RemoteService=DataManager.shareInstance.remoteService
+    var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
     
     private var datasource=Array<NSObject>()
     private var pagingList=Array<GameModel>()
@@ -55,7 +55,7 @@ class PaingTalbeDemoViewController: PagingViewController {
          
         let strategy:NormalPagingStrategy=pagingStrategy as! NormalPagingStrategy;
         let pageInfo:NormalPageInfo=strategy.getPageInfo() as! NormalPageInfo
-        self.remoteService.getGame(pageNum: pageInfo.pageNum, pageSize: pageInfo.pageSize, success: { [weak self] (gameListModel) in
+        self.socailAppService.getGame(pageNum: pageInfo.pageNum, pageSize: pageInfo.pageSize, success: { [weak self] (gameListModel) in
             if let strongSelf = self {
                 if(pageInfo.isFirstPage()){
                     strongSelf.pagingList=(gameListModel?.listData)!
