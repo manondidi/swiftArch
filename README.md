@@ -108,6 +108,8 @@ cmd+b build整个工程 如果成功 可以打开工程文件夹
 
 demo截图
 
+![](https://raw.githubusercontent.com/manondidi/swiftArch/master/%E6%88%AA%E5%9B%BE/demo%E9%A6%96%E9%A1%B5.png)
+
 
 
 
