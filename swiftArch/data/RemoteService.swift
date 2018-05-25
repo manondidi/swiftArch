@@ -121,10 +121,8 @@ class RemoteService {
                     success(list)
                 }
             }) { (code, msg) in
-                failure(code, msg)
-                
+                failure(code, msg) 
             }
-            
         }
         else{
             self.getFeedArticle(direction: direction, pageSize: pageSize, offsetId: offsetId, success: { (artileList) in
@@ -147,8 +145,8 @@ class RemoteService {
     }
      
     
-  private  func checkSuccess<T>(result:Result<T>) -> Bool {
-        return result.status==0
+  private  func checkSuccess(result:NSObject) -> Bool {
+        return true==result.value(forKey: "isSuccess") as? Bool
     }
 
 }

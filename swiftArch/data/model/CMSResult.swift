@@ -16,6 +16,11 @@ class CMSResult<T:HandyJSON>:NSObject,HandyJSON{
     
     required   override init() {}
     
-    
+    @objc var isSuccess:Bool{
+        @objc get{
+            return code==0
+        }
+        
+    }
     
 }
