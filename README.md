@@ -18,7 +18,7 @@ UI组件
 
 - [ ] ​              请求聚合(还没想到怎么做,替代方案是在service层用requestcount做聚合控制,详见
 
-      RemoteService  -getBannerAndFeedArticle)
+      SocialAppService -getBannerAndFeedArticle)
 
 - [x] ​               缓存
 
