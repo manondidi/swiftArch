@@ -29,8 +29,8 @@ class SocialAppService {
                 else{
                     failure(result.status,result.msg)
                 }
-            }, failure: {statusCode,error in
-                failure(statusCode,error.localizedDescription)
+            }, failure: {statusCode,msg in
+                failure(statusCode,msg)
             })
     }
     
@@ -43,8 +43,8 @@ class SocialAppService {
                 else{
                     failure(result.status,result.msg)
                 }
-            }, failure: {statusCode,error in
-                failure(statusCode,error.localizedDescription)
+            }, failure: {statusCode,msg in
+                failure(statusCode,msg)
             })
     }
     
@@ -62,8 +62,8 @@ class SocialAppService {
                 else{
                     failure(result.status,result.msg)
                 }
-            }, failure: {statusCode,error in
-                failure(statusCode,error.localizedDescription)
+            }, failure: {statusCode,msg in
+                failure(statusCode,msg)
             })
     }
     

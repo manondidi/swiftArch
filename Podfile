@@ -18,6 +18,7 @@ end
 
 
 #target 'swiftArchTests' do
+
     pod 'Alamofire', '~> 4.7'
     pod 'HandyJSON', '~> 4.1.1'
     pod 'SQLite.swift', '~> 0.11.5'

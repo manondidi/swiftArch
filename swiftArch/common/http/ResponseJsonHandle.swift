@@ -11,17 +11,21 @@ import Alamofire
 import HandyJSON
 extension DataRequest {
     
-    public func responseModel<T:HandyJSON>( success:@escaping ((T)->()),failure:@escaping ((Int?,Error)->()) )
+    public func responseModel<T:HandyJSON>( success:@escaping ((T)->()),failure:@escaping ((Int?,String?)->()) )
         
     {
          responseString { (response) in
             NetLogger.log(response: response)
             if(response.result.isFailure){
-                failure(response.response?.statusCode,response.error!)
+                failure(response.response?.statusCode,response.error?.localizedDescription)
             }
-            let jsonStr = response.value   
-            let result:T = T.deserialize(from: jsonStr)!
-            success( result)
+            let jsonStr = response.value
+            let result:T? = JsonUtil.jsonParse(jsonStr: jsonStr!)
+            if let r = result{
+                success( r)
+            }else{
+                failure(-2,"json解析失败")
+            }
         
         }
     }
@@ -32,7 +36,7 @@ extension DataRequest {
     ///   - useCache:是否读缓存,一定会去存
     ///   - success: 成功回调,第一个参数是整个返回值model节点,第二个参数是该回调是否是缓存回调
     ///   - failure: 失败回调
-    public func responseModelAndCache<T:HandyJSON>( readCache:Bool,success:@escaping ((T,Bool)->()),failure:@escaping ((Int?,Error)->()) )
+    public func responseModelAndCache<T:HandyJSON>( readCache:Bool,success:@escaping ((T,Bool)->()),failure:@escaping ((Int?,String?)->()) )
         
     {
         responseString { (response) in
@@ -44,11 +48,13 @@ extension DataRequest {
             
             let cacheJson = cacheManager.getCache(key:cacheKey!)
             if(cacheJson != nil && readCache){
-                let cacheResult:T = T.deserialize(from: cacheJson)!
-                success( cacheResult,true)
+                let cacheResult:T? = JsonUtil.jsonParse(jsonStr: cacheJson!)
+                if let r = cacheResult{
+                   success( r,true)
+                }
             }
             if(response.result.isFailure){
-                failure(response.response?.statusCode,response.error!)
+                failure(response.response?.statusCode,response.error?.localizedDescription)
                 return;
             }
             
@@ -57,8 +63,12 @@ extension DataRequest {
             if((cacheKey) != nil){
                 cacheManager.saveCache(key:cacheKey!, value: jsonStr!)
             }
-            let result:T = T.deserialize(from: jsonStr)! 
-            success( result,false)
+            let result:T? = JsonUtil.jsonParse(jsonStr: jsonStr!)
+            if let r = result{
+                success( r,false)
+            }else{
+                failure(-2,"json解析失败")
+            }
             
         }
     }

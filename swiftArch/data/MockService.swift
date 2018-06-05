@@ -38,11 +38,10 @@ class MockService    {
     func loadJsonFromFile<T:HandyJSON>(fileName:String,model:T ) -> T {
         
         let jsonPath = Bundle.main.path(forResource: fileName, ofType: "")
-     
         let jsonStr=try?String(contentsOfFile: jsonPath!)
-       
-        let result:T = T.deserialize(from: jsonStr!)!
+        let result:T = JsonUtil.jsonParse(jsonStr: jsonStr)!
         return result
         
     }
+    
 }
