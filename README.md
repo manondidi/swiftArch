@@ -3,7 +3,7 @@
 swift开发框架
 
 简书详细说明地址 从零开始搭建swift开发框架 :https://www.jianshu.com/p/aac5dec83959
-
+说明文档: https://github.com/manondidi/swiftArch/blob/master/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md
 
 
 
@@ -17,13 +17,13 @@ UI组件
 - [x] ​       可定制状态视图  
 - [x] ​       上下拉(可定制) 
 
-- [ ] ~~collectionView(分页解耦)  暂时不打算做~~
+- [ ] ~~collectionView(分页解耦)  正在做
 
 网络库
 
 - [ ] ​              请求聚合(还没想到怎么做,替代方案是在service层用requestcount做聚合控制,详见
 
-      SocialAppService -getBannerAndFeedArticle)
+      SocialAppService -getBannerAndFeedArticle
 
 - [x] ​               缓存
 
@@ -39,7 +39,7 @@ UI组件
 
 - [ ] ​              ~~下载(使用alamofire自带,已经很棒了)~~
 
-- [ ] ~~cookie~~
+- [ ] ~~cookie(使用alamofire自带,已经很棒了)~~
 
 业务层  
 
