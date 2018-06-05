@@ -2,7 +2,10 @@
 
 swift开发框架
 
-简书详细说明地址 从零开始搭建swift开发框架 :https://www.jianshu.com/p/aac5dec83959
+简书详细说明地址 从零开始搭建swift开发框架 :https://www.jianshu.com/p/aac5dec83959  
+
+  
+
 说明文档: https://github.com/manondidi/swiftArch/blob/master/%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3.md
 
 
@@ -17,7 +20,7 @@ UI组件
 - [x] ​       可定制状态视图  
 - [x] ​       上下拉(可定制) 
 
-- [ ] ~~collectionView(分页解耦)  正在做
+- [ ] **collectionView(分页解耦)**  正在做
 
 网络库
 
