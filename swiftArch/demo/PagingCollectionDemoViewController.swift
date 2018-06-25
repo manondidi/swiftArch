@@ -26,6 +26,7 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
         super.registerCellModel()
         self.collectionView?.registerCellNib(nib: R.nib.gameCollectionCell(), modelClass: GameModel.self)
         self.collectionView?.registerCellNib(nib: R.nib.addGameCollectionCell(), modelClass: AddGameModel.self)
+        self.collectionView?.registerCellNib(nib: R.nib.gameCollectionHeaderCell(), modelClass: GameCollectionHeaderModel.self)
     }
     
     
@@ -43,8 +44,10 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
                 if(pageInfo.isFirstPage()){
                     strongSelf.pagingList=(gameListModel?.listData)!
                     strongSelf.datasource=(gameListModel?.listData)!
+                    strongSelf.datasource.insert(GameCollectionHeaderModel(title: "第\(pageInfo.pageNum)页数据"), at: 0)
                 }else{
                     strongSelf.pagingList+=(gameListModel?.listData)!
+                    strongSelf.datasource.append(GameCollectionHeaderModel(title: "第\(pageInfo.pageNum)页数据"))
                     strongSelf.datasource = strongSelf.datasource + (gameListModel?.listData)!
                 }
                 strongSelf.loadSuccess(resultData: gameListModel!, dataSource: strongSelf.datasource, pagingList: strongSelf.pagingList)
@@ -77,12 +80,15 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
     
     override func collectionView(collection: UICollectionView, sizeForModel model: NSObject) -> CGSize {
         
-        if let item:GameModel = model as? GameModel {
+        if let _:GameModel = model as? GameModel {
             let width=UIScreen.main.bounds.width/4.0
             return CGSize(width:width,height:130/115.0*width)
-        }else if let item:AddGameModel = model as? AddGameModel {
+        }else if let _:AddGameModel = model as? AddGameModel {
                 let width=UIScreen.main.bounds.width/4.0
                 return CGSize(width:width,height:130/115.0*width)
+        }else if let _:GameCollectionHeaderModel = model as? GameCollectionHeaderModel {
+            let width=UIScreen.main.bounds.width
+            return CGSize(width:width,height:40)
         }
         return CGSize.zero
     }
