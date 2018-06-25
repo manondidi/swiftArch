@@ -70,7 +70,7 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
             cell.addTapGesture {[weak self] (tap) in
                 self?.view.makeToast("cell被点击\(String(describing: item.title))")
             }
-        }else   if let item:AddGameModel = model as? AddGameModel {
+        }else  if let item:AddGameModel = model as? AddGameModel {
             
             cell.addTapGesture {[weak self] (tap) in
                 self?.view.makeToast("添加cell被点击")

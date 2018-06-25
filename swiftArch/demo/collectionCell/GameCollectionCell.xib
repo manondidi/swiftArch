@@ -21,13 +21,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lWB-qd-c4h">
-                        <rect key="frame" x="17" y="11" width="81" height="81"/>
+                        <rect key="frame" x="17" y="15" width="81" height="81"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="lWB-qd-c4h" secondAttribute="height" multiplier="1:1" id="HSz-Y0-0QR"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gameName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lud-u8-ENE">
-                        <rect key="frame" x="18" y="101" width="77" height="15"/>
+                        <rect key="frame" x="18" y="105" width="77" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="lWB-qd-c4h" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="11" id="5KG-uo-Xxo"/>
+                <constraint firstItem="lWB-qd-c4h" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="15" id="5KG-uo-Xxo"/>
                 <constraint firstItem="lWB-qd-c4h" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="17" id="IgQ-t5-G49"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="lWB-qd-c4h" secondAttribute="trailing" constant="17" id="eHi-cA-qcS"/>
                 <constraint firstItem="lud-u8-ENE" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="18" id="g0O-Ot-KKq"/>

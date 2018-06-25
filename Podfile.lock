@@ -14,6 +14,7 @@ PODS:
     - SQLite.swift/standard (= 0.11.5)
   - SQLite.swift/standard (0.11.5)
   - Toast-Swift (3.0.1)
+  - UICollectionViewLeftAlignedLayout (1.0.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - SnapKit (~> 4.0.0)
   - SQLite.swift (~> 0.11.5)
   - Toast-Swift (~> 3.0.1)
+  - UICollectionViewLeftAlignedLayout
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -42,6 +44,7 @@ SPEC REPOS:
     - SnapKit
     - SQLite.swift
     - Toast-Swift
+    - UICollectionViewLeftAlignedLayout
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -56,7 +59,8 @@ SPEC CHECKSUMS:
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
+  UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
 
-PODFILE CHECKSUM: 59f2984c440ec77ce15e9b8d7be722d1596041b2
+PODFILE CHECKSUM: 1d64e49b4c3b9995b0eaa8a2dcc55592f45b6196
 
 COCOAPODS: 1.5.0

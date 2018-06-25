@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import UICollectionViewLeftAlignedLayout
 class PagingCollectionViewController: BaseViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout {
    
     var collectionView:StateCollectionView?
@@ -71,7 +71,7 @@ class PagingCollectionViewController: BaseViewController,UICollectionViewDataSou
     
     func initCollectionView(){//子类重写(如果有必要)
         
-        let layout=UICollectionViewFlowLayout();
+        let layout=UICollectionViewLeftAlignedLayout();
         layout.minimumLineSpacing = 0;
         layout.minimumInteritemSpacing = 0;
         self.collectionView=StateCollectionView(frame: CGRect.zero, collectionViewLayout: layout)

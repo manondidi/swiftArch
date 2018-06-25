@@ -14,6 +14,7 @@ target 'swiftArch' do
     pod 'Kingfisher', '~>4.8.0'
     pod 'RegexKitLite-NoWarning'
     pod 'FSPagerView'
+    pod 'UICollectionViewLeftAlignedLayout'
 end
 
 
