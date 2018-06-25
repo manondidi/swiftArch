@@ -23,6 +23,8 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
     
     override func initView() {
         super.initView()
+        self.edgesForExtendedLayout = UIRectEdge.bottom
+        self.automaticallyAdjustsScrollViewInsets = false;
         self.pagingStrategy=self.getPagingStrategy()
         self.initTableView()
         self.registerCellModel()
@@ -38,9 +40,7 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         }
         
         self.tableView?.dataSource=self;
-        self.tableView?.delegate=self;
-        self.edgesForExtendedLayout = UIRectEdge.bottom
-        self.automaticallyAdjustsScrollViewInsets = false;
+        self.tableView?.delegate=self; 
     }
     
     
@@ -64,7 +64,7 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
     
     ///提供分页策略 必须重写
     func getPagingStrategy() -> PagingStrategy {
-       return NormalPagingStrategy(startPageNum: 1)
+       return NonePagingStrategy()
     }
     
     ///子类可以重写

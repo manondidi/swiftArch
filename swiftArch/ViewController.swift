@@ -94,7 +94,21 @@ class ViewController: UIViewController {
             [weak self] in
             self?.navigationController?.pushViewController(FeedsDemoViewController(), animated: true)
         }
-       
+        
+        
+        let btn7=UIButton(type: UIButtonType.roundedRect)
+        self.view.addSubview(btn7)
+        btn7.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(btn6.snp.bottom).offset(30)
+        }
+        btn7.titleLabel?.numberOfLines=0
+        btn7.setTitle("pagingCollectionViewcontrollerDemo的例子", for: UIControlState.normal)
+        btn7.onTap {
+            [weak self] in
+            self?.navigationController?.pushViewController(PagingCollectionDemoViewController(), animated: true)
+        }
+        
     }
 
 }

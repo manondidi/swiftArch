@@ -43,6 +43,10 @@
 		612B17AE20B415CD00F06E4E /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612B17AD20B415CD00F06E4E /* Feed.swift */; };
 		615A832820E0845E00176C44 /* StateCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615A832720E0845E00176C44 /* StateCollectionView.swift */; };
 		615A832A20E084A200176C44 /* UICollectionView+Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615A832920E084A200176C44 /* UICollectionView+Binder.swift */; };
+		615A832C20E0859000176C44 /* PagingCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615A832B20E0859000176C44 /* PagingCollectionViewController.swift */; };
+		615A833020E0906000176C44 /* PagingCollectionDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615A832F20E0906000176C44 /* PagingCollectionDemoViewController.swift */; };
+		615A833320E0918A00176C44 /* GameCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615A833120E0918A00176C44 /* GameCollectionCell.swift */; };
+		615A833420E0918A00176C44 /* GameCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 615A833220E0918A00176C44 /* GameCollectionCell.xib */; };
 		61707A5820A3363100B378FD /* TableDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707A5620A3363100B378FD /* TableDemoVC.swift */; };
 		61707A5920A3363100B378FD /* TableDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61707A5720A3363100B378FD /* TableDemoVC.xib */; };
 		61707A5B20A33AA900B378FD /* StyleTableDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707A5A20A33AA900B378FD /* StyleTableDemoVC.swift */; };
@@ -144,6 +148,10 @@
 		612B17AD20B415CD00F06E4E /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		615A832720E0845E00176C44 /* StateCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateCollectionView.swift; sourceTree = "<group>"; };
 		615A832920E084A200176C44 /* UICollectionView+Binder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Binder.swift"; sourceTree = "<group>"; };
+		615A832B20E0859000176C44 /* PagingCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewController.swift; sourceTree = "<group>"; };
+		615A832F20E0906000176C44 /* PagingCollectionDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionDemoViewController.swift; sourceTree = "<group>"; };
+		615A833120E0918A00176C44 /* GameCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionCell.swift; sourceTree = "<group>"; };
+		615A833220E0918A00176C44 /* GameCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCollectionCell.xib; sourceTree = "<group>"; };
 		61707A5620A3363100B378FD /* TableDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDemoVC.swift; sourceTree = "<group>"; };
 		61707A5720A3363100B378FD /* TableDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableDemoVC.xib; sourceTree = "<group>"; };
 		61707A5A20A33AA900B378FD /* StyleTableDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleTableDemoVC.swift; sourceTree = "<group>"; };
@@ -296,6 +304,8 @@
 		61244C6620A2E7A500BBF6BF /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				615A832E20E08FDC00176C44 /* collectionCell */,
+				615A832D20E08FDC00176C44 /* CollectionHeader */,
 				9C02969120B40C2C0053E9F3 /* Discovery */,
 				610D229320AD92D2003B1324 /* sectionHeader */,
 				617E89FD20AC04B2006C358E /* cell */,
@@ -308,6 +318,7 @@
 				61079DB120A9273100624424 /* UserStyleLoadView.xib */,
 				617E8A0A20AC124A006C358E /* PaingTalbeDemoViewController.swift */,
 				617E8A0E20AC3715006C358E /* PagingOffsetIdDemoViewController.swift */,
+				615A832F20E0906000176C44 /* PagingCollectionDemoViewController.swift */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -338,6 +349,22 @@
 			path = collectionView;
 			sourceTree = "<group>";
 		};
+		615A832D20E08FDC00176C44 /* CollectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionHeader;
+			sourceTree = "<group>";
+		};
+		615A832E20E08FDC00176C44 /* collectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				615A833120E0918A00176C44 /* GameCollectionCell.swift */,
+				615A833220E0918A00176C44 /* GameCollectionCell.xib */,
+			);
+			path = collectionCell;
+			sourceTree = "<group>";
+		};
 		61707A5E20A3DC6E00B378FD /* pageState */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +381,7 @@
 			children = (
 				61079DAB20A7180600624424 /* BaseViewController.swift */,
 				61079DB320A929AD00624424 /* PagingViewController.swift */,
+				615A832B20E0859000176C44 /* PagingCollectionViewController.swift */,
 			);
 			path = basePage;
 			sourceTree = "<group>";
@@ -649,6 +677,7 @@
 				9C0296A920B40C4A0053E9F3 /* feeds.json in Resources */,
 				617E8A0820AC102E006C358E /* feed.json in Resources */,
 				617E8A0320AC04E3006C358E /* GameCell.xib in Resources */,
+				615A833420E0918A00176C44 /* GameCollectionCell.xib in Resources */,
 				61D472032080457A009B10F5 /* Assets.xcassets in Resources */,
 				61D472012080457A009B10F5 /* Main.storyboard in Resources */,
 				61244C5B20A1852000BBF6BF /* DefaultTableLoadView.xib in Resources */,
@@ -757,6 +786,7 @@
 				9C0296A120B40C2C0053E9F3 /* SPFeedCell.swift in Sources */,
 				617E8A0B20AC124A006C358E /* PaingTalbeDemoViewController.swift in Sources */,
 				61244C5920A1850400BBF6BF /* DefaultTableLoadView.swift in Sources */,
+				615A833320E0918A00176C44 /* GameCollectionCell.swift in Sources */,
 				61707A6720A3E78900B378FD /* PageStateLoadView.swift in Sources */,
 				6119133E20B66E6E00553D3A /* BannersVM.swift in Sources */,
 				61079DAC20A7180600624424 /* BaseViewController.swift in Sources */,
@@ -793,9 +823,11 @@
 				615A832A20E084A200176C44 /* UICollectionView+Binder.swift in Sources */,
 				61079DD420AA83E300624424 /* PagingStrategy.swift in Sources */,
 				617E89FC20AC00A2006C358E /* UITableView+Binder.swift in Sources */,
+				615A833020E0906000176C44 /* PagingCollectionDemoViewController.swift in Sources */,
 				61079DAE20A9259700624424 /* DemoViewController.swift in Sources */,
 				9C46BA6B20B52914002CCBB4 /* DateShowExt.swift in Sources */,
 				61244C5D20A19B5200BBF6BF /* DefaultTableEmptyView.swift in Sources */,
+				615A832C20E0859000176C44 /* PagingCollectionViewController.swift in Sources */,
 				612B17AC20B415A600F06E4E /* SPFeedVM.swift in Sources */,
 				61197E7F20B7A2730046E8C2 /* CmsService.swift in Sources */,
 				612B17A820B4106300F06E4E /* NonePagingStrategy.swift in Sources */,

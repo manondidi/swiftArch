@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import MJRefresh
 class StateCollectionView: UICollectionView  {
     
     var loadView:UIView?

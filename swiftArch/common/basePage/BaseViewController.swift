@@ -48,6 +48,6 @@ class BaseViewController: UIViewController {
  
 
     deinit {
-        print("########### \(String(describing:self.classForCoder.self))deinit################")
+//        print("########### \(String(describing:self.classForCoder.self))deinit################")
     }
 }
