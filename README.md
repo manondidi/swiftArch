@@ -20,7 +20,7 @@ UI组件
 - [x] ​       可定制状态视图  
 - [x] ​       上下拉(可定制) 
 
-- [ ] **collectionView(分页解耦)**  正在做
+- [x] **collectionView(分页解耦)**  
 
 网络库
 
@@ -154,15 +154,7 @@ demo截图
 
 
 
-​    
-
-`
-
-
-
-
-
-
+ ![多类型CollectionViewCell,自动分页](https://raw.githubusercontent.com/manondidi/swiftArch/master/%E6%88%AA%E5%9B%BE/多类型CollectionViewCell,自动分页.png)
 
 ​    
 
