@@ -154,7 +154,7 @@ demo截图
 
 
 
- ![多类型CollectionViewCell,自动分页](https://raw.githubusercontent.com/manondidi/swiftArch/master/%E6%88%AA%E5%9B%BE/多类型CollectionViewCell,自动分页.png)
+ ![多类型CollectionViewCell,自动分页](https://raw.githubusercontent.com/manondidi/swiftArch/master/%E6%88%AA%E5%9B%BE/%E5%A4%9A%E7%B1%BB%E5%9E%8BCollectionViewCell%2C%E8%87%AA%E5%8A%A8%E5%88%86%E9%A1%B5.png)
 
 ​    
 
