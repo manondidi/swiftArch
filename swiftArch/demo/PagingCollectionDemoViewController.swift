@@ -14,17 +14,18 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
     
     private var pagingList=Array<GameModel>()
     
+    private var datasource=Array<NSObject>()
+    
     //可以不需要重写该方法
     override func initView() {
         super.initView()
         self.title="真实的分页请求"
     }
-    
-     
   
     override func registerCellModel() {
         super.registerCellModel()
         self.collectionView?.registerCellNib(nib: R.nib.gameCollectionCell(), modelClass: GameModel.self)
+        self.collectionView?.registerCellNib(nib: R.nib.addGameCollectionCell(), modelClass: AddGameModel.self)
     }
     
     
@@ -41,10 +42,18 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
             if let strongSelf = self {
                 if(pageInfo.isFirstPage()){
                     strongSelf.pagingList=(gameListModel?.listData)!
+                    strongSelf.datasource=(gameListModel?.listData)!
                 }else{
                     strongSelf.pagingList+=(gameListModel?.listData)!
+                    strongSelf.datasource = strongSelf.datasource + (gameListModel?.listData)!
                 }
-                strongSelf.loadSuccess(resultData: gameListModel!, dataSource: strongSelf.pagingList, pagingList: strongSelf.pagingList)
+                strongSelf.loadSuccess(resultData: gameListModel!, dataSource: strongSelf.datasource, pagingList: strongSelf.pagingList)
+                let isFinish=strategy.checkFinish(result: gameListModel!, listSize: strongSelf.pagingList.count)
+                if(isFinish){
+                    strongSelf.datasource.append(AddGameModel())
+                    strongSelf.loadSuccess(resultData: gameListModel!, dataSource: strongSelf.datasource, pagingList: strongSelf.pagingList)
+                }
+                
             }
         }) {[weak self] (code, msg) in
             self?.loadFail()
@@ -58,6 +67,11 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
             cell.addTapGesture {[weak self] (tap) in
                 self?.view.makeToast("cell被点击\(String(describing: item.title))")
             }
+        }else   if let item:AddGameModel = model as? AddGameModel {
+            
+            cell.addTapGesture {[weak self] (tap) in
+                self?.view.makeToast("添加cell被点击")
+            }
         }
     }
     
@@ -66,6 +80,9 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
         if let item:GameModel = model as? GameModel {
             let width=UIScreen.main.bounds.width/4.0
             return CGSize(width:width,height:130/115.0*width)
+        }else if let item:AddGameModel = model as? AddGameModel {
+                let width=UIScreen.main.bounds.width/4.0
+                return CGSize(width:width,height:130/115.0*width)
         }
         return CGSize.zero
     }

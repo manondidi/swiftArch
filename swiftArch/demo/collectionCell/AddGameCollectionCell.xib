@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AddGameCollectionCell" customModule="swiftArch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="153" height="143"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="153" height="143"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_purpose" translatesAutoresizingMaskIntoConstraints="NO" id="ENo-4x-9af">
+                        <rect key="frame" x="17" y="11" width="119" height="119"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ENo-4x-9af" secondAttribute="height" multiplier="1:1" id="CpQ-gq-da9"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ENo-4x-9af" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="17" id="a4y-4s-OLE"/>
+                <constraint firstItem="ENo-4x-9af" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="11" id="rrl-gR-Mgm"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="ENo-4x-9af" secondAttribute="trailing" constant="17" id="xkm-UG-bnU"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="153" height="143"/>
+            <point key="canvasLocation" x="76.5" y="98.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="add_purpose" width="206" height="206"/>
+    </resources>
+</document>
