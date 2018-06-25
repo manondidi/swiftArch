@@ -70,9 +70,16 @@ class PagingCollectionViewController: BaseViewController,UICollectionViewDataSou
     }
     
     func initCollectionView(){//子类重写(如果有必要)
-        self.collectionView=StateCollectionView(frame: self.view.bounds, collectionViewLayout: UICollectionViewFlowLayout())
+        
+        let layout=UICollectionViewFlowLayout();
+        layout.minimumLineSpacing = 0;
+        layout.minimumInteritemSpacing = 0;
+        self.collectionView=StateCollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         self.collectionView?.backgroundColor=UIColor.white
         self.view.addSubview(self.collectionView!)
+        self.collectionView?.snp.makeConstraints({ (make) in
+            make.edges.equalTo(self.view)
+        })
        
     }
     

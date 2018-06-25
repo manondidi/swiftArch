@@ -30,7 +30,7 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
     
     //自定义分页策略 需要用户去写
     override func getPagingStrategy() -> PagingStrategy {
-        let strategy:PagingStrategy=NormalPagingStrategy(startPageNum: 0, pageSize: 20)
+        let strategy:PagingStrategy=NormalPagingStrategy(startPageNum: 0, pageSize: 30)
         return strategy
     }
     override func onLoadData(pagingStrategy: PagingStrategy) {
@@ -64,7 +64,8 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
     override func collectionView(collection: UICollectionView, sizeForModel model: NSObject) -> CGSize {
         
         if let item:GameModel = model as? GameModel {
-            return CGSize(width:85,height:95) 
+            let width=UIScreen.main.bounds.width/4.0
+            return CGSize(width:width,height:130/115.0*width)
         }
         return CGSize.zero
     }
