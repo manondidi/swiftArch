@@ -41,6 +41,8 @@
 		612B17A820B4106300F06E4E /* NonePagingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612B17A720B4106300F06E4E /* NonePagingStrategy.swift */; };
 		612B17AC20B415A600F06E4E /* SPFeedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612B17AB20B415A600F06E4E /* SPFeedVM.swift */; };
 		612B17AE20B415CD00F06E4E /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612B17AD20B415CD00F06E4E /* Feed.swift */; };
+		615A832820E0845E00176C44 /* StateCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615A832720E0845E00176C44 /* StateCollectionView.swift */; };
+		615A832A20E084A200176C44 /* UICollectionView+Binder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615A832920E084A200176C44 /* UICollectionView+Binder.swift */; };
 		61707A5820A3363100B378FD /* TableDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707A5620A3363100B378FD /* TableDemoVC.swift */; };
 		61707A5920A3363100B378FD /* TableDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61707A5720A3363100B378FD /* TableDemoVC.xib */; };
 		61707A5B20A33AA900B378FD /* StyleTableDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61707A5A20A33AA900B378FD /* StyleTableDemoVC.swift */; };
@@ -140,6 +142,8 @@
 		612B17A720B4106300F06E4E /* NonePagingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonePagingStrategy.swift; sourceTree = "<group>"; };
 		612B17AB20B415A600F06E4E /* SPFeedVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedVM.swift; sourceTree = "<group>"; };
 		612B17AD20B415CD00F06E4E /* Feed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		615A832720E0845E00176C44 /* StateCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateCollectionView.swift; sourceTree = "<group>"; };
+		615A832920E084A200176C44 /* UICollectionView+Binder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Binder.swift"; sourceTree = "<group>"; };
 		61707A5620A3363100B378FD /* TableDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDemoVC.swift; sourceTree = "<group>"; };
 		61707A5720A3363100B378FD /* TableDemoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableDemoVC.xib; sourceTree = "<group>"; };
 		61707A5A20A33AA900B378FD /* StyleTableDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleTableDemoVC.swift; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 		61244C4E20A0452500BBF6BF /* component */ = {
 			isa = PBXGroup;
 			children = (
+				615A832620E083E400176C44 /* collectionView */,
 				61707A5E20A3DC6E00B378FD /* pageState */,
 				61244C4F20A0453600BBF6BF /* tableview */,
 			);
@@ -322,6 +327,15 @@
 				612B17A720B4106300F06E4E /* NonePagingStrategy.swift */,
 			);
 			path = none;
+			sourceTree = "<group>";
+		};
+		615A832620E083E400176C44 /* collectionView */ = {
+			isa = PBXGroup;
+			children = (
+				615A832720E0845E00176C44 /* StateCollectionView.swift */,
+				615A832920E084A200176C44 /* UICollectionView+Binder.swift */,
+			);
+			path = collectionView;
 			sourceTree = "<group>";
 		};
 		61707A5E20A3DC6E00B378FD /* pageState */ = {
@@ -769,12 +783,14 @@
 				61C01351208DC27B00BBE4DC /* ResponseJsonHandle.swift in Sources */,
 				617E8A0F20AC3715006C358E /* PagingOffsetIdDemoViewController.swift in Sources */,
 				9C0296A520B40C2C0053E9F3 /* SPFeedPhotosView.swift in Sources */,
+				615A832820E0845E00176C44 /* StateCollectionView.swift in Sources */,
 				61707A6320A3E76500B378FD /* PageStateEmptyView.swift in Sources */,
 				61D471FC2080457A009B10F5 /* AppDelegate.swift in Sources */,
 				618E3BF920C672690057346D /* JsonUtil.swift in Sources */,
 				617E8A1220AC3753006C358E /* FeedArticleCell.swift in Sources */,
 				61707A5820A3363100B378FD /* TableDemoVC.swift in Sources */,
 				61244C5320A1467000BBF6BF /* StateTableView.swift in Sources */,
+				615A832A20E084A200176C44 /* UICollectionView+Binder.swift in Sources */,
 				61079DD420AA83E300624424 /* PagingStrategy.swift in Sources */,
 				617E89FC20AC00A2006C358E /* UITableView+Binder.swift in Sources */,
 				61079DAE20A9259700624424 /* DemoViewController.swift in Sources */,
