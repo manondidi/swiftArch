@@ -105,6 +105,24 @@ class PaingTalbeDemoViewController: PagingViewController {
     } 
 
    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if let _ = self.getRealDataSourceModel(indexPath: indexPath) as? GameModel {
+            return true
+        }
+        
+        return false
+        
+    }
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return UITableViewCellEditingStyle.delete
+    }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        self.datasource.remove(at: self.getDataSourceRowIndex(indexPath: indexPath))
+        self.reloadDataSource(dataSource: self.datasource)
+        
+        
+    }
     
 }

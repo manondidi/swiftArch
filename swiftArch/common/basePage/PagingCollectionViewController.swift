@@ -108,12 +108,8 @@ class PagingCollectionViewController: BaseViewController,UICollectionViewDataSou
         self.pagingStrategy?.addPage(info: pagingList)
         let isFinish=self.pagingStrategy?.checkFinish(result: resultData, listSize: pagingList.count)
         self.collectionView?.setLoadMoreEnable(b:!isFinish! )
-        if(dataSource.count==0){
-            self.collectionView?.showEmpty()
-        }
-        self.dataSource.removeAll()
-        self.dataSource += dataSource
-        self.collectionView?.reloadData()
+       
+        self.reloadDatasource(dataSource: dataSource)
     }
     func loadFail(){
         if(self.dataSource.count==0){
@@ -121,6 +117,14 @@ class PagingCollectionViewController: BaseViewController,UICollectionViewDataSou
         }else{
             self.view.makeToast("加载失败")
         }
+    }
+    
+    func reloadDatasource(dataSource:Array<NSObject>){
+        if(dataSource.count==0){
+            self.collectionView?.showEmpty()
+        }
+        self.dataSource=dataSource;
+        self.collectionView?.reloadData()
     }
     
     ///子类必须重写

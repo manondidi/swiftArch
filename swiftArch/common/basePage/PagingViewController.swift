@@ -120,12 +120,7 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         self.pagingStrategy?.addPage(info: pagingList)
         let isFinish=self.pagingStrategy?.checkFinish(result: resultData, listSize: pagingList.count)
         self.tableView?.setLoadMoreEnable(b:!isFinish! )
-        if(dataSource.count==0){
-            self.tableView?.showEmpty()
-        }
-        self.dataSource.removeAll()
-        self.dataSource += dataSource
-        self.tableView?.reloadData()
+        self.reloadDataSource(dataSource: dataSource)
     }
     func loadFail(){
         if(self.dataSource.count==0){
@@ -133,6 +128,15 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         }else{
             self.view.makeToast("加载失败")
         }
+    }
+    
+    func reloadDataSource(dataSource:Array<NSObject>)  {
+        if(dataSource.count==0){
+            self.tableView?.showEmpty()
+        }
+         self.dataSource=dataSource
+        self.tableView?.reloadData()
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -191,6 +195,7 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
             sectionData.removeAll()
             return 1
         }else{
+            self.sectionData.removeAll()
             var dataInSection:Array<NSObject>?=nil
             self.dataSource.forEach { (data) in
                 if(self.sectionModelList.contains(data)){
@@ -224,6 +229,21 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
         return item
     }
     
+    func getDataSourceRowIndex(indexPath: IndexPath)->Int{
+        if(self.sectionData.count==0){
+            return indexPath.row
+        }else{
+            var rowIndex=0 
+             for i in 0..<indexPath.section {
+                let sectionDataSource = self.sectionData[i]
+                rowIndex+=sectionDataSource.count
+            }
+            rowIndex+=indexPath.section+1;
+            rowIndex+=indexPath.row;
+            return rowIndex
+        }
+    }
+    
     ///禁止重写 因为你的indexpath用子类的datasource取到的不一定是真正的数据源,看下getRealDataSourceModel方法
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let item:NSObject = self.getRealDataSourceModel(indexPath: indexPath)
@@ -237,6 +257,8 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
     func tableView(_ tableView: UITableView,heightForModel model: NSObject)->CGFloat {
         return UITableViewAutomaticDimension
     }
+    
+    
     
     
 }

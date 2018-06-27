@@ -21,7 +21,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add_purpose" translatesAutoresizingMaskIntoConstraints="NO" id="ENo-4x-9af">
-                        <rect key="frame" x="17" y="11" width="119" height="119"/>
+                        <rect key="frame" x="17" y="15" width="119" height="119"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="ENo-4x-9af" secondAttribute="height" multiplier="1:1" id="CpQ-gq-da9"/>
                         </constraints>
@@ -30,7 +30,7 @@
             </view>
             <constraints>
                 <constraint firstItem="ENo-4x-9af" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="17" id="a4y-4s-OLE"/>
-                <constraint firstItem="ENo-4x-9af" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="11" id="rrl-gR-Mgm"/>
+                <constraint firstItem="ENo-4x-9af" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="15" id="rrl-gR-Mgm"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="ENo-4x-9af" secondAttribute="trailing" constant="17" id="xkm-UG-bnU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>

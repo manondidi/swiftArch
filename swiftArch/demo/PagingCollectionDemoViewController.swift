@@ -54,7 +54,7 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
                 let isFinish=strategy.checkFinish(result: gameListModel!, listSize: strongSelf.pagingList.count)
                 if(isFinish){
                     strongSelf.datasource.append(AddGameModel())
-                    strongSelf.loadSuccess(resultData: gameListModel!, dataSource: strongSelf.datasource, pagingList: strongSelf.pagingList)
+                    strongSelf.reloadDatasource(dataSource: strongSelf.datasource)
                 }
                 
             }
