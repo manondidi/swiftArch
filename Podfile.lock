@@ -2,7 +2,7 @@ PODS:
   - Alamofire (4.7.2)
   - Closures (0.4)
   - FSPagerView (0.7.1)
-  - HandyJSON (4.1.1)
+  - HandyJSON (4.2.0)
   - Kingfisher (4.8.0)
   - MJRefresh (3.1.15.3)
   - R.swift (4.0.0):
@@ -20,7 +20,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.7)
   - Closures (~> 0.4)
   - FSPagerView
-  - HandyJSON (~> 4.1.1)
+  - HandyJSON (~> 4.2.0)
   - Kingfisher (~> 4.8.0)
   - MJRefresh
   - R.swift
@@ -31,7 +31,7 @@ DEPENDENCIES:
   - UICollectionViewLeftAlignedLayout
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - Closures
     - FSPagerView
@@ -50,7 +50,7 @@ SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   Closures: fe9ecbda045d8d42cc13520209b4ea5208e38248
   FSPagerView: 958aba39684e1573755ddcfcc29f7eebb8413cee
-  HandyJSON: 3a3de917c4118767ffe41c29b5acba23409649f4
+  HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
@@ -61,6 +61,6 @@ SPEC CHECKSUMS:
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
 
-PODFILE CHECKSUM: 1d64e49b4c3b9995b0eaa8a2dcc55592f45b6196
+PODFILE CHECKSUM: 9cd1b9a54a5fd9f7287b39da1c71372e8f0229da
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.6.0.beta.1

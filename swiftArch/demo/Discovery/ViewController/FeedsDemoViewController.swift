@@ -39,14 +39,14 @@ class FeedsDemoViewController: PagingViewController {
     }
     
     override func getPagingStrategy() -> PagingStrategy {
-        let strategy:PagingStrategy = FeedPaingStrategy(pageSize: 20, offsetIdKey: "id")
+        let strategy:PagingStrategy = OffsetStrategy(pageSize: 20, offsetIdKey: "id")
         return strategy
     }
     
     override func onLoadData(pagingStrategy: PagingStrategy) {
         
-        let strategy:FeedPaingStrategy=pagingStrategy as! FeedPaingStrategy;
-        let pageInfo:FeedPageInfo=strategy.getPageInfo() as! FeedPageInfo
+        let strategy:OffsetStrategy=pagingStrategy as! OffsetStrategy;
+        let pageInfo:OffsetPageInfo=strategy.getPageInfo() as! OffsetPageInfo
 
         self.socailAppService.getFeedsMock { [weak self] (result: Array<SPFeedVM>) in
             if let strongSelf=self{

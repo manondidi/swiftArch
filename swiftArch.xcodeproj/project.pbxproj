@@ -13,10 +13,10 @@
 		61079DB220A9273100624424 /* UserStyleLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61079DB120A9273100624424 /* UserStyleLoadView.xib */; };
 		61079DB420A929AD00624424 /* PagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61079DB320A929AD00624424 /* PagingViewController.swift */; };
 		61079DD420AA83E300624424 /* PagingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61079DCE20AA83E200624424 /* PagingStrategy.swift */; };
-		61079DD520AA83E300624424 /* FeedPaingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61079DD020AA83E300624424 /* FeedPaingStrategy.swift */; };
+		61079DD520AA83E300624424 /* OffsetPaingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61079DD020AA83E300624424 /* OffsetPaingStrategy.swift */; };
 		61079DD620AA83E300624424 /* NormalPagingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61079DD220AA83E300624424 /* NormalPagingStrategy.swift */; };
 		61079DD720AA83E300624424 /* NormalPageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61079DD320AA83E300624424 /* NormalPageInfo.swift */; };
-		61079DD920AA83F500624424 /* FeedPageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61079DD820AA83F500624424 /* FeedPageInfo.swift */; };
+		61079DD920AA83F500624424 /* OffsetPageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61079DD820AA83F500624424 /* OffsetPageInfo.swift */; };
 		610D229720AD9308003B1324 /* GameDateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610D229620AD9308003B1324 /* GameDateModel.swift */; };
 		610D229B20AD9497003B1324 /* GameDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610D229A20AD9497003B1324 /* GameDateHeader.swift */; };
 		610D229D20AE6007003B1324 /* EmptyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610D229C20AE6007003B1324 /* EmptyHeader.swift */; };
@@ -124,10 +124,10 @@
 		61079DB120A9273100624424 /* UserStyleLoadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserStyleLoadView.xib; sourceTree = "<group>"; };
 		61079DB320A929AD00624424 /* PagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingViewController.swift; sourceTree = "<group>"; };
 		61079DCE20AA83E200624424 /* PagingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingStrategy.swift; sourceTree = "<group>"; };
-		61079DD020AA83E300624424 /* FeedPaingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedPaingStrategy.swift; sourceTree = "<group>"; };
+		61079DD020AA83E300624424 /* OffsetPaingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffsetPaingStrategy.swift; sourceTree = "<group>"; };
 		61079DD220AA83E300624424 /* NormalPagingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalPagingStrategy.swift; sourceTree = "<group>"; };
 		61079DD320AA83E300624424 /* NormalPageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalPageInfo.swift; sourceTree = "<group>"; };
-		61079DD820AA83F500624424 /* FeedPageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPageInfo.swift; sourceTree = "<group>"; };
+		61079DD820AA83F500624424 /* OffsetPageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetPageInfo.swift; sourceTree = "<group>"; };
 		610D229620AD9308003B1324 /* GameDateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDateModel.swift; sourceTree = "<group>"; };
 		610D229A20AD9497003B1324 /* GameDateHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDateHeader.swift; sourceTree = "<group>"; };
 		610D229C20AE6007003B1324 /* EmptyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyHeader.swift; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				612B17A620B4102300F06E4E /* none */,
-				61079DCF20AA83E300624424 /* feed */,
+				61079DCF20AA83E300624424 /* offset */,
 				61079DD120AA83E300624424 /* normal */,
 				61079DCE20AA83E200624424 /* PagingStrategy.swift */,
 			);
@@ -252,13 +252,13 @@
 			path = swiftArch/Paging;
 			sourceTree = SOURCE_ROOT;
 		};
-		61079DCF20AA83E300624424 /* feed */ = {
+		61079DCF20AA83E300624424 /* offset */ = {
 			isa = PBXGroup;
 			children = (
-				61079DD020AA83E300624424 /* FeedPaingStrategy.swift */,
-				61079DD820AA83F500624424 /* FeedPageInfo.swift */,
+				61079DD020AA83E300624424 /* OffsetPaingStrategy.swift */,
+				61079DD820AA83F500624424 /* OffsetPageInfo.swift */,
 			);
-			path = feed;
+			path = offset;
 			sourceTree = "<group>";
 		};
 		61079DD120AA83E300624424 /* normal */ = {
@@ -732,7 +732,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-swiftArch/Pods-swiftArch-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-swiftArch/Pods-swiftArch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Closures/Closures.framework",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
@@ -763,7 +763,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-swiftArch/Pods-swiftArch-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-swiftArch/Pods-swiftArch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		61244C5420A17F5D00BBF6BF /* ShellScript */ = {
@@ -820,7 +820,7 @@
 				612B17AE20B415CD00F06E4E /* Feed.swift in Sources */,
 				617E8A0220AC04E3006C358E /* GameCell.swift in Sources */,
 				61C0134D208DAEBA00BBE4DC /* User.swift in Sources */,
-				61079DD920AA83F500624424 /* FeedPageInfo.swift in Sources */,
+				61079DD920AA83F500624424 /* OffsetPageInfo.swift in Sources */,
 				61A4CEC2208A1E800097AC72 /* HttpClient.swift in Sources */,
 				61C0135B208ED09A00BBE4DC /* SocialResult.swift in Sources */,
 				61707A6120A3E6E800B378FD /* PageSateManager.swift in Sources */,
@@ -849,7 +849,7 @@
 				612B17AC20B415A600F06E4E /* SPFeedVM.swift in Sources */,
 				61197E7F20B7A2730046E8C2 /* CmsService.swift in Sources */,
 				612B17A820B4106300F06E4E /* NonePagingStrategy.swift in Sources */,
-				61079DD520AA83E300624424 /* FeedPaingStrategy.swift in Sources */,
+				61079DD520AA83E300624424 /* OffsetPaingStrategy.swift in Sources */,
 				610D229720AD9308003B1324 /* GameDateModel.swift in Sources */,
 				61C0134F208DBABA00BBE4DC /* Result.swift in Sources */,
 				610D229F20AE604B003B1324 /* EmptyHeaderModel.swift in Sources */,
@@ -1057,15 +1057,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YEDCH4UEA5;
+				DEVELOPMENT_TEAM = A2QEH4RKY8;
 				INFOPLIST_FILE = swiftArch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.czq.swiftArch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.czq.swiftArch1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1076,14 +1076,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YEDCH4UEA5;
+				DEVELOPMENT_TEAM = A2QEH4RKY8;
 				INFOPLIST_FILE = swiftArch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.czq.swiftArch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.czq.swiftArch1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

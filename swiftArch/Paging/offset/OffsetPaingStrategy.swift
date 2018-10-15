@@ -8,8 +8,8 @@
 
 import UIKit
 
-class FeedPaingStrategy: PagingStrategy {
-    var pageInfo:FeedPageInfo=FeedPageInfo()
+class OffsetStrategy: PagingStrategy {
+    var pageInfo:OffsetPageInfo=OffsetPageInfo()
     var offsetIdKey=""
     
     convenience init(pageSize:Int=20,offsetIdKey:String) {

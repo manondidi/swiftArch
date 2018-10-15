@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedPageInfo: NSObject {
+class OffsetPageInfo: NSObject {
 
     var type="new"
     var pageSize=20
