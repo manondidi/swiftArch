@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RxSwift
 class PaingTalbeDemoViewController: PagingViewController {
 
     var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
@@ -15,6 +15,7 @@ class PaingTalbeDemoViewController: PagingViewController {
     private var datasource=Array<NSObject>()
     private var pagingList=Array<GameModel>()
  
+    let disposeBag=DisposeBag()
    //可以不需要重写该方法
     override func initView() {
         super.initView()
@@ -56,33 +57,25 @@ class PaingTalbeDemoViewController: PagingViewController {
          
         let strategy:NormalPagingStrategy=pagingStrategy as! NormalPagingStrategy;
         let pageInfo:NormalPageInfo=strategy.getPageInfo() as! NormalPageInfo
-        self.socailAppService.getGame(pageNum: pageInfo.pageNum, pageSize: pageInfo.pageSize, success: { [weak self] (gameListModel) in
-            if let strongSelf = self {
+        
+        self.socailAppService.rxGetGame(pageNum: pageInfo.pageNum, pageSize: pageInfo.pageSize)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: {[weak self] (gameListModel) in
+                if let strongSelf = self {
                 if(pageInfo.isFirstPage()){
-                    strongSelf.pagingList=(gameListModel?.listData)!
-                    strongSelf.datasource=(gameListModel?.listData)!
-                                                                        //如果要使用sectionHeader功能
-    //                self.datasource.insert(EmptyHeaderModel(), at: 0)//第一行一定是SectionModel
-                                                                        //因为我是靠sectionmodel的个数做section截断
-                                                                        //如果和业务相悖,就插入emptyheadermodel占位
-                                                                        //这个model对应的headerview是是个高度为1 完全透明的一个header
-                                                                        //如果你确定你的一整个datasource是不可能存在sectionmodel即不使用section功能
-                                                                        //那你可以不需要插EmptyHeaderModel
+                    strongSelf.pagingList=(gameListModel.listData)!
+                    strongSelf.datasource=(gameListModel.listData)!
                     
                     strongSelf.datasource.insert(GameDateModel(date:"今天"), at: 0)
                 }else{
-                    strongSelf.pagingList+=(gameListModel?.listData)!
+                    strongSelf.pagingList+=(gameListModel.listData)!
                     strongSelf.datasource.append(GameDateModel(date:"2011-11-\(Int(arc4random()%30)+1)"))
-                    strongSelf.datasource = strongSelf.datasource + (gameListModel?.listData)!
+                    strongSelf.datasource = strongSelf.datasource + (gameListModel.listData)!
                 }
-                //调用者必须维护两个列表
-                //1.和分页相关的列表
-                //2.总数据源的列表
-                strongSelf.loadSuccess(resultData: gameListModel!, dataSource: strongSelf.datasource, pagingList: strongSelf.pagingList)
-            }
-        }) {[weak self] (code, msg) in
-            self?.loadFail()
-        }
+                strongSelf.loadSuccess(resultData: gameListModel, dataSource: strongSelf.datasource, pagingList: strongSelf.pagingList)
+            } },onError:{[weak self] error in
+                    self?.loadFail()
+            }).disposed(by: disposeBag)
         
     }
     override func registerEventforSectionHeader(header: UIView, model: NSObject) {

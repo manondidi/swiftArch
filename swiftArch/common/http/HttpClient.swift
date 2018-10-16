@@ -6,8 +6,11 @@
 //  Copyright © 2018年 czq. All rights reserved.
 //
 
-import UIKit
+
+import RxSwift
+import RxAlamofire
 import Alamofire
+import HandyJSON
 class HttpClient: NSObject {//一个server对应一个httpclient 
     var baseUrl:String?=nil;
     var headers:HTTPHeaders?=nil;
@@ -35,5 +38,23 @@ class HttpClient: NSObject {//一个server对应一个httpclient
     }
     
     
+    public func rxRequest<T:HandyJSON>(url:String,method:HTTPMethod,pathParams:Dictionary<String,String>=[:],params:Dictionary<String,String>=[:])
+    -> Observable<T>{
+        var pathUrl=baseUrl!+url;
+        for (key, value) in pathParams {
+            pathUrl=pathUrl.replacingOccurrences(of:"{\(key)}", with: "\(value)")
+        }
+        return RxAlamofire.requestString(method, pathUrl, parameters: params, encoding: URLEncoding.default, headers: self.headers)
+            .debug()
+            .map({ (response, string) ->T in
+                let jsonStr = string
+                let result:T? = JsonUtil.jsonParse(jsonStr: jsonStr)
+                if let r = result{
+                    return r
+                }else{
+                    throw JsonError()
+                }
+            })
+    }
 
 }

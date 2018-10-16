@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RxSwift
 
 class DemoViewController: BaseViewController {
 
     
+    let disposeBag=DisposeBag()
     var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
   
     
@@ -47,25 +49,41 @@ class DemoViewController: BaseViewController {
     }
     func loadData(userId:String,password:String){
         self.showLoading()
-        socailAppService.getUser(userId: userId, password: password, success: { [weak self] user in
-            self?.showContent()
-            self?.view.makeToast("success")
-        }) {[weak self] (code, msg) in
-            self?.view.makeToast("错误的账号密码必然失败回调")
-            self?.showError()
-        }
+        socailAppService.rxGetUser(userId: userId, password: password)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: {[weak self] (bannerArticleList) in
+                if let strongSelf=self{
+                    strongSelf.showContent()
+                }
+                }, onError: {[weak self]  (error) in
+                    if let strongSelf=self{
+                        strongSelf.showError()
+                        strongSelf.view.makeToast("点击空白处")
+                    }
+            }).disposed(by: disposeBag)
     }
     
     func loadMockData(userId:String,password:String){
         self.showLoading()
-        socailAppService.getUserMock(userId: userId, password: password, success: { [weak self]  user in
-            self?.showContent()
-            self?.view.makeToast("mock必然成功演示")
-        }) {[weak self] (code, msg) in
-            self?.showError()
-            self?.view.makeToast(msg)
+        
+        socailAppService.rxGetUserMock(userId: userId, password: password)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: {[weak self] (bannerArticleList) in
+                if let strongSelf=self{
+                    strongSelf.showContent()
+                    strongSelf.view.makeToast("mock必然成功演示")
+                }
+                }, onError: {[weak self]  (error) in
+                    if let strongSelf=self{
+                        strongSelf.showError()
+                        strongSelf.view.makeToast(error.localizedDescription)
+                    }
+            }).disposed(by: disposeBag)
+                
         }
-    }
+        
+
+    
  
 
 }

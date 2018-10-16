@@ -8,32 +8,28 @@
 
 import UIKit
 import HandyJSON
+import RxSwift
 
 class MockService    {
 
     
     
-    func getUser(userId:String,password:String,result:@escaping (User)->()){
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            result(self.loadJsonFromFile(fileName: "getUser.json" ,model:User()));
-        }
-        
+  
+    func rxGetBanners()->Observable<Result<Array<Banner>>> {
+        return self.rxLoadJsonFromFile(fileName: "banner.json" ,model:Result<Array<Banner>>())
     }
+    
+    func rxGetUser(userId:String,password:String)->Observable<User>{
+         return self.rxLoadJsonFromFile(fileName: "getUser.json" ,model:User())
+    }
+    
     
     // 获取Feeds
-    func getFeeds(result: @escaping ((Result<Array<Feed>>)->())) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            result(self.loadJsonFromFile(fileName: "feeds.json" ,model:Result<Array<Feed>>()));
-        }
+    func rxGetFeeds()->Observable<Result<Array<Feed>>> {
+         return self.rxLoadJsonFromFile(fileName: "feeds.json" ,model:Result<Array<Feed>>())
     }
     
-    // 获取banner
-    func getBanners(result: @escaping ((Result<Array<Banner>>)->())) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            result(self.loadJsonFromFile(fileName: "banner.json" ,model:Result<Array<Banner>>()));
-        }
-    }
+   
     
     func loadJsonFromFile<T:HandyJSON>(fileName:String,model:T ) -> T {
         
@@ -41,7 +37,16 @@ class MockService    {
         let jsonStr=try?String(contentsOfFile: jsonPath!)
         let result:T = JsonUtil.jsonParse(jsonStr: jsonStr)!
         return result
-        
+    }
+    
+    func rxLoadJsonFromFile<T:HandyJSON>(fileName:String,model:T ) ->  Observable<T> {
+        return Observable<T>.create { observable in
+            let jsonPath = Bundle.main.path(forResource: fileName, ofType: "")
+            let jsonStr=try?String(contentsOfFile: jsonPath!)
+            let result:T = JsonUtil.jsonParse(jsonStr: jsonStr)!
+            observable.onNext(result)
+            return Disposables.create { }
+        }
     }
     
 }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RxSwift
 class PagingCollectionDemoViewController: PagingCollectionViewController {
 
     var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
@@ -15,6 +15,7 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
     private var pagingList=Array<GameModel>()
     
     private var datasource=Array<NSObject>()
+    let disposeBag=DisposeBag()
     
     //可以不需要重写该方法
     override func initView() {
@@ -39,28 +40,32 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
         
         let strategy:NormalPagingStrategy=pagingStrategy as! NormalPagingStrategy;
         let pageInfo:NormalPageInfo=strategy.getPageInfo() as! NormalPageInfo
-        self.socailAppService.getGame(pageNum: pageInfo.pageNum, pageSize: pageInfo.pageSize, success: { [weak self] (gameListModel) in
-            if let strongSelf = self {
-                if(pageInfo.isFirstPage()){
-                    strongSelf.pagingList=(gameListModel?.listData)!
-                    strongSelf.datasource=(gameListModel?.listData)!
-                    strongSelf.datasource.insert(GameCollectionHeaderModel(title: "第\(pageInfo.pageNum)页数据"), at: 0)
-                }else{
-                    strongSelf.pagingList+=(gameListModel?.listData)!
-                    strongSelf.datasource.append(GameCollectionHeaderModel(title: "第\(pageInfo.pageNum)页数据"))
-                    strongSelf.datasource = strongSelf.datasource + (gameListModel?.listData)!
-                }
-                strongSelf.loadSuccess(resultData: gameListModel!, dataSource: strongSelf.datasource, pagingList: strongSelf.pagingList)
-                let isFinish=strategy.checkFinish(result: gameListModel!, listSize: strongSelf.pagingList.count)
-                if(isFinish){
-                    strongSelf.datasource.append(AddGameModel())
-                    strongSelf.reloadDatasource(dataSource: strongSelf.datasource)
-                }
+        
+        self.socailAppService.rxGetGame(pageNum: pageInfo.pageNum, pageSize: pageInfo.pageSize)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: {[weak self] (gameListModel) in
+                if let strongSelf = self {
+                    if(pageInfo.isFirstPage()){
+                        strongSelf.pagingList=(gameListModel.listData!)
+                        strongSelf.datasource=(gameListModel.listData!)
+                        strongSelf.datasource.insert(GameCollectionHeaderModel(title: "第\(pageInfo.pageNum)页数据"), at: 0)
+                    }else{
+                        strongSelf.pagingList+=(gameListModel.listData)!
+                        strongSelf.datasource.append(GameCollectionHeaderModel(title: "第\(pageInfo.pageNum)页数据"))
+                        strongSelf.datasource = strongSelf.datasource + (gameListModel.listData)!
+                    }
+                    strongSelf.loadSuccess(resultData: gameListModel, dataSource: strongSelf.datasource, pagingList: strongSelf.pagingList)
+                    let isFinish=strategy.checkFinish(result: gameListModel, listSize: strongSelf.pagingList.count)
+                    if(isFinish){
+                        strongSelf.datasource.append(AddGameModel())
+                        strongSelf.reloadDatasource(dataSource: strongSelf.datasource)
+                    }
+                    
+                } },onError:{[weak self] error in
+                    self?.loadFail()
+            }).disposed(by: disposeBag)
                 
-            }
-        }) {[weak self] (code, msg) in
-            self?.loadFail()
-        }
+     
         
     }
  

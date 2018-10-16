@@ -9,6 +9,14 @@ PODS:
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
   - RegexKitLite-NoWarning (1.1.0)
+  - RxAlamofire (4.3.0):
+    - RxAlamofire/Core (= 4.3.0)
+  - RxAlamofire/Core (4.3.0):
+    - Alamofire (~> 4.5)
+    - RxSwift (~> 4)
+  - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
   - SnapKit (4.0.0)
   - SQLite.swift (0.11.5):
     - SQLite.swift/standard (= 0.11.5)
@@ -25,6 +33,9 @@ DEPENDENCIES:
   - MJRefresh
   - R.swift
   - RegexKitLite-NoWarning
+  - RxAlamofire (~> 4.3.0)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
   - SnapKit (~> 4.0.0)
   - SQLite.swift (~> 0.11.5)
   - Toast-Swift (~> 3.0.1)
@@ -41,6 +52,9 @@ SPEC REPOS:
     - R.swift
     - R.swift.Library
     - RegexKitLite-NoWarning
+    - RxAlamofire
+    - RxCocoa
+    - RxSwift
     - SnapKit
     - SQLite.swift
     - Toast-Swift
@@ -56,11 +70,14 @@ SPEC CHECKSUMS:
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   RegexKitLite-NoWarning: 365d208f8187997e33d9de8baeddfc00728596d8
+  RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
 
-PODFILE CHECKSUM: 9cd1b9a54a5fd9f7287b39da1c71372e8f0229da
+PODFILE CHECKSUM: cd08443cfc829e4fd7ade68ea657ad7693f4444a
 
 COCOAPODS: 1.6.0.beta.1

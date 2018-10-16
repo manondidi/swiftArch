@@ -21,11 +21,9 @@ class NetLogger: NSObject {
         if let body = response.request?.httpBody {
             debugPrint("NetLogger#### httpBody:"+String(data: body, encoding: String.Encoding.utf8)!)
         }
-        
         if let result = response.value {
             debugPrint("NetLogger#### result:"+result)
         }
-        
         debugPrint("\n")
     }
 }

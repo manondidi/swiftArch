@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class PagingOffsetIdDemoViewController: PagingViewController {
 
@@ -14,6 +15,7 @@ class PagingOffsetIdDemoViewController: PagingViewController {
     
     private var datasource=Array<NSObject>()
     private var pagingList=Array<NSObject>()
+    let disposeBag = DisposeBag()
     
     //可以不需要重写该方法
     override func initView() {
@@ -44,21 +46,24 @@ class PagingOffsetIdDemoViewController: PagingViewController {
         let strategy:OffsetStrategy=pagingStrategy as! OffsetStrategy;
         let pageInfo:OffsetPageInfo=strategy.getPageInfo() as! OffsetPageInfo
         
-        self.socailAppService.getBannerAndFeedArticle(direction: pageInfo.type, pageSize: pageInfo.pageSize, offsetId: pageInfo.offsetId, success: {
-            [weak self] (bannerArticleList) in
-            if let strongSelf=self{
-                 if(pageInfo.isFirstPage()){
-                    strongSelf.pagingList=bannerArticleList!
-                    strongSelf.datasource=bannerArticleList!
-                }else{
-                    strongSelf.pagingList = strongSelf.pagingList + bannerArticleList!
-                    strongSelf.datasource = strongSelf.datasource + bannerArticleList!
+        self.socailAppService.rxGetBannerAndFeedArticle(direction: pageInfo.type, pageSize: pageInfo.pageSize, offsetId: pageInfo.offsetId)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: {[weak self] (bannerArticleList) in
+                if let strongSelf=self{
+                    if(pageInfo.isFirstPage()){
+                        strongSelf.pagingList=bannerArticleList
+                        strongSelf.datasource=bannerArticleList
+                    }else{
+                        strongSelf.pagingList = strongSelf.pagingList + bannerArticleList
+                        strongSelf.datasource = strongSelf.datasource + bannerArticleList
+                    }
+                    strongSelf.loadSuccess(resultData: bannerArticleList as NSObject, dataSource: strongSelf.datasource, pagingList: strongSelf.pagingList)
                 }
-                strongSelf.loadSuccess(resultData: bannerArticleList! as NSObject, dataSource: strongSelf.datasource, pagingList: strongSelf.pagingList)
-            }
-        }) {[weak self] (code, msg) in
-              self?.loadFail()
-        }
+            }, onError: {[weak self]  (error) in
+                if let strongSelf=self{
+                    strongSelf.loadFail() 
+                }
+            }).disposed(by: disposeBag)
         
         
     }

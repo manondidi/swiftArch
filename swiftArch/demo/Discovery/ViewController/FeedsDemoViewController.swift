@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import RxSwift
 
 class FeedsDemoViewController: PagingViewController {
     
     private var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
     private var datasource = Array<NSObject>()
     private var pagingDatas = Array<SPFeedVM>()
+    let disposeBag=DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,21 +50,18 @@ class FeedsDemoViewController: PagingViewController {
         let strategy:OffsetStrategy=pagingStrategy as! OffsetStrategy;
         let pageInfo:OffsetPageInfo=strategy.getPageInfo() as! OffsetPageInfo
 
-        self.socailAppService.getFeedsMock { [weak self] (result: Array<SPFeedVM>) in
-            if let strongSelf=self{
-            
+        self.socailAppService.rxGetFeedsMock()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: {[weak self] (result) in
+                if let strongSelf=self{
                     if(pageInfo.isFirstPage()){
                         strongSelf.datasource=result
-                    
                     }else{
                         strongSelf.datasource = strongSelf.datasource + result
                     }
-                // 调用者必须维护两个列表
-                // 1.和分页相关的列表
-                // 2.总数据源的列表
                     strongSelf.loadSuccess(resultData: result as NSObject, dataSource: strongSelf.datasource, pagingList: strongSelf.datasource)
                 }
-         }
+         }).disposed(by: disposeBag)
     }
     
     override func tableView(_ tableView: UITableView, heightForModel model: NSObject) -> CGFloat {
