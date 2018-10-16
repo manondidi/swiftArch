@@ -22,9 +22,10 @@ class SocialAppService {
     typealias failureCallback = (_ statusCode:Int?,_ msg:String?) -> Void
     
     func rxGetUser(userId:String,password:String )->Observable<User>{
-      return   httpClient.rxRequest(url: "user/{userId}", method: .post, pathParams: ["userId":userId ], params: ["password":password])
-            .map { result-> User in
-              return  self.getData(result: result)!
+      return
+        httpClient.rxRequest(url: "user/{userId}", method: .post, pathParams: ["userId":userId ], params: ["password":password])
+            .map { result-> User  in
+              return try self.getData(result: result)!
             }
         
     }
@@ -35,7 +36,7 @@ class SocialAppService {
         
        return httpClient.rxRequest(url: "archServer/games", method: .get ,params:["pageNum":"\(pageNum)","pageSize":"\(pageSize)"])
             .map{result->NormalPageModel<GameModel> in
-                return self.getData(result: result)!
+                return try self.getData(result: result)!
         }
         
     }
@@ -51,7 +52,7 @@ class SocialAppService {
         
        return  httpClient.rxRequest(url: "archServer/feeds", method: .get ,params:dic)
         .map({ (result) -> Array<FeedArtileModel> in
-            return  self.getData(result: result)!
+            return try  self.getData(result: result)!
         })
     }
     
@@ -59,7 +60,7 @@ class SocialAppService {
     func rxGetBanners()->Observable<BannersVM> {
        return  mockService.rxGetBanners()
             .map { (result) -> Array<Banner> in
-                self.getData(result: result)!
+               try self.getData(result: result)!
         }
         .map({ (banners) -> BannersVM in
             let bannersVm=BannersVM()
@@ -110,18 +111,17 @@ class SocialAppService {
     
     
     
-   private func getData<T>(result:Result<T>)  ->T? {
-        if self.checkSuccess(result: result) {
-            return result.data!;
-        }
-        else{
-          return nil
-        }
+   private func getData<T>(result:Result<T>) throws  ->T? {
+        try self.checkSuccess(result: result)
+        return result.data!
     }
      
     
-  private  func checkSuccess(result:NSObject) -> Bool {
-        return true==result.value(forKey: "isSuccess") as? Bool
+   private  func checkSuccess<T>(result:Result<T>)throws  {
+        if  !result.isSuccess{
+            throw ResultError(code:result.status!,msg:result.msg)
+        }
     }
+    
 
 }

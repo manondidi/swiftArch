@@ -43,7 +43,8 @@ class HttpClient: NSObject {//一个server对应一个httpclient
         var pathUrl=baseUrl!+url;
         for (key, value) in pathParams {
             pathUrl=pathUrl.replacingOccurrences(of:"{\(key)}", with: "\(value)")
-        }
+        } 
+        
         return RxAlamofire.requestString(method, pathUrl, parameters: params, encoding: URLEncoding.default, headers: self.headers)
             .debug()
             .map({ (response, string) ->T in
