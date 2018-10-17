@@ -21,10 +21,5 @@ target 'swiftArch' do
 end
 
 
-#target 'swiftArchTests' do
-
-    pod 'Alamofire', '~> 4.7'
-    pod 'HandyJSON', '~> 4.2.0'
-    pod 'SQLite.swift', '~> 0.11.5'
-#end
+ 
 
