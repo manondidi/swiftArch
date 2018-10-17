@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CocoaLumberjack
 class BaseViewController: UIViewController {
 
     private var stateManager:PageSateManager?
@@ -47,7 +47,7 @@ class BaseViewController: UIViewController {
     }
  
 
-    deinit {
-//        print("########### \(String(describing:self.classForCoder.self))deinit################")
+    deinit { 
+        DDLogVerbose("###############\(String(describing:self.classForCoder.self))##############deinit")
     }
 }

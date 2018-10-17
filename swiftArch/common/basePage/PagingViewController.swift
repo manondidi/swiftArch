@@ -257,8 +257,5 @@ class PagingViewController: BaseViewController,UITableViewDataSource,UITableView
     func tableView(_ tableView: UITableView,heightForModel model: NSObject)->CGFloat {
         return UITableViewAutomaticDimension
     }
-    
-    
-    
-    
+     
 }

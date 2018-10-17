@@ -26,9 +26,7 @@
 		6119133C20B6652F00553D3A /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6119133B20B6652F00553D3A /* BannerCell.swift */; };
 		6119133E20B66E6E00553D3A /* BannersVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6119133D20B66E6E00553D3A /* BannersVM.swift */; };
 		6119134020B69A8A00553D3A /* BannerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6119133F20B69A8A00553D3A /* BannerItemCell.swift */; };
-		61197E7D20B6BFEC0046E8C2 /* NetLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61197E7C20B6BFEC0046E8C2 /* NetLogger.swift */; };
 		61197E7F20B7A2730046E8C2 /* CmsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61197E7E20B7A2730046E8C2 /* CmsService.swift */; };
-		61244C4B209C597B00BBF6BF /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C4A209C597B00BBF6BF /* CacheManager.swift */; };
 		61244C5320A1467000BBF6BF /* StateTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C5220A1467000BBF6BF /* StateTableView.swift */; };
 		61244C5620A183C700BBF6BF /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C5520A183C600BBF6BF /* R.generated.swift */; };
 		61244C5920A1850400BBF6BF /* DefaultTableLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61244C5820A1850400BBF6BF /* DefaultTableLoadView.swift */; };
@@ -81,7 +79,6 @@
 		61A4CEC2208A1E800097AC72 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A4CEC1208A1E800097AC72 /* HttpClient.swift */; };
 		61C0134D208DAEBA00BBE4DC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C0134C208DAEBA00BBE4DC /* User.swift */; };
 		61C0134F208DBABA00BBE4DC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C0134E208DBABA00BBE4DC /* Result.swift */; };
-		61C01351208DC27B00BBE4DC /* ResponseJsonHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C01350208DC27B00BBE4DC /* ResponseJsonHandle.swift */; };
 		61C01359208ED07E00BBE4DC /* CMSResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C01358208ED07E00BBE4DC /* CMSResult.swift */; };
 		61C0135B208ED09A00BBE4DC /* SocialResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C0135A208ED09A00BBE4DC /* SocialResult.swift */; };
 		61C0135F208F28C600BBE4DC /* getUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 61C0135E208F28C600BBE4DC /* getUser.json */; };
@@ -126,9 +123,7 @@
 		6119133B20B6652F00553D3A /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
 		6119133D20B66E6E00553D3A /* BannersVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersVM.swift; sourceTree = "<group>"; };
 		6119133F20B69A8A00553D3A /* BannerItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerItemCell.swift; sourceTree = "<group>"; };
-		61197E7C20B6BFEC0046E8C2 /* NetLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetLogger.swift; sourceTree = "<group>"; };
 		61197E7E20B7A2730046E8C2 /* CmsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmsService.swift; sourceTree = "<group>"; };
-		61244C4A209C597B00BBF6BF /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		61244C4C209FF55300BBF6BF /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		61244C5220A1467000BBF6BF /* StateTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableView.swift; sourceTree = "<group>"; };
 		61244C5520A183C600BBF6BF /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -184,12 +179,9 @@
 		61A4CEC1208A1E800097AC72 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		61C0134C208DAEBA00BBE4DC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		61C0134E208DBABA00BBE4DC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		61C01350208DC27B00BBE4DC /* ResponseJsonHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseJsonHandle.swift; sourceTree = "<group>"; };
 		61C01358208ED07E00BBE4DC /* CMSResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSResult.swift; sourceTree = "<group>"; };
 		61C0135A208ED09A00BBE4DC /* SocialResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialResult.swift; sourceTree = "<group>"; };
 		61C0135E208F28C600BBE4DC /* getUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = getUser.json; sourceTree = "<group>"; };
-		61C9D4E6208B55BA00DD8C17 /* swiftArchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftArchTests.swift; sourceTree = "<group>"; };
-		61C9D4E8208B55BA00DD8C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61D471F82080457A009B10F5 /* swiftArch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftArch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D471FB2080457A009B10F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61D471FD2080457A009B10F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -441,9 +433,6 @@
 			isa = PBXGroup;
 			children = (
 				61A4CEC1208A1E800097AC72 /* HttpClient.swift */,
-				61C01350208DC27B00BBE4DC /* ResponseJsonHandle.swift */,
-				61244C4A209C597B00BBF6BF /* CacheManager.swift */,
-				61197E7C20B6BFEC0046E8C2 /* NetLogger.swift */,
 			);
 			path = http;
 			sourceTree = "<group>";
@@ -479,20 +468,10 @@
 			path = jsonFile;
 			sourceTree = "<group>";
 		};
-		61C9D4E5208B55BA00DD8C17 /* swiftArchTests */ = {
-			isa = PBXGroup;
-			children = (
-				61C9D4E6208B55BA00DD8C17 /* swiftArchTests.swift */,
-				61C9D4E8208B55BA00DD8C17 /* Info.plist */,
-			);
-			path = swiftArchTests;
-			sourceTree = "<group>";
-		};
 		61D471EF2080457A009B10F5 = {
 			isa = PBXGroup;
 			children = (
 				61D471FA2080457A009B10F5 /* swiftArch */,
-				61C9D4E5208B55BA00DD8C17 /* swiftArchTests */,
 				61D471F92080457A009B10F5 /* Products */,
 				FDDCFEEDE2F4C7D0E849E264 /* Pods */,
 				9AB2DC129541A8855DBAFC44 /* Frameworks */,
@@ -700,6 +679,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-swiftArch/Pods-swiftArch-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Closures/Closures.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -718,6 +698,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Closures.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -779,7 +760,6 @@
 				9CBFDA3420B57CD700698F08 /* SPFeedArticleView.swift in Sources */,
 				618F8E3B2085858A004F06F7 /* DataManager.swift in Sources */,
 				618F8E39208584D7004F06F7 /* MockService.swift in Sources */,
-				61244C4B209C597B00BBF6BF /* CacheManager.swift in Sources */,
 				612B17AE20B415CD00F06E4E /* Feed.swift in Sources */,
 				617E8A0220AC04E3006C358E /* GameCell.swift in Sources */,
 				61C0134D208DAEBA00BBE4DC /* User.swift in Sources */,
@@ -789,8 +769,6 @@
 				61707A6120A3E6E800B378FD /* PageSateManager.swift in Sources */,
 				61707A5B20A33AA900B378FD /* StyleTableDemoVC.swift in Sources */,
 				610D229D20AE6007003B1324 /* EmptyHeader.swift in Sources */,
-				61197E7D20B6BFEC0046E8C2 /* NetLogger.swift in Sources */,
-				61C01351208DC27B00BBE4DC /* ResponseJsonHandle.swift in Sources */,
 				617E8A0F20AC3715006C358E /* PagingOffsetIdDemoViewController.swift in Sources */,
 				9C0296A520B40C2C0053E9F3 /* SPFeedPhotosView.swift in Sources */,
 				615A832820E0845E00176C44 /* StateCollectionView.swift in Sources */,

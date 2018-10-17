@@ -68,6 +68,7 @@ class SocialAppService {
             return bannersVm
         })
     }
+    
     ///下拉刷新时候 一起请求banner和article的第一页,上拉加载只请求article
     func rxGetBannerAndFeedArticle(direction:String,pageSize:Int,offsetId:String?)->Observable<Array<NSObject>>{
         if(direction=="new"){

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CocoaLumberjack
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow.init(frame: UIScreen.main.bounds)
         self.window?.rootViewController = UINavigationController(rootViewController: ViewController())
         self.window?.makeKeyAndVisible()
+        //日志隔离级别
+        DDLog.add(DDTTYLogger.sharedInstance, with: DDLogLevel.verbose)
+        
+        
         return true
     }
 
