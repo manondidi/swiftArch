@@ -14,7 +14,7 @@ class FeedsDemoViewController: PagingViewController {
     private var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
     private var datasource = Array<NSObject>()
     private var pagingDatas = Array<SPFeedVM>()
-    let disposeBag=DisposeBag()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -14,8 +14,7 @@ class PaingTalbeDemoViewController: PagingViewController {
     
     private var datasource=Array<NSObject>()
     private var pagingList=Array<GameModel>()
- 
-    let disposeBag=DisposeBag()
+  
    //可以不需要重写该方法
     override func initView() {
         super.initView()

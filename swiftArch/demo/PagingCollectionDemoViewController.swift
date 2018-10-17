@@ -13,9 +13,7 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
     var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
     
     private var pagingList=Array<GameModel>()
-    
     private var datasource=Array<NSObject>()
-    let disposeBag=DisposeBag()
     
     //可以不需要重写该方法
     override func initView() {

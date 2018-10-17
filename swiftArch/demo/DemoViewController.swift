@@ -11,8 +11,7 @@ import RxSwift
 
 class DemoViewController: BaseViewController {
 
-    
-    let disposeBag=DisposeBag()
+     
     var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
   
     

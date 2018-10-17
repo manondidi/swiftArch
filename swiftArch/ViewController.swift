@@ -14,39 +14,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor=UIColor.white
         
-        let btn1=UIButton(type: UIButtonType.roundedRect)
-        self.view.addSubview(btn1)
-        btn1.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview()
-            make.top.equalToSuperview().offset(140)
-        }
-        btn1.setTitle("tableview组件演示默认样式的styleTable例子", for: UIControlState.normal)
-        btn1.onTap {
-            [weak self]  in
-                self?.navigationController?.pushViewController(TableDemoVC(nibName: "TableDemoVC", bundle: nil), animated: true)
-        }
- 
-        
-        
-        let btn2=UIButton(type: UIButtonType.roundedRect)
-        self.view.addSubview(btn2)
-        btn2.snp.makeConstraints { (make) in
-            make.centerX.equalToSuperview()
-            make.top.equalTo(btn1.snp.bottom).offset(30)
-        }
-        btn2.titleLabel?.numberOfLines=0
-        btn2.setTitle("tableview组件演示自定义样式的styleTable例子\n可自定义headview footview emptyview error loadingcover", for: UIControlState.normal)
-        btn2.onTap {
-            [weak self]  in
-            self?.navigationController?.pushViewController(StyleTableDemoVC(), animated: true)
-        }
         
         
         let btn3=UIButton(type: UIButtonType.roundedRect)
         self.view.addSubview(btn3)
         btn3.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.top.equalTo(btn2.snp.bottom).offset(30)
+            make.top.equalToSuperview().offset(140)
         }
         btn3.setTitle("继承自BaseViewcontrollerDemo", for: UIControlState.normal)
         btn3.onTap {

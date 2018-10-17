@@ -8,9 +8,11 @@
 
 import UIKit
 import CocoaLumberjack
+import RxSwift
 class BaseViewController: UIViewController {
 
     private var stateManager:PageSateManager?
+    let disposeBag=DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
