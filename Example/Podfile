@@ -1,0 +1,8 @@
+use_frameworks!
+
+target 'swiftArch_Example' do
+  pod 'swiftArch', :path => '../'
+
+  pod 'FSPagerView'
+  pod 'RegexKitLite-NoWarning'
+end

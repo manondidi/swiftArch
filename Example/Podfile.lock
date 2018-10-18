@@ -1,0 +1,81 @@
+PODS:
+  - Alamofire (4.7.3)
+  - Closures (0.5)
+  - CocoaLumberjack/Default (3.4.2)
+  - CocoaLumberjack/Swift (3.4.2):
+    - CocoaLumberjack/Default
+  - FSPagerView (0.8.0)
+  - HandyJSON (4.2.0)
+  - Kingfisher (4.8.1)
+  - MJRefresh (3.1.15.7)
+  - RegexKitLite-NoWarning (1.1.0)
+  - RxAlamofire (4.3.0):
+    - RxAlamofire/Core (= 4.3.0)
+  - RxAlamofire/Core (4.3.0):
+    - Alamofire (~> 4.5)
+    - RxSwift (~> 4)
+  - RxCocoa (4.3.1):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.3.1)
+  - SnapKit (4.0.1)
+  - swiftArch (1.0.0):
+    - Closures (~> 0.5)
+    - CocoaLumberjack/Swift
+    - HandyJSON (~> 4.2.0)
+    - Kingfisher (~> 4.8.0)
+    - MJRefresh
+    - RxAlamofire (~> 4.3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+    - SnapKit (~> 4.0.0)
+    - Toast-Swift (~> 4.0.0)
+    - UICollectionViewLeftAlignedLayout
+  - Toast-Swift (4.0.0)
+  - UICollectionViewLeftAlignedLayout (1.0.2)
+
+DEPENDENCIES:
+  - FSPagerView
+  - RegexKitLite-NoWarning
+  - swiftArch (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Closures
+    - CocoaLumberjack
+    - FSPagerView
+    - HandyJSON
+    - Kingfisher
+    - MJRefresh
+    - RegexKitLite-NoWarning
+    - RxAlamofire
+    - RxCocoa
+    - RxSwift
+    - SnapKit
+    - Toast-Swift
+    - UICollectionViewLeftAlignedLayout
+
+EXTERNAL SOURCES:
+  swiftArch:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Closures: ad5ebce1242de44d64505bfd3b7c25b12cad3d2e
+  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
+  FSPagerView: 53d0cd11a233d662ff23e37ed8ee4ecea3cec693
+  HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  RegexKitLite-NoWarning: 365d208f8187997e33d9de8baeddfc00728596d8
+  RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  swiftArch: 2c06347e93edf12da87a30bf45e596eae579fd6c
+  Toast-Swift: 594b5c5e5129f15438e410207e43287f027b3c00
+  UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
+
+PODFILE CHECKSUM: 97785d651690278dc98a5d4b61f4085797c59330
+
+COCOAPODS: 1.6.0.beta.1
