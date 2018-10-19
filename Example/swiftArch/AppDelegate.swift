@@ -15,9 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        self.window = UIWindow.init(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = UINavigationController(rootViewController: ViewController())
-        self.window?.makeKeyAndVisible()
+ 
         //日志隔离级别
         DDLog.add(DDTTYLogger.sharedInstance, with: DDLogLevel.verbose)
         return true

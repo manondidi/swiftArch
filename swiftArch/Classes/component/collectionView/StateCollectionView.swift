@@ -14,6 +14,7 @@ public class StateCollectionView: UICollectionView  {
     public var emptyView:UIView?
     public var errorView:UIView?
     
+    lazy var bundle=Bundle(for: self.classForCoder)
     
     private var refreshHeader:MJRefreshHeader?
     private var loadMoreFooter:MJRefreshFooter?
@@ -55,15 +56,17 @@ public class StateCollectionView: UICollectionView  {
     public func setUpState()  {
         
         if loadView==nil {
-            let dLoadView:DefaultTableLoadView=Bundle.main.loadNibNamed("DefaultTableLoadView", owner: nil, options: nil)?.first as! DefaultTableLoadView
+            let dLoadView:DefaultTableLoadView=bundle.loadNibNamed("DefaultTableLoadView", owner: nil, options: nil)?.first as! DefaultTableLoadView
             loadView=dLoadView
         }
         if emptyView==nil {
-            let dEmptyView:DefaultTableEmptyView=Bundle.main.loadNibNamed("DefaultTableEmptyView", owner: nil, options: nil)?.first as! DefaultTableEmptyView
+            
+            let dEmptyView:DefaultTableEmptyView=bundle.loadNibNamed("DefaultTableEmptyView", owner: nil, options: nil)?.first as! DefaultTableEmptyView
             emptyView=dEmptyView
         }
         if errorView==nil {
-            let dErrorView:DefaultTableErrorView=Bundle.main.loadNibNamed("DefaultTableErrorView", owner: nil, options: nil)?.first as! DefaultTableErrorView
+            
+            let dErrorView:DefaultTableErrorView=bundle.loadNibNamed("DefaultTableErrorView", owner: nil, options: nil)?.first as! DefaultTableErrorView
             errorView=dErrorView
         }
         
@@ -176,17 +179,19 @@ public class StateCollectionView: UICollectionView  {
         refreshHeader=MJRefreshGifHeader()
         (refreshHeader as! MJRefreshGifHeader).lastUpdatedTimeLabel.isHidden=true
         (refreshHeader as! MJRefreshGifHeader).stateLabel.isHidden = true;
-        let images=[UIImage(named: "load0"),
-                    UIImage(named: "load1"),
-                    UIImage(named: "load2"),
-                    UIImage(named: "load3"),
-                    UIImage(named: "load4"),
-                    UIImage(named: "load5"),
-                    UIImage(named: "load6"),
-                    UIImage(named: "load7"),
-                    UIImage(named: "load8"),
-                    UIImage(named: "load9"),
-                    UIImage(named: "load10")]
+        let swiftArchBundle = Bundle.init(url: bundle.url(forResource: "swiftArch", withExtension: "bundle")!)
+        
+        let images=[UIImage(named: "load0", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load1", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load2", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load3", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load4", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load5", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load6", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load7", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load8", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load9", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load10", in:swiftArchBundle,compatibleWith:nil)]
         (refreshHeader as! MJRefreshGifHeader).setImages(images, for: MJRefreshState.idle)
         (refreshHeader as! MJRefreshGifHeader).setImages(images, for: MJRefreshState.pulling)
         (refreshHeader as! MJRefreshGifHeader).setImages(images, for: MJRefreshState.refreshing)

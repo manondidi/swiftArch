@@ -23,17 +23,7 @@ class DataManager: NSObject {
     var baseUrlSocail=""
     
     
-    var baseUrlDevCms:String="http://47.98.129.57:8080/info-admin-web/"
-    var baseUrlTestCms:String="http://47.98.129.57:8080/info-admin-web/"
-    var baseUrlReleaseCms:String="http://47.98.129.57:8080/info-admin-web/"
-    let urlEnvCms=URL_ENVITORMENT.Dev;//在这切换环境
-    var baseUrlCms=""
-     
-    
-    lazy var cmsService :CmsService = {
-        let service = CmsService()
-        return service
-    }()
+ 
     
     lazy var socailAppService :SocialAppService = {
         let service = SocialAppService()
@@ -56,14 +46,7 @@ class DataManager: NSObject {
              self.baseUrlSocail=baseUrlReleaseSocail
         }
         
-        switch urlEnvCms {
-        case .Dev:
-            self.baseUrlCms=baseUrlDevCms
-        case .Test:
-            self.baseUrlCms=baseUrlTestCms
-        case .Release:
-            self.baseUrlCms=baseUrlReleaseCms
-        }
+      
     }
   
     

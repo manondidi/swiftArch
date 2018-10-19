@@ -97,7 +97,7 @@ class SocialAppService {
       return  mockService.rxGetFeeds()
             .map({ (result) -> Array<SPFeedVM> in
                 let tmpFeeds = result.data;
-                return tmpFeeds!.map({ (feed) -> SPFeedVM in
+                let arrays =  tmpFeeds!.map({ (feed) -> SPFeedVM in
                     if let retweetFeed = feed.payload?.post?.retweetFeed {
                         retweetFeed.isRetweeted = true
                     }
@@ -105,6 +105,7 @@ class SocialAppService {
                     feedVM.feed = feed
                     return feedVM
                 })
+                return arrays
             })
         
     }

@@ -57,7 +57,12 @@ class FeedsDemoViewController: PagingViewController {
                     }
                     strongSelf.loadSuccess(resultData: result as NSObject, dataSource: strongSelf.datasource, pagingList: strongSelf.datasource)
                 }
-         }).disposed(by: disposeBag)
+                }, onError: {[weak self]  (error) in
+                    if let strongSelf=self{
+                        strongSelf.showError()
+                        strongSelf.view.makeToast("点击空白处")
+                    }
+            }).disposed(by: disposeBag)
     }
     
     override func tableView(_ tableView: UITableView, heightForModel model: NSObject) -> CGFloat {

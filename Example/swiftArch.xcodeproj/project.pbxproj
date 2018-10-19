@@ -20,12 +20,9 @@
 		613B49502178619200270CE7 /* getUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 613B49372178619100270CE7 /* getUser.json */; };
 		613B49512178619200270CE7 /* feeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 613B49382178619100270CE7 /* feeds.json */; };
 		613B49522178619200270CE7 /* feed.json in Resources */ = {isa = PBXBuildFile; fileRef = 613B49392178619100270CE7 /* feed.json */; };
-		613B49532178619200270CE7 /* CmsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B493A2178619100270CE7 /* CmsService.swift */; };
 		613B49542178619200270CE7 /* GameDateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B493D2178619100270CE7 /* GameDateModel.swift */; };
-		613B49552178619200270CE7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B493E2178619100270CE7 /* Result.swift */; };
 		613B49562178619200270CE7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B493F2178619200270CE7 /* User.swift */; };
 		613B49572178619200270CE7 /* FeedArtileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49402178619200270CE7 /* FeedArtileModel.swift */; };
-		613B49582178619200270CE7 /* CMSResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49412178619200270CE7 /* CMSResult.swift */; };
 		613B49592178619200270CE7 /* AddGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49422178619200270CE7 /* AddGameModel.swift */; };
 		613B495A2178619200270CE7 /* GameCollectionHeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49432178619200270CE7 /* GameCollectionHeaderModel.swift */; };
 		613B495B2178619200270CE7 /* SocialResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49442178619200270CE7 /* SocialResult.swift */; };
@@ -67,6 +64,8 @@
 		613B49A7217861AB00270CE7 /* TableDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613B4988217861AB00270CE7 /* TableDemoVC.xib */; };
 		613B49AE2178734800270CE7 /* UserStyleLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613B49AD2178734800270CE7 /* UserStyleLoadView.xib */; };
 		613B49B621787A5E00270CE7 /* DateShowExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49B121787A5E00270CE7 /* DateShowExt.swift */; };
+		613B49BA217966FA00270CE7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49B9217966FA00270CE7 /* Result.swift */; };
+		613B49BB21796F8200270CE7 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 613B49A8217866AF00270CE7 /* iconfont.ttf */; };
 		66E9AC3F28AEDDD6AEA0A6D7 /* Pods_swiftArch_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9E3FD1FC5CE41934E7C693 /* Pods_swiftArch_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,12 +89,9 @@
 		613B49372178619100270CE7 /* getUser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getUser.json; sourceTree = "<group>"; };
 		613B49382178619100270CE7 /* feeds.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feeds.json; sourceTree = "<group>"; };
 		613B49392178619100270CE7 /* feed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feed.json; sourceTree = "<group>"; };
-		613B493A2178619100270CE7 /* CmsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CmsService.swift; sourceTree = "<group>"; };
 		613B493D2178619100270CE7 /* GameDateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDateModel.swift; sourceTree = "<group>"; };
-		613B493E2178619100270CE7 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		613B493F2178619200270CE7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		613B49402178619200270CE7 /* FeedArtileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedArtileModel.swift; sourceTree = "<group>"; };
-		613B49412178619200270CE7 /* CMSResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMSResult.swift; sourceTree = "<group>"; };
 		613B49422178619200270CE7 /* AddGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGameModel.swift; sourceTree = "<group>"; };
 		613B49432178619200270CE7 /* GameCollectionHeaderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCollectionHeaderModel.swift; sourceTree = "<group>"; };
 		613B49442178619200270CE7 /* SocialResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialResult.swift; sourceTree = "<group>"; };
@@ -138,6 +134,7 @@
 		613B49A8217866AF00270CE7 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		613B49AD2178734800270CE7 /* UserStyleLoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserStyleLoadView.xib; sourceTree = "<group>"; };
 		613B49B121787A5E00270CE7 /* DateShowExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateShowExt.swift; sourceTree = "<group>"; };
+		613B49B9217966FA00270CE7 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		658A98147417BD320B9104F2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		66D56DC1DA06E2B9AAF6FD81 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BE40C80948261E481035C2DB /* Pods_swiftArch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftArch_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,7 +244,6 @@
 				613B49302178619100270CE7 /* viewModel */,
 				613B49332178619100270CE7 /* DataManager.swift */,
 				613B49342178619100270CE7 /* jsonFile */,
-				613B493A2178619100270CE7 /* CmsService.swift */,
 				613B493B2178619100270CE7 /* model */,
 				613B49492178619200270CE7 /* SocialAppService.swift */,
 				613B494A2178619200270CE7 /* MockService.swift */,
@@ -281,10 +277,8 @@
 			children = (
 				613B493C2178619100270CE7 /* result */,
 				613B493D2178619100270CE7 /* GameDateModel.swift */,
-				613B493E2178619100270CE7 /* Result.swift */,
 				613B493F2178619200270CE7 /* User.swift */,
 				613B49402178619200270CE7 /* FeedArtileModel.swift */,
-				613B49412178619200270CE7 /* CMSResult.swift */,
 				613B49422178619200270CE7 /* AddGameModel.swift */,
 				613B49432178619200270CE7 /* GameCollectionHeaderModel.swift */,
 				613B49442178619200270CE7 /* SocialResult.swift */,
@@ -299,6 +293,7 @@
 		613B493C2178619100270CE7 /* result */ = {
 			isa = PBXGroup;
 			children = (
+				613B49B9217966FA00270CE7 /* Result.swift */,
 			);
 			path = result;
 			sourceTree = "<group>";
@@ -486,6 +481,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				613B49BB21796F8200270CE7 /* iconfont.ttf in Resources */,
 				613B49A2217861AB00270CE7 /* FeedArticleCell.xib in Resources */,
 				613B498F217861AB00270CE7 /* GameCollectionCell.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
@@ -596,11 +592,11 @@
 				613B4995217861AB00270CE7 /* SPFeedGameView.swift in Sources */,
 				613B4997217861AB00270CE7 /* SPFeedTextView.swift in Sources */,
 				613B494D2178619200270CE7 /* DataManager.swift in Sources */,
+				613B49BA217966FA00270CE7 /* Result.swift in Sources */,
 				613B499C217861AB00270CE7 /* DemoViewController.swift in Sources */,
 				613B4999217861AB00270CE7 /* SPFeedPhotosView.swift in Sources */,
 				613B49542178619200270CE7 /* GameDateModel.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
-				613B49582178619200270CE7 /* CMSResult.swift in Sources */,
 				613B495A2178619200270CE7 /* GameCollectionHeaderModel.swift in Sources */,
 				613B498D217861AB00270CE7 /* AddGameCollectionCell.swift in Sources */,
 				613B4989217861AB00270CE7 /* UserStyleTableEmptyView.swift in Sources */,
@@ -612,7 +608,6 @@
 				613B49612178619200270CE7 /* MockService.swift in Sources */,
 				613B4990217861AB00270CE7 /* GameDateHeader.swift in Sources */,
 				613B499F217861AB00270CE7 /* FeedArticleCell.swift in Sources */,
-				613B49532178619200270CE7 /* CmsService.swift in Sources */,
 				613B4991217861AB00270CE7 /* PagingCollectionDemoViewController.swift in Sources */,
 				613B49A0217861AB00270CE7 /* BannerCell.swift in Sources */,
 				613B495F2178619200270CE7 /* GameModel.swift in Sources */,
@@ -628,7 +623,6 @@
 				613B495D2178619200270CE7 /* Banner.swift in Sources */,
 				613B4996217861AB00270CE7 /* SPFeedArticleView.swift in Sources */,
 				613B498C217861AB00270CE7 /* GameCollectionCell.swift in Sources */,
-				613B49552178619200270CE7 /* Result.swift in Sources */,
 				613B494C2178619200270CE7 /* SPFeedVM.swift in Sources */,
 				613B49A1217861AB00270CE7 /* GameCell.swift in Sources */,
 			);
