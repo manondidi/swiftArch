@@ -43,14 +43,6 @@
 		613B4991217861AB00270CE7 /* PagingCollectionDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B496D217861AB00270CE7 /* PagingCollectionDemoViewController.swift */; };
 		613B4992217861AB00270CE7 /* TableDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B496E217861AB00270CE7 /* TableDemoVC.swift */; };
 		613B4993217861AB00270CE7 /* PaingTalbeDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B496F217861AB00270CE7 /* PaingTalbeDemoViewController.swift */; };
-		613B4994217861AB00270CE7 /* SPFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4973217861AB00270CE7 /* SPFeedCell.swift */; };
-		613B4995217861AB00270CE7 /* SPFeedGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4974217861AB00270CE7 /* SPFeedGameView.swift */; };
-		613B4996217861AB00270CE7 /* SPFeedArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4975217861AB00270CE7 /* SPFeedArticleView.swift */; };
-		613B4997217861AB00270CE7 /* SPFeedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4976217861AB00270CE7 /* SPFeedTextView.swift */; };
-		613B4998217861AB00270CE7 /* SPFeedToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4977217861AB00270CE7 /* SPFeedToolbar.swift */; };
-		613B4999217861AB00270CE7 /* SPFeedPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4978217861AB00270CE7 /* SPFeedPhotosView.swift */; };
-		613B499A217861AB00270CE7 /* SPFeedLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4979217861AB00270CE7 /* SPFeedLinkView.swift */; };
-		613B499B217861AB00270CE7 /* FeedsDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B497B217861AB00270CE7 /* FeedsDemoViewController.swift */; };
 		613B499C217861AB00270CE7 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B497C217861AB00270CE7 /* DemoViewController.swift */; };
 		613B499D217861AB00270CE7 /* PagingOffsetIdDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B497D217861AB00270CE7 /* PagingOffsetIdDemoViewController.swift */; };
 		613B499E217861AB00270CE7 /* StyleTableDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B497E217861AB00270CE7 /* StyleTableDemoVC.swift */; };
@@ -66,6 +58,14 @@
 		613B49B621787A5E00270CE7 /* DateShowExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49B121787A5E00270CE7 /* DateShowExt.swift */; };
 		613B49BA217966FA00270CE7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49B9217966FA00270CE7 /* Result.swift */; };
 		613B49BB21796F8200270CE7 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 613B49A8217866AF00270CE7 /* iconfont.ttf */; };
+		613B49BF217970D800270CE7 /* FeedsDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49BE217970D800270CE7 /* FeedsDemoViewController.swift */; };
+		613B49C82179711600270CE7 /* SPFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49C12179711600270CE7 /* SPFeedCell.swift */; };
+		613B49C92179711600270CE7 /* SPFeedGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49C22179711600270CE7 /* SPFeedGameView.swift */; };
+		613B49CA2179711600270CE7 /* SPFeedArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49C32179711600270CE7 /* SPFeedArticleView.swift */; };
+		613B49CB2179711600270CE7 /* SPFeedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49C42179711600270CE7 /* SPFeedTextView.swift */; };
+		613B49CC2179711600270CE7 /* SPFeedToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49C52179711600270CE7 /* SPFeedToolbar.swift */; };
+		613B49CD2179711600270CE7 /* SPFeedPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49C62179711600270CE7 /* SPFeedPhotosView.swift */; };
+		613B49CE2179711600270CE7 /* SPFeedLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49C72179711600270CE7 /* SPFeedLinkView.swift */; };
 		66E9AC3F28AEDDD6AEA0A6D7 /* Pods_swiftArch_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9E3FD1FC5CE41934E7C693 /* Pods_swiftArch_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,14 +112,6 @@
 		613B496D217861AB00270CE7 /* PagingCollectionDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionDemoViewController.swift; sourceTree = "<group>"; };
 		613B496E217861AB00270CE7 /* TableDemoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDemoVC.swift; sourceTree = "<group>"; };
 		613B496F217861AB00270CE7 /* PaingTalbeDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaingTalbeDemoViewController.swift; sourceTree = "<group>"; };
-		613B4973217861AB00270CE7 /* SPFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedCell.swift; sourceTree = "<group>"; };
-		613B4974217861AB00270CE7 /* SPFeedGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedGameView.swift; sourceTree = "<group>"; };
-		613B4975217861AB00270CE7 /* SPFeedArticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedArticleView.swift; sourceTree = "<group>"; };
-		613B4976217861AB00270CE7 /* SPFeedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedTextView.swift; sourceTree = "<group>"; };
-		613B4977217861AB00270CE7 /* SPFeedToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedToolbar.swift; sourceTree = "<group>"; };
-		613B4978217861AB00270CE7 /* SPFeedPhotosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedPhotosView.swift; sourceTree = "<group>"; };
-		613B4979217861AB00270CE7 /* SPFeedLinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedLinkView.swift; sourceTree = "<group>"; };
-		613B497B217861AB00270CE7 /* FeedsDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsDemoViewController.swift; sourceTree = "<group>"; };
 		613B497C217861AB00270CE7 /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		613B497D217861AB00270CE7 /* PagingOffsetIdDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingOffsetIdDemoViewController.swift; sourceTree = "<group>"; };
 		613B497E217861AB00270CE7 /* StyleTableDemoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleTableDemoVC.swift; sourceTree = "<group>"; };
@@ -135,6 +127,14 @@
 		613B49AD2178734800270CE7 /* UserStyleLoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserStyleLoadView.xib; sourceTree = "<group>"; };
 		613B49B121787A5E00270CE7 /* DateShowExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateShowExt.swift; sourceTree = "<group>"; };
 		613B49B9217966FA00270CE7 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		613B49BE217970D800270CE7 /* FeedsDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsDemoViewController.swift; sourceTree = "<group>"; };
+		613B49C12179711600270CE7 /* SPFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedCell.swift; sourceTree = "<group>"; };
+		613B49C22179711600270CE7 /* SPFeedGameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedGameView.swift; sourceTree = "<group>"; };
+		613B49C32179711600270CE7 /* SPFeedArticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedArticleView.swift; sourceTree = "<group>"; };
+		613B49C42179711600270CE7 /* SPFeedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedTextView.swift; sourceTree = "<group>"; };
+		613B49C52179711600270CE7 /* SPFeedToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedToolbar.swift; sourceTree = "<group>"; };
+		613B49C62179711600270CE7 /* SPFeedPhotosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedPhotosView.swift; sourceTree = "<group>"; };
+		613B49C72179711600270CE7 /* SPFeedLinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedLinkView.swift; sourceTree = "<group>"; };
 		658A98147417BD320B9104F2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		66D56DC1DA06E2B9AAF6FD81 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BE40C80948261E481035C2DB /* Pods_swiftArch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftArch_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -306,9 +306,9 @@
 				613B496D217861AB00270CE7 /* PagingCollectionDemoViewController.swift */,
 				613B496E217861AB00270CE7 /* TableDemoVC.swift */,
 				613B496F217861AB00270CE7 /* PaingTalbeDemoViewController.swift */,
-				613B4970217861AB00270CE7 /* Discovery */,
 				613B497C217861AB00270CE7 /* DemoViewController.swift */,
 				613B497D217861AB00270CE7 /* PagingOffsetIdDemoViewController.swift */,
+				613B49BE217970D800270CE7 /* FeedsDemoViewController.swift */,
 				613B497E217861AB00270CE7 /* StyleTableDemoVC.swift */,
 				613B497F217861AB00270CE7 /* cell */,
 				613B4987217861AB00270CE7 /* UserStyleLoadView.swift */,
@@ -340,48 +340,10 @@
 			path = sectionHeader;
 			sourceTree = "<group>";
 		};
-		613B4970217861AB00270CE7 /* Discovery */ = {
-			isa = PBXGroup;
-			children = (
-				613B4971217861AB00270CE7 /* Model */,
-				613B4972217861AB00270CE7 /* View */,
-				613B497A217861AB00270CE7 /* ViewController */,
-			);
-			path = Discovery;
-			sourceTree = "<group>";
-		};
-		613B4971217861AB00270CE7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		613B4972217861AB00270CE7 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				613B4973217861AB00270CE7 /* SPFeedCell.swift */,
-				613B4974217861AB00270CE7 /* SPFeedGameView.swift */,
-				613B4975217861AB00270CE7 /* SPFeedArticleView.swift */,
-				613B4976217861AB00270CE7 /* SPFeedTextView.swift */,
-				613B4977217861AB00270CE7 /* SPFeedToolbar.swift */,
-				613B4978217861AB00270CE7 /* SPFeedPhotosView.swift */,
-				613B4979217861AB00270CE7 /* SPFeedLinkView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		613B497A217861AB00270CE7 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				613B497B217861AB00270CE7 /* FeedsDemoViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		613B497F217861AB00270CE7 /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				613B49C02179711600270CE7 /* feedCell */,
 				613B4980217861AB00270CE7 /* FeedArticleCell.swift */,
 				613B4981217861AB00270CE7 /* BannerCell.swift */,
 				613B4982217861AB00270CE7 /* GameCell.swift */,
@@ -406,6 +368,20 @@
 				613B49B121787A5E00270CE7 /* DateShowExt.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		613B49C02179711600270CE7 /* feedCell */ = {
+			isa = PBXGroup;
+			children = (
+				613B49C12179711600270CE7 /* SPFeedCell.swift */,
+				613B49C22179711600270CE7 /* SPFeedGameView.swift */,
+				613B49C32179711600270CE7 /* SPFeedArticleView.swift */,
+				613B49C42179711600270CE7 /* SPFeedTextView.swift */,
+				613B49C52179711600270CE7 /* SPFeedToolbar.swift */,
+				613B49C62179711600270CE7 /* SPFeedPhotosView.swift */,
+				613B49C72179711600270CE7 /* SPFeedLinkView.swift */,
+			);
+			path = feedCell;
 			sourceTree = "<group>";
 		};
 		B643C2EB4216E61CAA1744A0 /* Pods */ = {
@@ -585,43 +561,43 @@
 				613B498E217861AB00270CE7 /* GameCollectionHeaderCell.swift in Sources */,
 				613B499D217861AB00270CE7 /* PagingOffsetIdDemoViewController.swift in Sources */,
 				613B494B2178619200270CE7 /* BannersVM.swift in Sources */,
+				613B49C82179711600270CE7 /* SPFeedCell.swift in Sources */,
 				613B49B621787A5E00270CE7 /* DateShowExt.swift in Sources */,
 				613B495C2178619200270CE7 /* Feed.swift in Sources */,
+				613B49CB2179711600270CE7 /* SPFeedTextView.swift in Sources */,
 				613B4992217861AB00270CE7 /* TableDemoVC.swift in Sources */,
 				613B49592178619200270CE7 /* AddGameModel.swift in Sources */,
-				613B4995217861AB00270CE7 /* SPFeedGameView.swift in Sources */,
-				613B4997217861AB00270CE7 /* SPFeedTextView.swift in Sources */,
 				613B494D2178619200270CE7 /* DataManager.swift in Sources */,
 				613B49BA217966FA00270CE7 /* Result.swift in Sources */,
 				613B499C217861AB00270CE7 /* DemoViewController.swift in Sources */,
-				613B4999217861AB00270CE7 /* SPFeedPhotosView.swift in Sources */,
 				613B49542178619200270CE7 /* GameDateModel.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				613B495A2178619200270CE7 /* GameCollectionHeaderModel.swift in Sources */,
 				613B498D217861AB00270CE7 /* AddGameCollectionCell.swift in Sources */,
 				613B4989217861AB00270CE7 /* UserStyleTableEmptyView.swift in Sources */,
-				613B499A217861AB00270CE7 /* SPFeedLinkView.swift in Sources */,
 				613B4993217861AB00270CE7 /* PaingTalbeDemoViewController.swift in Sources */,
+				613B49C92179711600270CE7 /* SPFeedGameView.swift in Sources */,
 				613B49602178619200270CE7 /* SocialAppService.swift in Sources */,
 				613B495B2178619200270CE7 /* SocialResult.swift in Sources */,
 				613B49572178619200270CE7 /* FeedArtileModel.swift in Sources */,
 				613B49612178619200270CE7 /* MockService.swift in Sources */,
 				613B4990217861AB00270CE7 /* GameDateHeader.swift in Sources */,
+				613B49CD2179711600270CE7 /* SPFeedPhotosView.swift in Sources */,
+				613B49BF217970D800270CE7 /* FeedsDemoViewController.swift in Sources */,
 				613B499F217861AB00270CE7 /* FeedArticleCell.swift in Sources */,
 				613B4991217861AB00270CE7 /* PagingCollectionDemoViewController.swift in Sources */,
 				613B49A0217861AB00270CE7 /* BannerCell.swift in Sources */,
 				613B495F2178619200270CE7 /* GameModel.swift in Sources */,
+				613B49CA2179711600270CE7 /* SPFeedArticleView.swift in Sources */,
 				613B49562178619200270CE7 /* User.swift in Sources */,
 				613B49A4217861AB00270CE7 /* BannerItemCell.swift in Sources */,
-				613B4994217861AB00270CE7 /* SPFeedCell.swift in Sources */,
-				613B499B217861AB00270CE7 /* FeedsDemoViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
-				613B4998217861AB00270CE7 /* SPFeedToolbar.swift in Sources */,
 				613B495E2178619200270CE7 /* NormalPageModel.swift in Sources */,
+				613B49CE2179711600270CE7 /* SPFeedLinkView.swift in Sources */,
 				613B499E217861AB00270CE7 /* StyleTableDemoVC.swift in Sources */,
 				613B49A6217861AB00270CE7 /* UserStyleLoadView.swift in Sources */,
 				613B495D2178619200270CE7 /* Banner.swift in Sources */,
-				613B4996217861AB00270CE7 /* SPFeedArticleView.swift in Sources */,
+				613B49CC2179711600270CE7 /* SPFeedToolbar.swift in Sources */,
 				613B498C217861AB00270CE7 /* GameCollectionCell.swift in Sources */,
 				613B494C2178619200270CE7 /* SPFeedVM.swift in Sources */,
 				613B49A1217861AB00270CE7 /* GameCell.swift in Sources */,
