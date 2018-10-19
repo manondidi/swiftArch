@@ -12,7 +12,7 @@ import RxSwift
 import Toast_Swift
 open class BaseViewController: UIViewController {
 
-    private var stateManager:PageSateManager?
+    private var stateManager:PageStateManager?
     public let disposeBag=DisposeBag()
     
     open  override  func viewDidLoad() {
@@ -22,14 +22,14 @@ open class BaseViewController: UIViewController {
     
     open func initView() {//需要子类重写
         self.view.backgroundColor=UIColor.white
-        stateManager=PageSateManager(rootView: self.view)
-        self.setStateManagerView(sateManager: self.stateManager!)
+        stateManager=PageStateManager(rootView: self.view)
+        self.setStateManagerView(stateManager: self.stateManager!)
         stateManager?.setUpState()
         stateManager?.setReloadCallback {[weak self] in
             self?.onReload()
         } 
     }
-    open func setStateManagerView(sateManager:PageSateManager){//子类重写这个方法去自定义几种View的样式
+    open func setStateManagerView(stateManager:PageStateManager){//子类重写这个方法去自定义几种View的样式
             //  stateManager?.setLoadView(view: )
     }
     

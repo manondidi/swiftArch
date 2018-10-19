@@ -33,13 +33,13 @@ TODO: Add long description of the pod here.
   s.source_files = 'swiftArch/Classes/**/**/*'
   
   
+  s.dependency 'Closures', '~> 0.5'
   s.dependency 'HandyJSON', '~> 4.2.0' 
   s.dependency 'SnapKit', '~> 4.0.0'
   s.dependency 'MJRefresh'
   s.dependency 'RxAlamofire', '~>4.3.0'
   s.dependency 'RxSwift',    '~> 4.0'
   s.dependency 'RxCocoa',    '~> 4.0'
-  s.dependency 'Closures', '~> 0.5'
   s.dependency 'Toast-Swift', '~> 4.0.0'
   s.dependency 'Kingfisher', '~>4.8.0'
   s.dependency 'CocoaLumberjack/Swift'

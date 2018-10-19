@@ -71,7 +71,7 @@ open class PagingViewController: BaseViewController,UITableViewDataSource,UITabl
     /// 用于个性化定制整个页面的cover,用法:子类覆盖该方法
     /// example: sateManager.setLoadView(view: )
     /// - Parameter sateManager: 页面的管理器
-    open override func setStateManagerView(sateManager: PageSateManager) {}
+    open override func setStateManagerView(stateManager: PageStateManager) {}
   
     
     open func  onTableRresh() {

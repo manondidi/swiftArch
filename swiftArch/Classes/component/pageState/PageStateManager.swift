@@ -9,7 +9,7 @@
 import UIKit
 import Closures
 
-public class PageSateManager: NSObject {
+public class PageStateManager: NSObject {
 
     private var emptyView:PageStateEmptyView?
     private var errorView:PageStateErrorView?

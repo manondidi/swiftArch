@@ -41,11 +41,9 @@
 		613B498F217861AB00270CE7 /* GameCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613B496A217861AB00270CE7 /* GameCollectionCell.xib */; };
 		613B4990217861AB00270CE7 /* GameDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B496C217861AB00270CE7 /* GameDateHeader.swift */; };
 		613B4991217861AB00270CE7 /* PagingCollectionDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B496D217861AB00270CE7 /* PagingCollectionDemoViewController.swift */; };
-		613B4992217861AB00270CE7 /* TableDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B496E217861AB00270CE7 /* TableDemoVC.swift */; };
 		613B4993217861AB00270CE7 /* PaingTalbeDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B496F217861AB00270CE7 /* PaingTalbeDemoViewController.swift */; };
 		613B499C217861AB00270CE7 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B497C217861AB00270CE7 /* DemoViewController.swift */; };
 		613B499D217861AB00270CE7 /* PagingOffsetIdDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B497D217861AB00270CE7 /* PagingOffsetIdDemoViewController.swift */; };
-		613B499E217861AB00270CE7 /* StyleTableDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B497E217861AB00270CE7 /* StyleTableDemoVC.swift */; };
 		613B499F217861AB00270CE7 /* FeedArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4980217861AB00270CE7 /* FeedArticleCell.swift */; };
 		613B49A0217861AB00270CE7 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4981217861AB00270CE7 /* BannerCell.swift */; };
 		613B49A1217861AB00270CE7 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4982217861AB00270CE7 /* GameCell.swift */; };
@@ -53,7 +51,6 @@
 		613B49A3217861AB00270CE7 /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613B4984217861AB00270CE7 /* GameCell.xib */; };
 		613B49A4217861AB00270CE7 /* BannerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4985217861AB00270CE7 /* BannerItemCell.swift */; };
 		613B49A6217861AB00270CE7 /* UserStyleLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4987217861AB00270CE7 /* UserStyleLoadView.swift */; };
-		613B49A7217861AB00270CE7 /* TableDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613B4988217861AB00270CE7 /* TableDemoVC.xib */; };
 		613B49AE2178734800270CE7 /* UserStyleLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613B49AD2178734800270CE7 /* UserStyleLoadView.xib */; };
 		613B49B621787A5E00270CE7 /* DateShowExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49B121787A5E00270CE7 /* DateShowExt.swift */; };
 		613B49BA217966FA00270CE7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49B9217966FA00270CE7 /* Result.swift */; };
@@ -110,11 +107,9 @@
 		613B496A217861AB00270CE7 /* GameCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameCollectionCell.xib; sourceTree = "<group>"; };
 		613B496C217861AB00270CE7 /* GameDateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDateHeader.swift; sourceTree = "<group>"; };
 		613B496D217861AB00270CE7 /* PagingCollectionDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingCollectionDemoViewController.swift; sourceTree = "<group>"; };
-		613B496E217861AB00270CE7 /* TableDemoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableDemoVC.swift; sourceTree = "<group>"; };
 		613B496F217861AB00270CE7 /* PaingTalbeDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaingTalbeDemoViewController.swift; sourceTree = "<group>"; };
 		613B497C217861AB00270CE7 /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		613B497D217861AB00270CE7 /* PagingOffsetIdDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingOffsetIdDemoViewController.swift; sourceTree = "<group>"; };
-		613B497E217861AB00270CE7 /* StyleTableDemoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleTableDemoVC.swift; sourceTree = "<group>"; };
 		613B4980217861AB00270CE7 /* FeedArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedArticleCell.swift; sourceTree = "<group>"; };
 		613B4981217861AB00270CE7 /* BannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
 		613B4982217861AB00270CE7 /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
@@ -122,7 +117,6 @@
 		613B4984217861AB00270CE7 /* GameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
 		613B4985217861AB00270CE7 /* BannerItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerItemCell.swift; sourceTree = "<group>"; };
 		613B4987217861AB00270CE7 /* UserStyleLoadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStyleLoadView.swift; sourceTree = "<group>"; };
-		613B4988217861AB00270CE7 /* TableDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableDemoVC.xib; sourceTree = "<group>"; };
 		613B49A8217866AF00270CE7 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		613B49AD2178734800270CE7 /* UserStyleLoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserStyleLoadView.xib; sourceTree = "<group>"; };
 		613B49B121787A5E00270CE7 /* DateShowExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateShowExt.swift; sourceTree = "<group>"; };
@@ -303,18 +297,15 @@
 			children = (
 				613B4964217861AB00270CE7 /* collectionCell */,
 				613B496B217861AB00270CE7 /* sectionHeader */,
-				613B496D217861AB00270CE7 /* PagingCollectionDemoViewController.swift */,
-				613B496E217861AB00270CE7 /* TableDemoVC.swift */,
-				613B496F217861AB00270CE7 /* PaingTalbeDemoViewController.swift */,
 				613B497C217861AB00270CE7 /* DemoViewController.swift */,
+				613B496F217861AB00270CE7 /* PaingTalbeDemoViewController.swift */,
 				613B497D217861AB00270CE7 /* PagingOffsetIdDemoViewController.swift */,
 				613B49BE217970D800270CE7 /* FeedsDemoViewController.swift */,
-				613B497E217861AB00270CE7 /* StyleTableDemoVC.swift */,
+				613B496D217861AB00270CE7 /* PagingCollectionDemoViewController.swift */,
 				613B497F217861AB00270CE7 /* cell */,
 				613B4987217861AB00270CE7 /* UserStyleLoadView.swift */,
 				613B49AD2178734800270CE7 /* UserStyleLoadView.xib */,
 				613B4963217861AB00270CE7 /* UserStyleTableEmptyView.swift */,
-				613B4988217861AB00270CE7 /* TableDemoVC.xib */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -470,7 +461,6 @@
 				613B498A217861AB00270CE7 /* AddGameCollectionCell.xib in Resources */,
 				613B49522178619200270CE7 /* feed.json in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				613B49A7217861AB00270CE7 /* TableDemoVC.xib in Resources */,
 				613B498B217861AB00270CE7 /* GameCollectionHeaderCell.xib in Resources */,
 				613B494F2178619200270CE7 /* game.json in Resources */,
 			);
@@ -565,7 +555,6 @@
 				613B49B621787A5E00270CE7 /* DateShowExt.swift in Sources */,
 				613B495C2178619200270CE7 /* Feed.swift in Sources */,
 				613B49CB2179711600270CE7 /* SPFeedTextView.swift in Sources */,
-				613B4992217861AB00270CE7 /* TableDemoVC.swift in Sources */,
 				613B49592178619200270CE7 /* AddGameModel.swift in Sources */,
 				613B494D2178619200270CE7 /* DataManager.swift in Sources */,
 				613B49BA217966FA00270CE7 /* Result.swift in Sources */,
@@ -594,7 +583,6 @@
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				613B495E2178619200270CE7 /* NormalPageModel.swift in Sources */,
 				613B49CE2179711600270CE7 /* SPFeedLinkView.swift in Sources */,
-				613B499E217861AB00270CE7 /* StyleTableDemoVC.swift in Sources */,
 				613B49A6217861AB00270CE7 /* UserStyleLoadView.swift in Sources */,
 				613B495D2178619200270CE7 /* Banner.swift in Sources */,
 				613B49CC2179711600270CE7 /* SPFeedToolbar.swift in Sources */,
