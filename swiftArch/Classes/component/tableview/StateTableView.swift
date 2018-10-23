@@ -14,7 +14,7 @@ import Closures
 
 public class StateTableView: UITableView {
     
-    public var loadView:UIView?
+    public var loadView: (UIView & LoadViewProtocol)?
     public var emptyView:UIView?
     public var errorView:UIView?
     
@@ -30,7 +30,7 @@ public class StateTableView: UITableView {
     private var refreshCallback:refreshCallback?
     private var loadMoreCallback:loadMoreCallback?
     
-    public func setLoadView(view:UIView) {
+    public func setLoadView(view:(UIView & LoadViewProtocol)) {
         loadView=view;
     }
     public func setEmptyiew(view:UIView) {
@@ -128,6 +128,7 @@ public class StateTableView: UITableView {
         loadView?.isHidden=true
         emptyView?.isHidden=true
         errorView?.isHidden=true
+        loadView?.stopAnimate()
     }
 
    public func showContent(){
@@ -141,6 +142,7 @@ public class StateTableView: UITableView {
    public func showLoading()  {
         self.hideAllCover()
         loadView?.isHidden=false
+        loadView?.startAnimate()
         self.bringCoverToFront()
     }
     public func showEmpty()  {
@@ -185,7 +187,6 @@ public class StateTableView: UITableView {
         (refreshHeader as! MJRefreshGifHeader).lastUpdatedTimeLabel.isHidden=true
         (refreshHeader as! MJRefreshGifHeader).stateLabel.isHidden = true;
         let swiftArchBundle = Bundle.init(url: bundle.url(forResource: "swiftArch", withExtension: "bundle")!)
-        
         let images=[UIImage(named: "load0", in:swiftArchBundle,compatibleWith:nil),
                     UIImage(named: "load1", in:swiftArchBundle,compatibleWith:nil),
                     UIImage(named: "load2", in:swiftArchBundle,compatibleWith:nil),

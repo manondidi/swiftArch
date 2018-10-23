@@ -10,7 +10,7 @@ import UIKit
 import MJRefresh
 public class StateCollectionView: UICollectionView  {
     
-    public var loadView:UIView?
+    public var loadView: (UIView & LoadViewProtocol)?
     public var emptyView:UIView?
     public var errorView:UIView?
     
@@ -26,7 +26,7 @@ public class StateCollectionView: UICollectionView  {
     private var refreshCallback:refreshCallback?
     private var loadMoreCallback:loadMoreCallback?
     
-    public func setLoadView(view:UIView) {
+    public func setLoadView(view:UIView&LoadViewProtocol) {
         loadView=view;
     }
     public func setEmptyiew(view:UIView) {
@@ -123,6 +123,7 @@ public class StateCollectionView: UICollectionView  {
         loadView?.isHidden=true
         emptyView?.isHidden=true
         errorView?.isHidden=true
+        loadView?.stopAnimate()
     }
     
     public func showContent(){
@@ -136,6 +137,7 @@ public class StateCollectionView: UICollectionView  {
     public func showLoading()  {
         self.hideAllCover()
         loadView?.isHidden=false
+        loadView?.startAnimate()
         self.bringCoverToFront()
     }
     public func showEmpty()  {

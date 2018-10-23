@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class PageStateEmptyView: UIView {
+public class DefaultPageStateEmptyView: UIView {
     public let emptyLabel = UILabel()
     
     

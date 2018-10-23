@@ -11,9 +11,9 @@ import Closures
 
 public class PageStateManager: NSObject {
 
-    private var emptyView:PageStateEmptyView?
-    private var errorView:PageStateErrorView?
-    private var loadView:PageStateLoadView?
+    private var emptyView:UIView?
+    private var errorView:UIView?
+    private var loadView: (UIView & LoadViewProtocol)?
     
     
     public typealias reloadCallback = () -> Void
@@ -33,27 +33,27 @@ public class PageStateManager: NSObject {
         self.rootView.bringSubviewToFront(loadView!)
     }
     
-    public func setEmptyView(view:PageStateEmptyView){
+    public func setEmptyView(view:UIView){
         self.emptyView=view
     }
     
-    public func setErrorView(view:PageStateErrorView){
+    public func setErrorView(view:UIView){
         self.errorView=view
     }
-    public func setLoadView(view:PageStateLoadView){
+    public func setLoadView(view:(UIView & LoadViewProtocol)){
         self.loadView=view
     }
     
     private func userDefaultEmptyView(){
-        self.emptyView=PageStateEmptyView()
+        self.emptyView=DefaultPageStateEmptyView()
     }
     
     private func userDefaultErrorView(){
-        self.errorView=PageStateErrorView()
+        self.errorView=DefaultPageStateErrorView()
     }
     
     private func userDefaultLoadView(){
-        self.loadView=PageStateLoadView()
+        self.loadView=DefaultPageStateLoadView()
     }
     
     

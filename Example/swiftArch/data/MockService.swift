@@ -44,7 +44,7 @@ class MockService{
             let result:T = JsonUtil.jsonParse(jsonStr: jsonStr)!
             observable.onNext(result)
             return Disposables.create { }
-        }
+        }.delay(2, scheduler: MainScheduler.instance)
     }
     
 }

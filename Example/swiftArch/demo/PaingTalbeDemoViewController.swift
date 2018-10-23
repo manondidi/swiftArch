@@ -29,20 +29,33 @@ class PaingTalbeDemoViewController: PagingViewController {
         self.tableView?.estimatedSectionHeaderHeight = 40
     }
     
-    //如果使用默认的列表Stateview可以不需要重写该方法(用于自定义 empty error loadingview)
-    //也可再次自定义 上下拉的 head 和foot
+    ///在此处定制各种 stateView
+    override func setStateManagerView(stateManager: PageStateManager) {
+        let loadView:UserStyleLoadView=Bundle.main.loadNibNamed("UserStyleLoadView", owner: nil, options: nil)?.first as! UserStyleLoadView
+        stateManager.setLoadView(view:loadView)
+    }
+    
+    
+    ///如果使用默认的列表Stateview可以不需要重写该方法(用于自定义 empty error loadingview)
+    ///也可再次自定义 上下拉的 head 和foot
+    ///我的tableview已经在empty和error上加入了点击会触发下beginRefresh
+    ///但是你依然可以在emptyView上添加你想要的View比如按钮, 点击之后的事件 和我的点击重新加载不冲突
     override func setTalbeStateView() {
         let emptyView=UserStyleTableEmptyView()
-        emptyView.button.onTap {[weak self] in       //我的tableview已经在empty和error上加入了点击会触发下beginRefresh
-                                    //但是你依然可以在emptyView上添加你想要的View比如按钮, 点击之后的事件 和我的点击重新加载不冲突
+        emptyView.button.onTap {[weak self] in
             self?.view.makeToast("去添加")
         }
         self.tableView?.setEmptyiew(view: emptyView)
+//        self.tableView?.setLoadView(view: <#T##(UIView & LoadViewProtocol)#>
+//        self.tableView?.setErroriew(view: <#T##UIView#>)
     }
+    
+    
     override func registerCellModel() {
         super.registerCellModel()
         self.tableView?.registerCellNib(nib: UINib(nibName: "GameCell", bundle: nil), modelClass: GameModel.self)
     }
+    
     override func registerSectionHeaderModel() {
         super.registerSectionHeaderModel()
         self.tableView?.registerHeaderClass(headerClass: GameDateHeader.self, modelClass: GameDateModel.self)

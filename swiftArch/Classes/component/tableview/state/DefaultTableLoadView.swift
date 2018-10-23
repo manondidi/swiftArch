@@ -8,47 +8,38 @@
 
 import UIKit
 
-public class DefaultTableLoadView: UIView {
-  
+public class DefaultTableLoadView: UIView,LoadViewProtocol {
     @IBOutlet weak var gifIV: UIImageView!
+    lazy var bundle=Bundle(for: self.classForCoder)
     
-    public override var isHidden: Bool{
-        set {
-            if newValue {
-                if(gifIV != nil){
-                    gifIV.stopAnimating()
-                }
-            }else{
-                if(gifIV != nil){
-                    gifIV.startAnimating()
-                }
-            }
-            super.isHidden=newValue
-           
-        }
-        get {
-            return super.isHidden
-        }
-    } 
     public override func awakeFromNib() {
         super.awakeFromNib()
-//        let images=[UIImage(named: "load0",in:bundle,compatibleWith:nil),
-//                    UIImage(named: "load1", in:bundle,compatibleWith:nil),
-//                    UIImage(named: "load2", in:bundle,compatibleWith:nil),
-//                    UIImage(named: "load3", in:bundle,compatibleWith:nil),
-//                    UIImage(named: "load4", in:bundle,compatibleWith:nil),
-//                    UIImage(named: "load5", in:bundle,compatibleWith:nil),
-//                    UIImage(named: "load6", in:bundle,compatibleWith:nil),
-//                    UIImage(named: "load7", in:bundle,compatibleWith:nil),
-//                    UIImage(named: "load8", in:bundle,compatibleWith:nil),
-//                    UIImage(named: "load9", in:bundle,compatibleWith:nil),
-//                    UIImage(named: "load10", in:bundle,compatibleWith:nil)]
-//        gifIV.animationImages=images as? [UIImage]
-        gifIV.startAnimating()
+        let swiftArchBundle = Bundle.init(url: bundle.url(forResource: "swiftArch", withExtension: "bundle")!)
+        let images=[UIImage(named: "load0", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load1", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load2", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load3", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load4", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load5", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load6", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load7", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load8", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load9", in:swiftArchBundle,compatibleWith:nil),
+                    UIImage(named: "load10", in:swiftArchBundle,compatibleWith:nil)]
+        gifIV.animationImages=images as? [UIImage]
+         
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    
+    public func startAnimate() {
+        gifIV.startAnimating()
+    }
+    
+    public func stopAnimate() {
+         gifIV.stopAnimating()
     }
     
 }

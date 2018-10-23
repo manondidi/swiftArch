@@ -43,10 +43,10 @@ class DemoViewController: BaseViewController {
         
     }
     ///在此处定制各种 stateView
-    override func setStateManagerView(stateManager: PageStateManager) {
-        let loadView:UserStyleLoadView=Bundle.main.loadNibNamed("UserStyleLoadView", owner: nil, options: nil)?.first as! UserStyleLoadView
-        stateManager.setLoadView(view:loadView)
-    }
+//    override func setStateManagerView(stateManager: PageStateManager) {
+//        let loadView:UserStyleLoadView=Bundle.main.loadNibNamed("UserStyleLoadView", owner: nil, options: nil)?.first as! UserStyleLoadView
+//        stateManager.setLoadView(view:loadView)
+//    }
     
     func loadData(userId:String,password:String){
         self.showLoading()

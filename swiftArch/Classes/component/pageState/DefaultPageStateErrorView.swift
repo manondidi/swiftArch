@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class PageStateErrorView: UIView {
+public class DefaultPageStateErrorView: UIView {
  
     public let errorLabel = UILabel()
     

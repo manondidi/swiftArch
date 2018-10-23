@@ -8,7 +8,7 @@
 
 import UIKit
 import swiftArch
-class UserStyleLoadView: PageStateLoadView {
+class UserStyleLoadView: DefaultPageStateLoadView {
 
     @IBOutlet weak var gifIv: UIImageView!
     override var isHidden: Bool{
