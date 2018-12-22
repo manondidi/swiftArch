@@ -36,6 +36,7 @@ PODS:
 DEPENDENCIES:
   - FSPagerView
   - RegexKitLite-NoWarning
+  - RxSwift
   - swiftArch (from `../`)
 
 SPEC REPOS:
@@ -76,6 +77,6 @@ SPEC CHECKSUMS:
   Toast-Swift: 594b5c5e5129f15438e410207e43287f027b3c00
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
 
-PODFILE CHECKSUM: 97785d651690278dc98a5d4b61f4085797c59330
+PODFILE CHECKSUM: 7b7bf16889937b5282c9928a1c6cde86a5c8370e
 
 COCOAPODS: 1.6.0.beta.1

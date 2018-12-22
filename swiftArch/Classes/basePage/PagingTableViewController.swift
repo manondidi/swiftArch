@@ -7,19 +7,21 @@
 //
 
 import UIKit
-
+import CocoaLumberjack
 //用于计算分页
-open class PagingViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
+open class PagingTableViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
 
     public var tableView: StateTableView?
 
     public var pagingStrategy: PagingStrategy?
 
-    private var dataSource = Array<NSObject>()
-    
-    private var sectionModelList = Array<NSObject>()
+    public var dataSource = Array<Any>()
 
-    private var sectionData = Array<Array<NSObject>>()
+    public var pagingList = Array<Any>()
+
+    private var sectionModelList = Array<Any>()
+
+    private var sectionData = Array<Array<Any>>()
 
 
     open override func initView() {
@@ -114,31 +116,24 @@ open class PagingViewController: BaseViewController, UITableViewDataSource, UITa
     ///
     /// - Parameters:
     ///   - resultData: 完整的返回值(因为我要从里面取分页信息比如total)
-    ///   - dataSource: 完整的列表的数组(用于展示)
-    ///   - pagingList: 分页相关的列表数组
-    open func loadSuccess(resultData: NSObject, dataSource: Array<NSObject>, pagingList: Array<NSObject>) {
+    open func loadSuccess(resultData: Any?) {
         self.tableView?.showContent()
         self.pagingStrategy?.addPage(info: pagingList)
         let isFinish = self.pagingStrategy?.checkFinish(result: resultData, listSize: pagingList.count)
         self.tableView?.setLoadMoreEnable(b: !isFinish!)
-        self.reloadDataSource(dataSource: dataSource)
+        self.tableView?.reloadData()
     }
-    open func loadFail() {
+    
+    open func loadFail(_ error: Error? = nil){
         if(self.dataSource.count == 0) {
             self.tableView?.showError()
         } else {
             self.view.makeToast("加载失败")
-        }
+        } 
+        DDLogError(error?.localizedDescription ?? "")
     }
 
-    public func reloadDataSource(dataSource: Array<NSObject>) {
-        if(dataSource.count == 0) {
-            self.tableView?.showEmpty()
-        }
-        self.dataSource = dataSource
-        self.tableView?.reloadData()
-
-    }
+ 
 
     open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
@@ -170,7 +165,7 @@ open class PagingViewController: BaseViewController, UITableViewDataSource, UITa
     open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 
         if (section < self.sectionModelList.count) {
-            let item = self.sectionModelList[section]
+            let item = self.sectionModelList[section] as? NSObject ?? NSObject()
             let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing: item.classForCoder.self))!
             header.setValue(item, forKey: "model")
             self.registerEventforSectionHeader(header: header, model: item)
@@ -184,7 +179,8 @@ open class PagingViewController: BaseViewController, UITableViewDataSource, UITa
 
         self.sectionModelList = Array<NSObject>()
         let sectionCount = self.dataSource.filter { (data) -> Bool in
-            let isSectionModel = (tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing: data.classForCoder.self)) != nil)
+            let dataOjb = data as? NSObject ?? NSObject()
+            let isSectionModel = (tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing: dataOjb.classForCoder.self)) != nil)
             if(isSectionModel) {
                 self.sectionModelList.append(data)
             }
@@ -199,13 +195,18 @@ open class PagingViewController: BaseViewController, UITableViewDataSource, UITa
             self.sectionData.removeAll()
             var dataInSection: Array<NSObject>? = nil
             self.dataSource.forEach { (data) in
-                if(self.sectionModelList.contains(data)) {
+                let dataObj=data as? NSObject
+                if(self.sectionModelList.contains(where: { (it) -> Bool in
+                  return  dataObj == it as? NSObject
+                })) {
                     if(dataInSection != nil) {
                         self.sectionData.append(dataInSection!)
                     }
                     dataInSection = Array<NSObject>()
                 } else {
-                    dataInSection!.append(data)
+                    if(dataObj != nil){
+                        dataInSection!.append(dataObj!)
+                    }
                 }
             }
             self.sectionData.append(dataInSection!)
@@ -220,13 +221,13 @@ open class PagingViewController: BaseViewController, UITableViewDataSource, UITa
 
 
     public func getRealDataSourceModel(indexPath: IndexPath) -> NSObject {
-        var sectionDataSource = Array<NSObject>()
+        var sectionDataSource = Array<Any>()
         if(self.sectionData.count == 0) {
             sectionDataSource = self.dataSource
         } else {
             sectionDataSource = self.sectionData[indexPath.section]
         }
-        let item = sectionDataSource[indexPath.row]
+        let item = sectionDataSource[indexPath.row] as? NSObject ?? NSObject()
         return item
     }
 

@@ -5,4 +5,5 @@ target 'swiftArch_Example' do
 
   pod 'FSPagerView'
   pod 'RegexKitLite-NoWarning'
+  pod 'RxSwift'
 end

@@ -9,59 +9,53 @@
 import UIKit
 import RxSwift
 import swiftArch
-class FeedsDemoViewController: PagingViewController {
-    
-    private var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
+class FeedsDemoViewController: PagingTableViewController {
+
+    private var socailAppService: SocialAppService = DataManager.shareInstance.socailAppService
     private var datasource = Array<NSObject>()
     private var pagingDatas = Array<SPFeedVM>()
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
 
-    
+
+
     override func initTableView() {
         super.initTableView()
         self.tableView?.estimatedSectionHeaderHeight = 0
     }
-    
+
     override func registerCellModel() {
         super.registerCellModel()
         self.tableView?.registerCellClass(cellClass: SPFeedCell.self, modelClass: SPFeedVM.self)
     }
-    
-    override func getPagingStrategy() -> PagingStrategy {
-        let strategy:PagingStrategy = OffsetStrategy(pageSize: 20, offsetIdKey: "id")
+
+    override func getPagingStrategy() -> PagingStrategy? {
+        let strategy: PagingStrategy = OffsetStrategy(pageSize: 20, offsetIdKey: "id")
         return strategy
     }
-    
+
     override func onLoadData(pagingStrategy: PagingStrategy) {
-        
-        let strategy:OffsetStrategy=pagingStrategy as! OffsetStrategy;
-        let pageInfo:OffsetPageInfo=strategy.getPageInfo() as! OffsetPageInfo
+
+        let strategy: OffsetStrategy = pagingStrategy as! OffsetStrategy;
+        let pageInfo: OffsetPageInfo = strategy.getPageInfo() as! OffsetPageInfo
 
         self.socailAppService.rxGetFeedsMock()
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: {[weak self] (result) in
-                if let strongSelf=self{
-                    if(pageInfo.isFirstPage()){
-                        strongSelf.datasource=result
-                    }else{
-                        strongSelf.datasource = strongSelf.datasource + result
-                    }
-                    strongSelf.loadSuccess(resultData: result as NSObject, dataSource: strongSelf.datasource, pagingList: strongSelf.datasource)
+            .subscribe(onNext: { [weak self] (result) in
+                if(pageInfo.isFirstPage()) {
+                    self?.dataSource.removeAll()
+                    self?.pagingList.removeAll()
                 }
-                }, onError: {[weak self]  (error) in
-                    if let strongSelf=self{
-                        strongSelf.showError()
-                        strongSelf.view.makeToast("点击空白处")
+                self?.dataSource.append(contentsOf: result)
+                self?.pagingList.append(contentsOf: result)
+                self?.loadSuccess(resultData: result)
+            }
+                , onError: { [weak self] (error) in
+                    if let strongSelf = self {
+                        strongSelf.loadFail()
                     }
-            }).disposed(by: disposeBag)
+                }).disposed(by: disposeBag)
+
     }
-    
+
     override func tableView(_ tableView: UITableView, heightForModel model: NSObject) -> CGFloat {
         let realItem = model as! SPFeedVM
         return realItem.cellHeight
