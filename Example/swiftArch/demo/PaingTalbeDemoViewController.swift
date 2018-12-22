@@ -13,8 +13,8 @@ class PaingTalbeDemoViewController: PagingViewController {
 
     var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
     
-    private var datasource=Array<NSObject>()
-    private var pagingList=Array<GameModel>()
+    public var datasource=Array<NSObject>()
+    public var pagingList=Array<GameModel>()
   
    //可以不需要重写该方法
     override func initView() {

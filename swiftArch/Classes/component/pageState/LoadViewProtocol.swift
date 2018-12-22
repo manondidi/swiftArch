@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol LoadViewProtocol  {
+public protocol LoadViewProtocol {
     func startAnimate()
     func stopAnimate()
 }

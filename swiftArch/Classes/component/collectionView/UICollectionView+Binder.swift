@@ -8,12 +8,12 @@
 
 import UIKit
 
-public extension UICollectionView{
+public extension UICollectionView {
 
-   public func registerCellClass(cellClass:AnyClass,modelClass:AnyClass) {
-        self.register(cellClass, forCellWithReuseIdentifier:String(describing:modelClass.self) )
+    public func registerCellClass(cellClass: AnyClass, modelClass: AnyClass) {
+        self.register(cellClass, forCellWithReuseIdentifier: String(describing: modelClass.self))
     }
-   public func registerCellNib(nib:UINib,modelClass:AnyClass){
-        self.register(nib, forCellWithReuseIdentifier: String(describing:modelClass.self))
+    public func registerCellNib(nib: UINib, modelClass: AnyClass) {
+        self.register(nib, forCellWithReuseIdentifier: String(describing: modelClass.self))
     }
 }

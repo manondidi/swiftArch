@@ -25,11 +25,8 @@ class FeedArticleCell: UITableViewCell {
             self.imgCover.kf.setImage(with:URL(string: (model?.payload?.article?.cover?.medium)!))
             self.labelTitle.text=model?.payload?.article?.title
             self.labelUserName.text=model?.user?.nickname
-            if(model?.payload?.article?.game != nil){
-                self.labelGameName.text=model?.payload?.article?.game?.name
-            }else{
-                self.labelGameName.text=""
-            }
+            self.labelGameName.text=model?.payload?.article?.game?.name ?? ""
+             
             
             
             let isFirefly=model?.payload?.article?.isFireflyUser ?? false

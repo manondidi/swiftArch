@@ -10,18 +10,18 @@ import UIKit
 
 public class OffsetPageInfo: NSObject {
 
-    public var type="new"
-    public var pageSize=20
-    public var offsetId:String?=nil
-    
-    public convenience init(pageSize:Int=20) {
+    public var type = "new"
+    public var pageSize = 20
+    public var offsetId: String? = nil
+
+    public convenience init(pageSize: Int = 20) {
         self.init()
-        self.pageSize=pageSize
+        self.pageSize = pageSize
     }
-    
+
     public func isFirstPage() -> Bool {
-        return type=="new"
+        return type == "new"
     }
-    
-    
+
+
 }

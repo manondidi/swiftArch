@@ -21,10 +21,7 @@ class FeedsDemoViewController: PagingViewController {
         
     }
     
- 
-    
-    
-    // MARK:- 模板方法重写
+
     
     override func initTableView() {
         super.initTableView()

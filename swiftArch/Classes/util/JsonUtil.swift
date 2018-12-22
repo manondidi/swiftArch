@@ -9,14 +9,14 @@
 import UIKit
 import HandyJSON
 public class JsonUtil: NSObject {
-    
-    public static func jsonParse<T:HandyJSON>(jsonStr:String?)->T?{
-        let result:T? = T.deserialize(from: jsonStr)
+
+    public static func jsonParse<T:HandyJSON>(jsonStr: String?) -> T? {
+        let result: T? = T.deserialize(from: jsonStr)
         return result
     }
-     
-    public static func toJsonString(any:Any)->String{
-        
+
+    public static func toJsonString(any: Any) -> String {
+
         //首先判断能不能转换
         guard JSONSerialization.isValidJSONObject(any) else {
             return ""
@@ -25,11 +25,11 @@ public class JsonUtil: NSObject {
         if let jsonData = jsonData {
             let str = String(data: jsonData, encoding: String.Encoding.utf8)
             return str ?? ""
-        }else {
+        } else {
             return ""
         }
     }
-    
-    
+
+
 
 }

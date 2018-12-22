@@ -8,12 +8,12 @@
 
 import Foundation
 public class JsonError: NSError {
-    override public var localizedDescription: String{
-        get{
+    override public var localizedDescription: String {
+        get {
             return "Json转换失败"
         }
     }
 }
 
 
- 
+

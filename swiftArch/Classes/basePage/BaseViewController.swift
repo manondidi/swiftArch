@@ -12,45 +12,44 @@ import RxSwift
 import Toast_Swift
 open class BaseViewController: UIViewController {
 
-    private var stateManager:PageStateManager?
-    public let disposeBag=DisposeBag()
-    
-    open  override  func viewDidLoad() {
+    private var stateManager: PageStateManager?
+    public let disposeBag = DisposeBag()
+
+    open override func viewDidLoad() {
         super.viewDidLoad()
         self.initView()
     }
-    
-    open func initView() {//需要子类重写
-        self.view.backgroundColor=UIColor.white
-        stateManager=PageStateManager(rootView: self.view)
+
+    open func initView() { //需要子类重写
+        self.view.backgroundColor = UIColor.white
+        stateManager = PageStateManager(rootView: self.view)
         self.setStateManagerView(stateManager: self.stateManager!)
         stateManager?.setUpState()
-        stateManager?.setReloadCallback {[weak self] in
+        stateManager?.setReloadCallback { [weak self] in
             self?.onReload()
-        } 
+        }
     }
-    open func setStateManagerView(stateManager:PageStateManager){//子类重写这个方法去自定义几种View的样式
-            //  stateManager?.setLoadView(view: )
+    open func setStateManagerView(stateManager: PageStateManager) { //子类重写这个方法去自定义几种View的样式
+        //  stateManager?.setLoadView(view: )
     }
-    
-    open func onReload(){ //子类必须重写这个方法
+
+    open func onReload() { //子类必须重写这个方法
         //当用户点击erroview的时候会回调这个方法
-    } 
-    open func showContent(){
+    }
+    open func showContent() {
         stateManager?.showContent()
     }
-    open func showLoading(){
+    open func showLoading() {
         stateManager?.showLoading()
     }
-    open func showEmpty(){
+    open func showEmpty() {
         stateManager?.showEmpty()
     }
-    open func showError(){
+    open func showError(error: Swift.Error? = nil) {
         stateManager?.showError()
+        DDLogError(error?.localizedDescription ?? "")
     }
- 
 
-    deinit { 
-        DDLogVerbose("###############\(String(describing:self.classForCoder.self))##############deinit")
-    }
+
+
 }

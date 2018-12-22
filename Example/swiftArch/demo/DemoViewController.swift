@@ -42,15 +42,12 @@ class DemoViewController: BaseViewController {
         self.loadMockData(userId: "manondidi", password: "12345566") // 这里走mock 肯定成功
         
     }
-    ///在此处定制各种 stateView
-//    override func setStateManagerView(stateManager: PageStateManager) {
-//        let loadView:UserStyleLoadView=Bundle.main.loadNibNamed("UserStyleLoadView", owner: nil, options: nil)?.first as! UserStyleLoadView
-//        stateManager.setLoadView(view:loadView)
-//    }
+
     
     func loadData(userId:String,password:String){
         self.showLoading()
         socailAppService.rxGetUser(userId: userId, password: password)
+            
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: {[weak self] (bannerArticleList) in
                 if let strongSelf=self{
@@ -59,7 +56,6 @@ class DemoViewController: BaseViewController {
                 }, onError: {[weak self]  (error) in
                     if let strongSelf=self{
                         strongSelf.showError()
-                        strongSelf.view.makeToast("点击空白处")
                     }
             }).disposed(by: disposeBag)
     }
@@ -72,7 +68,6 @@ class DemoViewController: BaseViewController {
             .subscribe(onNext: {[weak self] (bannerArticleList) in
                 if let strongSelf=self{
                     strongSelf.showContent()
-                    strongSelf.view.makeToast("mock必然成功演示")
                 }
                 }, onError: {[weak self]  (error) in
                     if let strongSelf=self{

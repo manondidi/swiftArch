@@ -9,9 +9,9 @@
 import UIKit
 
 ///分页策略
-public protocol PagingStrategy{
-    func addPage(info:Any)
+public protocol PagingStrategy {
+    func addPage(info: Any?)
     func resetPage()
-    func getPageInfo()->Any
-    func checkFinish(result:NSObject,listSize: Int) -> Bool
+    func getPageInfo() -> Any?
+    func checkFinish(result: Any?, listSize: Int) -> Bool
 }

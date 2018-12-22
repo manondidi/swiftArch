@@ -8,18 +8,18 @@
 
 import Foundation
 public class ResultError: NSError {
- 
-    public var msg=""
-    override public var localizedDescription: String{
-        get{
+
+    public var msg = ""
+    override public var localizedDescription: String {
+        get {
             return msg
         }
     }
-    public init( code: Int, msg :String? ) {
+    public init(code: Int, msg: String?) {
         super.init(domain: "requestResult", code: code, userInfo: nil)
-        self.msg=msg ?? ""
+        self.msg = msg ?? ""
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

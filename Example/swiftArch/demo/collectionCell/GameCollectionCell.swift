@@ -20,7 +20,7 @@ class GameCollectionCell: UICollectionViewCell {
         didSet
         {
             self.labelName.text=model?.title
-            self.ivIcon.kf.setImage(with:URL(string: (model?.icon)!))
+            self.ivIcon.kf.setImage(with:URL(string: model?.icon ?? ""))
         }
     }
 }

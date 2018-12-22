@@ -19,7 +19,7 @@ public class OffsetStrategy: PagingStrategy {
         pageInfo.type="new"
     }
     
-    public func addPage(info: Any) {
+    public func addPage(info: Any?) {
         pageInfo.type="old"
         let arr=info as?[NSObject]
         let feed=arr?.last 
@@ -32,11 +32,11 @@ public class OffsetStrategy: PagingStrategy {
         pageInfo.offsetId=nil
     }
     
-    public func getPageInfo() -> Any {
-         return pageInfo
+    public func getPageInfo() -> Any? {
+        return pageInfo
     }
     
-    public func checkFinish(result: NSObject, listSize: Int) -> Bool {
+    public func checkFinish(result: Any?, listSize: Int) -> Bool {
         let arr=result as! [Any]
         return arr.count==0
     }

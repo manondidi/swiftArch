@@ -7,15 +7,26 @@
 //
 
 import UIKit
+import SnapKit
 
 public class DefaultTableEmptyView: UIView {
+    public lazy var emptyLabel = UILabel()
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.addSubview(emptyLabel)
+        self.backgroundColor = UIColor.white
+        emptyLabel.textColor = UIColor.darkGray
+        emptyLabel.font = UIFont.systemFont(ofSize: 14)
+        emptyLabel.text = "空空如也~"
+        emptyLabel.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
     }
-    */
+
+
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
 }
