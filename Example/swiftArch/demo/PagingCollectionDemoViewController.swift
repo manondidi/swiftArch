@@ -49,7 +49,7 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
                 self?.pagingList.append(contentsOf: result.listData!)
                 self?.loadSuccess(resultData: result)
             }, onError: { [weak self] error in
-                    self?.loadFail(error)
+                self?.loadFail(error)
                 })
             .disposed(by: disposeBag)
 

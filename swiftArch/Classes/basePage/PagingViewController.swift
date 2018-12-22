@@ -16,6 +16,7 @@ open class PagingViewController: BaseViewController, UITableViewDataSource, UITa
     public var pagingStrategy: PagingStrategy?
 
     private var dataSource = Array<NSObject>()
+    
     private var sectionModelList = Array<NSObject>()
 
     private var sectionData = Array<Array<NSObject>>()

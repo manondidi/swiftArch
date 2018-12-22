@@ -45,7 +45,7 @@ open class BaseViewController: UIViewController {
     open func showEmpty() {
         stateManager?.showEmpty()
     }
-    open func showError(error: Swift.Error? = nil) {
+    open func showError(_ error:Error? = nil) {
         stateManager?.showError()
         DDLogError(error?.localizedDescription ?? "")
     }

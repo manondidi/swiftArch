@@ -66,8 +66,9 @@ open class PagingCollectionViewController: BaseViewController, UICollectionViewD
     open func collectionView(collection: UICollectionView, sizeForModel model: NSObject) -> CGSize {
         return CGSize.zero
     }
-    open override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    open override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         self.collectionView?.beginRefresh()
     }
  
@@ -112,7 +113,7 @@ open class PagingCollectionViewController: BaseViewController, UICollectionViewD
         self.collectionView?.reloadData()
     }
 
-    open func loadFail(error: Swift.Error? = nil) {
+    open func loadFail(_ error: Error? = nil) {
         if(self.dataSource.count == 0) {
             self.collectionView?.showError()
         } else {
