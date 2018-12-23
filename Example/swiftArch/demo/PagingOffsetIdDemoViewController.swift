@@ -24,14 +24,13 @@ class PagingOffsetIdDemoViewController: PagingTableViewController {
         self.tableView?.separatorStyle=UITableViewCell.SeparatorStyle.none
     }
     
-   
     
- 
     override func registerCellModel() {
         self.tableView?.registerCellClass(cellClass: BannerCell.self, modelClass: BannersVM.self)
         self.tableView?.registerCellNib(nib:UINib(nibName: "FeedArticleCell", bundle: nil), modelClass: FeedArtileModel.self)
-        
     }
+    
+  
     
     //自定义分页策略 需要用户去写
     override func getPagingStrategy() -> PagingStrategy? {

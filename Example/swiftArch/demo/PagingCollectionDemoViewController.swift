@@ -33,6 +33,7 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
         return strategy
     }
 
+    
 
     override func onLoadData(pagingStrategy: PagingStrategy?) {
 

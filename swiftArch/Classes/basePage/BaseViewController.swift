@@ -14,10 +14,12 @@ open class BaseViewController: UIViewController {
 
     private var stateManager: PageStateManager?
     public let disposeBag = DisposeBag()
+ 
 
     open override func viewDidLoad() {
         super.viewDidLoad()
-        self.initView()
+        initView()
+        start()
     }
 
     open func initView() { //需要子类重写
@@ -26,16 +28,21 @@ open class BaseViewController: UIViewController {
         self.setStateManagerView(stateManager: self.stateManager!)
         stateManager?.setUpState()
         stateManager?.setReloadCallback { [weak self] in
-            self?.onReload()
+            self?.start()
         }
     }
-    open func setStateManagerView(stateManager: PageStateManager) { //子类重写这个方法去自定义几种View的样式
-        //  stateManager?.setLoadView(view: )
+
+   
+
+    open func start() {
+       
     }
 
-    open func onReload() { //子类必须重写这个方法
-        //当用户点击erroview的时候会回调这个方法
+    open func setStateManagerView(stateManager: PageStateManager) { //子类重写这个方法去自定义几种View的样式
+        
     }
+
+
     open func showContent() {
         stateManager?.showContent()
     }
@@ -45,7 +52,7 @@ open class BaseViewController: UIViewController {
     open func showEmpty() {
         stateManager?.showEmpty()
     }
-    open func showError(_ error:Error? = nil) {
+    open func showError(_ error: Error? = nil) {
         stateManager?.showError()
         DDLogError(error?.localizedDescription ?? "")
     }

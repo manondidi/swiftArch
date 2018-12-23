@@ -58,6 +58,7 @@ public class PageStateManager: NSObject {
 
 
     public func setReloadCallback(reloadCallback: @escaping reloadCallback) {
+        self.showLoading()
         self.reloadCallback = reloadCallback
     }
 

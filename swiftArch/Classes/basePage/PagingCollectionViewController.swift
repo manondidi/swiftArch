@@ -39,9 +39,7 @@ open class PagingCollectionViewController: BaseViewController, UICollectionViewD
         self.collectionView?.delegate = self;
     }
     
-    
-    open override func viewDidLoad() {
-        super.viewDidLoad()
+    open override func start() {
         self.collectionView?.beginRefresh()
     }
     

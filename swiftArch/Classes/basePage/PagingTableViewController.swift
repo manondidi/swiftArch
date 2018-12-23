@@ -217,12 +217,8 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
         return sectionCount
     }
 
-
-    
-    open override func viewDidLoad() {
-        super.viewDidLoad()
+    open override func start() {
         self.tableView?.beginRefresh()
-        
     }
 
 

@@ -20,8 +20,7 @@ class SocialAppService {
 
 
     func rxGetUser(userId: String, password: String) -> Observable<User> {
-        return
-        httpClient.rxRequest(url: "user/{userId}", method: .post, pathParams: ["userId": userId], params: ["password": password])
+        return httpClient.rxRequest(url: "user/{userId}", method: .post, pathParams: ["userId": userId], params: ["password": password])
             .map { result -> User in
                 return try self.getData(result: result)!
         }

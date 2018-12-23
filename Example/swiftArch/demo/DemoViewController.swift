@@ -14,6 +14,7 @@ class DemoViewController: BaseViewController {
      
     var socailAppService:SocialAppService=DataManager.socailAppService
   
+    var count=0
     
     override func initView() {
         super.initView()
@@ -30,16 +31,18 @@ class DemoViewController: BaseViewController {
         UIApplication.shared.keyWindow?.makeToast("这个开小差是我故意的,请点一下空白处", duration: 3)
         
     }
+   
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.loadData(userId: "manondidi", password: "12345566")//错误的账号密码 肯定失败
-       
-    }
+  
     
-    override func onReload() {
-        self.showLoading() 
-        self.loadMockData(userId: "manondidi", password: "12345566") // 这里走mock 肯定成功
+    override func start(){
+        if count==0 {
+            self.showLoading()
+            self.loadData(userId: "manondidi", password: "12345566")//错误的账号密码 肯定失败
+            count+=1
+        }else{
+            self.loadMockData(userId: "manondidi", password: "12345566")
+        }
         
     }
 
@@ -54,6 +57,7 @@ class DemoViewController: BaseViewController {
                     self?.showError()
             }).disposed(by: disposeBag)
     }
+    
     
     func loadMockData(userId:String,password:String){
         self.showLoading()
