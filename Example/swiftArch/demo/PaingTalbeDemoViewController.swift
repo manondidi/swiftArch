@@ -84,7 +84,7 @@ class PaingTalbeDemoViewController: PagingTableViewController {
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         self.dataSource.remove(at: self.getDataSourceRowIndex(indexPath: indexPath))
-        self.pagingList.remove(at: 0)//随便删除哪条 只是用来作分页机算
+        self.pagingList.remove(at: 0)//随便删除哪条 只是用来作分页计算
         self.tableView?.reloadData()
     }
 
