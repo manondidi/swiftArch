@@ -12,7 +12,7 @@ import swiftArch
 
 class PagingOffsetIdDemoViewController: PagingTableViewController {
 
-    var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
+    var socailAppService:SocialAppService=DataManager.socailAppService
     
    
     //可以不需要重写该方法
@@ -56,9 +56,7 @@ class PagingOffsetIdDemoViewController: PagingTableViewController {
                     self?.loadSuccess(resultData: result)
                 }
             , onError: {[weak self]  (error) in
-                if let strongSelf=self{
-                    strongSelf.loadFail() 
-                }
+                self?.loadFail()
             }).disposed(by: disposeBag)
         
         

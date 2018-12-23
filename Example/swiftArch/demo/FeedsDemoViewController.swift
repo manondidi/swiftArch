@@ -11,7 +11,7 @@ import RxSwift
 import swiftArch
 class FeedsDemoViewController: PagingTableViewController {
 
-    private var socailAppService: SocialAppService = DataManager.shareInstance.socailAppService
+    private var socailAppService: SocialAppService = DataManager.socailAppService
     private var datasource = Array<NSObject>()
     private var pagingDatas = Array<SPFeedVM>()
 
@@ -47,11 +47,8 @@ class FeedsDemoViewController: PagingTableViewController {
                 self?.dataSource.append(contentsOf: result)
                 self?.pagingList.append(contentsOf: result)
                 self?.loadSuccess(resultData: result)
-            }
-                , onError: { [weak self] (error) in
-                    if let strongSelf = self {
-                        strongSelf.loadFail()
-                    }
+            }, onError: { [weak self] (error) in
+                    self?.loadFail()
                 }).disposed(by: disposeBag)
 
     }

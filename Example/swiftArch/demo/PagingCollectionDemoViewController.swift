@@ -11,7 +11,7 @@ import RxSwift
 import swiftArch
 class PagingCollectionDemoViewController: PagingCollectionViewController {
 
-    var socailAppService: SocialAppService = DataManager.shareInstance.socailAppService
+    var socailAppService: SocialAppService = DataManager.socailAppService
 
     override func initView() {
         super.initView()
@@ -19,10 +19,12 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
 
     override func registerCellModel() {
         super.registerCellModel()
-        self.collectionView?.registerCellNib(nib: UINib(nibName: "GameCollectionCell", bundle: nil), modelClass: GameModel.self)
-        self.collectionView?.registerCellNib(nib: UINib(nibName: "AddGameCollectionCell", bundle: nil),
-            modelClass: AddGameModel.self)
-        self.collectionView?.registerCellNib(nib: UINib(nibName: "GameCollectionHeaderCell", bundle: nil), modelClass: GameCollectionHeaderModel.self)
+        self.collectionView?
+            .registerCellNib(nib: UINib(nibName: "GameCollectionCell", bundle: nil), modelClass: GameModel.self)
+        self.collectionView?
+            .registerCellNib(nib: UINib(nibName: "AddGameCollectionCell", bundle: nil), modelClass: AddGameModel.self)
+        self.collectionView?
+            .registerCellNib(nib: UINib(nibName: "GameCollectionHeaderCell", bundle: nil), modelClass: GameCollectionHeaderModel.self)
     }
 
 
@@ -52,9 +54,6 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
                 self?.loadFail(error)
                 })
             .disposed(by: disposeBag)
-
-
-
     }
 
     override func registerEventforCell(cell: UICollectionViewCell, model: NSObject) {
@@ -82,8 +81,5 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
             return CGSize(width: width, height: 40)
         }
         return CGSize.zero
-    }
-
-
-
+    } 
 }

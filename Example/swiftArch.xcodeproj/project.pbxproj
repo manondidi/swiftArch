@@ -32,7 +32,6 @@
 		613B495F2178619200270CE7 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49482178619200270CE7 /* GameModel.swift */; };
 		613B49602178619200270CE7 /* SocialAppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49492178619200270CE7 /* SocialAppService.swift */; };
 		613B49612178619200270CE7 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B494A2178619200270CE7 /* MockService.swift */; };
-		613B4989217861AB00270CE7 /* UserStyleTableEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4963217861AB00270CE7 /* UserStyleTableEmptyView.swift */; };
 		613B498A217861AB00270CE7 /* AddGameCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613B4965217861AB00270CE7 /* AddGameCollectionCell.xib */; };
 		613B498B217861AB00270CE7 /* GameCollectionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613B4966217861AB00270CE7 /* GameCollectionHeaderCell.xib */; };
 		613B498C217861AB00270CE7 /* GameCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4967217861AB00270CE7 /* GameCollectionCell.swift */; };
@@ -50,8 +49,6 @@
 		613B49A2217861AB00270CE7 /* FeedArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613B4983217861AB00270CE7 /* FeedArticleCell.xib */; };
 		613B49A3217861AB00270CE7 /* GameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613B4984217861AB00270CE7 /* GameCell.xib */; };
 		613B49A4217861AB00270CE7 /* BannerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4985217861AB00270CE7 /* BannerItemCell.swift */; };
-		613B49A6217861AB00270CE7 /* UserStyleLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B4987217861AB00270CE7 /* UserStyleLoadView.swift */; };
-		613B49AE2178734800270CE7 /* UserStyleLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 613B49AD2178734800270CE7 /* UserStyleLoadView.xib */; };
 		613B49B621787A5E00270CE7 /* DateShowExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49B121787A5E00270CE7 /* DateShowExt.swift */; };
 		613B49BA217966FA00270CE7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49B9217966FA00270CE7 /* Result.swift */; };
 		613B49BB21796F8200270CE7 /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 613B49A8217866AF00270CE7 /* iconfont.ttf */; };
@@ -98,7 +95,6 @@
 		613B49482178619200270CE7 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		613B49492178619200270CE7 /* SocialAppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialAppService.swift; sourceTree = "<group>"; };
 		613B494A2178619200270CE7 /* MockService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
-		613B4963217861AB00270CE7 /* UserStyleTableEmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStyleTableEmptyView.swift; sourceTree = "<group>"; };
 		613B4965217861AB00270CE7 /* AddGameCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddGameCollectionCell.xib; sourceTree = "<group>"; };
 		613B4966217861AB00270CE7 /* GameCollectionHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameCollectionHeaderCell.xib; sourceTree = "<group>"; };
 		613B4967217861AB00270CE7 /* GameCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCollectionCell.swift; sourceTree = "<group>"; };
@@ -116,9 +112,7 @@
 		613B4983217861AB00270CE7 /* FeedArticleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedArticleCell.xib; sourceTree = "<group>"; };
 		613B4984217861AB00270CE7 /* GameCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameCell.xib; sourceTree = "<group>"; };
 		613B4985217861AB00270CE7 /* BannerItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerItemCell.swift; sourceTree = "<group>"; };
-		613B4987217861AB00270CE7 /* UserStyleLoadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStyleLoadView.swift; sourceTree = "<group>"; };
 		613B49A8217866AF00270CE7 /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
-		613B49AD2178734800270CE7 /* UserStyleLoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserStyleLoadView.xib; sourceTree = "<group>"; };
 		613B49B121787A5E00270CE7 /* DateShowExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateShowExt.swift; sourceTree = "<group>"; };
 		613B49B9217966FA00270CE7 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		613B49BE217970D800270CE7 /* FeedsDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedsDemoViewController.swift; sourceTree = "<group>"; };
@@ -303,9 +297,6 @@
 				613B49BE217970D800270CE7 /* FeedsDemoViewController.swift */,
 				613B496D217861AB00270CE7 /* PagingCollectionDemoViewController.swift */,
 				613B497F217861AB00270CE7 /* cell */,
-				613B4987217861AB00270CE7 /* UserStyleLoadView.swift */,
-				613B49AD2178734800270CE7 /* UserStyleLoadView.xib */,
-				613B4963217861AB00270CE7 /* UserStyleTableEmptyView.swift */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -453,7 +444,6 @@
 				613B498F217861AB00270CE7 /* GameCollectionCell.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				613B49512178619200270CE7 /* feeds.json in Resources */,
-				613B49AE2178734800270CE7 /* UserStyleLoadView.xib in Resources */,
 				613B494E2178619200270CE7 /* banner.json in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				613B49502178619200270CE7 /* getUser.json in Resources */,
@@ -563,7 +553,6 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				613B495A2178619200270CE7 /* GameCollectionHeaderModel.swift in Sources */,
 				613B498D217861AB00270CE7 /* AddGameCollectionCell.swift in Sources */,
-				613B4989217861AB00270CE7 /* UserStyleTableEmptyView.swift in Sources */,
 				613B4993217861AB00270CE7 /* PaingTalbeDemoViewController.swift in Sources */,
 				613B49C92179711600270CE7 /* SPFeedGameView.swift in Sources */,
 				613B49602178619200270CE7 /* SocialAppService.swift in Sources */,
@@ -583,7 +572,6 @@
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				613B495E2178619200270CE7 /* NormalPageModel.swift in Sources */,
 				613B49CE2179711600270CE7 /* SPFeedLinkView.swift in Sources */,
-				613B49A6217861AB00270CE7 /* UserStyleLoadView.swift in Sources */,
 				613B495D2178619200270CE7 /* Banner.swift in Sources */,
 				613B49CC2179711600270CE7 /* SPFeedToolbar.swift in Sources */,
 				613B498C217861AB00270CE7 /* GameCollectionCell.swift in Sources */,

@@ -11,19 +11,19 @@ import RxSwift
 import swiftArch
 class PaingTalbeDemoViewController: PagingTableViewController {
 
-    var socailAppService: SocialAppService = DataManager.shareInstance.socailAppService
- 
+    var socailAppService: SocialAppService = DataManager.socailAppService
+
 
     //可以不需要重写该方法
     override func initView() {
         super.initView()
         self.title = "真实的分页请求(还支持section)"
-        
+
         self.tableView?.estimatedRowHeight = 80//这个值不影响行高 最好接近你想要的值
         self.tableView?.estimatedSectionHeaderHeight = 40
     }
 
- 
+
 
     override func registerCellModel() {
         super.registerCellModel()
@@ -68,13 +68,14 @@ class PaingTalbeDemoViewController: PagingTableViewController {
         }
         return false
     }
-    
+
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return UITableViewCell.EditingStyle.delete
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         self.dataSource.remove(at: self.getDataSourceRowIndex(indexPath: indexPath))
+        self.pagingList.remove(at: 0)//随便删除哪条 只是用来作分页机算
         self.tableView?.reloadData()
     }
 

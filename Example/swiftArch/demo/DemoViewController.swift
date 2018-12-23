@@ -12,7 +12,7 @@ import swiftArch
 class DemoViewController: BaseViewController {
 
      
-    var socailAppService:SocialAppService=DataManager.shareInstance.socailAppService
+    var socailAppService:SocialAppService=DataManager.socailAppService
   
     
     override func initView() {
@@ -47,16 +47,13 @@ class DemoViewController: BaseViewController {
     func loadData(userId:String,password:String){
         self.showLoading()
         socailAppService.rxGetUser(userId: userId, password: password)
-            
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: {[weak self] (bannerArticleList) in
                 if let strongSelf=self{
                     strongSelf.showContent()
                 }
                 }, onError: {[weak self]  (error) in
-                    if let strongSelf=self{
-                        strongSelf.showError()
-                    }
+                    self?.showError()
             }).disposed(by: disposeBag)
     }
     
