@@ -25,7 +25,7 @@ open class BaseViewController: UIViewController {
     open func initView() { //需要子类重写
         self.view.backgroundColor = UIColor.white
         stateManager = PageStateManager(rootView: self.view)
-        self.setStateManagerView(stateManager: self.stateManager!)
+        createStateManagerView(stateManager: self.stateManager!)
         stateManager?.setUpState()
         stateManager?.setReloadCallback { [weak self] in
             self?.start()
@@ -38,7 +38,7 @@ open class BaseViewController: UIViewController {
        
     }
 
-    open func setStateManagerView(stateManager: PageStateManager) { //子类重写这个方法去自定义几种View的样式
+    open func createStateManagerView(stateManager: PageStateManager) { //子类重写这个方法去自定义几种View的样式
         
     }
 

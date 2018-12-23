@@ -32,7 +32,7 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
         self.initTableView()
         self.registerCellModel()
         self.registerSectionHeaderModel()
-        self.setTalbeStateView()
+        self.createTalbeStateView()
         self.tableView?.setUpState()
         self.tableView?.tableFooterView = UIView()
         self.tableView?.setRefreshCallback { [weak self] in
@@ -44,6 +44,8 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
 
         self.tableView?.dataSource = self;
         self.tableView?.delegate = self;
+        
+        
     }
 
 
@@ -70,12 +72,7 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
         return nil
     }
 
-    ///子类可以重写
-    /// 用于个性化定制整个页面的cover,用法:子类覆盖该方法
-    /// example: sateManager.setLoadView(view: )
-    /// - Parameter sateManager: 页面的管理器
-    open override func setStateManagerView(stateManager: PageStateManager) { }
-
+   
 
     open func onTableRresh() {
         self.pagingStrategy?.resetPage()
@@ -95,7 +92,7 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
     /// 子类单页面需要个性化定制tablevview的stateCover请重写
     ///如果采用默认的stateCover那就不需要重写
     ///example:self.tableView?.setLoadView(view: )
-    open func setTalbeStateView() { }
+    open func createTalbeStateView() { }
 
 
     /// 用于个性化提供tableView 用法:子类重写

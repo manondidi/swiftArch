@@ -27,7 +27,7 @@ open class PagingCollectionViewController: BaseViewController, UICollectionViewD
         self.pagingStrategy = self.getPagingStrategy()
         self.initCollectionView()
         self.registerCellModel()
-        self.setCollectionStateView()
+        self.createCollectionStateView()
         self.collectionView?.setUpState()
         self.collectionView?.setRefreshCallback { [weak self] in
             self?.onCollectionViewRefresh()
@@ -88,7 +88,7 @@ open class PagingCollectionViewController: BaseViewController, UICollectionViewD
 
     open func registerCellModel() { }
 
-    open func setCollectionStateView() { }
+    open func createCollectionStateView() { }
 
     open func onCollectionViewRefresh() {
         self.pagingStrategy?.resetPage()

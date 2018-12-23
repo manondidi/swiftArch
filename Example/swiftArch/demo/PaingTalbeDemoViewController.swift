@@ -21,6 +21,7 @@ class PaingTalbeDemoViewController: PagingTableViewController {
 
         self.tableView?.estimatedRowHeight = 80//这个值不影响行高 最好接近你想要的值
         self.tableView?.estimatedSectionHeaderHeight = 40
+        
     }
     
     override func registerEventforCell(cell: UITableViewCell, model: NSObject) {
