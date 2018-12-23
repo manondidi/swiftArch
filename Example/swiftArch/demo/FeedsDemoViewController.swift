@@ -17,11 +17,6 @@ class FeedsDemoViewController: PagingTableViewController {
 
 
 
-    override func initTableView() {
-        super.initTableView()
-        self.tableView?.estimatedSectionHeaderHeight = 0
-    }
-
     override func registerCellModel() {
         super.registerCellModel()
         self.tableView?.registerCellClass(cellClass: SPFeedCell.self, modelClass: SPFeedVM.self)

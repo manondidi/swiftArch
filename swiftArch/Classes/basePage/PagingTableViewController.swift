@@ -122,6 +122,9 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
         let isFinish = self.pagingStrategy?.checkFinish(result: resultData, listSize: pagingList.count)
         self.tableView?.setLoadMoreEnable(b: !isFinish!)
         self.tableView?.reloadData()
+        if self.dataSource.isEmpty {
+            self.tableView?.showEmpty()
+        }
     }
     
     open func loadFail(_ error: Error? = nil){
@@ -215,8 +218,11 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
     }
 
 
-    open override func viewDidAppear(_ animated: Bool) {
+    
+    open override func viewDidLoad() {
+        super.viewDidLoad()
         self.tableView?.beginRefresh()
+        
     }
 
 

@@ -38,6 +38,13 @@ open class PagingCollectionViewController: BaseViewController, UICollectionViewD
         self.collectionView?.dataSource = self;
         self.collectionView?.delegate = self;
     }
+    
+    
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        self.collectionView?.beginRefresh()
+    }
+    
     ///提供分页策略 必须重写
     open func getPagingStrategy() -> PagingStrategy? {
         return nil
@@ -67,11 +74,6 @@ open class PagingCollectionViewController: BaseViewController, UICollectionViewD
         return CGSize.zero
     }
     
-    open override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.collectionView?.beginRefresh()
-    }
- 
 
     open func initCollectionView() { //子类重写(如果有必要)
         let layout = UICollectionViewLeftAlignedLayout();
@@ -111,6 +113,9 @@ open class PagingCollectionViewController: BaseViewController, UICollectionViewD
         let isFinish = self.pagingStrategy?.checkFinish(result: resultData, listSize: self.pagingList.count)
         self.collectionView?.setLoadMoreEnable(b: !isFinish!)
         self.collectionView?.reloadData()
+        if self.dataSource.isEmpty {
+            self.collectionView?.showEmpty()
+        }
     }
 
     open func loadFail(_ error: Error? = nil) {

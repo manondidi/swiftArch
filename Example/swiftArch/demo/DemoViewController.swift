@@ -49,9 +49,7 @@ class DemoViewController: BaseViewController {
         socailAppService.rxGetUser(userId: userId, password: password)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: {[weak self] (bannerArticleList) in
-                if let strongSelf=self{
-                    strongSelf.showContent()
-                }
+                    self?.showContent()
                 }, onError: {[weak self]  (error) in
                     self?.showError()
             }).disposed(by: disposeBag)
@@ -63,14 +61,10 @@ class DemoViewController: BaseViewController {
         socailAppService.rxGetUserMock(userId: userId, password: password)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: {[weak self] (bannerArticleList) in
-                if let strongSelf=self{
-                    strongSelf.showContent()
-                }
+                    self?.showContent()
                 }, onError: {[weak self]  (error) in
-                    if let strongSelf=self{
-                        strongSelf.showError()
-                        strongSelf.view.makeToast(error.localizedDescription)
-                    }
+                    self?.showError()
+                    self?.view.makeToast(error.localizedDescription)
             }).disposed(by: disposeBag)
                 
         }
