@@ -160,7 +160,7 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
 
 
     ///子类重写去注册header或者header内部的事件
-    open func registerEventforSectionHeader(header: UIView, model: NSObject) { }
+    open func registerEventforSectionHeader(header: UITableViewHeaderFooterView, model: NSObject) { }
 
     open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 

@@ -17,7 +17,7 @@ class PaingTalbeDemoViewController: PagingTableViewController {
     //可以不需要重写该方法
     override func initView() {
         super.initView()
-        self.title = "真实的分页请求(还支持section)" 
+        self.title = "真实的分页请求(还支持section)"
         self.tableView?.estimatedRowHeight = 80//这个值不影响行高 最好接近你想要的值
         self.tableView?.estimatedSectionHeaderHeight = 40
     }
@@ -26,7 +26,7 @@ class PaingTalbeDemoViewController: PagingTableViewController {
         
     }
     
-    override func registerEventforSectionHeader(header: UIView, model: NSObject) {
+    override func registerEventforSectionHeader(header: UITableViewHeaderFooterView, model: NSObject) {
         
     }
 
