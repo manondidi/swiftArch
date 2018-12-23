@@ -105,6 +105,8 @@ public class StateTableView: UITableView {
         })
 
         self.showContent()
+        
+        self.mj_header.isAutomaticallyChangeAlpha = true
 
 
     }
@@ -156,19 +158,28 @@ public class StateTableView: UITableView {
     }
 
     public func beginRefresh() {
-        refreshHeader?.beginRefreshing()
+        if (!(refreshHeader?.isRefreshing ?? true)){
+            refreshHeader?.beginRefreshing()
+        }
     }
 
     public func endRefresh() {
-        refreshHeader?.endRefreshing()
+        if (refreshHeader?.isRefreshing ?? false) {
+            refreshHeader?.endRefreshing()
+        }
     }
 
     public func beginLoadMore() {
-        loadMoreFooter?.beginRefreshing()
+        if (!(loadMoreFooter?.isRefreshing ?? true)){
+            loadMoreFooter?.beginRefreshing()
+            
+        }
     }
 
     public func endLoadMore() {
-        loadMoreFooter?.endRefreshing()
+        if (loadMoreFooter?.isRefreshing ?? false) {
+            loadMoreFooter?.endRefreshing()
+        }
     }
 
     public func setLoadMoreEnable(b: Bool) {

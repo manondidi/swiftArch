@@ -34,9 +34,7 @@ open class BaseViewController: UIViewController {
 
    
 
-    open func start() {
-       
-    }
+    open func start() {}
 
     open func createStateManagerView(stateManager: PageStateManager) { //子类重写这个方法去自定义几种View的样式
         

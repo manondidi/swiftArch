@@ -22,8 +22,6 @@ open class PagingCollectionViewController: BaseViewController, UICollectionViewD
 
     open override func initView() {
         super.initView()
-        self.edgesForExtendedLayout = UIRectEdge.bottom
-        self.automaticallyAdjustsScrollViewInsets = false;
         self.pagingStrategy = self.getPagingStrategy()
         self.initCollectionView()
         self.registerCellModel()
@@ -40,6 +38,7 @@ open class PagingCollectionViewController: BaseViewController, UICollectionViewD
     }
     
     open override func start() {
+        super.start()
         self.collectionView?.beginRefresh()
     }
     
@@ -95,11 +94,16 @@ open class PagingCollectionViewController: BaseViewController, UICollectionViewD
         if self.dataSource.count == 0 {
             self.collectionView?.showLoading()
         }
-        self.onLoadData(pagingStrategy: self.pagingStrategy)
+        self.loadData()
     }
 
-    open func onCollectionViewLoadMore() {
+    open func loadData(){
         self.onLoadData(pagingStrategy: self.pagingStrategy)
+    }
+    
+    
+    open func onCollectionViewLoadMore() {
+        self.loadData()
     }
 
     ///

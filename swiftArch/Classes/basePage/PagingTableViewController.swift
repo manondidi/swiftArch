@@ -26,8 +26,6 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
 
     open override func initView() {
         super.initView()
-        self.edgesForExtendedLayout = UIRectEdge.bottom
-        self.automaticallyAdjustsScrollViewInsets = false;
         self.pagingStrategy = self.getPagingStrategy()
         self.initTableView()
         self.registerCellModel()
@@ -41,11 +39,8 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
         self.tableView?.setLoadMoreCallback { [weak self] in
             self?.onTableLoadMore()
         }
-
-        self.tableView?.dataSource = self;
-        self.tableView?.delegate = self;
-        
-        
+        self.tableView?.dataSource = self
+        self.tableView?.delegate = self
     }
 
 
@@ -79,14 +74,19 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
         if self.dataSource.count == 0 {
             self.tableView?.showLoading()
         }
-        self.onLoadData(pagingStrategy: self.pagingStrategy!)
+        self.loadData()
     }
+    
+    open func loadData(){
+        self.onLoadData(pagingStrategy: self.pagingStrategy)
+    }
+    
     open func onTableLoadMore() {
-        self.onLoadData(pagingStrategy: self.pagingStrategy!)
+        self.loadData()
     }
 
     ///子类必须重写
-    open func onLoadData(pagingStrategy: PagingStrategy) {
+    open func onLoadData(pagingStrategy: PagingStrategy?) {
     }
 
     /// 子类单页面需要个性化定制tablevview的stateCover请重写
@@ -104,7 +104,7 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
         self.tableView = StateTableView()
         self.view.addSubview(self.tableView!)
         self.tableView?.snp.makeConstraints({ (make) in
-            make.top.left.bottom.right.equalToSuperview()
+            make.edges.equalToSuperview()
         })
         self.tableView?.estimatedSectionHeaderHeight = 0
     }
@@ -215,7 +215,11 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
     }
 
     open override func start() {
+        super.start()
         self.tableView?.beginRefresh()
+    }
+    open override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 
 

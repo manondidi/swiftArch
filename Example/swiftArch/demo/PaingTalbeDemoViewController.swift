@@ -49,7 +49,7 @@ class PaingTalbeDemoViewController: PagingTableViewController {
         return strategy
     }
     
-    override func onLoadData(pagingStrategy: PagingStrategy) {
+    override func onLoadData(pagingStrategy: PagingStrategy?) {
 
         let strategy: NormalPagingStrategy = pagingStrategy as! NormalPagingStrategy;
         let pageInfo: NormalPageInfo = strategy.getPageInfo() as! NormalPageInfo

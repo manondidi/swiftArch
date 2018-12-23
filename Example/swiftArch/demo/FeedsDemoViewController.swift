@@ -27,7 +27,7 @@ class FeedsDemoViewController: PagingTableViewController {
         return strategy
     }
 
-    override func onLoadData(pagingStrategy: PagingStrategy) {
+    override func onLoadData(pagingStrategy: PagingStrategy?) {
 
         let strategy: OffsetStrategy = pagingStrategy as! OffsetStrategy;
         let pageInfo: OffsetPageInfo = strategy.getPageInfo() as! OffsetPageInfo
