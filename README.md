@@ -7,6 +7,10 @@
 
 
 
+
+
+
+
 ## Todo
 
 UI组件 
@@ -45,6 +49,22 @@ UI组件
 
 
 
+
+
+
+## Screenshot
+
+![image](https://github.com/manondidi/swiftArch/blob/master/screenshot/sc1.png)
+
+![image](https://github.com/manondidi/swiftArch/blob/master/screenshot/sc2.png)
+
+![image](https://github.com/manondidi/swiftArch/blob/master/screenshot/sc3.png)
+
+![image](https://github.com/manondidi/swiftArch/blob/master/screenshot/sc4.png)
+
+![image](https://github.com/manondidi/swiftArch/blob/master/screenshot/sc5.png)
+
+![image](https://github.com/manondidi/swiftArch/blob/master/screenshot/sc6.png)
 
 
 
