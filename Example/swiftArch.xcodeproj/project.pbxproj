@@ -289,6 +289,7 @@
 		613B4962217861AB00270CE7 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				613B497F217861AB00270CE7 /* cell */,
 				613B4964217861AB00270CE7 /* collectionCell */,
 				613B496B217861AB00270CE7 /* sectionHeader */,
 				613B497C217861AB00270CE7 /* DemoViewController.swift */,
@@ -296,7 +297,6 @@
 				613B497D217861AB00270CE7 /* PagingOffsetIdDemoViewController.swift */,
 				613B49BE217970D800270CE7 /* FeedsDemoViewController.swift */,
 				613B496D217861AB00270CE7 /* PagingCollectionDemoViewController.swift */,
-				613B497F217861AB00270CE7 /* cell */,
 			);
 			path = demo;
 			sourceTree = "<group>";
