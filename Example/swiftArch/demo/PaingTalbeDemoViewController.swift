@@ -89,6 +89,7 @@ class PaingTalbeDemoViewController: PagingTableViewController {
         self.dataSource.remove(at: self.getDataSourceRowIndex(indexPath: indexPath))
         self.pagingList.remove(at: 0)//随便删除哪条 只是用来作分页计算
         self.tableView?.reloadData()
+        
     }
 
 }
