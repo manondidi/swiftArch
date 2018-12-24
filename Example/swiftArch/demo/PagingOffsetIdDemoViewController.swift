@@ -60,8 +60,5 @@ class PagingOffsetIdDemoViewController: PagingTableViewController {
         
         
     }
-    
-    
      
-
 }

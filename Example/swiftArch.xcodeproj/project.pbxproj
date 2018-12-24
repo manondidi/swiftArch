@@ -60,6 +60,14 @@
 		613B49CC2179711600270CE7 /* SPFeedToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49C52179711600270CE7 /* SPFeedToolbar.swift */; };
 		613B49CD2179711600270CE7 /* SPFeedPhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49C62179711600270CE7 /* SPFeedPhotosView.swift */; };
 		613B49CE2179711600270CE7 /* SPFeedLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613B49C72179711600270CE7 /* SPFeedLinkView.swift */; };
+		61DEEBAC21D0800C00506763 /* BaseTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DEEBAB21D0800C00506763 /* BaseTempViewController.swift */; };
+		61DEEBAF21D0841E00506763 /* BaseTempXibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DEEBAD21D0841E00506763 /* BaseTempXibViewController.swift */; };
+		61DEEBB021D0841E00506763 /* BaseTempXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61DEEBAE21D0841E00506763 /* BaseTempXibViewController.xib */; };
+		61DEEBB321D0876900506763 /* TempTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DEEBB121D0876900506763 /* TempTestViewController.swift */; };
+		61DEEBB421D0876900506763 /* TempTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61DEEBB221D0876900506763 /* TempTestViewController.xib */; };
+		61DEEBB621D0B6D800506763 /* PagingTableTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DEEBB521D0B6D800506763 /* PagingTableTempViewController.swift */; };
+		61DEEBB921D0BD6A00506763 /* PagingTableViewXibTempController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DEEBB721D0BD6A00506763 /* PagingTableViewXibTempController.swift */; };
+		61DEEBBA21D0BD6A00506763 /* PagingTableViewXibTempController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61DEEBB821D0BD6A00506763 /* PagingTableViewXibTempController.xib */; };
 		66E9AC3F28AEDDD6AEA0A6D7 /* Pods_swiftArch_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9E3FD1FC5CE41934E7C693 /* Pods_swiftArch_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +131,14 @@
 		613B49C52179711600270CE7 /* SPFeedToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedToolbar.swift; sourceTree = "<group>"; };
 		613B49C62179711600270CE7 /* SPFeedPhotosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedPhotosView.swift; sourceTree = "<group>"; };
 		613B49C72179711600270CE7 /* SPFeedLinkView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPFeedLinkView.swift; sourceTree = "<group>"; };
+		61DEEBAB21D0800C00506763 /* BaseTempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTempViewController.swift; sourceTree = "<group>"; };
+		61DEEBAD21D0841E00506763 /* BaseTempXibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTempXibViewController.swift; sourceTree = "<group>"; };
+		61DEEBAE21D0841E00506763 /* BaseTempXibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseTempXibViewController.xib; sourceTree = "<group>"; };
+		61DEEBB121D0876900506763 /* TempTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempTestViewController.swift; sourceTree = "<group>"; };
+		61DEEBB221D0876900506763 /* TempTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TempTestViewController.xib; sourceTree = "<group>"; };
+		61DEEBB521D0B6D800506763 /* PagingTableTempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingTableTempViewController.swift; sourceTree = "<group>"; };
+		61DEEBB721D0BD6A00506763 /* PagingTableViewXibTempController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingTableViewXibTempController.swift; sourceTree = "<group>"; };
+		61DEEBB821D0BD6A00506763 /* PagingTableViewXibTempController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagingTableViewXibTempController.xib; sourceTree = "<group>"; };
 		658A98147417BD320B9104F2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		66D56DC1DA06E2B9AAF6FD81 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		BE40C80948261E481035C2DB /* Pods_swiftArch_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftArch_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +192,7 @@
 		607FACD21AFB9204008FA782 /* Example for swiftArch */ = {
 			isa = PBXGroup;
 			children = (
+				61DEEBAA21D07D2F00506763 /* templateTest */,
 				613B49AF21787A5E00270CE7 /* common */,
 				613B4962217861AB00270CE7 /* demo */,
 				613B492F2178619100270CE7 /* data */,
@@ -366,6 +383,21 @@
 			path = feedCell;
 			sourceTree = "<group>";
 		};
+		61DEEBAA21D07D2F00506763 /* templateTest */ = {
+			isa = PBXGroup;
+			children = (
+				61DEEBAB21D0800C00506763 /* BaseTempViewController.swift */,
+				61DEEBAD21D0841E00506763 /* BaseTempXibViewController.swift */,
+				61DEEBAE21D0841E00506763 /* BaseTempXibViewController.xib */,
+				61DEEBB121D0876900506763 /* TempTestViewController.swift */,
+				61DEEBB221D0876900506763 /* TempTestViewController.xib */,
+				61DEEBB521D0B6D800506763 /* PagingTableTempViewController.swift */,
+				61DEEBB721D0BD6A00506763 /* PagingTableViewXibTempController.swift */,
+				61DEEBB821D0BD6A00506763 /* PagingTableViewXibTempController.xib */,
+			);
+			path = templateTest;
+			sourceTree = SOURCE_ROOT;
+		};
 		B643C2EB4216E61CAA1744A0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,9 +471,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61DEEBB421D0876900506763 /* TempTestViewController.xib in Resources */,
 				613B49BB21796F8200270CE7 /* iconfont.ttf in Resources */,
 				613B49A2217861AB00270CE7 /* FeedArticleCell.xib in Resources */,
 				613B498F217861AB00270CE7 /* GameCollectionCell.xib in Resources */,
+				61DEEBB021D0841E00506763 /* BaseTempXibViewController.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				613B49512178619200270CE7 /* feeds.json in Resources */,
 				613B494E2178619200270CE7 /* banner.json in Resources */,
@@ -450,6 +484,7 @@
 				613B49A3217861AB00270CE7 /* GameCell.xib in Resources */,
 				613B498A217861AB00270CE7 /* AddGameCollectionCell.xib in Resources */,
 				613B49522178619200270CE7 /* feed.json in Resources */,
+				61DEEBBA21D0BD6A00506763 /* PagingTableViewXibTempController.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				613B498B217861AB00270CE7 /* GameCollectionHeaderCell.xib in Resources */,
 				613B494F2178619200270CE7 /* game.json in Resources */,
@@ -477,6 +512,7 @@
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/RegexKitLite-NoWarning/RegexKitLite_NoWarning.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -497,6 +533,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RegexKitLite_NoWarning.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -550,6 +587,8 @@
 				613B49BA217966FA00270CE7 /* Result.swift in Sources */,
 				613B499C217861AB00270CE7 /* DemoViewController.swift in Sources */,
 				613B49542178619200270CE7 /* GameDateModel.swift in Sources */,
+				61DEEBAF21D0841E00506763 /* BaseTempXibViewController.swift in Sources */,
+				61DEEBB621D0B6D800506763 /* PagingTableTempViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				613B495A2178619200270CE7 /* GameCollectionHeaderModel.swift in Sources */,
 				613B498D217861AB00270CE7 /* AddGameCollectionCell.swift in Sources */,
@@ -565,10 +604,13 @@
 				613B499F217861AB00270CE7 /* FeedArticleCell.swift in Sources */,
 				613B4991217861AB00270CE7 /* PagingCollectionDemoViewController.swift in Sources */,
 				613B49A0217861AB00270CE7 /* BannerCell.swift in Sources */,
+				61DEEBB321D0876900506763 /* TempTestViewController.swift in Sources */,
 				613B495F2178619200270CE7 /* GameModel.swift in Sources */,
+				61DEEBB921D0BD6A00506763 /* PagingTableViewXibTempController.swift in Sources */,
 				613B49CA2179711600270CE7 /* SPFeedArticleView.swift in Sources */,
 				613B49562178619200270CE7 /* User.swift in Sources */,
 				613B49A4217861AB00270CE7 /* BannerItemCell.swift in Sources */,
+				61DEEBAC21D0800C00506763 /* BaseTempViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				613B495E2178619200270CE7 /* NormalPageModel.swift in Sources */,
 				613B49CE2179711600270CE7 /* SPFeedLinkView.swift in Sources */,

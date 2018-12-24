@@ -145,8 +145,6 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
         }
     }
     open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-
         let item = self.getRealDataSourceModel(indexPath: indexPath)
         let cellKey = String(describing: item.classForCoder.self)
         let cell = tableView.dequeueReusableCell(withIdentifier: cellKey)

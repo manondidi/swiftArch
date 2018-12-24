@@ -46,10 +46,10 @@ TODO: Add long description of the pod here.
   s.dependency 'UICollectionViewLeftAlignedLayout'
 
   s.swift_version = '4.2' 
-  s.resources = ['swiftArch/Assets/*.xib']
-  s.resource_bundles = {
-      'swiftArch' => ['swiftArch/Assets/*.png']
-  }
+  # s.resources = ['swiftArch/Assets/*.xib']
+  # s.resource_bundles = {
+  #     'swiftArch' => ['swiftArch/Assets/*.png']
+  # }
 
 #   s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

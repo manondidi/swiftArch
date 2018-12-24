@@ -58,7 +58,7 @@ public class PageStateManager: NSObject {
 
 
     public func setReloadCallback(reloadCallback: @escaping reloadCallback) {
-        self.showLoading()
+        
         self.reloadCallback = reloadCallback
     }
 
@@ -103,16 +103,20 @@ public class PageStateManager: NSObject {
         emptyView?.snp.makeConstraints({ (make) in
             make.width.height.equalToSuperview()
         })
+        
         errorView?.snp.makeConstraints({ (make) in
             make.width.height.equalToSuperview()
         })
+        
         loadView?.snp.makeConstraints({ (make) in
             make.width.height.equalToSuperview()
         })
 
         errorView?.addTapGesture(handler: { [weak self] (tap) in
+            self?.showLoading()
             self?.reloadCallback?()
         })
+        self.showContent()
 
 
     }

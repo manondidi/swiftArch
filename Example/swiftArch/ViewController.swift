@@ -83,6 +83,18 @@ class ViewController: UIViewController {
             self?.navigationController?.pushViewController(PagingCollectionDemoViewController(), animated: true)
         }
         
+        let btn8=UIButton(type: UIButton.ButtonType.roundedRect)
+        self.view.addSubview(btn8)
+        btn8.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(btn7.snp.bottom).offset(30)
+        }
+        btn8.titleLabel?.numberOfLines=0
+        btn8.setTitle("测试新建的模板", for: UIControl.State.normal)
+        btn8.onTap {
+            [weak self] in
+            self?.navigationController?.pushViewController(TempTestViewController(), animated: true)
+        }
     }
 
 

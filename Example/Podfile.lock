@@ -1,11 +1,11 @@
 PODS:
-  - Alamofire (4.7.3)
+  - Alamofire (4.8.0)
   - Closures (0.5)
   - CocoaLumberjack/Default (3.4.2)
   - CocoaLumberjack/Swift (3.4.2):
     - CocoaLumberjack/Default
-  - FSPagerView (0.8.0)
-  - HandyJSON (4.2.0)
+  - FSPagerView (0.8.2)
+  - HandyJSON (4.2.1)
   - Kingfisher (4.8.1)
   - MJRefresh (3.1.15.7)
   - RegexKitLite-NoWarning (1.1.0)
@@ -14,11 +14,13 @@ PODS:
   - RxAlamofire/Core (4.3.0):
     - Alamofire (~> 4.5)
     - RxSwift (~> 4)
-  - RxCocoa (4.3.1):
+  - RxAtomic (4.4.0)
+  - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
-  - RxSwift (4.3.1)
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
   - SnapKit (4.0.1)
-  - swiftArch (1.0.0):
+  - swiftArch (1.1.0):
     - Closures (~> 0.5)
     - CocoaLumberjack/Swift
     - HandyJSON (~> 4.2.0)
@@ -30,7 +32,7 @@ PODS:
     - SnapKit (~> 4.0.0)
     - Toast-Swift (~> 4.0.0)
     - UICollectionViewLeftAlignedLayout
-  - Toast-Swift (4.0.0)
+  - Toast-Swift (4.0.1)
   - UICollectionViewLeftAlignedLayout (1.0.2)
 
 DEPENDENCIES:
@@ -50,6 +52,7 @@ SPEC REPOS:
     - MJRefresh
     - RegexKitLite-NoWarning
     - RxAlamofire
+    - RxAtomic
     - RxCocoa
     - RxSwift
     - SnapKit
@@ -61,20 +64,21 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   Closures: ad5ebce1242de44d64505bfd3b7c25b12cad3d2e
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
-  FSPagerView: 53d0cd11a233d662ff23e37ed8ee4ecea3cec693
-  HandyJSON: 9dfc026c7d7adc1f0f8ba8b181495f0e0763b0f4
+  FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
+  HandyJSON: d0c5fc80204f29056d59d3e5c4587fa0b16b60a8
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   RegexKitLite-NoWarning: 365d208f8187997e33d9de8baeddfc00728596d8
   RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
-  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
-  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
-  swiftArch: f34578b5fb38faef541e3e07980c0c2620058c6f
-  Toast-Swift: 594b5c5e5129f15438e410207e43287f027b3c00
+  swiftArch: 3085f5ed7332e0d72021968e31440b627f06f38f
+  Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
 
 PODFILE CHECKSUM: 7b7bf16889937b5282c9928a1c6cde86a5c8370e

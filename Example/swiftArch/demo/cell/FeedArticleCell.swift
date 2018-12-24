@@ -26,14 +26,10 @@ class FeedArticleCell: UITableViewCell {
             self.labelTitle.text=model?.payload?.article?.title
             self.labelUserName.text=model?.user?.nickname
             self.labelGameName.text=model?.payload?.article?.game?.name ?? ""
-             
-            
-            
             let isFirefly=model?.payload?.article?.isFireflyUser ?? false
-            
             labelFlyIcon.isHidden = !isFirefly
             labelFlyText.isHidden = !isFirefly
-            if(isFirefly ){
+            if(isFirefly){
                 imgCover.snp.updateConstraints { (make) in
                     make.top.equalToSuperview().offset(36.0)
                 }

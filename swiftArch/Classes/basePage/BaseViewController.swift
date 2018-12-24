@@ -31,16 +31,14 @@ open class BaseViewController: UIViewController {
             self?.start()
         }
     }
-
-   
-
-    open func start() {}
+ 
+    open func start() {
+        
+    }
 
     open func createStateManagerView(stateManager: PageStateManager) { //子类重写这个方法去自定义几种View的样式
         
     }
-
-
     open func showContent() {
         stateManager?.showContent()
     }
