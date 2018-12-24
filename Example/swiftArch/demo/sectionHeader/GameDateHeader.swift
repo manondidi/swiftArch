@@ -7,17 +7,16 @@
 //
 
 import UIKit
-
-class GameDateHeader: UITableViewHeaderFooterView {
+import swiftArch
+class GameDateHeader: UITableViewHeaderFooterView , CellProtocol{
 
     var labelDate: UILabel?
+     
     
-    @objc var model:GameDateModel?{
-        didSet
-        {
-            labelDate?.text=model?.date
-            
-        }
+    public func bindModel(_ m: NSObject) {
+        let model = m as? GameDateModel
+        
+        labelDate?.text=model?.date
     }
  
     override init(reuseIdentifier: String?) {

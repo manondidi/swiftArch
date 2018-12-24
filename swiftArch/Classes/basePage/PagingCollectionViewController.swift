@@ -56,7 +56,8 @@ open class PagingCollectionViewController: BaseViewController, UICollectionViewD
         let item = self.dataSource[indexPath.item] as? NSObject ?? NSObject()
         let cellKey = String(describing: item.classForCoder.self)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellKey, for: indexPath)
-        cell.setValue(item, forKey: "model")
+        let c = cell as! CellProtocol
+        c.bindModel(item)
         self.registerEventforCell(cell: cell, model: item)
         return cell
     }

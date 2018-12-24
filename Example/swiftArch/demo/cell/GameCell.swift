@@ -8,21 +8,21 @@
 
 import UIKit
 import Kingfisher
-class GameCell: UITableViewCell {
+import swiftArch
+class GameCell: UITableViewCell , CellProtocol {
 
     @IBOutlet weak var lbGameName: UILabel!
     @IBOutlet weak var ivIcon: UIImageView!
-    
-    @objc var model:GameModel?{
-        didSet
-        {
-            self.lbGameName.text=model?.title
-            self.ivIcon.kf.setImage(with:URL(string: (model?.icon)!))
-        }
+
+
+    public func bindModel(_ m: NSObject) {
+        let model = m as? GameModel
+
+        self.lbGameName.text = model?.title
+        self.ivIcon.kf.setImage(with: URL(string: (model?.icon)!))
     }
-    
-    
-    
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,5 +33,5 @@ class GameCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
 }

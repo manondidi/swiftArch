@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PagingTableViewXibTempController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PagingCollectionViewXibTempViewController" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,14 +17,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
 
 
-            <!--  加入stateTableview  -->
+            <!--  加入StateCollectionView  -->
             <subviews>
-                <view tag="9000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAM-Za-ACK" customClass="StateTableView" customModule="swiftArch">
+                <view tag="9000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAM-Za-ACK" customClass="StateCollectionView" customModule="swiftArch">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews> 
-            <!--  加入stateTableview  -->
+            <!--  加入StateCollectionView  -->
 
 
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

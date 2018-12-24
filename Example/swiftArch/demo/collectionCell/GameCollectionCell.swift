@@ -7,20 +7,20 @@
 //
 
 import UIKit
-
-class GameCollectionCell: UICollectionViewCell {
+import swiftArch
+class GameCollectionCell: UICollectionViewCell , CellProtocol {
 
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var ivIcon: UIImageView!
-    
+
     override func awakeFromNib() {
-        super.awakeFromNib() 
+        super.awakeFromNib()
     }
-    @objc var model:GameModel?{
-        didSet
-        {
-            self.labelName.text=model?.title
-            self.ivIcon.kf.setImage(with:URL(string: model?.icon ?? ""))
-        }
+
+
+    public func bindModel(_ m: NSObject) {
+        let model = m as? GameModel
+        self.labelName.text = model?.title
+        self.ivIcon.kf.setImage(with: URL(string: model?.icon ?? ""))
     }
 }

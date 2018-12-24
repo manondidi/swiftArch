@@ -12,21 +12,21 @@ import RxSwift
 
 class PagingTableViewXibTempController: PagingTableViewController { 
 
+
     var socailAppService: SocialAppService = DataManager.socailAppService
-    
-    
-    override func initView() {
-        super.initView()
-        
+
+ 	override func initView() {
+        super.initView() 
+
     }
-    
-    override func initTableView() {
+
+     override func initTableView() {
         self.tableView=(self.view.viewWithTag(9000001) as! StateTableView)
         self.tableView?.estimatedSectionHeaderHeight = 0
         
     }
-    
-    
+
+
     override func registerCellModel() {
         self.tableView?.registerCellNib(nib: UINib(nibName: "GameCell", bundle: nil), modelClass: GameModel.self)
     }
@@ -61,6 +61,5 @@ class PagingTableViewXibTempController: PagingTableViewController {
         
         
     }
-    
 }
 

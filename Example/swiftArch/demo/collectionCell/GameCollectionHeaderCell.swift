@@ -7,17 +7,17 @@
 //
 
 import UIKit
-
-class GameCollectionHeaderCell: UICollectionViewCell {
+import swiftArch
+class GameCollectionHeaderCell: UICollectionViewCell , CellProtocol {
+  
 
     @IBOutlet weak var labelTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib() 
     }
-    @objc var model:GameCollectionHeaderModel?{
-        didSet
-        {
-            labelTitle.text=model?.title
-        }
+    
+    public func bindModel(_ m: NSObject) {
+        let model = m as? GameCollectionHeaderModel
+        labelTitle.text=model?.title
     }
 }

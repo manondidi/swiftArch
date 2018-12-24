@@ -19,6 +19,10 @@ class TempTestViewController: UIViewController {
     
     @IBOutlet weak var btnPagingTableVCXib: UIButton!
     
+    @IBOutlet weak var btnPagingCollectionVC: UIButton!
+    
+    @IBOutlet weak var btnPaingCollecionXibVC: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +42,12 @@ class TempTestViewController: UIViewController {
             self?.navigationController?.pushViewController(PagingTableViewXibTempController(), animated: true)
         }
         
+        btnPagingCollectionVC.addTapGesture { [weak self] tap in
+            self?.navigationController?.pushViewController(PagingCollectionViewTempController(), animated: true)
+        }
+        btnPaingCollecionXibVC.addTapGesture { [weak self] tap in
+            self?.navigationController?.pushViewController(PagingCollectionViewXibTempViewController(), animated: true)
+        }
     }
 
 

@@ -7,17 +7,15 @@
 //
 
 import UIKit
-
-class AddGameCollectionCell: UICollectionViewCell {
+import swiftArch
+class AddGameCollectionCell: UICollectionViewCell , CellProtocol {
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    @objc var model:AddGameModel?{
-        didSet
-        {
-            
-        }
+
+    public func bindModel(_ m: NSObject) {
+//        let model = m as? AddGameModel
     }
 }

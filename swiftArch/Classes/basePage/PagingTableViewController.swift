@@ -148,7 +148,8 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
         let item = self.getRealDataSourceModel(indexPath: indexPath)
         let cellKey = String(describing: item.classForCoder.self)
         let cell = tableView.dequeueReusableCell(withIdentifier: cellKey)
-        cell?.setValue(item, forKey: "model")
+        let c = cell as! CellProtocol
+        c.bindModel(item)
         self.registerEventforCell(cell: cell!, model: item)
         return cell!
     }
@@ -165,7 +166,8 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
         if (section < self.sectionModelList.count) {
             let item = self.sectionModelList[section] as? NSObject ?? NSObject()
             let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: String(describing: item.classForCoder.self))!
-            header.setValue(item, forKey: "model")
+            let c = header as! CellProtocol
+            c.bindModel(item)
             self.registerEventforSectionHeader(header: header, model: item)
             return header
         }
