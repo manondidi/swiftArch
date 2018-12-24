@@ -68,6 +68,7 @@
 		61489B0C21D0E91D00280F48 /* CollectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61489B0B21D0E91D00280F48 /* CollectCell.swift */; };
 		61489B0F21D0E93900280F48 /* XibCollectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61489B0D21D0E93900280F48 /* XibCollectCell.swift */; };
 		61489B1021D0E93900280F48 /* XibCollectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61489B0E21D0E93900280F48 /* XibCollectCell.xib */; };
+		61489B1221D0EBDC00280F48 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61489B1121D0EBDC00280F48 /* TestViewController.swift */; };
 		618DD8D321D0C95D0002873B /* PagingCollectionViewTempController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618DD8D221D0C95D0002873B /* PagingCollectionViewTempController.swift */; };
 		61DEEBAC21D0800C00506763 /* BaseTempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DEEBAB21D0800C00506763 /* BaseTempViewController.swift */; };
 		61DEEBAF21D0841E00506763 /* BaseTempXibViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DEEBAD21D0841E00506763 /* BaseTempXibViewController.swift */; };
@@ -148,6 +149,7 @@
 		61489B0B21D0E91D00280F48 /* CollectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectCell.swift; sourceTree = "<group>"; };
 		61489B0D21D0E93900280F48 /* XibCollectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibCollectCell.swift; sourceTree = "<group>"; };
 		61489B0E21D0E93900280F48 /* XibCollectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XibCollectCell.xib; sourceTree = "<group>"; };
+		61489B1121D0EBDC00280F48 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		618DD8D221D0C95D0002873B /* PagingCollectionViewTempController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewTempController.swift; sourceTree = "<group>"; };
 		61DEEBAB21D0800C00506763 /* BaseTempViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTempViewController.swift; sourceTree = "<group>"; };
 		61DEEBAD21D0841E00506763 /* BaseTempXibViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTempXibViewController.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 				618DD8D221D0C95D0002873B /* PagingCollectionViewTempController.swift */,
 				6113708521D0D084000250D8 /* PagingCollectionViewXibTempViewController.swift */,
 				6113708621D0D084000250D8 /* PagingCollectionViewXibTempViewController.xib */,
+				61489B1121D0EBDC00280F48 /* TestViewController.swift */,
 			);
 			path = templateTest;
 			sourceTree = SOURCE_ROOT;
@@ -632,6 +635,7 @@
 				613B495A2178619200270CE7 /* GameCollectionHeaderModel.swift in Sources */,
 				618DD8D321D0C95D0002873B /* PagingCollectionViewTempController.swift in Sources */,
 				613B498D217861AB00270CE7 /* AddGameCollectionCell.swift in Sources */,
+				61489B1221D0EBDC00280F48 /* TestViewController.swift in Sources */,
 				613B4993217861AB00270CE7 /* PaingTalbeDemoViewController.swift in Sources */,
 				613B49C92179711600270CE7 /* SPFeedGameView.swift in Sources */,
 				613B49602178619200270CE7 /* SocialAppService.swift in Sources */,
