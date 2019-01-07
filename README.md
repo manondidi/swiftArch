@@ -1,5 +1,9 @@
 # swiftArch
 
+首先这套东西是有一定门槛的,
+但是只要你用上手了,真的可以快速开发业务,减少非常多的代码量
+
+
 [![CI Status](https://img.shields.io/travis/czq/swiftArch.svg?style=flat)](https://travis-ci.org/czq/swiftArch)
 [![Version](https://img.shields.io/cocoapods/v/swiftArch.svg?style=flat)](https://cocoapods.org/pods/swiftArch)
 [![License](https://img.shields.io/cocoapods/l/swiftArch.svg?style=flat)](https://cocoapods.org/pods/swiftArch)
