@@ -77,10 +77,10 @@ SPEC CHECKSUMS:
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
-  swiftArch: c7c3e00b1619d7d96eb3efe743f094a56f218dde
+  swiftArch: 535025b26c6871d86325cd162fd293bbae1ce3f2
   Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
 
 PODFILE CHECKSUM: 7b7bf16889937b5282c9928a1c6cde86a5c8370e
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.6.1
