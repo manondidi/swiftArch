@@ -34,7 +34,7 @@ TODO: Add long description of the pod here.
   
   
   s.dependency 'Closures', '~> 0.5'
-  s.dependency 'HandyJSON', '~> 4.2.0' 
+  s.dependency 'HandyJSON', '5.0.0-beta.1' 
   s.dependency 'SnapKit', '~> 4.0.0'
   s.dependency 'MJRefresh'
   s.dependency 'RxAlamofire', '~>4.3.0'

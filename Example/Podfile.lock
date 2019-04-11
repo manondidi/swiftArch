@@ -1,29 +1,27 @@
 PODS:
-  - Alamofire (4.8.0)
-  - Closures (0.5)
-  - CocoaLumberjack/Default (3.4.2)
-  - CocoaLumberjack/Swift (3.4.2):
-    - CocoaLumberjack/Default
+  - Alamofire (4.8.2)
+  - Closures (0.6)
+  - CocoaLumberjack/Core (3.5.2)
+  - CocoaLumberjack/Swift (3.5.2):
+    - CocoaLumberjack/Core
   - FSPagerView (0.8.2)
-  - HandyJSON (4.2.1)
+  - HandyJSON (5.0.0-beta.1)
   - Kingfisher (4.8.1)
-  - MJRefresh (3.1.15.7)
+  - MJRefresh (3.1.16)
   - RegexKitLite-NoWarning (1.1.0)
   - RxAlamofire (4.3.0):
     - RxAlamofire/Core (= 4.3.0)
   - RxAlamofire/Core (4.3.0):
     - Alamofire (~> 4.5)
     - RxSwift (~> 4)
-  - RxAtomic (4.4.0)
-  - RxCocoa (4.4.0):
-    - RxSwift (~> 4.0)
-  - RxSwift (4.4.0):
-    - RxAtomic (~> 4.4)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
   - SnapKit (4.0.1)
   - swiftArch (1.2.0):
     - Closures (~> 0.5)
     - CocoaLumberjack/Swift
-    - HandyJSON (~> 4.2.0)
+    - HandyJSON (= 5.0.0-beta.1)
     - Kingfisher (~> 4.8.0)
     - MJRefresh
     - RxAlamofire (~> 4.3.0)
@@ -52,7 +50,6 @@ SPEC REPOS:
     - MJRefresh
     - RegexKitLite-NoWarning
     - RxAlamofire
-    - RxAtomic
     - RxCocoa
     - RxSwift
     - SnapKit
@@ -64,23 +61,22 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  Closures: ad5ebce1242de44d64505bfd3b7c25b12cad3d2e
-  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Closures: 7477e86502e33d7ae435b8c60ce219390e06c476
+  CocoaLumberjack: 118bf4a820efc641f79fa487b75ed928dccfae23
   FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
-  HandyJSON: d0c5fc80204f29056d59d3e5c4587fa0b16b60a8
+  HandyJSON: 582477127ab3ab65bd2e471815f1a7b846856978
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
-  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
   RegexKitLite-NoWarning: 365d208f8187997e33d9de8baeddfc00728596d8
   RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
-  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
-  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
-  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
-  swiftArch: 535025b26c6871d86325cd162fd293bbae1ce3f2
+  swiftArch: fbec622c09a5be6fc23cae86d4ab092680a0104b
   Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
 
-PODFILE CHECKSUM: 7b7bf16889937b5282c9928a1c6cde86a5c8370e
+PODFILE CHECKSUM: a11f79ccf54f87c0153eec7fdf91d4225bf0dd99
 
 COCOAPODS: 1.6.1
