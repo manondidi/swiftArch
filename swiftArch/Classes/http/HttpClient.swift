@@ -30,14 +30,14 @@ public class HttpClient: NSObject {
 
 
 
-    public func rxRequest<T:HandyJSON>(url: String, method: HTTPMethod, pathParams: Dictionary<String, String> = [:], params: Dictionary<String, String> = [:])
+    public func rxRequest<T:HandyJSON>(url: String, method: HTTPMethod,encoding:URLEncoding = URLEncoding.default, pathParams: Dictionary<String, String> = [:], params: Dictionary<String, String> = [:])
         -> Observable<T> {
             var pathUrl = baseUrl! + url;
             for (key, value) in pathParams {
                 pathUrl = pathUrl.replacingOccurrences(of: "{\(key)}", with: "\(value)")
             }
             #if DEBUG
-                return RxAlamofire.requestString(method, pathUrl, parameters: params, encoding: URLEncoding.default, headers: self.headers)
+                return RxAlamofire.requestString(method, pathUrl, parameters: params, encoding: encoding, headers: self.headers)
                     .debug()
                     .map({ (response, string) -> T in
                         let jsonStr = string
@@ -49,7 +49,7 @@ public class HttpClient: NSObject {
                         }
                     })
             #else
-                return RxAlamofire.requestString(method, pathUrl, parameters: params, encoding: URLEncoding.default, headers: self.headers)
+                return RxAlamofire.requestString(method, pathUrl, parameters: params, encoding: encoding, headers: self.headers)
                     .map({ (response, string) -> T in
                         let jsonStr = string
                         let result: T? = JsonUtil.jsonParse(jsonStr: jsonStr)
