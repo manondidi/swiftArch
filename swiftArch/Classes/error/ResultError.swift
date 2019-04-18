@@ -9,18 +9,14 @@
 import Foundation
 public class ResultError: NSError {
 
-    public var msg = ""
+    public var reason = ""
     override public var localizedDescription: String {
         get {
-            return msg
+            return reason
         }
     }
-    public init(code: Int, msg: String?) {
-        super.init(domain: "requestResult", code: code, userInfo: nil)
-        self.msg = msg ?? ""
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    public convenience init(code: Int, msg: String?) {
+        self.init(domain: "ResultError", code: code, userInfo: nil)
+        self.reason = msg ?? ""
+    } 
 }

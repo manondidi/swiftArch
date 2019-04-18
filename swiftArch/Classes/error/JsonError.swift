@@ -13,7 +13,10 @@ public class JsonError: NSError {
             return "Json转换失败"
         }
     }
-}
+    public convenience init() {
+        self.init(domain: "JsonError", code: 400001, userInfo: nil)
+    }
+ }
 
 
 
