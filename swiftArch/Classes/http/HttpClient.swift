@@ -30,7 +30,7 @@ public class HttpClient: NSObject {
 
 
 
-    public func rxRequest<T:HandyJSON>(url: String, method: HTTPMethod,encoding:URLEncoding = URLEncoding.default, pathParams: Dictionary<String, String> = [:], params: Dictionary<String, String> = [:])
+    public func rxRequest<T:HandyJSON>(url: String, method: HTTPMethod,encoding:ParameterEncoding = URLEncoding.default, pathParams: Dictionary<String, String> = [:], params: Dictionary<String, String> = [:])
         -> Observable<T> {
             var pathUrl = baseUrl! + url;
             for (key, value) in pathParams {
