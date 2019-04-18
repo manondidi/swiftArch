@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'swiftArch'
-  s.version          = '1.2.4'
+  s.version          = '1.2.5'
   s.summary          = 'swift开发脚手架'
 
 # This description is used to generate tags and improve search results.
