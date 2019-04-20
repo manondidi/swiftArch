@@ -113,8 +113,8 @@ open class PagingCollectionViewController: BaseViewController, UICollectionViewD
     open func loadSuccess(resultData: NSObject?) {
         self.collectionView?.showContent()
         self.pagingStrategy?.addPage(info: self.pagingList)
-        let isFinish = self.pagingStrategy?.checkFinish(result: resultData, listSize: self.pagingList.count)
-        self.collectionView?.setLoadMoreEnable(b: !isFinish!)
+        let isFinish = (self.pagingStrategy?.checkFinish(result: resultData, listSize: self.pagingList.count) ?? true)
+        self.collectionView?.setLoadMoreEnable(b: !isFinish)
         self.collectionView?.reloadData()
         if self.dataSource.isEmpty {
             self.collectionView?.showEmpty()

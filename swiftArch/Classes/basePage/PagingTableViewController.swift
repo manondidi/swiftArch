@@ -116,8 +116,8 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
     open func loadSuccess(resultData: Any?) {
         self.tableView?.showContent()
         self.pagingStrategy?.addPage(info: pagingList)
-        let isFinish = self.pagingStrategy?.checkFinish(result: resultData, listSize: pagingList.count)
-        self.tableView?.setLoadMoreEnable(b: !isFinish!)
+        let isFinish = (self.pagingStrategy?.checkFinish(result: resultData, listSize: pagingList.count)) ?? true
+        self.tableView?.setLoadMoreEnable(b: !isFinish)
         self.tableView?.reloadData()
         if self.dataSource.isEmpty {
             self.tableView?.showEmpty()
