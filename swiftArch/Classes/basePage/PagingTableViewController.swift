@@ -107,6 +107,7 @@ open class PagingTableViewController: BaseViewController, UITableViewDataSource,
             make.edges.equalToSuperview()
         })
         self.tableView?.estimatedSectionHeaderHeight = 0
+        self.tableView?.estimatedRowHeight = 30
     }
 
 
