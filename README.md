@@ -16,6 +16,8 @@
 提供了 脚手架的 模板  直接一键生成对应代码
 https://github.com/manondidi/swiftArchTemplate
 
+https://github.com/manondidi/swiftArchCodeTemplate
+
 
 
 ## Todo
