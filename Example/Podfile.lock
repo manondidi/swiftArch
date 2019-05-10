@@ -1,42 +1,44 @@
 PODS:
   - Alamofire (4.8.2)
   - Closures (0.6)
-  - CocoaLumberjack/Core (3.5.2)
-  - CocoaLumberjack/Swift (3.5.2):
+  - CocoaLumberjack/Core (3.5.3)
+  - CocoaLumberjack/Swift (3.5.3):
     - CocoaLumberjack/Core
   - FSPagerView (0.8.2)
   - HandyJSON (5.0.0-beta.1)
   - Kingfisher (4.8.1)
-  - MJRefresh (3.1.16)
+  - MJRefresh (3.2.0)
   - RegexKitLite-NoWarning (1.1.0)
-  - RxAlamofire (4.3.0):
-    - RxAlamofire/Core (= 4.3.0)
-  - RxAlamofire/Core (4.3.0):
-    - Alamofire (~> 4.5)
-    - RxSwift (~> 4)
-  - RxCocoa (4.5.0):
-    - RxSwift (>= 4.4.2, ~> 4.4)
-  - RxSwift (4.5.0)
+  - RxAlamofire (5.0.0):
+    - RxAlamofire/Core (= 5.0.0)
+  - RxAlamofire/Core (5.0.0):
+    - Alamofire (~> 4.8)
+    - RxSwift (~> 5.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
   - SnapKit (4.0.1)
-  - swiftArch (1.2.0):
-    - Closures (~> 0.5)
+  - swiftArch (1.2.7):
+    - Closures (= 0.6)
     - CocoaLumberjack/Swift
     - HandyJSON (= 5.0.0-beta.1)
     - Kingfisher (~> 4.8.0)
     - MJRefresh
-    - RxAlamofire (~> 4.3.0)
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
+    - RxAlamofire (~> 5.0.0)
+    - RxCocoa (~> 5.0.0)
+    - RxSwift (~> 5.0.0)
     - SnapKit (~> 4.0.0)
-    - Toast-Swift (~> 4.0.0)
+    - Toast-Swift (~> 5.0.0)
     - UICollectionViewLeftAlignedLayout
-  - Toast-Swift (4.0.1)
+  - Toast-Swift (5.0.0)
   - UICollectionViewLeftAlignedLayout (1.0.2)
 
 DEPENDENCIES:
   - FSPagerView
   - RegexKitLite-NoWarning
-  - RxSwift
   - swiftArch (from `../`)
 
 SPEC REPOS:
@@ -51,6 +53,7 @@ SPEC REPOS:
     - RegexKitLite-NoWarning
     - RxAlamofire
     - RxCocoa
+    - RxRelay
     - RxSwift
     - SnapKit
     - Toast-Swift
@@ -63,20 +66,21 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Closures: 7477e86502e33d7ae435b8c60ce219390e06c476
-  CocoaLumberjack: 118bf4a820efc641f79fa487b75ed928dccfae23
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
   FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
   HandyJSON: 582477127ab3ab65bd2e471815f1a7b846856978
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
-  MJRefresh: 7798e16e53a5ef7f332dd05b27664db4e29530fd
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   RegexKitLite-NoWarning: 365d208f8187997e33d9de8baeddfc00728596d8
-  RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
-  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
-  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  RxAlamofire: e7875a012aff55345672d0f70a2a9cd6aeb0f211
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
-  swiftArch: fbec622c09a5be6fc23cae86d4ab092680a0104b
-  Toast-Swift: e42a638589a2f95036b4bb7626cfbdde7daf0393
+  swiftArch: 8dbc3250c2f62773ce183cb5f844da11799591b1
+  Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
   UICollectionViewLeftAlignedLayout: 830bf6fa5bab9f9b464f62e3384f9d2e00b3c0f6
 
-PODFILE CHECKSUM: a11f79ccf54f87c0153eec7fdf91d4225bf0dd99
+PODFILE CHECKSUM: 20c6c68fcaf34775c7a2ef502adfcc1fb5c8f03c
 
 COCOAPODS: 1.6.1

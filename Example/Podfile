@@ -5,6 +5,6 @@ target 'swiftArch_Example' do
   pod 'swiftArch', :path => '../'
 
   pod 'FSPagerView'
-  pod 'RegexKitLite-NoWarning'
-  pod 'RxSwift'
+  pod 'RegexKitLite-NoWarning' 
+
 end
