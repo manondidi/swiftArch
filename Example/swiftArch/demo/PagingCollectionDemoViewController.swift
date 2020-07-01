@@ -42,6 +42,7 @@ class PagingCollectionDemoViewController: PagingCollectionViewController {
 
         self.socailAppService.rxGetGame(pageNum: pageInfo.pageNum, pageSize: pageInfo.pageSize)
             .observeOn(MainScheduler.instance)
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .subscribe(onNext: { [weak self] (result) in
                 if(pageInfo.isFirstPage()) {
                     self?.pagingList.removeAll()

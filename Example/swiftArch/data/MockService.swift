@@ -21,13 +21,18 @@ class MockService{
          return self.rxLoadJsonFromFile(fileName: "getUser.json" )
     }
     
+    func rxGetGames()->Observable<NormalPageModel<GameModel>>{
+         return self.rxLoadJsonFromFile(fileName: "game.json" )
+    }
     
     // 获取Feeds
     func rxGetFeeds()->Observable<Result<Array<Feed>>> {
          return self.rxLoadJsonFromFile(fileName: "feeds.json" )
     }
     
-   
+   func rxGetFeedArticles()->Observable<Result<Array<FeedArtileModel>>> {
+          return self.rxLoadJsonFromFile(fileName: "feed.json" )
+     }
     
     func loadJsonFromFile<T:HandyJSON>(fileName:String) -> T {
         

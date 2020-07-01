@@ -1,4 +1,7 @@
-[{
+{
+"status": 0,
+"msg": "ok.",
+"data": [{
 	"id": 170957,
 	"type": "create-article",
 	"payload": {
@@ -4156,4 +4159,4 @@
 		"followStatus": "unfollowed",
 		"isFireflyUser": true
 	}
-}]
+}]}

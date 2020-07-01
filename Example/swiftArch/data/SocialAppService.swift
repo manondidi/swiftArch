@@ -29,11 +29,12 @@ class SocialAppService {
 
 
     func rxGetGame(pageNum: Int, pageSize: Int) -> Observable<NormalPageModel<GameModel>> {
+        return mockService.rxGetGames()
 
-        return httpClient.rxRequest(url: "archServer/games", method: .get, params: ["pageNum": "\(pageNum)", "pageSize": "\(pageSize)"])
-            .map { result -> NormalPageModel<GameModel> in
-                return try self.getData(result: result)!
-        }
+//        return httpClient.rxRequest(url: "archServer/games", method: .get, params: ["pageNum": "\(pageNum)", "pageSize": "\(pageSize)"])
+//            .map { result -> NormalPageModel<GameModel> in
+//                return try self.getData(result: result)!
+//        }
 
     }
 
@@ -41,15 +42,19 @@ class SocialAppService {
 
     func rxGetFeedArticle(direction: String, pageSize: Int, offsetId: String?) -> Observable<Array<FeedArtileModel>> {
 
-        var dic = Dictionary<String, String>()
-        dic["pageSize"] = "\(pageSize)"
-        dic["direction"] = direction
-        dic["offsetId"] = offsetId
-
-        return httpClient.rxRequest(url: "archServer/feeds", method: .get, params: dic)
-            .map({ (result) -> Array<FeedArtileModel> in
-                return try self.getData(result: result)!
-            })
+        return mockService.rxGetFeedArticles()
+                    .map({ (result) -> Array<FeedArtileModel> in
+                        return try self.getData(result: result)!
+                    })
+//        var dic = Dictionary<String, String>()
+//        dic["pageSize"] = "\(pageSize)"
+//        dic["direction"] = direction
+//        dic["offsetId"] = offsetId
+//
+//        return httpClient.rxRequest(url: "archServer/feeds", method: .get, params: dic)
+//            .map({ (result) -> Array<FeedArtileModel> in
+//                return try self.getData(result: result)!
+//            })
     }
 
 
